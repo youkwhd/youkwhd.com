@@ -6,7 +6,7 @@ module.exports = {
       summary: `a self-taught developer`
     },
     description: `brand new blog as a journey of a self-taught dev`,
-    // siteUrl: `https://localhost:8000/`,
+    siteUrl: `https://youkwhd.github.io/`,
     social: {
       twitter: `youkwhd`,
       instagram: `youkwhd`,
