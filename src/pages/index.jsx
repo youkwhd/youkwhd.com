@@ -3,12 +3,12 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout/Layout";
 
-const Home = ({ data }) => {
+const Home = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMdx.nodes;
 
 	return (
-		<Layout title={siteTitle}>
+		<Layout location={location} title={siteTitle}>
 			<h1>blog posts</h1>
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.slug;

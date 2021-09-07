@@ -4,12 +4,17 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "../components/Layout/Layout";
 
-const BlogPosts = ({ data }) => {
+const BlogPosts = ({ data, location }) => {
     const post = data.mdx;
 
     return (
-        <Layout title={data.site.siteMetadata.title}>
+        <Layout location={location} title={data.site.siteMetadata.title}>
+            <span className="post-category">{post.frontmatter.category.toUpperCase()}</span>
             <h1>{post.frontmatter.title}</h1>
+            <ul className="post-author">
+                <li>written by {post.frontmatter.author}</li>
+                <li>{post.frontmatter.date}</li>
+            </ul>
             <article>
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>
@@ -20,7 +25,7 @@ const BlogPosts = ({ data }) => {
 export default BlogPosts;
 
 export const pageQuery = graphql`
-    query GetPostBySlug($slug: String!) {
+    query PostQuery($slug: String!) {
         site {
             siteMetadata {
                 title
@@ -29,7 +34,9 @@ export const pageQuery = graphql`
         mdx(slug: {eq: $slug}) {
             body
             frontmatter {
-                date(formatString: "Do MMMM, YYYY")
+                author
+                category
+                date(formatString: "D MMM, YYYY")
                 title
             }
         }
