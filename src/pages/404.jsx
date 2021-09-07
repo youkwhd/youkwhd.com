@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo"
 
-const NotFoundPage = ({ location }) => {
+const NotFoundPage = ({ data, location }) => {
     return (
-		<Layout location={location}>
+		<Layout location={location} title={data.site.siteMetadata.title}>
+			<Seo title={`404: Not Found | ${data.site.siteMetadata.title}`} />
 			<h1>sorry there is no road ahead :(</h1>
 			<p>it seems that you are lost, <Link to="/">go back</Link></p>
 		</Layout>
@@ -13,3 +15,13 @@ const NotFoundPage = ({ location }) => {
 };
 
 export default NotFoundPage;
+
+export const pageQuery = graphql`
+	query {
+		site {
+			siteMetadata {
+				title
+			}
+		}
+	}
+`;

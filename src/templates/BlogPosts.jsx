@@ -3,7 +3,8 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 const BlogPosts = ({ data, location }) => {
     const post = data.mdx;
@@ -12,6 +13,10 @@ const BlogPosts = ({ data, location }) => {
 
     return (
         <Layout location={location} title={data.site.siteMetadata.title}>
+            <Seo 
+                title={post.frontmatter.title} 
+                description={post.frontmatter.description || post.excerpt}    
+            />
             <span className="post-category">{post.frontmatter.category.toUpperCase()}</span>
             <h1>{post.frontmatter.title}</h1>
             { imageExist && <GatsbyImage image={featuredImage} alt="featured image"/> }
@@ -37,6 +42,7 @@ export const pageQuery = graphql`
         }
         mdx(slug: {eq: $slug}) {
             body
+            excerpt
             frontmatter {
                 author
                 category

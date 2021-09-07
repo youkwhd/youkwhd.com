@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 const Home = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
@@ -9,6 +10,7 @@ const Home = ({ data, location }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
+			<Seo title={`All posts | ${siteTitle}`} />
 			<h1>blog posts</h1>
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.slug;
