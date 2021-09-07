@@ -45,5 +45,7 @@ module.exports = {
     },
     `gatsby-remark-images`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`, // for dynamic image
   ],
 }
