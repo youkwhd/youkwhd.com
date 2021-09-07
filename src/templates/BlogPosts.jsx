@@ -18,13 +18,13 @@ const BlogPosts = ({ data, location }) => {
                 description={post.frontmatter.description || post.excerpt}    
             />
             <span className="post-category">{post.frontmatter.category.toUpperCase()}</span>
-            <h1>{post.frontmatter.title}</h1>
+            <h1 class="post-title">{post.frontmatter.title}</h1>
             { imageExist && <GatsbyImage image={featuredImage} alt="featured image"/> }
             <ul className="post-author">
                 <li>written by {post.frontmatter.author}</li>
                 <li>{post.frontmatter.date}</li>
             </ul>
-            <article>
+            <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>
         </Layout>
