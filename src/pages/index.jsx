@@ -8,27 +8,19 @@ const Home = ({ data }) => {
 	const posts = data.allMdx.nodes;
 
 	return (
-		<Layout>
-			<h1>{siteTitle}</h1>
-			<ul>
+		<Layout title={siteTitle}>
+			<h1>blog posts</h1>
 				{posts.map((post) => {
-					const date = post.frontmatter.date;
-					const description = post.frontmatter.description;
-					const title = post.frontmatter.title;
+					const title = post.frontmatter.title || post.slug;
 
 					return (
-						<li key={title}>
-							<h2>
-								<Link to="/">
-									{title}
-								</Link>
-							</h2>
-							<p>{date}</p>
-							<p>{description}</p>
-						</li>
+						<article key={post.slug}>
+							<h2><Link to={post.slug}>{title}</Link></h2>
+							<p>{post.frontmatter.date}</p>
+							<p>{post.frontmatter.description}</p>
+						</article>
 					);
 				})}
-			</ul>
 		</Layout>
 	);
 };
