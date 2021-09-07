@@ -1,9 +1,10 @@
 ---
-title: "Gatsby.js and it's markdown support"
+title: Gatsby.js and it's markdown support
 category: Coding
+featuredImage: two.jpg
 author: youkwhd
 date: "2021-09-07"
-description: "talking about why i prefer Gatsby.js more than Next.js"
+description: talking about why i prefer Gatsby.js more than Next.js
 ---
 
 # why gatsby?
