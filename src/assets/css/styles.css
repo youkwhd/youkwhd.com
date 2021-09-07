@@ -69,6 +69,15 @@
     box-sizing: border-box;
 }
 
+header {
+    margin-bottom: var(--spacing-20);
+
+}
+
+article {
+    margin: var(--spacing-10) var(--spacing-0);
+}
+
 /* Custom Classes */
 
 .global-wrapper {
