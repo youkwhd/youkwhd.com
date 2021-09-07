@@ -8,7 +8,7 @@ const BlogPosts = ({ data }) => {
     const post = data.mdx;
 
     return (
-        <Layout>
+        <Layout title={data.site.siteMetadata.title}>
             <h1>{post.frontmatter.title}</h1>
             <article>
                 <MDXRenderer>{post.body}</MDXRenderer>
@@ -21,6 +21,11 @@ export default BlogPosts;
 
 export const pageQuery = graphql`
     query GetPostBySlug($slug: String!) {
+        site {
+            siteMetadata {
+                title
+            }
+        }
         mdx(slug: {eq: $slug}) {
             body
             frontmatter {
