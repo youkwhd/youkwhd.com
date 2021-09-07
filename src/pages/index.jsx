@@ -11,14 +11,24 @@ const Home = ({ data, location }) => {
 	return (
 		<Layout location={location} title={siteTitle}>
 			<Seo title={`All posts | ${siteTitle}`} />
-			<h1>blog posts</h1>
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.slug;
+					const timeToRead = post.timeToRead;
+					
+					let emoji;
+
+					if (timeToRead >= 0 && timeToRead < 7) {
+						emoji = "☕️";
+					} else if (timeToRead >= 7 && timeToRead < 17) {
+						emoji = "☕️☕️";
+					} else if (timeToRead >= 17) {
+						emoji = "☕️☕️☕️";
+					}
 
 					return (
-						<article key={post.slug}>
+						<article key={post.slug} className="global-article">
 							<h2><Link to={post.slug}>{title}</Link></h2>
-							<p>{post.frontmatter.date}</p>
+							<p>{post.frontmatter.date} • {emoji} {post.timeToRead} min read</p>
 							<p>{post.frontmatter.description}</p>
 						</article>
 					);
@@ -41,8 +51,9 @@ export const pageQuery = graphql`
     		nodes {
     			excerpt
 				slug
+				timeToRead
     			frontmatter {
-        			date(formatString: "Do MMMM, YYYY")
+        			date(formatString: "MMMM DD, YYYY")
         			description
         			title
       			}
