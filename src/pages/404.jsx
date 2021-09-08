@@ -7,7 +7,7 @@ import Seo from "../components/Seo"
 const NotFoundPage = ({ data, location }) => {
     return (
 		<Layout location={location} title={data.site.siteMetadata.title}>
-			<Seo title=`404: Not Found` />
+			<Seo title="404: Not Found" />
 			<h1>sorry there is no road ahead :(</h1>
 			<p>it seems that you are lost, <Link to="/">go back</Link></p>
 		</Layout>
