@@ -10,7 +10,7 @@ const Home = ({ data, location }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<Seo title={`All posts | ${siteTitle}`} />
+			<Seo title=`All posts` />
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.slug;
 					const timeToRead = post.timeToRead;
