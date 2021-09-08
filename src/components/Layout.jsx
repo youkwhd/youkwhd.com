@@ -2,11 +2,19 @@ import React from "react";
 import { Link } from "gatsby";
 
 const Layout = ({ location, title, children }) => {
-    const rootPath = `${__PATH_PREFIX__}/`;
-    const isRootPath = location.pathname === rootPath;
+    const path = {
+        rootPath: `${__PATH_PREFIX__}/`,
+        blogPath: {
+            rootPath: `${__PATH_PREFIX__}/blog/`,
+            nonRootPath: `${__PATH_PREFIX__}/blog`,
+        }    
+    }
+    
+    const isRootPath = location.pathname === path.rootPath;
+    const isBlogPath = location.pathname === path.blogPath.rootPath || location.pathname === path.blogPath.nonRootPath;
     let header;
 
-    if(isRootPath) {
+    if(isRootPath || isBlogPath) {
         header = (
             <h1 className="main-heading">
                 <Link to="/">{title}</Link>
@@ -15,7 +23,7 @@ const Layout = ({ location, title, children }) => {
     } else {
         header = (
             <h1 className="header-link-home">
-                <Link to="/">{title}</Link>
+                <Link to="/blog/">{title}</Link>
             </h1>
         )
     }
