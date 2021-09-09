@@ -10,7 +10,7 @@ const Blog = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle}>
-            <Seo title="Blog, All posts" />
+            <Seo title="blog" />
                 {posts.map((post) => {
 					const title = post.frontmatter.title;
 					const timeToRead = post.timeToRead;

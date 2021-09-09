@@ -9,7 +9,7 @@ const Home = ({ data, location }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<Seo title="Home" />
+			<Seo title="home" />
 			<article className="local-article">
 				<p><Link to="/blog/">checkout my blog</Link> this and what lul <Link to="/contact/">contact me</Link></p>
 			</article>

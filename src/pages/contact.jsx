@@ -7,7 +7,7 @@ import Seo from "../components/Seo";
 const Contact = ({ data, location }) => {
     return (
         <Layout location={location} title={data.site.siteMetadata.title}>
-            <Seo title="Contact" />
+            <Seo title="contact" />
             hello from Contact
         </Layout>
     );
