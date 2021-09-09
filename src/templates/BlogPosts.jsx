@@ -14,7 +14,7 @@ const BlogPosts = ({ data, location }) => {
     return (
         <Layout location={location} title={data.site.siteMetadata.title}>
             <Seo 
-                title={post.frontmatter.title} 
+                title={post.frontmatter.title.toLowerCase()} 
                 description={post.frontmatter.description || post.excerpt}    
             />
             <span className="post-category">{post.frontmatter.category.toUpperCase()}</span>
