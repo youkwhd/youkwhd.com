@@ -2,30 +2,40 @@ import React from "react";
 import { Link } from "gatsby";
 
 const Layout = ({ location, title, children }) => {
-    const path = {
-        rootPath: `${__PATH_PREFIX__}/`,
-        blogPath: {
-            rootPath: `${__PATH_PREFIX__}/blog/`,
-            nonRootPath: `${__PATH_PREFIX__}/blog`,
-        }    
-    }
-    
-    const isRootPath = location.pathname === path.rootPath;
-    const isBlogPath = location.pathname === path.blogPath.rootPath || location.pathname === path.blogPath.nonRootPath;
-    let header;
+    const rootPath = `${__PATH_PREFIX__}/`; 
+    const paths = [ rootPath, `${rootPath}blog/`, `${rootPath}contact/` ];
+    let isMainPath, includesPath, header;
 
-    if(isRootPath || isBlogPath) {
+    for (let i = 0; i < paths.length; i++) {
+        if (location.pathname === paths[i]) {
+            isMainPath = true;
+        }
+
+        if (location.pathname.includes(paths[i])) {
+            includesPath = paths[i];
+        }
+    }
+
+    if(isMainPath) {
         header = (
             <h1 className="main-heading">
                 <Link to="/">{title}</Link>
             </h1>
         );
     } else {
-        header = (
-            <h1 className="header-link-home">
-                <Link to="/blog/">{title}</Link>
-            </h1>
-        )
+        if (includesPath) {
+            header = (
+                <h1 className="header-link-home">
+                    <Link to={includesPath}>{title}</Link>
+                </h1>
+            );
+        } else {
+            header = (
+                <h1 className="header-link-home">
+                    <Link to="/">{title}</Link>
+                </h1>
+            );
+        }
     }
     
     return (
