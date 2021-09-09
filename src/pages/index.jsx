@@ -11,7 +11,7 @@ const Home = ({ data, location }) => {
 		<Layout location={location} title={siteTitle}>
 			<Seo title="Home" />
 			<article className="local-article">
-				<p>hello, i'm youkwhd <br /> <br /> If you're a fellow software developer, feel free to <Link to="/blog/">checkout my blog</Link> where I write about various programming and technology topics.</p>
+				<p><Link to="/blog/">checkout my blog</Link> this and what lul <Link to="/contact/">contact me</Link></p>
 			</article>
 		</Layout>
 	);
