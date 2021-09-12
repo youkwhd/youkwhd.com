@@ -316,3 +316,19 @@ text-decoration: none;
     list-style: none;
     color:  var(--color-text-light);
 }
+
+.local-article {
+    margin: 0;
+}
+
+.bio-wrapper {
+    padding: var(--spacing-5) var(--spacing-0);
+    display: flex;
+}
+
+.bio-avatar {
+    margin-right: var(--spacing-4);
+    margin-bottom: var(--spacing-0);
+    min-width: 50px;
+    border-radius: 100%;
+}
