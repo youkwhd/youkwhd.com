@@ -6,7 +6,7 @@ a personal site, made with Gatsby and React.
 
 feel free to contribute! any help is appreciated :)
 
-## fonts
+## fonts used
 
 - [Montserrat](https://github.com/JulietaUla/Montserrat)
 - [Merriweather](https://github.com/SorkinType/Merriweather)
