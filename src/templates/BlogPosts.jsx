@@ -14,12 +14,9 @@ const BlogPosts = ({ data, location }) => {
                 title={post.frontmatter.title.toLowerCase()} 
                 description={post.frontmatter.description || post.excerpt}    
             />
-            <span className="post-category">{post.frontmatter.category.toUpperCase()}</span>
+            {/* <span className="post-category">{post.frontmatter.category.toUpperCase()}</span> */}
             <h1 className="post-title">{post.frontmatter.title}</h1>
-            <ul className="post-author">
-                <li>written by {post.frontmatter.author}</li>
-                <li>{post.frontmatter.date}</li>
-            </ul>
+            <span className="post-date" style={{ fontSize: 14 }}>{post.frontmatter.date}</span>
             <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>
@@ -41,7 +38,6 @@ export const pageQuery = graphql`
             excerpt
             frontmatter {
                 author
-                category
                 date(formatString: "D MMM, YYYY")
                 title
             }
