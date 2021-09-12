@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
+import BlankAnchor from "./BlankAnchor";
+
 const Bio = () => {
     const data = useStaticQuery(graphql`
     query BioQuery {
@@ -37,8 +39,8 @@ const Bio = () => {
             />
             {author?.name && (
                 <p>
-                    written by <strong>
-                        <a href={`https://github.com/${social?.github || ``}`} target="_blank" rel="noopener noreferrer">{author.name}</a>
+                    personal web by <strong>
+                        <BlankAnchor href={`https://github.com/${social?.github || ``}`}>{author.name}</BlankAnchor>
                     </strong>
                     <br />
                     {author?.summary || null}
