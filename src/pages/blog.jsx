@@ -18,19 +18,21 @@ const Blog = ({ data, location }) => {
 
 					let emoji;
 
-					if (timeToRead >= 0 && timeToRead < 7) {
+					if (timeToRead >= 0 && timeToRead < 4) {
 						emoji = "☕️";
-					} else if (timeToRead >= 7 && timeToRead < 17) {
+					} else if (timeToRead >= 4 && timeToRead < 10) {
 						emoji = "☕️☕️";
-					} else if (timeToRead >= 17) {
+					} else if (timeToRead >= 10) {
 						emoji = "☕️☕️☕️";
 					}
 
 					return (
 						<article key={post.slug} className="global-article">
 							<h2><Link to={slugLink}>{title}</Link></h2>
-							<p>{post.frontmatter.date} • {emoji} {post.timeToRead} min read</p>
-							<p>{post.frontmatter.description}</p>
+							<div className="global-desc">
+								<p>{post.frontmatter.date} • {emoji} {post.timeToRead} min read</p>
+								<p>{post.frontmatter.description}</p>
+							</div>
 						</article>
 					);
 				})}
