@@ -4,12 +4,15 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 
+import Bio from "../components/Bio";
+
 const Home = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 
 	return (
 		<Layout location={location} title={siteTitle}>
 			<Seo title="home" />
+			<Bio />
 			<article className="local-article">
 				<p><Link to="/blog/">checkout my blog</Link> this and what lul <Link to="/contact/">contact me</Link></p>
 			</article>
