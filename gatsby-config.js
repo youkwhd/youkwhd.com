@@ -3,7 +3,7 @@ module.exports = {
     title: `youkwhd`,
     author: {
       name: `youkwhd`,
-      summary: `a self-taught developer`
+      summary: `a self-taught developer`,
     },
     description: `brand new blog as a journey of a self-taught dev`,
     siteUrl: `https://youkwhd.github.io/`,
@@ -13,14 +13,25 @@ module.exports = {
       github: `youkwhd`,
     },
   },
-
+  
   plugins: [
+    `gatsby-remark-images`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`, // for dynamic image
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/content`,
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
     },
     // {
     //   resolve: `gatsby-plugin-page-creator`,
@@ -43,9 +54,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-remark-images`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`, // for dynamic image
   ],
 }
