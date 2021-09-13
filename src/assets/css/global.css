@@ -1,6 +1,3 @@
-@import url("../fonts/montserrat/Montserrat.css");
-@import url("../fonts/merriweather/Merriweather.css");
-
 :root {
     --maxWidth-none: "none";
     --maxWidth-xs: 20rem;
@@ -28,11 +25,11 @@
     --spacing-20: 5rem;
     --spacing-24: 6rem;
     --spacing-32: 8rem;
-    /* --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-    --fontFamily-sans: 'Montserrat', sans-serif;
-    --fontFamily-serif: 'Merriweather', serif;
+    --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+    Times, serif;
     --font-body: var(--fontFamily-serif);
     --font-heading: var(--fontFamily-sans);
     --fontWeight-normal: 400;
@@ -329,6 +326,9 @@ text-decoration: none;
     margin-right: var(--spacing-4);
     margin-bottom: var(--spacing-0);
     min-width: 50px;
+}
+
+.bio-avatar > picture > img {
     border-radius: 100%;
 }
 
