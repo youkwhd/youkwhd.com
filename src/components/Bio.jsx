@@ -31,7 +31,7 @@ const Bio = () => {
                 layout="fixed"
                 placeholder="blurred"
                 formats={["auto", "webp", "avif"]}
-                src="../assets/images/youkwhd.jpeg"
+                src="../assets/images/profile-pic.jpeg"
                 width={80}
                 height={80}
                 quality={95}
