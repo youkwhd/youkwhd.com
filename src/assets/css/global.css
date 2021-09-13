@@ -43,6 +43,7 @@
     --lineHeight-tight: 1.1;
     --lineHeight-normal: 1.5;
     --lineHeight-relaxed: 1.625;
+    --lineHeight-root: 28px;
     /* 1.200 Minor Third Type Scale */
     --fontSize-0: 0.833rem;
     --fontSize-1: 1rem;
@@ -160,7 +161,7 @@ article h6 {
 /* Prose */
 
 p {
-    line-height: var(--lineHeight-relaxed);
+    line-height: var(--lineHeight-root);
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
     padding: var(--spacing-0);
