@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import { bunny } from "../../utils/ascii";
+
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`; 
     const paths = [ rootPath, `${rootPath}blog/`, `${rootPath}contact/` ];
@@ -37,6 +39,8 @@ const Layout = ({ location, title, children }) => {
             );
         }
     }
+
+    console.log(`%c ${bunny}`, "color:#9acc14; background:black; font-family: monospace");
     
     return (
         <div className="global-wrapper">
