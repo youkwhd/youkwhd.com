@@ -10,7 +10,7 @@ const Contact = ({ data, location }) => {
     return (
         <Layout location={location} title={data.site.siteMetadata.title}>
             <Seo title="contact" />
-            <p>get in touch <BlankAnchor href="mailto:lolywk@secmail.pro">lolywk@secmail.pro</BlankAnchor></p>
+            <p>get in touch <BlankAnchor href="mailto:lolywk@tutanota.com">lolywk@tutanota.com</BlankAnchor></p>
         </Layout>
     );
 };
