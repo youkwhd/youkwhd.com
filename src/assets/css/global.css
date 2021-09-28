@@ -260,9 +260,10 @@ text-decoration: none;
     font-family: var(--font-heading);
 }
 
-.local-article p, pre {
+.local-article p, pre, .gatsby-highlight {
     margin-bottom: var(--spacing-8);
 }
+
 
 .text-wrapper {
     padding: var(--spacing-0) var(--spacing-5);
