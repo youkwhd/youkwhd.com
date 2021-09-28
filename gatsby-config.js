@@ -13,7 +13,6 @@ module.exports = {
       github: `youkwhd`,
     },
   },
-  
   plugins: [
     `gatsby-remark-images`,
     `gatsby-plugin-sharp`,
@@ -49,6 +48,36 @@ module.exports = {
             options: {
               maxWidth: 632,
               withWebp: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: { numberLines: true },
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
             },
           },
         ],
