@@ -16,7 +16,7 @@ const BlogPosts = ({ data, location }) => {
             />
             {/* <span className="post-category">{post.frontmatter.category.toUpperCase()}</span> */}
             <h1 className="post-title">{post.frontmatter.title}</h1>
-            <span className="post-date" style={{ fontSize: 14 }}>{post.frontmatter.date}</span>
+            <span className="post-date" style={{ fontSize: 14 }}>{post.frontmatter.date} • {post.timeToRead} minute read</span>
             <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>
@@ -36,6 +36,7 @@ export const pageQuery = graphql`
         mdx(slug: {eq: $slug}) {
             body
             excerpt
+            timeToRead
             frontmatter {
                 author
                 date(formatString: "D MMM, YYYY")
