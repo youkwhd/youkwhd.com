@@ -72,5 +72,16 @@ a::after {
 }
 ```
 
+## other way to make:
+you can also use box-shadow to accomplish this:
+
+```css
+a {
+    box-shadow: inset 0 -8px 0 0 rgba(233, 136, 136 , .1);
+}
+```
+
+
+
 ## conclusion
 there is a lot of way when it comes to styling in web development. pick a good and efficient way to make the css globally reuseable. Any solution would work if you put effort into it. i hope this article helps you to understand the use of [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp), thank you for visiting. have a nice day :)
