@@ -39,11 +39,7 @@ const Bio = () => {
             />
             {author?.name && (
                 <p>
-                    personal web by <strong>
-                        <BlankAnchor href={`https://github.com/${social?.github || ``}`}>{author.name}</BlankAnchor>
-                    </strong>
-                    <br />
-                    {author?.summary || null}
+                    personal web by <BlankAnchor href={`https://github.com/${social?.github || ``}`}>{author.name}</BlankAnchor>, {author?.summary || null}
                 </p>
             )}
         </div>

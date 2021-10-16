@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import BlankAnchor from "./BlankAnchor";
 import { bunny } from "../../utils/ascii";
 
 const Layout = ({ location, title, children }) => {
@@ -20,22 +21,26 @@ const Layout = ({ location, title, children }) => {
 
     if(isMainPath) {
         header = (
-            <h1 className="main-heading">
-                <Link to="/">{title}</Link>
-            </h1>
+            <>
+                <h1 className="main-heading">
+                    <Link to="/">{title}</Link>
+                </h1>
+                [<Link to="/blog/">blog</Link>]
+                [<Link to="/contact/">contact me</Link>]
+                [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
+            </>
         );
     } else {
         if (includesPath) {
             header = (
-                <h1 className="header-link-home">
-                    <Link to={includesPath}>{title}</Link>
-                </h1>
-            );
-        } else {
-            header = (
-                <h1 className="header-link-home">
-                    <Link to="/">{title}</Link>
-                </h1>
+                <>
+                    <h1 className="main-heading">
+                        <Link to={includesPath}>{title}</Link>
+                    </h1>
+                    [<Link to="/blog/">blog</Link>]
+                    [<Link to="/contact/">contact me</Link>]
+                    [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
+                </>
             );
         }
     }

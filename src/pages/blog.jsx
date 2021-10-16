@@ -13,24 +13,13 @@ const Blog = ({ data, location }) => {
             <Seo title="blog" />
                 {posts.map((post) => {
 					const title = post.frontmatter.title;
-					const timeToRead = post.timeToRead;
                     const slugLink = post.slug.slice(5);
-
-					let emoji;
-
-					if (timeToRead >= 0 && timeToRead < 4) {
-						emoji = "☕️";
-					} else if (timeToRead >= 4 && timeToRead < 10) {
-						emoji = "☕️☕️";
-					} else if (timeToRead >= 10) {
-						emoji = "☕️☕️☕️";
-					}
 
 					return (
 						<article key={post.slug} className="global-article">
 							<h2><Link to={slugLink}>{title}</Link></h2>
 							<div className="global-desc">
-								<p>{post.frontmatter.date} • {emoji} {post.timeToRead} min read</p>
+								<p>{post.frontmatter.date} <strong>({post.timeToRead} min read)</strong></p>
 								<p>{post.frontmatter.description}</p>
 							</div>
 						</article>
