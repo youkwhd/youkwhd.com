@@ -25,6 +25,7 @@ const Layout = ({ location, title, children }) => {
                 <h1 className="main-heading">
                     <Link to="/">{title}</Link>
                 </h1>
+                [<Link to="/">home</Link>]
                 [<Link to="/blog/">blog</Link>]
                 [<Link to="/contact/">contact me</Link>]
                 [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
@@ -37,6 +38,7 @@ const Layout = ({ location, title, children }) => {
                     <h1 className="main-heading">
                         <Link to={includesPath}>{title}</Link>
                     </h1>
+                    [<Link to="/">home</Link>]
                     [<Link to="/blog/">blog</Link>]
                     [<Link to="/contact/">contact me</Link>]
                     [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
