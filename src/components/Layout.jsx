@@ -28,6 +28,7 @@ const Layout = ({ location, title, children }) => {
                 [<Link to="/">home</Link>]
                 [<Link to="/blog/">blog</Link>]
                 [<Link to="/contact/">contact me</Link>]
+                [<BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>]
                 [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
             </>
         );
@@ -41,6 +42,7 @@ const Layout = ({ location, title, children }) => {
                     [<Link to="/">home</Link>]
                     [<Link to="/blog/">blog</Link>]
                     [<Link to="/contact/">contact me</Link>]
+                    [<BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>]
                     [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
                 </>
             );
