@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b deploy -m publish",
+    "deploy": "gatsby build && gh-pages -d public -b deploy -m gh-pages",
     "gh-clean": "gh-pages-clean"
   },
   "dependencies": {
