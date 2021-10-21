@@ -1,8 +1,8 @@
 ---
-title: a guide to style text underline or links
+title: a guide to style text or underlined links
 author: youkwhd
 date: "2021-09-27"
-description: styling minimalistic text underline or links with css
+description: here is a way to style text or underlined links with pure css (understanding pseudo elements)
 ---
 
 designing underlined text is hard, but when it comes to styling it, it should be very easy right? yes. indeed if you know a good amount of knowledge in css, in this case, i will be using the [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) to execute the design.
