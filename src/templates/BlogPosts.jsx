@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import BlankAnchor from "../components/BlankAnchor";
 
 const BlogPosts = ({ data, location }) => {
     const post = data.mdx;
@@ -14,12 +15,14 @@ const BlogPosts = ({ data, location }) => {
                 title={post.frontmatter.title.toLowerCase()} 
                 description={post.frontmatter.description || post.excerpt}    
             />
-            {/* <span className="post-category">{post.frontmatter.category.toUpperCase()}</span> */}
             <h1 className="post-title">{post.frontmatter.title}</h1>
             <span className="post-date" style={{ fontSize: 14 }}>{post.frontmatter.date} <strong>({post.timeToRead} minute read)</strong></span>
             <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>
+            <footer>
+                <p>if you find a typo, <BlankAnchor href={`https://github.com/youkwhd/youkwhd.github.io/tree/master/content/${post.slug}index.md`}>check the markdown file</BlankAnchor> on this page repo. then <BlankAnchor href="https://github.com/youkwhd/youkwhd.github.io/issues">open an issue</BlankAnchor> on the repo.</p>
+            </footer>
         </Layout>
     );
 }
@@ -34,6 +37,7 @@ export const pageQuery = graphql`
             }
         }
         mdx(slug: {eq: $slug}) {
+            slug
             body
             excerpt
             timeToRead
