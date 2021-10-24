@@ -96,7 +96,7 @@ const findSecondLargestNum = (arr) => {
 
 ## how does this method work?
 
-same as the method one, the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
+same as the first method, the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
 
 then as the code above said, it will find the largest number first.
 
@@ -104,6 +104,8 @@ after so, it will try to find the second largest number by iterating over the ar
 
 the condition is here explained:  
 if the current array index value is less than the `biggestNum`, and not already in the `historyArr` (historyArr is an array of all the numbers that has been iterated through) then the `secondLargest` will be the current index. so then the final output would be: *90*.
+
+if you see the variable `secondLargest`, it contains the number **0**, but why? the number **0** could mean `false`, so if there is no 'the second largest number', it would just return **0** instead of `arr[0]`.  
 
 ## conclusion
 
