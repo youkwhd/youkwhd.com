@@ -4237,11 +4237,6 @@ define-property@^2.0.2:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
 
-dejavu-fonts-ttf@^2.37.3:
-  version "2.37.3"
-  resolved "https://registry.yarnpkg.com/dejavu-fonts-ttf/-/dejavu-fonts-ttf-2.37.3.tgz#23f2bf5af594ca2a8a3a53224224b03467a6e0b8"
-  integrity sha1-I/K/WvWUyiqKOlMiQiSwNGem4Lg=
-
 del@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/del/-/del-5.1.0.tgz#d9487c94e367410e6eff2925ee58c0c84a75b3a7"
