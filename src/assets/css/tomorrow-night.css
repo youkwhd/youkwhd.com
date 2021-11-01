@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
     color: #ccc;
     background: none;
-    font-family: 'DejaVu Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: "anonymous_proregular", monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -32,19 +32,16 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-    border-radius: .5em;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    background: #2d2d2d;
+    background-color: #2d2d2d;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-    padding: .15em .4em;
-    border-radius: .3em;
-    white-space: normal;
+    white-space: pre;
 }
 
 .token.comment,
