@@ -14,5 +14,4 @@ feel free to contribute! any help is appreciated :)
 
 here are some of the fonts i used:
 
-- [Montserrat](https://github.com/JulietaUla/Montserrat)
-- [Merriweather](https://github.com/SorkinType/Merriweather)
+- [Anonymous-Pro](https://www.fontsquirrel.com/fonts/Anonymous-Pro) by Mark Simonson.
