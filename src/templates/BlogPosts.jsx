@@ -16,7 +16,6 @@ const BlogPosts = ({ data, location }) => {
                 description={post.frontmatter.description || post.excerpt}    
             />
             <h1 className="post-title">{post.frontmatter.title}</h1>
-            <span className="post-date" style={{ fontSize: 14 }}>{post.frontmatter.date} <strong>({post.timeToRead} minute read)</strong></span>
             <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>

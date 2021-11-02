@@ -211,6 +211,19 @@ a {
     margin-bottom: var(--spacing-8);
 }
 
+.header-links a {
+    margin-right: 20px;
+}
+
+.main-heading {
+    font-size: 22px;
+    padding-bottom: var(--spacing-2);
+}
+
+.main-heading a {
+    box-shadow: none;
+}
+
 .global-header {
     margin-bottom: var(--spacing-6);
 }

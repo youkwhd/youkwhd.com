@@ -25,25 +25,29 @@ const Layout = ({ location, title, children }) => {
                 <h1 className="main-heading">
                     <Link to="/">{title}</Link>
                 </h1>
-                [<Link to="/">home</Link>]
-                [<Link to="/blog/">blog</Link>]
-                [<Link to="/contact/">contact me</Link>]
-                [<BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>]
-                [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
+                <div className="header-links">
+                    <Link to="/">home</Link>
+                    <Link to="/blog/">blog</Link>
+                    <Link to="/contact/">contact me</Link>
+                    <BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>
+                    <BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>
+                </div>
             </>
         );
     } else {
         if (includesPath) {
             header = (
                 <>
-                    <h1 className="main-heading">
+                    <h1 className="main-heading includes-path">
                         <Link to={includesPath}>{title}</Link>
                     </h1>
-                    [<Link to="/">home</Link>]
-                    [<Link to="/blog/">blog</Link>]
-                    [<Link to="/contact/">contact me</Link>]
-                    [<BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>]
-                    [<BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>]
+                    <div className="header-links">
+                        <Link to="/">home</Link>
+                        <Link to="/blog/">blog</Link>
+                        <Link to="/contact/">contact me</Link>
+                        <BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>
+                        <BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>
+                    </div>
                 </>
             );
         }
