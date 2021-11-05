@@ -233,6 +233,10 @@ a {
     margin-bottom: var(--spacing-1);
 }
 
+.post-title::before, .local-article h2::before {
+    content: '# ';
+}
+
 .post-date {
     font-weight: var(--fontWeight-normal);
     font-family: var(--fontFamily-mono);
