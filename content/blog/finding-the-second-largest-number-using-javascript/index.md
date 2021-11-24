@@ -7,7 +7,7 @@ description: after finding the biggest number in an array, if you are wondering 
 
 after finding the **biggest** number in an array, if you are wondering how to get the **second** largest number, you're in the right place.
 
-## get started
+### get started
 
 if you don't have an array, generate the array using [this website](https://array-generator.netlify.app) ;D
 
@@ -38,7 +38,7 @@ const findSecondLargestNum = (arr) => {
 
 ```
 
-## how does this method work?
+### how does this method work?
 
 the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
 
@@ -94,7 +94,7 @@ const findSecondLargestNum = (arr) => {
 };
 ```
 
-## how does this method work?
+### how does this method work?
 
 same as the first method, the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
 
@@ -107,6 +107,6 @@ if the current array index value is less than the `biggestNum`, and not already 
 
 if you see the variable `secondLargest`, it contains the number **0**, but why? the number **0** could mean `false`, so if there is no 'the second largest number', it would just return **0** instead of `arr[0]`.  
 
-## conclusion
+### conclusion
 
 there is a lot of ways to get the second largest number, here i provide some of the 'easy way to understand' methods, hapi hacking.

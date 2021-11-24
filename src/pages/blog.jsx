@@ -16,13 +16,11 @@ const Blog = ({ data, location }) => {
                     const slugLink = post.slug.slice(5);
 
 					return (
-						<article key={post.slug} className="global-article">
-							<h2><Link to={slugLink}>{title}</Link></h2>
-							<div className="global-desc">
-								<p>—— {post.frontmatter.date} <strong>({post.timeToRead} min read)</strong></p>
-								<p>{post.frontmatter.description}</p>
-							</div>
-						</article>
+						<>
+							<article key={post.slug} className="global-article">
+								<p><strong><Link to={slugLink}>{title}</Link></strong>: {post.frontmatter.description} posted at <strong>{post.frontmatter.date}</strong></p>
+							</article>
+						</>
 					);
 				})}
         </Layout>
@@ -43,7 +41,6 @@ export const pageQuery = graphql`
     		nodes {
     			excerpt
 				slug
-				timeToRead
     			frontmatter {
         			date(formatString: "MMMM DD, YYYY")
         			description

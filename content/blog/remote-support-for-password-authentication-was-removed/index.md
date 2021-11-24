@@ -7,7 +7,7 @@ description: 'as the error said "remote: support for password authentication was
 
 as the error said "remote: support for password authentication was removed on August 13, 2021. solved" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens. which is an alternative for password auth.
 
-## creating a token
+### creating a token
 head to github main page [https://github.com](https://github.com)
 
 after entering your github profile, please head to the settings  
@@ -32,13 +32,13 @@ now you have successfully created your own PATs, you should be able to work with
 
 for more information, please see [this article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) from github.
 
-## using the token
+### using the token
 
 now you should be able to use the token. you should change your origin remote to:
 
 `https://<token>@github.com/<username>/<repo>.git`
 
-## github cli tool
+### github cli tool
 
 try this github cli to authenticate automatically:  
 please head to the [official instruction](https://cli.github.com/manual/installation) to install.
@@ -60,6 +60,6 @@ gh auth login
 
 then gh will ask some question, you can directly use password or PATs to authenticate.
 
-## conclusion
+### conclusion
 
 now you've installed `gh` github cli tool. And made your first personal access token (PATs) for github. I hope it solved your problem. thank you for reading this article, happi hacking.

@@ -15,7 +15,7 @@ const BlogPosts = ({ data, location }) => {
                 title={post.frontmatter.title.toLowerCase()} 
                 description={post.frontmatter.description || post.excerpt}    
             />
-            <h1 className="post-title">{post.frontmatter.title}</h1>
+            <h3 className="title">{post.frontmatter.title}</h3>
             <article className="local-article">
                 <MDXRenderer>{post.body}</MDXRenderer>
             </article>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import BlankAnchor from "./BlankAnchor";
 import { bunny } from "../../utils/ascii";
 
 const Layout = ({ location, title, children }) => {
@@ -22,44 +21,32 @@ const Layout = ({ location, title, children }) => {
     if(isMainPath) {
         header = (
             <>
-                <h1 className="main-heading">
+                <h3>
                     <Link to="/">{title}</Link>
-                </h1>
-                <div className="header-links">
-                    <Link to="/">home</Link>
-                    <Link to="/blog/">blog</Link>
-                    <Link to="/contact/">contact me</Link>
-                    <BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>
-                    <BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>
-                </div>
+                </h3>
+                <hr />
             </>
         );
     } else {
         if (includesPath) {
             header = (
                 <>
-                    <h1 className="main-heading includes-path">
+                    <h3>
                         <Link to={includesPath}>{title}</Link>
-                    </h1>
-                    <div className="header-links">
-                        <Link to="/">home</Link>
-                        <Link to="/blog/">blog</Link>
-                        <Link to="/contact/">contact me</Link>
-                        <BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor>
-                        <BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor>
-                    </div>
+                    </h3>
+                    <hr />
                 </>
             );
         }
     }
 
     console.log(`%c ${bunny}`, "color:#9acc14; background:black; font-family: monospace");
-    
+
     return (
-        <div className="global-wrapper">
+        <>
             <header className="text-wrapper global-header">{header}</header>
             <main className="text-wrapper">{children}</main>
-        </div>
+        </>
     );
 };
 

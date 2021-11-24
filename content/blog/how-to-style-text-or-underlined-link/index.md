@@ -8,9 +8,9 @@ description: here is a way to style text or underlined links with pure css (unde
 designing underlined text is hard, but when it comes to styling it, it should be very easy right? yes. indeed if you know a good amount of knowledge in css, in this case, i will be using the [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) to execute the design.
 
 the underlined text should look like this:  
-an example of the <a href="#">underlined text</a> is here!
+an example of the <a href="#" class="underline-text">underlined text</a> is here!
 
-## the process of making
+### the process of making
 we should have a paragraph or an anchor tag to style with. to start off, i'm gonna make a simple html code here:
 
 ```html
@@ -51,7 +51,7 @@ with `position: absolute;` being casted, we can visually see and determine the p
 
 using `z-index` will make a specific 'layer' to be on top or on the bottom. in this case, we need the line to be on the bottom of the link, so we are going to make it minus in order to make it stick to the bottom.
 
-## final code
+### final code
 so whether you've read how to make it or not, here is the final code to copy paste:
 
 ```css
@@ -72,7 +72,7 @@ a::after {
 }
 ```
 
-## other way to make:
+### other way to make:
 you can also use box-shadow to accomplish this:
 
 ```css
@@ -83,5 +83,7 @@ a {
 
 
 
-## conclusion
-there is a lot of way when it comes to styling in web development. pick a good and efficient way to make the css globally reuseable. Any solution would work if you put effort into it. i hope this article helps you to understand the use of [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp), thank you for visiting. have a nice day :)
+### conclusion
+there is a lot of way when it comes to styling in web development. pick a good and efficient way to make the css globally reuseable. Any solution would work if you put effort into it. i hope this article helps you to understand the use of [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp)
+
+however, the `box-shadow` is the better way to implement the underlined text, happi hacking.
