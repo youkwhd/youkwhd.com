@@ -18,7 +18,7 @@ const Blog = ({ data, location }) => {
 					return (
 						<>
 							<article key={post.slug} className="global-article">
-								<p><strong><Link to={slugLink}>{title}</Link></strong>: {post.frontmatter.description} posted at <strong>{post.frontmatter.date}</strong></p>
+								<p><strong><Link to={slugLink}>{title}</Link></strong>: {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong></p>
 							</article>
 						</>
 					);
