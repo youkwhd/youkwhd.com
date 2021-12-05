@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.6.22",
     "dejavu-fonts-ttf": "^2.37.3",
     "gatsby": "^3.13.0",
+    "gatsby-plugin-google-gtag": "^4.3.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-mdx": "^2.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
@@ -39,6 +40,7 @@
     "url": "https://github.com/youkwhd/youkwhd.github.io/issues"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "gh-pages": "^3.2.3"
   }
 }
