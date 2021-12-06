@@ -11,44 +11,37 @@ const Home = ({ data, location }) => {
 	const posts = data.allMdx.nodes;
 
 	return (
-		<Layout location={location} title={siteTitle}>
+		<>
 			<Seo title="home" />
-			<article>
-				<p>hello developers! welcome to my page, i'm new to the programming world, 
-				yet no experience as an employee neither self-employed. i love coding, not for the salary. simply because i love it, 
-				it has been my hobby since i know how to code. the satisfaction after you solve a problem is priceless, 
-				at least for me. thank you for the visit. have a nice day! also <Link to="/blog/">check out my blog</Link>
-				, you can <BlankAnchor href="https://github.com/youkwhd">find me on github</BlankAnchor>. feel free to <BlankAnchor href="https://github.com/youkwhd/youkwhd.github.io/">contribute to this page's</BlankAnchor> github repository.</p>
-			</article>
+			<Layout location={location} title={siteTitle}>
+				<div className="content">
+					<article>
+						<p>hello developers! welcome to my page, i'm new to the programming world, 
+						yet no experience as an employee neither self-employed. i love coding, not for the salary. simply because i love it, 
+						it has been my hobby since i know how to code. the satisfaction after you solve a problem is priceless, 
+						at least for me. thank you for the visit. have a nice day! also <Link to="/blog/">check out my blog</Link>
+						, you can <BlankAnchor href="https://github.com/youkwhd">find me on github</BlankAnchor>. feel free to <BlankAnchor href="https://github.com/youkwhd/youkwhd.github.io/">contribute to this page's</BlankAnchor> github repository.</p>
+					</article>
 
-			<hr />
+					<br />
+					<br />
 
-			<h3 className="title">navigator:</h3>
+					{posts.map((post) => {
+							const title = post.frontmatter.title;
+							const slugLink = post.slug;
 
-			<ul>
-                <li><Link to="/blog/">blog</Link></li>
-                <li><Link to="/contact/">contact me</Link></li>
-				<li><BlankAnchor href="https://array-generator.netlify.app">array-generator</BlankAnchor></li>
-                <li><BlankAnchor href="https://github.com/youkwhd/">github</BlankAnchor></li>
-            </ul>
-
-			<hr />
-
-			<h3 className="title">articles that i made:</h3>
-
-			{posts.map((post) => {
-					const title = post.frontmatter.title;
-                    const slugLink = post.slug;
-
-					return (
-						<>
-							<article key={post.slug} className="global-article">
-								<p><strong><Link to={slugLink}>{title}</Link></strong>: {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong></p>
-							</article>
-						</>
-					);
-				})}
-		</Layout>
+							return (
+								<>
+									<article key={post.slug} className="global-article">
+										<p><strong><Link to={slugLink}>{title}</Link></strong>: {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong></p>
+									</article>
+									<br />
+								</>
+							);
+						})}
+				</div>
+			</Layout>
+		</>
 	);
 };
 

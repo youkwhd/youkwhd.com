@@ -2,6 +2,12 @@
     --color-black: #070707;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-size: 16px;
     line-height: 22px;
@@ -24,8 +30,19 @@ h3 {
 }
 
 header > h3 > a {
-    text-decoration: none;
     color: var(--color-black);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .title {
@@ -34,6 +51,122 @@ header > h3 > a {
 
 .underlined-text {
     color: var(--color-black);
-    text-decoration: none;
     box-shadow: inset 0 -0.4em 0 0 #df8888;
+}
+
+/* root */
+.site-wrapper {
+    width: 85%;
+    margin: 32px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar-wrapper {
+    width: 20%;
+    height: 100%;
+}
+
+/* bio */
+
+.bio-wrapper > * {
+    margin-top: 20px;
+}
+
+.bio-wrapper > :first-child {
+    margin: 0;
+}
+
+.bio__author-avatar {
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.bio__author-nickname {
+    font-size: 18px;
+}
+
+.bio__author-nickname > a {
+    color: #000;
+}
+
+.bio__author-summary {
+    color: #727272;
+}
+
+
+/* navigator */
+
+.navigator {
+    margin-top: 18px;
+}
+
+.navigator > ul > li {
+    margin-top: 5px;
+}
+
+.navigator > ul > li > a {
+    color: var(--color-black);
+}
+
+/* content */
+
+.content-wrapper {
+    position: relative;
+    width: 70%;
+    padding-left: 0em;
+}
+
+.content-wrapper::before {
+    background: linear-gradient(180deg,#e6e6e6 0,#e6e6e6 48%,#fff);
+    position: absolute;
+    content: "";
+    width: .0625rem;
+    height: 540px;
+    left: -35px;
+}
+
+.content-wrapper > * {
+    margin-top: 40px;
+}
+
+.content-wrapper > :first-child {
+    margin: 0;
+}
+
+.local-article {
+    margin: 0;
+}
+
+.local-article > * {
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .site-wrapper {
+        display: block;
+    }
+
+    .content-wrapper {
+        margin: 0;
+        padding: 0;
+        padding-top: 4em;
+        width: 100%;
+    }
+
+    .sidebar-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .content-wrapper::before {
+        background: none;
+        position: unset;
+        content: "";
+        width: 0;
+        height: 0;
+    }
 }

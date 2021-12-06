@@ -6,8 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `youkwhd`,
     author: {
-      name: `youkwhd`,
-      summary: `a self-taught developer`,
+      name: `Ahmad Fattan`,
+      nickname: `youkwhd`,
+      summary: `I'm a self-taught developer, i also read books and follow where my art takes me.`,
     },
     description: `brand new blog as a journey of a self-taught dev`,
     siteUrl: `https://youkwhd.github.io/`,
