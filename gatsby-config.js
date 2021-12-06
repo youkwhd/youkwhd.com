@@ -102,7 +102,7 @@ module.exports = {
         gtagConfig: {
           anonymize_ip: true,
           cookie_expires: 0,
-          cookie_flags: "SameSite=None;Secure",
+          cookie_flags: "SameSite=None; Secure",
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
