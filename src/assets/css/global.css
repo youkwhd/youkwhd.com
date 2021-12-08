@@ -116,7 +116,7 @@ a:hover {
 .content-wrapper {
     position: relative;
     width: 70%;
-    padding-left: 0em;
+    padding-left: 0;
 }
 
 .content-wrapper::before {
