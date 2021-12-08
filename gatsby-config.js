@@ -8,7 +8,7 @@ module.exports = {
     author: {
       name: `Ahmad Fattan`,
       nickname: `youkwhd`,
-      summary: `I'm a self-taught developer, i also read books and follow where my art takes me.`,
+      summary: `I'm a self-taught developer, I enjoy problem solving as if it's my hobby.`,
     },
     description: `brand new blog as a journey of a self-taught dev`,
     siteUrl: `https://youkwhd.github.io/`,
