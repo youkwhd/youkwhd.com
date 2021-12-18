@@ -47,7 +47,7 @@ if you are new to css, you might not know this `content` property. so what does 
 
 if you still have some problem with the content property, you should [read this article](https://www.w3schools.com/CSSref/pr_gen_content.asp) from w3schools.com
 
-with `position: absolute;` being casted, we can visually see and determine the position of the underline. so it will stick to the bottom by adding the `bottom: 0;` and `left: 0;` to the code. but the problem here is that, the line will cover up your link, so what's the solution?
+with `position: absolute` being casted, we can visually see and determine the position of the underline. so it will stick to the bottom by adding the `bottom: 0` and `left: 0` to the code. but the problem here is that, the line will cover up your link, so what's the solution?
 
 using `z-index` will make a specific 'layer' to be on top or on the bottom. in this case, we need the line to be on the bottom of the link, so we are going to make it minus in order to make it stick to the bottom.
 
@@ -72,8 +72,8 @@ a::after {
 }
 ```
 
-### other way to make:
-you can also use `box-shadow` to accomplish this:
+### using box shadow:
+you can also use `box-shadow` to accomplish the effect, this method is far more the **better solution**.
 
 ```css
 a {

@@ -46,9 +46,9 @@ then the array will be sorted ascendingly, why sorting it tho? by sorting the ar
 
 what's the conclusion of sorting the array? knowing that we would have the biggest number at the last index, we'll have an *assumption* that the second biggest number is the index of the biggest number - 1 (ascending) or + 1 (descending).
 
-then we could just say: `return sortedArr[i - 1];` (without looping)
+then we could just say: `return sortedArr[i - 1]` (without looping)
 
-but, on the shown code above, we're iterating through the `sortedArr`, but why? *assuming* that the array would be `const nums = [10, 10, 10, 10];` if we were sorting it, i mean, it already is sorted, so the function would just return **10**, but there is no 'second largest number', what the function should do is that, it would return an error, so then we could just return nothing / undefined.
+but, on the shown code above, we're iterating through the `sortedArr`, but why? *assuming* that the array would be `const nums = [10, 10, 10, 10]` if we were sorting it, i mean, it already is sorted, so the function would just return **10**, but there is no 'second largest number', what the function should do is that, it would return an error, so then we could just return nothing / undefined.
 
 that's why we need to iterate through the array, to avoid unwanted errors, by decrementing the current number index by 1, we would know the next value of the array, if it's not the same as the current value, meaning it's not `[10, 10]` but rather be `[<any other number>, 10]` if so, then we could just return the `<any other number>` as the second largest number.
 

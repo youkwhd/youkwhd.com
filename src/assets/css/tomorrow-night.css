@@ -16,6 +16,8 @@ pre[class*="language-"] {
     word-wrap: normal;
     line-height: 1.5;
 
+    font-size: 14px;
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
@@ -42,6 +44,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
     white-space: pre;
+    padding: 2px 4px;
 }
 
 .token.comment,
