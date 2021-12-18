@@ -16,7 +16,7 @@ const Home = ({ data }) => {
 			<Headline>
 				<h1>Looking For A <span className="highlighted-text">Web Developer</span>?</h1>
 				{/* char escaped */}
-				<p>I'm a Junior Full-Stack Web Developer Living In Jakarta, Indonesia. I Make Web Applications, Usually With React</p>
+				<p>I'm a Junior Full-Stack Web Developer living in Jakarta, Indonesia. I make Web Applications, usually with React</p>
 
 				<Link to="/projects"><Button>Review My Projects</Button></Link>
 			</Headline>
