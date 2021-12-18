@@ -25,7 +25,7 @@ const Home = ({ data }) => {
 					<div className="main-container">
 						<p>
 							I primarily use <strong>TypeScript</strong> along side with <strong>Next.js</strong>, i'm comfortable developing on both frontend and backend.
-							From day to day developing web applications, i've gained much experience with my <Link to="/projects">projects</Link>. I am also attentive to the details of
+							From day to day developing web applications, i've gained much experience with my <Link to="/projects">projects</Link>. I'm also attentive to the details of
 							the application security.
 						</p>
 
