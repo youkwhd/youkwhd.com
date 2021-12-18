@@ -96,7 +96,7 @@ module.exports = {
         fonts: [
           `DM Serif Display`,
           `PT Serif`,
-          `Roboto\:100,100i,300,300i,400,400i,500,500i,500b,700,700i,900,900i` // you can also specify font weights and styles
+          `Roboto:100,100i,300,300i,400,400i,500,500i,500b,700,700i,900,900i` // you can also specify font weights and styles
         ],
         display: 'swap'
       }
