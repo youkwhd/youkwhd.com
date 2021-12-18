@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Headline from "../components/Headline";
-import Sidebar from "../components/Sidebar";
 import Seo from "../components/Seo";
+import Sidebar from "../components/Sidebar";
+import Headline from "../components/Headline";
 
 const Blog = ({ data }) => {
 	const siteMetadata = data.site.siteMetadata;
@@ -22,36 +22,20 @@ const Blog = ({ data }) => {
 				<div className="main-wrapper">
 					<div className="main-container">
 						{posts.map((post) => {
-							const title = post.frontmatter.title;
-							const slugLink = post.slug;
-
 							return (
-								<>
-									<article key={post.slug} className="global-article">
-										<p key={Math.random()}>
-											<strong><Link to={`/${slugLink}`}>{title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
-										</p>
-									</article>
-								</>
+								<article key={post.slug} className="global-article">
+									<p>
+										<strong className="sidebar-title"><Link to={`/${post.slug}`}>{post.frontmatter.title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
+									</p>
+								</article>
 							);
 						})}
 					</div>
 					<Sidebar>
-						<h1>Recent Posts</h1>
-						{posts.map((post) => {
-							const title = post.frontmatter.title;
-							const slugLink = post.slug;
-
-							return (
-								<>
-									<article key={post.slug} className="global-article">
-										<p key={Math.random()}>
-											<strong><Link to={`/${slugLink}`}>{title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
-										</p>
-									</article>
-								</>
-							);
-						})}
+						<p>
+							These are my <strong>archive</strong>, articles that i made from 2021 ‒ now.
+							Thank you for reading!
+						</p>
 					</Sidebar>
 				</div>
 			</main>

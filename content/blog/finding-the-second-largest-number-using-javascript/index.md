@@ -9,7 +9,7 @@ after finding the **biggest** number in an array, if you are wondering how to ge
 
 ### get started
 
-if you don't have an array, generate the array using [this website](https://array-generator.netlify.app) ;D
+if you don't have an array, generate the array using [this website](https://array-generator.vercel.app) ;D
 
 using first method:
 

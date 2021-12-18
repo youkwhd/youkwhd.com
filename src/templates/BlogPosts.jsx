@@ -2,10 +2,9 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Headline from "../components/Headline";
-// import LinkButton from "../components/Sidebar";
-import Sidebar from "../components/Sidebar";
 import Seo from "../components/Seo";
+import Sidebar from "../components/Sidebar";
+import Headline from "../components/Headline";
 
 const BlogPosts = ({ data }) => {
     const post = data.mdx;
@@ -34,17 +33,12 @@ const BlogPosts = ({ data }) => {
                     <Sidebar>
                         <h1>Recent Posts</h1>
                         {posts.map((post) => {
-                            const title = post.frontmatter.title;
-                            const slugLink = post.slug;
-
                             return (
-                                <>
-                                    <article key={post.slug} className="global-article">
-                                        <p key={Math.random()}>
-                                            <strong><Link to={`/${slugLink}`}>{title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
-                                        </p>
-                                    </article>
-                                </>
+                                <article key={post.slug} className="global-article">
+                                    <p>
+                                        <strong className="sidebar-title"><Link to={`/${post.slug}`}>{post.frontmatter.title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
+                                    </p>
+                                </article>
                             );
                         })}
                     </Sidebar>
