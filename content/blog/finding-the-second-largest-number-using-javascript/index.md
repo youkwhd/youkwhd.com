@@ -1,5 +1,5 @@
 ---
-title: finding the second largest number using javascript
+title: Finding The Second Largest Number Using JavaScript
 author: youkwhd
 date: "2021-10-22"
 description: after finding the biggest number in an array, if you are wondering how to get the second largest number, then this article might be the one that you're looking for, plus i will explain how it works.

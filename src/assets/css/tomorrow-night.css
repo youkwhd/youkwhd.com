@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
     color: #ccc;
     background: none;
-    font-family: "anonymous_proregular", monospace;
+    font-family: monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;

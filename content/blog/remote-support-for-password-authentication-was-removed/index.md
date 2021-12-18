@@ -1,5 +1,5 @@
 ---
-title: "remote: support for password authentication was removed on August 13, 2021"
+title: "Remote: Support for Password Authentication was Removed on August 13, 2021"
 author: "youkwhd"
 date: "2021-10-04"
 description: 'as the error said "remote: support for password authentication was removed on August 13, 2021. solved" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens.' 

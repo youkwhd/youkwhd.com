@@ -1,5 +1,5 @@
 ---
-title: a guide to style text or underlined links
+title: A Guide to Style Text or Underlined Links
 author: youkwhd
 date: "2021-09-27"
 description: here is a way to style text or underlined links with pure css (understanding pseudo elements)

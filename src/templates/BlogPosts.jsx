@@ -1,28 +1,57 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Layout from "../components/Layout";
+import Headline from "../components/Headline";
+// import LinkButton from "../components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import Seo from "../components/Seo";
-import BlankAnchor from "../components/BlankAnchor";
 
-const BlogPosts = ({ data, location }) => {
+const BlogPosts = ({ data }) => {
     const post = data.mdx;
+    const posts = data.allMdx.nodes;
 
     return (
-        <Layout location={location} title={data.site.siteMetadata.title}>
-            <Seo 
-                title={post.frontmatter.title.toLowerCase()} 
-                description={post.frontmatter.description || post.excerpt}    
+        <>
+            <Seo
+                title={post.frontmatter.title.toLowerCase()}
+                description={post.frontmatter.description || post.excerpt}
             />
-            <h3 className="title">{post.frontmatter.title}</h3>
-            <article className="local-article">
-                <MDXRenderer>{post.body}</MDXRenderer>
-            </article>
-            <footer>
-                <p>if you find a typo, <BlankAnchor href={`https://github.com/youkwhd/youkwhd.github.io/tree/master/content/${post.slug}index.md`}>check the markdown file</BlankAnchor> on this page repo. then <BlankAnchor href="https://github.com/youkwhd/youkwhd.github.io/issues">open an issue</BlankAnchor> on the repo.</p>
-            </footer>
-        </Layout>
+            <Headline>
+                <h1><Link to="/">{data.site.siteMetadata.author.nickname}</Link></h1>
+                <p>
+                    Blog — <span className="highlighted-text">a discussion or informational website</span> published on the World Wide Web consisting of discrete, often informal diary-style text entries.
+                </p>
+            </Headline>
+            <main>
+                <div className="main-wrapper">
+                    <div className="main-container">
+                        <h2 className="article-title">{post.frontmatter.title}</h2>
+                        <article>
+                            <MDXRenderer>{post.body}</MDXRenderer>
+                        </article>
+                    </div>
+                    <Sidebar>
+                        <h1>Recent Posts</h1>
+                        {posts.map((post) => {
+                            const title = post.frontmatter.title;
+                            const slugLink = post.slug;
+
+                            return (
+                                <>
+                                    <article key={post.slug} className="global-article">
+                                        <p key={Math.random()}>
+                                            <strong><Link to={`/${slugLink}`}>{title}</Link></strong> — {post.frontmatter.description} posted at <strong>{post.frontmatter.date}.</strong>
+                                        </p>
+                                    </article>
+                                </>
+                            );
+                        })}
+                    </Sidebar>
+                </div>
+            </main>
+        </>
+
     );
 }
 
@@ -32,7 +61,9 @@ export const pageQuery = graphql`
     query PostQuery($slug: String!) {
         site {
             siteMetadata {
-                title
+                author {
+                    nickname
+                }
             }
         }
         mdx(slug: {eq: $slug}) {
@@ -46,5 +77,16 @@ export const pageQuery = graphql`
                 title
             }
         }
+        allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
+    		nodes {
+    			excerpt
+				slug
+    			frontmatter {
+        			date(formatString: "MMMM DD, YYYY")
+        			description
+        			title
+    			}
+  			}
+		}
     }
 `;
