@@ -65,7 +65,7 @@ you can have a non-opaque terminal but under a certain conditions, e.g the termi
 
 thus will render out:
 
-```console
+```sh
 ~ > echo "youkwhd.github.io" 
 ~ > yay -S icecat vim
 ``` 
@@ -80,7 +80,7 @@ in case if you were using cool and cozy wallpapers, then you can do something li
 
 the following prompt would be:
 
-```console
+```sh
 [youkwhd@severus ~]$ echo "youkwhd.github.io"
 [youkwhd@severus ~]$ yay -S icecat vim
 ```
