@@ -1,0 +1,111 @@
+---
+title: "What makes a GNU/Linux rice looks good"
+author: "youkwhd"
+date: "2022-01-14"
+description: "I remember my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts"
+---
+
+
+I remember my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts.
+
+## Window Managers doesn't affect anything
+
+Well, i like suckless softwares; dwm, dmenu, st, etc. The way it's configured, the patches that is available, and it is widely customizable. What about other Window Managers? they all the same, it's just the programming language that's differ from others, the maintainer, functionality. but really, nothing matters but the themes, fonts, emojis (if used) or even icons that presents.
+
+take a look at my recent linux rice:
+
+![youkwhd's GNU/Linux rice](./wm__screenshot-03.png)
+
+the color scheme matched the wallpaper in the background, st has transparency, then there's big gaps in between. Also, the font matched with the environment.
+
+> here are my [dotfiles](https://github.com/youkwhd/dotfiles) configs.
+
+the fact is that i can make the same layout using i3, i mean the **exact same** as the screenshot above. Now we know that any Window Managers are viable. Use the one that you wish to use.
+
+
+## Things that really makes it perfect
+
+After months of ricing GNU/Linux, now i can share the things i think really makes the difference. These are my thoughts on why some GNU/Linux rice looks bad.
+
+take a look at my first rice, i was using vanilla i3 at that time:
+
+![youkwhd's first GNU/Linux rice](./wm__screenshot-04.png)
+
+what do you see? Gruvbox. Nothing but a fullscreen terminal with i3status on top, no gaps, nothing. Straight plain.
+
+what about the color scheme, isn't Gruvbox a good color scheme? yes indeed. I personally like it. But i wouldn't ever again staring at a fullscreen terminal, it just doesn't feel good. 
+
+then i switched to i3-gaps, it looks far more better, it is an ok environment. But i don't have any wallpaper installed. As you can guess, there is nothing but a blank black wallpaper and a non-opaque terminal. The result is still as bad.
+
+Note that the font is an ok option in this case. Take a look at the i3status, one icon, then all the number stuff? what does the GiB section even mean? is it how much memory left? what is that? it confuses you. Plus the size of the i3status doesn't fit with the i3-gaps font base.
+
+at that time, i thought i've made my rice to be as perfect as i want. But as time flies, i realize that this is beyond perfect, nothing special.
+
+## Add some gaps even if it's small
+
+you will feel better if you add gaps. Just, trust me. It's the UI/UX thing. even a little bit of gaps can change the feel, just maybe 5 pixels for each window. I promise your WM will look better and fresh.
+
+take a look at my i3 config as if it has some gaps:
+
+![youkwhd's i3-gaps](./wm__screenshot-05.png)
+
+you've made some progress, and you've successfully made your window manager better.
+
+## Use colorized wallpapers or plain wallpapers
+
+what you will regularly actually see is the background. Really tho, use one that looks super cool and the one that matches your style preferences. In case if you don't like to use wallpapers, you can use any plain wallpaper as an alternative. if you did used a plain wallpaper, it should match the terminal background color.
+
+for an example; if i use a plain black wallpaper, then the terminal background saturation should be a little bit higher, still black but has more light on it.
+
+## Determine your terminal transparency and prompt
+
+you can have a non-opaque terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist. Also, consider the prompt (PS1) to me minimal as well. for example: 
+
+`export PS1="\W > \[$(tput sgr0)\]"`
+
+thus will render out:
+
+```console
+~ > echo "youkwhd.github.io" 
+~ > yay -S icecat vim
+``` 
+
+> found this screenshot from the internet
+
+![terminal example](./wm__screenshot-07.jpg)
+
+in case if you were using cool and cozy wallpapers, then you can do something like a really long prompt, for example:
+
+`export PS1="[\u@\h \W]\$ "`
+
+the following prompt would be:
+
+```console
+[youkwhd@severus ~]$ echo "youkwhd.github.io"
+[youkwhd@severus ~]$ yay -S icecat vim
+```
+
+if you chose to use the long-prompt-like one, then i wouldn't have to consider paddings, but it depens on your preferences. Keep experimenting and you'll eventually like it.
+
+## X Bar status
+
+your window manager bar (i3bar, dwmblocks, etc) are one of the aspect of making a good rice. A messy, gray colored font for X bar will sometimes resulting in a bad X bar, and could even make it worse to read. What you can do is to add some life into it, an example of it is to use emojis as an advantage for you to make your X bar pretty. Or you can even use font-awesome as an alternative.
+
+
+## Terminal shadow and outline
+
+adding these can result a nice feel, and make your terminal stands out. Tho it's only an additional option, add what's need, don't over tweak things.
+
+> i also found this screenshot from the internet
+
+![terminal shadow and outline](./wm__screenshot-08.jpg)
+
+
+## Conclusion
+
+here comes the conclusion, don't be afraid to change things up, especially for your own good. If you are too afraid to make a mistake, configure a virtual machine, then use it as an experiment GNU/Linux rice.
+
+keep your attention to small details like spaces in between windows. When it comes to customizing your GNU/Linux, if you ever feel like it's wonky, re-check if anything doesn't make sense, e.g; your theme doesn't match, or if it's too bright.
+
+happy hacking folks!
+
