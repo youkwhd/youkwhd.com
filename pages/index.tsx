@@ -1,9 +1,19 @@
 import type { NextPage } from 'next';
+import { useEffect, useState } from 'react';
+import { convertToHTML } from '../utils/convertToHTML';
 
 const Home: NextPage = () => {
-  return (
-	<p>hello world</p>
-  );
+	const [htmd, setHtmd] = useState(null);
+	
+	useEffect(async () => {
+		const data = await convertToHTML("hello, world");
+		setHtmd(data);
+	}, [htmd]);
+
+	if (htmd) return <>{htmd}</>;
+
+	return <>converting markdown...</>;
 }
 
 export default Home;
+
