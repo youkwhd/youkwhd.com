@@ -3,11 +3,15 @@ import { useEffect, useState } from 'react';
 import { convertToHTML } from '../utils/convertToHTML';
 
 const Home: NextPage = () => {
-	const [htmd, setHtmd] = useState(null);
+	const [htmd, setHtmd] = useState("");
 	
-	useEffect(async () => {
-		const data = await convertToHTML("hello, world");
-		setHtmd(data);
+	useEffect(() => {
+		const getData = async () => {
+			const data = await convertToHTML("hello, world");
+			setHtmd(data);
+		};
+
+		getData();
 	}, [htmd]);
 
 	if (htmd) return <>{htmd}</>;
