@@ -1,3 +1,5 @@
 # youkwhd's personal site
 
-this site is using next.js techlogies
+> live site is outdated. it still uses gatsby
+
+this site is using next.js
