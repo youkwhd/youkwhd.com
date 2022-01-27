@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 		getData();
 	}, [htmd]);
 
-	if (htmd) return <div dangerouslySetInnerHTML={{ __html: htmd }}></div>;
+	if (htmd) return <div dangerouslySetInnerHTML={{ __html: htmd }} />;
 
 	return <>converting markdown...</>;
 }
