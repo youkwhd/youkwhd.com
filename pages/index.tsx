@@ -1,23 +1,15 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
-import { convertToHTML } from '../utils/convertToHTML';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
-	const [htmd, setHtmd] = useState("");
-	
-	useEffect(() => {
-		const getData = async () => {
-			const data = await convertToHTML("hello, world");
-			setHtmd(data);
-		};
-
-		getData();
-	}, [htmd]);
-
-	if (htmd) return <div dangerouslySetInnerHTML={{ __html: htmd }} />;
-
-	return <>converting markdown...</>;
+	return (
+		<>
+			<h1>youkwhd</h1>
+			<Link href="/blog">
+				<a>blog</a>
+			</Link>
+		</>
+	);
 }
 
 export default Home;
-
