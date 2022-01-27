@@ -28,10 +28,10 @@ export async function getStaticProps({ params }: Params) {
 
     return {
         props: {
-        post: {
-            ...postKeys,
-            content,
-        },
+            post: {
+                ...postKeys,
+                content,
+            },
         },
     }
 }
@@ -41,11 +41,11 @@ export async function getStaticPaths() {
 
     return {
         paths: posts.map((post) => {
-        return {
-            params: {
-            slug: post.slug,
-            },
-        }
+            return {
+                params: {
+                slug: post.slug,
+                },
+            }
         }),
         fallback: false,
     }

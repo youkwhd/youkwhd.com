@@ -29,16 +29,16 @@ const BlogPage = ({ allPosts }: any) => {
 export default BlogPage;
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'excerpt',
-  ])
+	const allPosts = getAllPosts([
+		'title',
+		'date',
+		'slug',
+		'excerpt',
+	])
 
-  return {
-    props: {
-		allPosts	
-	},
-  }
+	return {
+		props: {
+			allPosts	
+		},
+	}
 }
