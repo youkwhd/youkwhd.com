@@ -24,7 +24,7 @@ const BlogPage = ({ allPosts }: any) => {
 			})}
 		</>
 	);
-}
+};
 
 export default BlogPage;
 
@@ -40,5 +40,5 @@ export async function getStaticProps() {
 		props: {
 			allPosts	
 		},
-	}
+	};
 }

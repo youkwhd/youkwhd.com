@@ -6,7 +6,7 @@
 
 body {
 	font-size: 16px;
-    line-height: 22px;
+    /* line-height: 22px; */
     font-family: sans-serif;
 }
 
@@ -23,6 +23,10 @@ th, td {
 
 h2 {
     padding-top: 20px;
+}
+
+pre {
+	overflow: auto;
 }
         
 .title {

@@ -4,6 +4,8 @@ import { markdownToHTML } from "../../utils/markdownConverter";
 const BlogContentPage = ({ post }: any) => {
 	return (
 		<>
+			<h1>{post.title}</h1>
+			<hr />
 			<div dangerouslySetInnerHTML={{ __html: post.content }} />
 		</>
 	);
@@ -11,34 +13,37 @@ const BlogContentPage = ({ post }: any) => {
 
 export default BlogContentPage;
 
-type Params = {
+type params = {
     params: {
         slug: string
     }
-}
+};
 
-export async function getStaticProps({ params }: Params) {
-    const postKeys = getPostBySlug(params.slug, [
+export async function getStaticProps({ params }: params) {
+    const postkeys = getPostBySlug(params.slug, [
         'slug',
         'title',
         'content',
     ]);
 
-    const content = await markdownToHTML(postKeys.content || '');
+    const content = await markdownToHTML(postkeys.content || '');
 
     return {
         props: {
             post: {
-                ...postKeys,
+                ...postkeys,
                 content,
             },
         },
-    }
+    };
 }
 
 export async function getStaticPaths() {
-    const posts = getAllPosts(['slug']);
+    const posts = getAllPosts([
+        'slug'
+    ]);
 
+	// all the paths that's possible to be rendered out	
     return {
         paths: posts.map((post) => {
             return {
@@ -48,5 +53,5 @@ export async function getStaticPaths() {
             }
         }),
         fallback: false,
-    }
+    };
 }
