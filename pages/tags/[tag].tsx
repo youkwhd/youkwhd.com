@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "../../utils/getPosts";
 
-export default function TagPage({ filteredPosts }: any) {
+export default function TagRelatePage({ filteredPosts }: any) {
 	return (
 		<>
 			{filteredPosts.map((post: any) => {
