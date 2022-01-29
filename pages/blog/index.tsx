@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getAllPosts } from '../../utils/getPosts';
 
-const BlogPage = ({ allPosts }: any) => {
+export default function BlogPage({ allPosts }: any) {
 	return (
 		<>
 			{allPosts.map((post: any) => {
@@ -17,6 +17,19 @@ const BlogPage = ({ allPosts }: any) => {
 							{post.date.split("T")[0]}
 							<br />
 							<br />
+							tags:
+							<ul>
+								{post.tags.map((tag: string, index: number) => {
+									return (
+										<li>
+											<Link as={`/tags/${post.parsedTags[index]}`} href="/tags/[tag]">
+												{tag}
+											</Link>
+										</li>
+									);
+								})}
+							</ul>
+							<br />
 							{post.excerpt}
 						</ul>
 					</>
@@ -24,17 +37,17 @@ const BlogPage = ({ allPosts }: any) => {
 			})}
 		</>
 	);
-};
-
-export default BlogPage;
+}
 
 export async function getStaticProps() {
 	const allPosts = getAllPosts([
 		'title',
+		'tags',
+		'parsedTags',
 		'date',
 		'slug',
 		'excerpt',
-	])
+	]);
 
 	return {
 		props: {

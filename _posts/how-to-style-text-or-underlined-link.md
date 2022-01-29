@@ -1,6 +1,9 @@
 ---
 title: A Guide to Style Text or Underlined Links
 date: "2021-09-27"
+tags:
+  - html
+  - css
 excerpt: here is a way to style text or underlined links with pure css (understanding pseudo elements)
 ---
 

@@ -1,6 +1,9 @@
 ---
 title: "What makes a GNU/Linux rice looks good"
 date: "2022-01-14"
+tags:
+  - gnu/linux
+  - window managers
 excerpt: "I remembered my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts"
 ---
 

@@ -1,7 +1,7 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
 
-const BlogContentPage = ({ post }: any) => {
+export default function BlogContentPage({ post }: any) {
 	return (
 		<>
 			<h1>{post.title}</h1>
@@ -11,15 +11,13 @@ const BlogContentPage = ({ post }: any) => {
 	);
 }
 
-export default BlogContentPage;
-
-type params = {
+type Params = {
     params: {
         slug: string
     }
 };
 
-export async function getStaticProps({ params }: params) {
+export async function getStaticProps({ params }: Params) {
     const postkeys = getPostBySlug(params.slug, [
         'slug',
         'title',
