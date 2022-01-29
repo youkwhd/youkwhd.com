@@ -8,7 +8,7 @@ export default function TagsPage({ allTags }: any) {
             <ul>
                 {allTags.tags.map((tag: string, index: number) => {
                     return (
-                        <li>
+                        <li key={index}>
                             <Link as={`/tags/${allTags.parsedTags[index]}`} href="/tags/[tag]">
                                 {tag}
                             </Link>
