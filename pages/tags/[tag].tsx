@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { getAllPosts } from "../../utils/getPosts";
 
-export default function TagRelatePage({ filteredPosts }: any) {
+export default function TagRelatePage({ filteredPosts, currentPostTag }: any) {
 	return (
 		<>
+			<h1>{currentPostTag} related posts:</h1>
 			{filteredPosts.map((post: any) => {
 				return (
                     <ul key={post.slug}>
@@ -12,15 +13,12 @@ export default function TagRelatePage({ filteredPosts }: any) {
                                 {post.title}
                             </Link>
                         </li>
-                        <hr />
-                        {post.date.split("T")[0]}
-                        <br />
-                        <br />
+						<p>- written at: {post.date.split("T")[0]}</p>
                         tags:
                         <ul>
                             {post.tags.map((tag: string, index: number) => {
                                 return (
-                                    <li key={index}>
+									<li className="no-padding" key={index}>
                                         <Link as={`/tags/${post.parsedTags[index]}`} href="/tags/[tag]">
                                             {tag}
                                         </Link>
@@ -53,11 +51,19 @@ export const getStaticProps = ({ params }: Params) => {
 		'excerpt',
 	]);
     
-	const filteredPosts = allPosts.filter((post) => post.parsedTags.includes(params.tag)); 
-		
+	// filter all the posts that has the current tag.
+	const filteredPosts = allPosts.filter((post) => post.parsedTags.includes(params.tag));
+
+	// get the un-parsed tag
+	let currentPostTag: string = "";
+	for (let i = 0; i < filteredPosts[0].parsedTags.length; i++) {
+		if (filteredPosts[0].parsedTags[i] === params.tag) currentPostTag = filteredPosts[0].tags[i];  
+	}
+
 	return {
 		props: {
-			filteredPosts
+			filteredPosts,
+			currentPostTag
 		}
 	}
 };
