@@ -1,5 +1,5 @@
 ---
-title: Finding The Second Largest Number Using JavaScript
+title: Finding the second largest number using javascript
 tags:
   - javascript
 date: "2021-10-22"

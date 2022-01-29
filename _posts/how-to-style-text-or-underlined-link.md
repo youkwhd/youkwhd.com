@@ -1,5 +1,5 @@
 ---
-title: A Guide to Style Text or Underlined Links
+title: A guide to style text or underlined links
 date: "2021-09-27"
 tags:
   - html

@@ -1,12 +1,12 @@
 ---
-title: "Remote: Support for Password Authentication was Removed on August 13, 2021"
+title: "Remote: support for password authentication was removed on august 13, 2021"
 date: "2021-10-04"
 tags:
   - git
 excerpt: 'as the error said "remote: support for password authentication was removed on August 13, 2021. solved" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens.' 
 ---
 
-as the error said "remote: support for password authentication was removed on August 13, 2021. solved" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens. which is an alternative for password auth.
+as the error said "remote: support for password authentication was removed on August 13, 2021" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens. which is an alternative for password auth.
 
 ## Creating a token
 head to github main page [https://github.com](https://github.com)
@@ -59,8 +59,4 @@ to login, follow this code:
 gh auth login
 ```
 
-then gh will ask some question, you can directly use password or PATs to authenticate.
-
-## Conclusion
-
-now you've installed `gh` github cli tool. And made your first personal access token (PATs) for github. I hope it solved your problem. thank you for reading this article, happi hacking.
+then gh will ask some question, you can directly use password or PATs to authenticate. Now you've installed `gh` github cli tool. And made your first personal access token (PATs) for github. I hope it solved your problem. thank you for reading this article, happi hacking.

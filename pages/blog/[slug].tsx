@@ -5,7 +5,6 @@ export default function BlogContentPage({ post }: any) {
 	return (
 		<>
 			<h1>{post.title}</h1>
-			<hr />
 			<div dangerouslySetInnerHTML={{ __html: post.content }} />
 		</>
 	);
