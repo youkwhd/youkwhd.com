@@ -7,12 +7,12 @@ tags:
 excerpt: here is a way to style text or underlined links with pure css (understanding pseudo elements)
 ---
 
-designing underlined text is hard, but when it comes to styling it, it should be very easy right? yes. indeed if you know a good amount of knowledge in css, in this case, i will be using the [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) to execute the design.
+designing underlined text is hard, but when it comes to styling it, it should be very easy right? yes. indeed if you know a good amount of knowledge in css, in this case, i will be using the [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) and a built-in box shadow method to execute the design.
 
 the underlined text should look like this:  
 an example of the <a href="#" class="underlined-text">underlined text</a> is here!
 
-### the process of making
+## Using pseudo elements
 we should have a paragraph or an anchor tag to style with. to start off, i'm gonna make a simple html code here:
 
 ```html
@@ -53,7 +53,6 @@ with `position: absolute` being casted, we can visually see and determine the po
 
 using `z-index` will make a specific 'layer' to be on top or on the bottom. in this case, we need the line to be on the bottom of the link, so we are going to make it minus in order to make it stick to the bottom.
 
-### final code
 so whether you've read how to make it or not, here is the final code to copy paste:
 
 ```css
@@ -74,7 +73,7 @@ a::after {
 }
 ```
 
-### using box shadow:
+## Using box shadow
 you can also use `box-shadow` to accomplish the effect, this method is far more the **better solution**.
 
 ```css
@@ -83,9 +82,11 @@ a {
 }
 ```
 
+## Why it is recommended to use box shadow instead of pseudo elements
+when you're using pseudo elements, all of the sudden it looks like it's working at first. But then the text is resized, and apparently, the underline doesn't adapt with the current size. You can compare it yourself by resizing your browser size.
 
 
-### conclusion
+## Conclusion
 there is a lot of way when it comes to styling in web development. pick a good and efficient way to make the css globally reuseable. Any solution would work if you put effort into it. i hope this article helps you to understand the use of [css pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp)
 
 however, `box-shadow` is the better way to implement the underlined text, happi hacking.

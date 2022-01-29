@@ -8,11 +8,11 @@ excerpt: after finding the biggest number in an array, if you are wondering how 
 
 after finding the **biggest** number in an array, if you are wondering how to get the **second** largest number, you're in the right place.
 
-### get started
+## Get started
 
 if you don't have an array, generate the array using [this website](https://array-generator.vercel.app) ;D
 
-using first method:
+### using first method:
 
 ```js
 const nums = [78, 2, 61, 33, 97, 69, 54, 86, 90, 35, 79, 30, 80, 81, 80, 58, 51, 32, 9, 8, 59, 34, 50];
@@ -39,9 +39,7 @@ const findSecondLargestNum = (arr) => {
 
 ```
 
-### how does this method work?
-
-the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
+how does this method work? the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
 
 then the array will be sorted ascendingly, why sorting it tho? by sorting the array, the biggest number position should be at the last. same as if you were sorting it descendingly, the biggest number position would be at the first. 
 
@@ -57,7 +55,7 @@ why even bother to check if the next index of `sortedArr[i - 1]` is not undefine
 
 what's the last `return;` does? if the itteration condition doesn't met the requirement, then just return nothing / undefined.
 
-using the second method:
+### using the second method:
 
 ```js
 const nums = [78, 2, 61, 33, 97, 69, 54, 86, 90, 35, 79, 30, 80, 81, 80, 58, 51, 32, 9, 8, 59, 34, 50];
@@ -95,19 +93,15 @@ const findSecondLargestNum = (arr) => {
 };
 ```
 
-### how does this method work?
+## How does this method work?
 
-same as the first method, the function `findSecondLargestNum` will take a parameter, an array filled with numbers.
-
-then as the code above said, it will find the largest number first.
-
-after so, it will try to find the second largest number by iterating over the array.
+same as the first method, the function `findSecondLargestNum` will take a parameter, an array filled with numbers.Then as the code above said, it will find the largest number first, after so, it will try to find the second largest number by iterating over the array.
 
 the condition is here explained:  
 if the current array index value is less than the `biggestNum`, and not already in the `historyArr` (historyArr is an array of all the numbers that has been iterated through) then the `secondLargest` will be the current index. so then the final output would be: *90*.
 
 if you see the variable `secondLargest`, it contains the number **0**, but why? the number **0** could mean `false`, so if there is no 'the second largest number', it would just return **0** instead of `arr[0]`.  
 
-### conclusion
+## Conclusion
 
 there is a lot of ways to get the second largest number, here i provide some of the 'easy way to understand' methods, hapi hacking.
