@@ -23,6 +23,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     const parseTag = (tag: string) => {
         tag = tag.replace(" ", "-");
         tag = tag.replace("/", "-");
+        tag = tag.replace(".", "-");
     
         return tag;
     };
