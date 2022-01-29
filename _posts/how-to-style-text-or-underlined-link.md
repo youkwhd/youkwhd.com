@@ -1,6 +1,6 @@
 ---
 title: A guide to style text or underlined links
-date: "2021-09-27"
+date: "2021-09-27T17:15:21.982Z"
 tags:
   - html
   - css
