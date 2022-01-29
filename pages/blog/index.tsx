@@ -4,6 +4,7 @@ import { getAllPosts } from '../../utils/getPosts';
 export default function BlogPage({ allPosts }: any) {
 	return (
 		<>
+            <h1>blog posts:</h1>
 			{allPosts.map((post: any) => {
 				return (
 					<ul key={post.slug}>
@@ -12,15 +13,12 @@ export default function BlogPage({ allPosts }: any) {
 								{post.title}
 							</Link>
 						</li>
-						<hr />
-						{post.date.split("T")[0]}
-						<br />
-						<br />
+						<p>- written at: {post.date.split("T")[0]}</p>
 						tags:
 						<ul>
 							{post.tags.map((tag: string, index: number) => {
 								return (
-									<li key={index}>
+									<li className="no-padding" key={index}>
 										<Link as={`/tags/${post.parsedTags[index]}`} href="/tags/[tag]">
 											{tag}
 										</Link>
