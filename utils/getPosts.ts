@@ -4,7 +4,6 @@ import matter from "gray-matter";
 
 const postsDirectory = join(process.cwd(), '_posts');
 
-
 export function getPostSlugs() {
 	return fs.readdirSync(postsDirectory);
 }
@@ -21,6 +20,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
     // parsing tags
     const parseTag = (tag: string) => {
+        // TODO: make it one line, learn how to regex.
         tag = tag.replace(" ", "-");
         tag = tag.replace("/", "-");
         tag = tag.replace(".", "-");
