@@ -2,12 +2,12 @@ import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
 
 export default function BlogContentPage({ post }: any) {
-	return (
-		<>
-			<h1>{post.title}</h1>
-			<div dangerouslySetInnerHTML={{ __html: post.content }} />
-		</>
-	);
+    return (
+        <>
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </>
+    );
 }
 
 type Params = {
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
         'slug'
     ]);
 
-	// all the paths that's possible to be rendered out	
+    // all the paths that's possible to be rendered out	
     return {
         paths: posts.map((post) => {
             return {

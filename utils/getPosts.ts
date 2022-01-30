@@ -5,7 +5,7 @@ import matter from "gray-matter";
 const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
-	return fs.readdirSync(postsDirectory);
+    return fs.readdirSync(postsDirectory);
 }
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
@@ -34,18 +34,18 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     type Items = { [key: string]: string }
     const items: Items = {};
 
-	// this sort does things like graphql, you'll get what you
-	// include in the fields array
+    // this sort does things like graphql, you'll get what you
+    // include in the fields array
     fields.forEach((field) => {
-		// redirect slug to not return the file extension
+        // redirect slug to not return the file extension
         if (field === 'slug') items[field] = realSlug;
 
-		// redirect content to pass the content made by matter
+        // redirect content to pass the content made by matter
         if (field === 'content') items[field] = content;
 
         if (field === 'parsedTags') items[field] = parsedTags;
 
-		// this is where all the field being passed to the items object
+        // this is where all the field being passed to the items object
         if (typeof data[field] !== 'undefined') items[field] = data[field];
     });
 
@@ -53,14 +53,14 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllPosts(fields: string[] = []) {
-	// get all slugs
+    // get all slugs
     const slugs = getPostSlugs();
 
-	// get all posts by each slugs
-	// then sort it out by date
+    // get all posts by each slugs
+    // then sort it out by date
     const posts = slugs
-		.map((slug) => getPostBySlug(slug, fields))
-		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+        .map((slug) => getPostBySlug(slug, fields))
+        .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
     return posts;
 }

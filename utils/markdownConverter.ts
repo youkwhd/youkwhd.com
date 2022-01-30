@@ -8,5 +8,5 @@ import { remark } from "remark";
 import remarkHtml from "remark-html";
 
 export async function markdownToHTML(markdown: string) {
-	return (await remark().use(remarkHtml).process(markdown)).toString();
+    return (await remark().use(remarkHtml).process(markdown)).toString();
 }

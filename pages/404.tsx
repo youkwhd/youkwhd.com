@@ -1,5 +1,5 @@
 export default function NotFound() {
-	return (
-		<>not found</>
-	);
+    return (
+        <>not found</>
+    );
 }

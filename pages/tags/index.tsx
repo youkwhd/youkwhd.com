@@ -21,20 +21,20 @@ export default function TagsPage({ allTags }: any) {
 }
 
 export async function getStaticProps() {
-	const allTags = getAllPosts([
-		'tags',
-		'parsedTags',
-	]);
+    const allTags = getAllPosts([
+        'tags',
+        'parsedTags',
+    ]);
 
     const setOfTags= new Set(allTags.map((tag) => tag.tags).flat());
     const setOfParsedTags = new Set(allTags.map((tag) => tag.parsedTags).flat());
 
-	return {
-		props: {
+    return {
+        props: {
             allTags: {
                 tags: Array.from(setOfTags),
                 parsedTags: Array.from(setOfParsedTags)
             }
-		},
-	};
+        },
+    };
 }
