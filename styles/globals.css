@@ -6,7 +6,7 @@ body {
 }
 
 pre {
-	overflow: auto;
+    overflow: auto;
 }
 
 p {
@@ -14,7 +14,7 @@ p {
 }
 
 li {
-    padding: .5em 0 .5em 0;
+    padding: .5em 0;
 }
 
 .no-padding {
@@ -23,7 +23,7 @@ li {
 
 @media (max-width: 500px) {
     body {
-        padding: 0 1em 0 1em;
+        padding: 0 1em;
     }
 }
         
