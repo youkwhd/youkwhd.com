@@ -1,16 +1,23 @@
 import { getAllPosts } from '../../utils/getPosts';
+import { PostType } from "../../types/post";
 import PostCards from "../../components/PostCards";
 
-export default function BlogPage({ allPosts }: any) {
+type Props = {
+    allPosts: PostType[];
+};
+
+const BlogPage = ({ allPosts }: Props): JSX.Element => {
     return (
         <>
             <h1>blog posts:</h1>
             <PostCards posts={allPosts} />
         </>
     );
-}
+};
 
-export async function getStaticProps() {
+export default BlogPage;
+
+export const getStaticProps = () => {
     const allPosts = getAllPosts([
         'title',
         'tags',
@@ -25,4 +32,4 @@ export async function getStaticProps() {
             allPosts	
         },
     };
-}
+};

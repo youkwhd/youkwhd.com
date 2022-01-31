@@ -1,22 +1,29 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
+import { PostType } from "../../types/post";
 
-export default function BlogContentPage({ post }: any) {
+type Props = {
+    post: PostType;
+};
+
+const BlogContentPage = ({ post }: Props): JSX.Element => {
     return (
         <>
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </>
     );
-}
+};
+
+export default BlogContentPage;
 
 type Params = {
     params: {
-        slug: string
-    }
+        slug: string;
+    };
 };
 
-export async function getStaticProps({ params }: Params) {
+export const getStaticProps = async ({ params }: Params) => {
     const postkeys = getPostBySlug(params.slug, [
         'slug',
         'title',
@@ -33,9 +40,9 @@ export async function getStaticProps({ params }: Params) {
             },
         },
     };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths = () => {
     const posts = getAllPosts([
         'slug'
     ]);
@@ -51,4 +58,4 @@ export async function getStaticPaths() {
         }),
         fallback: false,
     };
-}
+};

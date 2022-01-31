@@ -1,19 +1,27 @@
 import { getAllPosts } from "../../utils/getPosts";
+import { PostType } from "../../types/post";
 import PostCards from "../../components/PostCards";
 
-export default function TagRelatePage({ filteredPosts, currentPostTag }: any) {
+type Props = {
+    filteredPosts: PostType[];
+    currentPostTag: string;
+};
+
+const TagRelatePage = ({ filteredPosts, currentPostTag }: Props): JSX.Element => {
     return (
         <>
             <h1>{currentPostTag} related posts:</h1>
             <PostCards posts={filteredPosts} />
         </>
     );
-}
+};
+
+export default TagRelatePage;
 
 type Params = {
     params: {
-        tag: string
-    }
+        tag: string;
+    };
 };
 
 export const getStaticProps = ({ params }: Params) => {
@@ -34,7 +42,8 @@ export const getStaticProps = ({ params }: Params) => {
     }
     
     let currentPostTag: string = ""; // the current location of /tags/[tag] but un-parsed
-    // get the un-parsed tag
+    // itterate through the first post, knowing that the current [tag] will always be inside
+    // the filtered post,then get the un-parsed tag
     for (let i = 0; i < filteredPosts[0].parsedTags.length; i++) {
         if (filteredPosts[0].parsedTags[i] === params.tag) { 
             // every position of parsedTag is the same as tag's

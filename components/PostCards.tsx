@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { PostType } from "../types/post";
 
-export default function PostCards({ posts }: any) {
+type Props = {
+    posts: PostType[];
+};
+
+const PostCards = ({ posts }: Props): JSX.Element => {
     return (
         <>
-            {posts.map((post: any) => {
+            {posts.map((post: PostType) => {
                 return (
                     <ul key={post.slug}>
                         <li>
@@ -35,4 +40,6 @@ export default function PostCards({ posts }: any) {
             })}
         </>
     );
-}
+};
+
+export default PostCards;

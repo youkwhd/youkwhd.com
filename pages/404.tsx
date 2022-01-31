@@ -1,5 +1,3 @@
-export default function NotFound() {
-    return (
-        <>not found</>
-    );
-}
+const NotFound = (): JSX.Element => <p>not found</p>;
+
+export default NotFound;

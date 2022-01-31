@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { getAllPosts } from "../../utils/getPosts";
 
-export default function TagsPage({ allTags }: any) {
+type Props = {
+    allTags: {
+        tags: string[];
+        parsedTags: string[];
+    };
+};
+
+const TagsPage = ({ allTags }: Props): JSX.Element => {
     return (
         <>
             <h1>available list of topics:</h1>
@@ -18,9 +25,11 @@ export default function TagsPage({ allTags }: any) {
             </ul>
         </>
     );
-}
+};
 
-export async function getStaticProps() {
+export default TagsPage;
+
+export const getStaticProps = () => {
     const allTags = getAllPosts([
         'tags',
         'parsedTags',
@@ -37,4 +46,4 @@ export async function getStaticProps() {
             }
         },
     };
-}
+};

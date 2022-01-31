@@ -1,9 +1,13 @@
-import type { NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts } from '../utils/getPosts';
+import { PostType } from "../types/post";
 
-const Home: NextPage = ({ recentPosts }: any) => {
+type Props = {
+    recentPosts: PostType[];
+};
+
+const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
             <Image
@@ -31,23 +35,23 @@ const Home: NextPage = ({ recentPosts }: any) => {
                 by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
             </p>
             <ul>
-                {recentPosts.map((post: any) => {
+                {recentPosts.map((post: PostType) => {
                     return (
-                            <li key={post.slug}>
-                                <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
-                                    {post.title}
-                                </Link>
-                            </li>
-                     );
+                        <li key={post.slug}>
+                            <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
+                                {post.title}
+                            </Link>
+                        </li>
+                    );
                 })}
             </ul>
         </>
     );
-}
+};
 
 export default Home;
 
-export async function getStaticProps() {
+export const getStaticProps = () => {
     const allPosts = getAllPosts([
         'title',
         'tags',
@@ -63,4 +67,4 @@ export async function getStaticProps() {
             recentPosts	
         },
     };
-}
+};
