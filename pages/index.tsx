@@ -31,8 +31,8 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
             <h2>take a look at my blog</h2>
             <p>
                 Writing articles has also been one of my hobby. Some articles that i've wrote isn't guaranteed to be perfect in terms of writing. You can find 
-                all of my articles <Link href={"/blog"}><a>here</a></Link>, or find it by <Link href={"/tags"}><a>tags</a></Link>, you can always help me
-                by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
+                <Link href={"/blog"}><a>all of my articles</a></Link> by clicking the link, or find it by <Link href={"/tags"}><a>tags</a></Link>, you can always
+                help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
             </p>
             <ul>
                 {recentPosts.map((post: PostType) => {
