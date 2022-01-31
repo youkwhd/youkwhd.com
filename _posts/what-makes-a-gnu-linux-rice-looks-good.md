@@ -16,7 +16,7 @@ Well, i like suckless softwares; dwm, dmenu, st, etc. It suck less, non bloated,
 
 take a look at my recent linux rice:
 
-![youkwhd's GNU/Linux rice](./wm__screenshot-03.png)
+![youkwhd's GNU/Linux rice](/assets/blog/wm__screenshot-03.png)
 
 the color scheme matched the wallpaper in the background, st has transparency, then there's big gaps in between. Also, the font matched with the environment.
 
@@ -31,7 +31,7 @@ After months of ricing GNU/Linux, now i can share the things i think really make
 
 take a look at my first rice, i was using vanilla i3 at that time:
 
-![youkwhd's first GNU/Linux rice](./wm__screenshot-04.png)
+![youkwhd's first GNU/Linux rice](/assets/blog/wm__screenshot-04.png)
 
 what do you see? Gruvbox. Nothing but a fullscreen terminal with i3status on top, no gaps, nothing. Straight plain.
 
@@ -49,11 +49,11 @@ you will feel better if you add gaps. Just, trust me. It's the UI/UX thing. even
 
 take a look at my i3 config as if it has some gaps:
 
-![youkwhd's i3-gaps](./wm__screenshot-05.png)
+![youkwhd's i3-gaps](/assets/blog/wm__screenshot-05.png)
 
 you've made some progress, and you've successfully made your window manager better.
 
-## Use colorized wallpapers or plain wallpapers
+## Use colorized or plain wallpapers
 
 what you will regularly actually see is the background. Really tho, use one that looks super cool and the one that matches your style preferences. In case if you don't like to use wallpapers, you can use any plain wallpaper as an alternative. if you did used a plain wallpaper, you might want to match the terminal background color.
 
@@ -74,7 +74,7 @@ thus will render out:
 
 > found this screenshot from the internet
 
-![terminal example](./wm__screenshot-07.jpg)
+![terminal example](/assets/blog/wm__screenshot-07.jpg)
 
 the way to configure transparency, shadow, etc. Is to install a compositor for X, e.g. picom, Xcompmgr, Unagi.
 
@@ -102,8 +102,11 @@ as mentioned above, adding these can result a nice feel, and make your terminal 
 
 > i also found this screenshot from the internet
 
-![terminal shadow and outline](./wm__screenshot-08.jpg)
+![terminal shadow and outline](/assets/blog/wm__screenshot-08.jpg)
 
+## Keep the theme on fit
+
+You can easily generate dynamic color schemes using pywal, any other premade themes like gruvbox, dracula, etc. Is a valid option especially if you are just getting started and wanted a stable color scheme. I don't recommend you to make your own theme / color scheme as a beginner, but rather if you are good at UI/UX or designing things, then go for it.
 
 ## Conclusion
 

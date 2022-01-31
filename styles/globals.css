@@ -17,6 +17,11 @@ li {
     padding: .5em 0;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .no-padding {
     padding: 0;
 }
@@ -26,4 +31,4 @@ li {
         padding: 0 1em;
     }
 }
-        
+

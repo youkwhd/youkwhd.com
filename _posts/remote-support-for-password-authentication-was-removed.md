@@ -14,20 +14,20 @@ head to github main page [https://github.com](https://github.com)
 after entering your github profile, please head to the settings  
 or you can open [this link](https://github.com/settings/profile) on new tab.
 
-![github-settings-screenshot](./github-settings.png)
+![github-settings-screenshot](/assets/blog/github-settings.png)
 
 now you can head to the developer settings
 or you can open [this link](https://github.com/settings/tokens) on new tab.
 
-![github-dev-settings-screenshot](./github-dev-settings.png)
+![github-dev-settings-screenshot](/assets/blog/github-dev-settings.png)
 
 then you can create your own token.
 
-![github-token-screenshot](./github-token.png)
+![github-token-screenshot](/assets/blog/github-token.png)
 
 you should get this success message from github. **DO NOT SHARE** your own personal access token. except if it's meant for others.
 
-![github-token-success-screenshot](./github-token-success.png)
+![github-token-success-screenshot](/assets/blog/github-token-success.png)
 
 now you have successfully created your own PATs, you should be able to work with git remotely.
 
