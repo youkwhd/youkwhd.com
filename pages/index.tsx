@@ -54,9 +54,6 @@ export default Home;
 export const getStaticProps = () => {
     const allPosts = getAllPosts([
         'title',
-        'tags',
-        'parsedTags',
-        'date',
         'slug',
     ]);
 
