@@ -62,10 +62,11 @@ export default Home;
 export const getStaticProps = () => {
     const allPosts = getAllPosts([
         'title',
+        'date', // essentially need dat for the getPosts to sort for corresponding date
         'slug',
     ]);
 
-    const recentPosts = allPosts.reverse().slice(0, 3);
+    const recentPosts = allPosts.slice(0, 3);
 
     return {
         props: {
