@@ -1,6 +1,11 @@
 import { getAllPosts } from '../../utils/getPosts';
 import { PostType } from "../../types/post";
 import PostCards from "../../components/PostCards";
+import { PageConfig } from "next";
+
+export const config: PageConfig = {
+    unstable_runtimeJS: false
+};
 
 type Props = {
     allPosts: PostType[];

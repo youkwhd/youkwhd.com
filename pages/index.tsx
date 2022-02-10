@@ -1,21 +1,29 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { getAllPosts } from '../utils/getPosts';
 import { PostType } from "../types/post";
+import { PageConfig } from "next";
+
+export const config: PageConfig = {
+    unstable_runtimeJS: false
+};
 
 type Props = {
     recentPosts: PostType[];
 };
 
+
 const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
+            {/*
             <Image
                 src={"/images/profile.jpeg"}
                 alt="a webcam picture of youkwhd"
                 width={150}
                 height={150}
             />
+            */}
             <h1>youkwhd</h1>
             <p>
                 I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.

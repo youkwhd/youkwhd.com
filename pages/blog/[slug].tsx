@@ -1,6 +1,11 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
 import { PostType } from "../../types/post";
+import { PageConfig } from "next";
+
+export const config: PageConfig = {
+    unstable_runtimeJS: false
+};
 
 type Props = {
     post: PostType;

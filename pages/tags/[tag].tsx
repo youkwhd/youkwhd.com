@@ -1,6 +1,11 @@
 import { getAllPosts } from "../../utils/getPosts";
 import { PostType } from "../../types/post";
 import PostCards from "../../components/PostCards";
+import { PageConfig } from "next";
+
+export const config: PageConfig = {
+    unstable_runtimeJS: false
+};
 
 type Props = {
     filteredPosts: PostType[];
@@ -36,10 +41,6 @@ export const getStaticProps = ({ params }: Params) => {
     
     // filter all the posts that has the current tag.
     const filteredPosts = allPosts.filter((post) => post.parsedTags.includes(params.tag));
-    
-    for (let i = 0; i < allPosts.length; i++) {
-        console.log(allPosts[i].tags, allPosts[i].parsedTags);
-    }
     
     let currentPostTag: string = ""; // the current location of /tags/[tag] but un-parsed
     // itterate through the first post, knowing that the current [tag] will always be inside

@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { getAllPosts } from "../../utils/getPosts";
+import { PageConfig } from "next";
+
+export const config: PageConfig = {
+    unstable_runtimeJS: false
+};
 
 type Props = {
     allTags: {
