@@ -65,7 +65,7 @@ export const getStaticProps = () => {
         'slug',
     ]);
 
-    const recentPosts = allPosts.slice(0, 3);
+    const recentPosts = allPosts.reverse().slice(0, 3);
 
     return {
         props: {
