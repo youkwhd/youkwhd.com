@@ -1,5 +1,4 @@
 import Link from 'next/link';
-// import Image from 'next/image';
 import { getAllPosts } from '../utils/getPosts';
 import { PostType } from "../types/post";
 import { PageConfig } from "next";
@@ -12,18 +11,14 @@ type Props = {
     recentPosts: PostType[];
 };
 
-
 const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
-            {/*
-            <Image
-                src={"/images/profile.jpeg"}
+            <img
+                src="/images/profile.jpeg" 
                 alt="a webcam picture of youkwhd"
-                width={150}
-                height={150}
+                style={{  height: "158px" }}
             />
-            */}
             <h1>youkwhd</h1>
             <p>
                 I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
@@ -52,7 +47,12 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
                         </li>
                     );
                 })}
-            </ul>
+            </ul>   
+            <h2>contact me</h2>
+            <p>
+                Please contact me via email, the address is <Link href={"mailto:lolywk@tutanota.com"}><a>lolywk@tutanota.com</a></Link>,
+                grab my <Link href={"/pgp-public-key"}><a>pgp public key</a></Link> for convenience.
+            </p>
         </>
     );
 };
@@ -62,7 +62,7 @@ export default Home;
 export const getStaticProps = () => {
     const allPosts = getAllPosts([
         'title',
-        'date', // essentially need dat for the getPosts to sort for corresponding date
+        'date', // essentially need this for the getPosts to sort for corresponding date
         'slug',
     ]);
 
