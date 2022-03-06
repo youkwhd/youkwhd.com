@@ -19,7 +19,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     data.tags = data.tags.map((tag: string) => tag.toLowerCase());
 
     // parsing tags
-    const parseTag = (tag: string) => {
+    const parseTag = (tag: string): string => {
         // TODO: make it one line, learn how to regex.
         tag = tag.replace(" ", "-");
         tag = tag.replace("/", "-");

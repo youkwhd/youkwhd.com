@@ -8,6 +8,8 @@ excerpt: 'as the error said "remote: support for password authentication was rem
 
 as the error said "remote: support for password authentication was removed on August 13, 2021" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens. which is an alternative for password auth.
 
+## Table of contents
+
 ## Creating a token
 head to github main page [https://github.com](https://github.com)
 

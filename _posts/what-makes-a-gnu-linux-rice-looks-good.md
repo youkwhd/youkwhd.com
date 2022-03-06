@@ -7,8 +7,9 @@ tags:
 excerpt: "I remembered my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts"
 ---
 
-
 I remembered my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts.
+
+## Table of contents
 
 ## Window Managers doesn't affect anything
 
@@ -61,7 +62,7 @@ for an example; if i use a plain black wallpaper, then the terminal background s
 
 ## Determine your terminal transparency and prompt
 
-you can have a non-transparent terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist, or even add a border radius, and you can also put a very a very standing border color like pure white. Also, consider the prompt (PS1) to me minimal as well. for example: 
+you can have a non-transparent terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist, or even add a border radius, and you can also put a very standing border color like pure white. Also, consider the prompt (PS1) to be minimal as well. for example: 
 
 `export PS1="\W > \[$(tput sgr0)\]"`
 
