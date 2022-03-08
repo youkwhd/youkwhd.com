@@ -29,18 +29,17 @@ type Params = {
 };
 
 export const getStaticProps = async ({ params }: Params) => {
-    const postkeys = getPostBySlug(params.slug, [
-        'slug',
+    const postKeys = getPostBySlug(params.slug, [
         'title',
         'content',
     ]);
 
-    const content = await markdownToHTML(postkeys.content || '');
+    const content = await markdownToHTML(postKeys.content || '');
 
     return {
         props: {
             post: {
-                ...postkeys,
+                ...postKeys,
                 content,
             },
         },

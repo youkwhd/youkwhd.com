@@ -43,8 +43,9 @@ export const getStaticProps = ({ params }: Params) => {
     const filteredPosts = allPosts.filter((post) => post.parsedTags.includes(params.tag));
     
     let currentPostTag: string = ""; // the current location of /tags/[tag] but un-parsed
+
     // itterate through the first post, knowing that the current [tag] will always be inside
-    // the filtered post,then get the un-parsed tag
+    // the filtered post of index 0, then get the un-parsed tag
     for (let i = 0; i < filteredPosts[0].parsedTags.length; i++) {
         if (filteredPosts[0].parsedTags[i] === params.tag) { 
             // every position of parsedTag is the same as tag's

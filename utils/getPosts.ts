@@ -37,12 +37,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     // this sort does things like graphql, you'll get what you
     // include in the fields array
     fields.forEach((field) => {
-        // redirect slug to not return the file extension
-        if (field === 'slug') items[field] = realSlug;
 
+        // return the realSlug instead
+        if (field === 'slug') items[field] = realSlug;
         // redirect content to pass the content made by matter
         if (field === 'content') items[field] = content;
-
+        // redirect parsedTags to pass the parsedTags
         if (field === 'parsedTags') items[field] = parsedTags;
 
         // this is where all the field being passed to the items object
