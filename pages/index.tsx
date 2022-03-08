@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { getAllPosts } from '../utils/getPosts';
-import { PostType } from "../types/post";
+import type { PostType } from "../types/post";
 import { PageConfig } from "next";
+import { generateRSSFeed } from '../utils/generateRSSFeed';
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -59,12 +60,16 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
 
 export default Home;
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
     const allPosts = getAllPosts([
         'title',
         'date', // essentially need this for the getPosts to sort for corresponding date
         'slug',
+        'excerpt', // needed for RSS
+        'content', // also for RSS
     ]);
+
+    await generateRSSFeed(allPosts);
 
     const recentPosts = allPosts.slice(0, 3);
 
