@@ -4,8 +4,8 @@ import type { PostType } from "../types/post";
 import { markdownToHTML } from "./markdownConverter";
 
 export async function generateRSSFeed(posts: any) {
-    const PROTOCOL = "http://";
-    const HOSTNAME = "localhost:3000";
+    const PROTOCOL = "https://";
+    const HOSTNAME = "youkwhd.vercel.app";
     const SITE_URL = PROTOCOL + HOSTNAME;
 
     const dateToday = new Date();
