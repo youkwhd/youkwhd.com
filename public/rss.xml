@@ -2,17 +2,53 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>youkwhd's blog posts</title>
-        <link>http://localhost:3000</link>
+        <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Tue, 08 Mar 2022 04:35:50 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Mar 2022 16:17:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
         <item>
+            <title><![CDATA[The future of this blog]]></title>
+            <link>https://youkwhd.vercel.app/blog/the-future-of-this-blog</link>
+            <guid>https://youkwhd.vercel.app/blog/the-future-of-this-blog</guid>
+            <pubDate>Wed, 09 Mar 2022 04:11:27 GMT</pubDate>
+            <description><![CDATA[I wanted to change up the technologies that i've used on this blog. Something just doesn't feel as rewarding if i myself didn't build this site from scratch, i might just consider making a new one from scratch and make use of bash scripting or make my own simple static site generator using the holy C that supports markdown.]]></description>
+            <content:encoded><![CDATA[<p>This very site was first made with <a href="https://gatsby.org">Gatsby</a>, and now it's build on top of <a href="https://nextjs.org">Next.js</a> — pure static HTML + CSS page, no javascript included. I wanted to change up the technologies that i've used on this blog. Something just doesn't feel as rewarding if i myself didn't build this site from scratch, i might just consider making a new one from scratch and make use of bash scripting or make my own simple static site generator using the holy C that supports markdown, including all the third party packages. Or this "plan" will be my side project. Considering i need more knowledge on Typescript for web development, more preferably Javascript itself.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li>
+<p><a href="#over-engineering-things">Over engineering things</a></p>
+<ul>
+<li><a href="#working-with-posts-tags">Working with posts tags</a></li>
+<li><a href="#the-newest-feature-table-of-contents">The newest feature, table of contents</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#no-javascript-shall-be-included">No javascript shall be included</a></p>
+</li>
+<li>
+<p><a href="#images-and-its-size">Images and it's size</a></p>
+</li>
+</ul>
+<h2 id="over-engineering-things">Over engineering things</h2>
+<p>I was on the state of not knowing what to do, these are the days i was living on dormitory, then some days passed when i realize Arch Wiki's site was a good reference to my blog. It has neat features, some of them are table of contents, categories, etc. I as a bored person, not knowing what to do next, was fired up to implement these features onto my site. And it was a good experience personally, but rather became a bad practice.</p>
+<h3 id="working-with-posts-tags">Working with posts tags</h3>
+<p>If you haven't noticed, every posts has it's own tags, you can <a href="/blog/tags">check it</a> by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.</p>
+<h3 id="the-newest-feature-table-of-contents">The newest feature, table of contents</h3>
+<p>There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one stupid bug that the library remark-toc or remark-html made, it generates <code>&#x3C;p>&#x3C;/p></code> tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?</p>
+<h2 id="no-javascript-shall-be-included">No javascript shall be included</h2>
+<p>Even tho this site is built using Typescript, it shouldn't bundle Javascript on build / production version. I don't hate Javascript, i just wanted to reduce the size of this site. Next.js or React itself has some downside on including and excluding Javascript, there should be Javascript or no Javascript at all. You can not have hybrid pages, as far as i know. This one feature has already been implemented using the SSG from Next.js, as i said before, i might build up my own simple SSG using C.</p>
+<h2 id="images-and-its-size">Images and it's size</h2>
+<p>I've tried optimizing this site's size, after doing some inspection, turns out that images are one of the factor that bloats this site. I probably will gonna remove images for upcoming updates. Might just use pure text and referring images as links.</p>
+]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
+        <item>
             <title><![CDATA[What makes a GNU/Linux rice looks good]]></title>
-            <link>http://localhost:3000/blog/what-makes-a-gnu-linux-rice-looks-good</link>
-            <guid>http://localhost:3000/blog/what-makes-a-gnu-linux-rice-looks-good</guid>
+            <link>https://youkwhd.vercel.app/blog/what-makes-a-gnu-linux-rice-looks-good</link>
+            <guid>https://youkwhd.vercel.app/blog/what-makes-a-gnu-linux-rice-looks-good</guid>
             <pubDate>Fri, 14 Jan 2022 18:03:14 GMT</pubDate>
             <description><![CDATA[I remembered my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts]]></description>
             <content:encoded><![CDATA[<p>I remembered my first time ricing my Ubuntu using vanilla i3 and eventually switched to i3-gaps that makes things a little bit spicy. but still, my GNU/Linux still feels plain. nothing fancy about it, not even compareable to r/unixporn posts.</p>
@@ -30,8 +66,7 @@
 </ul>
 <h2 id="window-managers-doesnt-affect-anything">Window Managers doesn't affect anything</h2>
 <p>Well, i like suckless softwares; dwm, dmenu, st, etc. It suck less, non bloated, then the way it's configured, the patches that is available, and it is widely customizable. What about other Window Managers? they all the same, it's just the programming language that's differ from others, the way it's configured, the maintainer, functionality. But really, when it comes to ricing, it does not matter.</p>
-<p>take a look at my recent linux rice:</p>
-<p><img src="/assets/blog/wm__screenshot-03.png" alt="youkwhd&#x27;s GNU/Linux rice"></p>
+<p>take a look at <a href="https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-04.png">my recent gnu/linux rice</a>.</p>
 <p>the color scheme matched the wallpaper in the background, st has transparency, then there's big gaps in between. Also, the font matched with the environment.</p>
 <blockquote>
 <p>here are my <a href="https://github.com/youkwhd/dotfiles">dotfiles</a> configs.</p>
@@ -39,8 +74,7 @@
 <p>the fact is that i can make the same layout using i3, i mean the <strong>exact same</strong> as the screenshot above. Now we know that any Window Managers are viable. Use the one that you comfort to use with.</p>
 <h2 id="things-that-really-makes-it-perfect">Things that really makes it perfect</h2>
 <p>After months of ricing GNU/Linux, now i can share the things i think really makes the difference. These are my thoughts on why some GNU/Linux rice looks bad.</p>
-<p>take a look at my first rice, i was using vanilla i3 at that time:</p>
-<p><img src="/assets/blog/wm__screenshot-04.png" alt="youkwhd&#x27;s first GNU/Linux rice"></p>
+<p>take a look at <a href="https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-08.png">my first rice</a>, i was using vanilla i3 at that time.</p>
 <p>what do you see? Gruvbox. Nothing but a fullscreen terminal with i3status on top, no gaps, nothing. Straight plain.</p>
 <p>what about the color scheme, isn't Gruvbox a good color scheme? yes indeed. I personally like it. But i wouldn't ever again staring at a fullscreen terminal, it just doesn't feel good.</p>
 <p>then i switched to i3-gaps, it looks far more better, it is an ok environment. But i don't have any wallpaper installed. As you can guess, there is nothing but a blank black wallpaper and a non-transparent terminal. The result is still as bad.</p>
@@ -48,8 +82,7 @@
 <p>at that time, i thought i've made my rice to be as perfect as i want. But as time flies, i realize that this is beyond perfect, nothing special.</p>
 <h2 id="add-some-gaps-even-if-its-small">Add some gaps even if it's small</h2>
 <p>you will feel better if you add gaps. Just, trust me. It's the UI/UX thing. even a little bit of gaps can change the feel, just maybe 5 pixels for each window. I promise your WM will look better and fresh.</p>
-<p>take a look at my i3 config as if it has some gaps:</p>
-<p><img src="/assets/blog/wm__screenshot-05.png" alt="youkwhd&#x27;s i3-gaps"></p>
+<p>take a look at <a href="https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-09.png">my i3 config</a> as if it has some gaps:</p>
 <p>you've made some progress, and you've successfully made your window manager better.</p>
 <h2 id="use-colorized-or-plain-wallpapers">Use colorized or plain wallpapers</h2>
 <p>what you will regularly actually see is the background. Really tho, use one that looks super cool and the one that matches your style preferences. In case if you don't like to use wallpapers, you can use any plain wallpaper as an alternative. if you did used a plain wallpaper, you might want to match the terminal background color.</p>
@@ -61,10 +94,7 @@
 <pre><code>~ > echo "youkwhd.github.io" 
 ~ > yay -S icecat vim
 </code></pre>
-<blockquote>
-<p>found this screenshot from the internet</p>
-</blockquote>
-<p><img src="/assets/blog/wm__screenshot-07.jpg" alt="terminal example"></p>
+<p>here is one of an <a href="https://i.redd.it/kfbpylqmga701.png">example</a>.</p>
 <p>the way to configure transparency, shadow, etc. Is to install a compositor for X, e.g. picom, Xcompmgr, Unagi.</p>
 <p>in case if you were using cool and cozy wallpapers, then you can do something like a really long prompt, for example:</p>
 <p><code>export PS1="[\u@\h \W]\$ "</code></p>
@@ -77,63 +107,18 @@
 <p>your window manager bar (i3bar, dwmblocks, etc) are one of the aspect of making a good rice. A messy, gray colored font for X bar will sometimes resulting in a bad X bar, and could even make it worse to read. What you can do is to add some life into it, an example of it is to use emojis as an advantage for you to make your X bar pretty. Or you can even use font-awesome as an alternative.</p>
 <h2 id="rounded-terminal-shadow-and-outline">Rounded terminal, shadow and outline</h2>
 <p>as mentioned above, adding these can result a nice feel, and make your terminal stands out. Tho it's only an additional option, add what's needed and what suits your style. don't over tweak things.</p>
-<blockquote>
-<p>i also found this screenshot from the internet</p>
-</blockquote>
-<p><img src="/assets/blog/wm__screenshot-08.jpg" alt="terminal shadow and outline"></p>
+<p>you can take a reference with these rices:</p>
+<ul>
+<li><a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.lNVwZzB4na-ibX9MWj-r8gHaEw%26pid%3DApi&#x26;f=1">stand out border</a></li>
+<li><a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ly6Ymz12V-1QgC4_NVgdmgHaEK%26pid%3DApi&#x26;f=1">minimal with outline</a></li>
+<li><a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CwzNbqzfJV_55eRv-B-wEQHaEK%26pid%3DApi&#x26;f=1">rounded</a></li>
+</ul>
 <h2 id="keep-the-theme-on-fit">Keep the theme on fit</h2>
 <p>You can easily generate dynamic color schemes using pywal, any other premade themes like gruvbox, dracula, etc. Is a valid option especially if you are just getting started and wanted a stable color scheme. I don't recommend you to make your own theme / color scheme as a beginner, but rather if you are good at UI/UX or designing things, then go for it.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>here comes the conclusion, don't be afraid to change things up, especially for your own good. If you are too afraid to make a mistake, configure a virtual machine, then use it as an experiment GNU/Linux rice, tho you might have more issues with virtual machines, it's still a good alternative way to ricing.</p>
 <p>keep your attention to small details like spaces in between windows. When it comes to customizing your GNU/Linux, if you ever feel like it's wonky, re-check if anything doesn't make sense, e.g; your theme doesn't match, or if it's too bright.</p>
 <p>happy hacking!</p>
-]]></content:encoded>
-            <author>lolywk@tutanota.com (youkwhd)</author>
-        </item>
-        <item>
-            <title><![CDATA[Remote: support for password authentication was removed on august 13, 2021]]></title>
-            <link>http://localhost:3000/blog/remote-support-for-password-authentication-was-removed</link>
-            <guid>http://localhost:3000/blog/remote-support-for-password-authentication-was-removed</guid>
-            <pubDate>Mon, 04 Oct 2021 16:34:13 GMT</pubDate>
-            <description><![CDATA[as the error said "remote: support for password authentication was removed on August 13, 2021. solved" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens.]]></description>
-            <content:encoded><![CDATA[<p>as the error said "remote: support for password authentication was removed on August 13, 2021" github does not support nor accept account password when authenticating git operations, now you have to use github personal access tokens. which is an alternative for password auth.</p>
-<h2 id="table-of-contents">Table of contents</h2>
-<ul>
-<li><a href="#creating-a-token">Creating a token</a></li>
-<li><a href="#using-the-token">Using the token</a></li>
-<li><a href="#github-cli-tool">Github CLI tool</a></li>
-</ul>
-<h2 id="creating-a-token">Creating a token</h2>
-<p>head to github main page <a href="https://github.com">https://github.com</a></p>
-<p>after entering your github profile, please head to the settings<br>
-or you can open <a href="https://github.com/settings/profile">this link</a> on new tab.</p>
-<p><img src="/assets/blog/github-settings.png" alt="github-settings-screenshot"></p>
-<p>now you can head to the developer settings
-or you can open <a href="https://github.com/settings/tokens">this link</a> on new tab.</p>
-<p><img src="/assets/blog/github-dev-settings.png" alt="github-dev-settings-screenshot"></p>
-<p>then you can create your own token.</p>
-<p><img src="/assets/blog/github-token.png" alt="github-token-screenshot"></p>
-<p>you should get this success message from github. <strong>DO NOT SHARE</strong> your own personal access token. except if it's meant for others.</p>
-<p><img src="/assets/blog/github-token-success.png" alt="github-token-success-screenshot"></p>
-<p>now you have successfully created your own PATs, you should be able to work with git remotely.</p>
-<p>for more information, please see <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">this article</a> from github.</p>
-<h2 id="using-the-token">Using the token</h2>
-<p>now you should be able to use the token. you should change your origin remote to:</p>
-<p><code>https://&#x3C;token>@github.com/&#x3C;username>/&#x3C;repo>.git</code></p>
-<h2 id="github-cli-tool">Github CLI tool</h2>
-<p>try this github cli to authenticate automatically:<br>
-please head to the <a href="https://cli.github.com/manual/installation">official instruction</a> to install.</p>
-<p>installation for <strong>debian based</strong>:</p>
-<pre><code>curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
-</code></pre>
-<p><strong>Note</strong>: If you get the error <em>"gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory"</em>, try installing the <code>dirmngr</code> package: <code>sudo apt install dirmngr</code>.</p>
-<p>to login, follow this code:</p>
-<pre><code>gh auth login
-</code></pre>
-<p>then gh will ask some question, you can directly use password or PATs to authenticate. Now you've installed <code>gh</code> github cli tool. And made your first personal access token (PATs) for github. I hope it solved your problem. thank you for reading this article, happi hacking.</p>
 ]]></content:encoded>
             <author>lolywk@tutanota.com (youkwhd)</author>
         </item>

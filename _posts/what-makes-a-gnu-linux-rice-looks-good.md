@@ -15,9 +15,7 @@ I remembered my first time ricing my Ubuntu using vanilla i3 and eventually swit
 
 Well, i like suckless softwares; dwm, dmenu, st, etc. It suck less, non bloated, then the way it's configured, the patches that is available, and it is widely customizable. What about other Window Managers? they all the same, it's just the programming language that's differ from others, the way it's configured, the maintainer, functionality. But really, when it comes to ricing, it does not matter. 
 
-take a look at my recent linux rice:
-
-![youkwhd's GNU/Linux rice](/assets/blog/wm__screenshot-03.png)
+take a look at [my recent gnu/linux rice](https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-04.png).
 
 the color scheme matched the wallpaper in the background, st has transparency, then there's big gaps in between. Also, the font matched with the environment.
 
@@ -30,9 +28,7 @@ the fact is that i can make the same layout using i3, i mean the **exact same** 
 
 After months of ricing GNU/Linux, now i can share the things i think really makes the difference. These are my thoughts on why some GNU/Linux rice looks bad.
 
-take a look at my first rice, i was using vanilla i3 at that time:
-
-![youkwhd's first GNU/Linux rice](/assets/blog/wm__screenshot-04.png)
+take a look at [my first rice](https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-08.png), i was using vanilla i3 at that time.
 
 what do you see? Gruvbox. Nothing but a fullscreen terminal with i3status on top, no gaps, nothing. Straight plain.
 
@@ -48,9 +44,7 @@ at that time, i thought i've made my rice to be as perfect as i want. But as tim
 
 you will feel better if you add gaps. Just, trust me. It's the UI/UX thing. even a little bit of gaps can change the feel, just maybe 5 pixels for each window. I promise your WM will look better and fresh.
 
-take a look at my i3 config as if it has some gaps:
-
-![youkwhd's i3-gaps](/assets/blog/wm__screenshot-05.png)
+take a look at [my i3 config](https://raw.githubusercontent.com/youkwhd/dotfiles/master/screenshots/wm__screenshot-09.png) as if it has some gaps:
 
 you've made some progress, and you've successfully made your window manager better.
 
@@ -73,9 +67,7 @@ thus will render out:
 ~ > yay -S icecat vim
 ``` 
 
-> found this screenshot from the internet
-
-![terminal example](/assets/blog/wm__screenshot-07.jpg)
+here is one of an [example](https://i.redd.it/kfbpylqmga701.png).
 
 the way to configure transparency, shadow, etc. Is to install a compositor for X, e.g. picom, Xcompmgr, Unagi.
 
@@ -101,9 +93,12 @@ your window manager bar (i3bar, dwmblocks, etc) are one of the aspect of making 
 
 as mentioned above, adding these can result a nice feel, and make your terminal stands out. Tho it's only an additional option, add what's needed and what suits your style. don't over tweak things.
 
-> i also found this screenshot from the internet
+you can take a reference with these rices:
 
-![terminal shadow and outline](/assets/blog/wm__screenshot-08.jpg)
+- [stand out border](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.lNVwZzB4na-ibX9MWj-r8gHaEw%26pid%3DApi&f=1)
+- [minimal with outline](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ly6Ymz12V-1QgC4_NVgdmgHaEK%26pid%3DApi&f=1)
+- [rounded](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CwzNbqzfJV_55eRv-B-wEQHaEK%26pid%3DApi&f=1)
+
 
 ## Keep the theme on fit
 

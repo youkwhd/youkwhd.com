@@ -17,6 +17,15 @@ li {
     padding: .5em 0;
 }
 
+li > p {
+    margin: 0;
+}
+
+/* for unconsistent p tag */ 
+ul > li > ul {
+    padding-top: .5em;
+}
+
 img {
   max-width: 100%;
   object-fit: contain;
