@@ -26,7 +26,7 @@ const PostCards = ({ posts }: Props): JSX.Element => {
                             {post.tags.map((tag: string, index: number) => {
                                 return (
                                     <li className="no-padding" key={index}>
-                                        <Link as={`/tags/${post.parsedTags[index]}`} href="/tags/[tag]">
+                                        <Link as={`/blog/tags/${post.parsedTags[index]}`} href="/blog/tags/[tag]">
                                             {tag}
                                         </Link>
                                     </li>
