@@ -15,11 +15,13 @@ type Props = {
 const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
+            {/*
             <img
                 src="/images/profile.jpeg" 
                 alt="a webcam picture of youkwhd"
                 style={{  height: "158px" }}
             />
+            */}
             <h1>youkwhd</h1>
             <p>
                 I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
