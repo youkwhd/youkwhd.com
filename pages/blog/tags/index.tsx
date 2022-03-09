@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPosts } from "../../utils/getPosts";
+import { getAllPosts } from "../../../utils/getPosts";
 import { PageConfig } from "next";
 
 export const config: PageConfig = {
@@ -21,7 +21,7 @@ const TagsPage = ({ allTags }: Props): JSX.Element => {
                 {allTags.tags.map((tag: string, index: number) => {
                     return (
                         <li key={index}>
-                            <Link as={`/tags/${allTags.parsedTags[index]}`} href="/tags/[tag]">
+                            <Link as={`/blog/tags/${allTags.parsedTags[index]}`} href="/blog/tags/[tag]">
                                 {tag}
                             </Link>
                         </li>

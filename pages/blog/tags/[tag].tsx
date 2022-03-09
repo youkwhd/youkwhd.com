@@ -1,6 +1,6 @@
-import { getAllPosts } from "../../utils/getPosts";
-import { PostType } from "../../types/post";
-import PostCards from "../../components/PostCards";
+import { getAllPosts } from "../../../utils/getPosts";
+import { PostType } from "../../../types/post";
+import PostCards from "../../../components/PostCards";
 import { PageConfig } from "next";
 
 export const config: PageConfig = {

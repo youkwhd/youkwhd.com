@@ -35,7 +35,7 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
             <h2>take a look at my blog</h2>
             <p>
                 Writing articles has also been one of my hobby. Some articles that i've wrote isn't guaranteed to be perfect in terms of writing. You can
-                find <Link href={"/blog"}><a>all of my articles</a></Link> by clicking the link, or find it by checking <Link href={"/tags"}><a>all the available tags</a></Link>, you can always 
+                find <Link href={"/blog"}><a>all of my articles</a></Link> by clicking the link, or find it by checking <Link href={"/blog/tags"}><a>all the available tags</a></Link>, you can always 
                 help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
             </p>
             <ul>
@@ -65,13 +65,14 @@ export const getStaticProps = async () => {
         'title',
         'date', // essentially need this for the getPosts to sort for corresponding date
         'slug',
-        'excerpt', // needed for RSS
-        'content', // also for RSS
+
+        // needed for RSS
+        'excerpt', 
+        'content', 
     ]);
 
-    await generateRSSFeed(allPosts);
-
     const recentPosts = allPosts.slice(0, 3);
+    await generateRSSFeed(allPosts);
 
     return {
         props: {
