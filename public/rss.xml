@@ -4,7 +4,7 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Thu, 10 Mar 2022 01:23:22 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 10 Mar 2022 05:49:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -37,7 +37,7 @@
 <h3 id="working-with-posts-tags">Working with posts tags</h3>
 <p>If you haven't noticed, every posts has it's own tags, you can <a href="/blog/tags">check it</a> by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.</p>
 <h3 id="the-newest-feature-table-of-contents">The newest feature, table of contents</h3>
-<p>There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one stupid bug that the library remark-toc or remark-html made, it generates <code>&#x3C;p>&#x3C;/p></code> tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?</p>
+<p>There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one bug that the library remark-toc or remark-html made, it generates <code>&#x3C;p>&#x3C;/p></code> tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?</p>
 <h2 id="no-javascript-shall-be-included">No javascript shall be included</h2>
 <p>Even tho this site is built using Typescript, it shouldn't bundle Javascript on build / production version. I don't hate Javascript, i just wanted to reduce the size of this site. Next.js or React itself has some downside on including and excluding Javascript, there should be Javascript or no Javascript at all. You can not have hybrid pages, as far as i know. This one feature has already been implemented using the SSG from Next.js, as i said before, i might build up my own simple SSG using C.</p>
 <h2 id="images-and-its-size">Images and it's size</h2>
