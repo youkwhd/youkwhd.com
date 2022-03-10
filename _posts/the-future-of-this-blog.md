@@ -20,7 +20,7 @@ If you haven't noticed, every posts has it's own tags, you can [check it](/blog/
 
 ### The newest feature, table of contents
 
-There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one stupid bug that the library remark-toc or remark-html made, it generates `<p></p>` tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?
+There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one bug that the library remark-toc or remark-html made, it generates `<p></p>` tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?
 
 ## No javascript shall be included
 
