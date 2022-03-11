@@ -3,6 +3,7 @@ import fs from "fs";
 import type { PostType } from "../types/post";
 import { markdownToHTML } from "./markdownConverter";
 
+// TODO: update types
 export async function generateRSSFeed(posts: any) {
     const PROTOCOL = "https://";
     const HOSTNAME = "youkwhd.vercel.app";
