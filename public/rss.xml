@@ -91,16 +91,16 @@
 <p>you can have a non-transparent terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist, or even add a border radius, and you can also put a very standing border color like pure white. Also, consider the prompt (PS1) to be minimal as well. for example:</p>
 <p><code>export PS1="\W > \[$(tput sgr0)\]"</code></p>
 <p>thus will render out:</p>
-<pre><code>~ > echo "youkwhd.github.io" 
-~ > yay -S icecat vim
+<pre class="language-bash"><code class="language-bash">~ <span class="token operator">></span> <span class="token builtin class-name">echo</span> <span class="token string">"youkwhd.github.io"</span> 
+~ <span class="token operator">></span> yay -S icecat <span class="token function">vim</span>
 </code></pre>
 <p>here is one of an <a href="https://i.redd.it/kfbpylqmga701.png">example</a>.</p>
 <p>the way to configure transparency, shadow, etc. Is to install a compositor for X, e.g. picom, Xcompmgr, Unagi.</p>
 <p>in case if you were using cool and cozy wallpapers, then you can do something like a really long prompt, for example:</p>
 <p><code>export PS1="[\u@\h \W]\$ "</code></p>
 <p>the following prompt would be:</p>
-<pre><code>[youkwhd@severus ~]$ echo "youkwhd.github.io"
-[youkwhd@severus ~]$ yay -S icecat vim
+<pre class="language-bash"><code class="language-bash"><span class="token punctuation">[</span>youkwhd@severus ~<span class="token punctuation">]</span>$ <span class="token builtin class-name">echo</span> <span class="token string">"youkwhd.github.io"</span>
+<span class="token punctuation">[</span>youkwhd@severus ~<span class="token punctuation">]</span>$ yay -S icecat <span class="token function">vim</span>
 </code></pre>
 <p>if you chose to use the long-prompt-like one, then i wouldn't have to consider paddings, but it depens on your preferences. Keep experimenting and you'll eventually like it.</p>
 <h2 id="x-bar-status">X Bar status</h2>

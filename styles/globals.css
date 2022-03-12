@@ -26,6 +26,14 @@ ul > li > ul {
     padding-top: .5em;
 }
 
+/* standalone code */
+code:not([class]) {
+    padding: .25em;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #f5f2f0;
+    overflow: auto;
+}
+
 img {
   max-width: 100%;
   object-fit: contain;
