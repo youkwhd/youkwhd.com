@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import { getAllPosts } from '../utils/getPosts';
-import type { PostType } from "../types/post";
+import Link from "next/link";
 import { PageConfig } from "next";
-import { generateRSSFeed } from '../utils/generateRSSFeed';
+import { NextSeo } from "next-seo";
+
+import { getAllPosts } from "../utils/getPosts";
+import type { PostType } from "../types/post";
+import { generateRSSFeed } from "../utils/generateRSSFeed";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -15,6 +17,9 @@ type Props = {
 const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
+            <NextSeo
+                title="home"
+            />
             <img
                 src="/images/profile.jpeg" 
                 alt="a webcam picture of youkwhd"
@@ -42,7 +47,7 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
                 {recentPosts.map((post: PostType) => {
                     return (
                         <li key={post.slug}>
-                            <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
+                            <Link as={`/blog/${post.slug}`} href={"/blog/[slug]"}>
                                 {post.title}
                             </Link>
                         </li>

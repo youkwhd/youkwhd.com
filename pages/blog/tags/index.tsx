@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../utils/getPosts";
+
 import { PageConfig } from "next";
+import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -16,6 +18,9 @@ type Props = {
 const TagsPage = ({ allTags }: Props): JSX.Element => {
     return (
         <>
+            <NextSeo
+                title="list of topics"
+            />
             <h1>available list of topics:</h1>
             <ul>
                 {allTags.tags.map((tag: string, index: number) => {

@@ -1,7 +1,9 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
 import { PostType } from "../../types/post";
+
 import { PageConfig } from "next";
+import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -14,6 +16,9 @@ type Props = {
 const BlogContentPage = ({ post }: Props): JSX.Element => {
     return (
         <>
+            <NextSeo
+                title={post.title.toLowerCase()}
+            />
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </>

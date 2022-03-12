@@ -1,4 +1,5 @@
 import { PageConfig } from "next";
+import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -67,6 +68,9 @@ n1l3Mm1PLwZf8D7FTczh8JDS58HGK/d5qfuAb903rh2mvBG3hSGD8zuVQWRldw==
 const PGPPage = (): JSX.Element => {
     return (
         <>
+            <NextSeo 
+                title="pgp public key"
+            />
             <p>or download the <a href="/lolywk.pubkey.asc" download>public key</a> here.</p>
             <hr />
             <p>fingerprint:</p>

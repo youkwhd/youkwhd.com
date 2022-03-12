@@ -1,7 +1,9 @@
 import { getAllPosts } from "../../../utils/getPosts";
 import { PostType } from "../../../types/post";
 import PostCards from "../../../components/PostCards";
+
 import { PageConfig } from "next";
+import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -15,6 +17,9 @@ type Props = {
 const TagRelatePage = ({ filteredPosts, currentPostTag }: Props): JSX.Element => {
     return (
         <>
+            <NextSeo
+                title={`${currentPostTag} related posts`}
+            />
             <h1>{currentPostTag} related posts:</h1>
             <PostCards posts={filteredPosts} />
         </>
