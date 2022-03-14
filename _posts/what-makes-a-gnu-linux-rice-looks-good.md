@@ -58,7 +58,9 @@ for an example; if i use a plain black wallpaper, then the terminal background s
 
 you can have a non-transparent terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist, or even add a border radius, and you can also put a very standing border color like pure white. Also, consider the prompt (PS1) to be minimal as well. for example: 
 
-`export PS1="\W > \[$(tput sgr0)\]"`
+```bash
+export PS1="\W > \[$(tput sgr0)\]"
+```
 
 thus will render out:
 
@@ -73,7 +75,9 @@ the way to configure transparency, shadow, etc. Is to install a compositor for X
 
 in case if you were using cool and cozy wallpapers, then you can do something like a really long prompt, for example:
 
-`export PS1="[\u@\h \W]\$ "`
+```bash
+export PS1="[\u@\h \W]\$ "
+```
 
 the following prompt would be:
 
