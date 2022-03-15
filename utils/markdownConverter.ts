@@ -10,14 +10,13 @@ import remarkToc from "remark-toc";
 import remarkRehype from "remark-rehype";
 
 import rehypeSlug from "rehype-slug";
-import rehypePrism from "@mapbox/rehype-prism";
+import rehypePrism from "@mapbox/rehype-prism"
 import rehypeStringify from "rehype-stringify"
 
 export async function markdownToHTML(markdown: string) {
     return (await unified()
                     .use(remarkParse)
                     .use(remarkToc)
-                    // .use(remarkPrism, { transformInlineCode: true })
                     .use(remarkRehype)
                     .use(rehypeSlug)
                     .use(rehypePrism)
