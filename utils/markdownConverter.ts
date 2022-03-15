@@ -1,22 +1,27 @@
 /*
  * markdownToHTML => gets a markdown content (type string) to be converted to html
- * e.g. markdown content; "hello, **world**"
+ * e.g. markdown content; "hello, world" => <p>hello, world</p>
  *
  */
-import { remark } from "remark";
-import remarkHtml from "remark-html";
-import remarkToc from "remark-toc";
+import { unified } from "unified";
 
-import { rehype } from "rehype";
+import remarkParse from "remark-parse";
+import remarkToc from "remark-toc";
+import remarkRehype from "remark-rehype";
+
 import rehypeSlug from "rehype-slug";
 import rehypePrism from "@mapbox/rehype-prism";
-
-export async function addIDToHTML(html: string) {
-    return (await rehype().data("settings", { fragment: true }).use(rehypeSlug).use(rehypePrism).process(html)).toString();
-}
+import rehypeStringify from "rehype-stringify"
 
 export async function markdownToHTML(markdown: string) {
-    const convertedHTML = (await remark().use(remarkToc).use(remarkHtml, { sanitize: false }).process(markdown)).toString();
-    return addIDToHTML(convertedHTML);
+    return (await unified()
+                    .use(remarkParse)
+                    .use(remarkToc)
+                    // .use(remarkPrism, { transformInlineCode: true })
+                    .use(remarkRehype)
+                    .use(rehypeSlug)
+                    .use(rehypePrism)
+                    .use(rehypeStringify)
+                    .process(markdown)).toString();
 }
 
