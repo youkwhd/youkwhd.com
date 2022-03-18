@@ -1,5 +1,5 @@
 {
-  "name": "youkwhd.github.io",
+  "name": "youkwhd.vercel.app",
   "private": true,
   "scripts": {
     "dev": "next dev",
