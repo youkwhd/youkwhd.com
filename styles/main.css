@@ -1,0 +1,104 @@
+body {
+    background-color: #171717;
+    color: #bbbbbb;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#__next {
+    max-width: 530px;
+    margin: 2em auto;
+}
+
+a {
+    color: #387cec;
+    text-decoration: none;
+    border-bottom: 1px dotted #387cec;
+}
+
+a:active, a:hover, a:active {
+    color: #3971cc;
+}
+
+blockquote {
+    margin: 0;
+    border-left: 4px solid #474747;
+    color: #757575;
+    padding-left: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* color: #658d36; */
+    color: #6f9b1d;
+    font-size: 16px;
+}
+
+h1::before {
+    content: "# ";
+}
+
+h2::before {
+    content: "## ";
+}
+
+h3::before {
+    content: "### ";
+}
+
+h4::before {
+    content: "#### ";
+}
+
+h5::before {
+    content: "##### ";
+}
+
+h6::before {
+    content: "###### ";
+}
+
+pre {
+    overflow: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+li {
+    padding: .25em 0;
+}
+
+li > p {
+    margin: 0;
+}
+
+/* for unconsistent p tag */ 
+ul > li > ul {
+    padding-top: .25em;
+}
+
+/* standalone code */
+code:not([class]) {
+    padding: .25em;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #3d3a3b;
+    border-radius: 2px;
+    overflow: auto;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 0 1em;
+    }
+}
+

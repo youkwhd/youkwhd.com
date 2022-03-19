@@ -2,8 +2,12 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import { getAllPosts } from "../utils/getPosts";
 import type { PostType } from "../types/post";
+
+import { MainLayout } from "../components/Layout";
+import RecentPosts from "../components/RecentPosts";
+
+import { getAllPosts } from "../utils/getPosts";
 import { generateRSSFeed } from "../utils/generateRSSFeed";
 
 export const config: PageConfig = {
@@ -20,53 +24,38 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
             <NextSeo
                 title="home"
             />
-            <img
-                src="/images/profile.jpeg" 
-                alt="a webcam picture of youkwhd"
-                style={{  height: "158px" }}
-            />
-            <h1>youkwhd</h1>
-            <p>
-                I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
-                I love programming at every aspect of it, it has been my hobby since i know the programming way to solve problems. I mean, it looks cool to 
-                write such program with Vim and seeing people thinking that you're some kind of a hackerman. I'm currently working with web apps, usually 
-                with React, and i primarily use Typescript as my go-to language alongside with Next.js, i'm also comfortable developing the backend using Node.js.
-            </p>
-            <p>
-                As a GNU/Linux enthusiast, I use Arch Linux as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus arch is 
-                a rolling release distribution, i'm lazy. But it would be a pain in the ass to compile things. I do love free and open source softwares (FOSS).
-                Indeed, as most of, if not, all of my projects are free and open source. You have to note that the term "free" and "open source" is different.
-            </p>
-            <h2>take a look at my blog</h2>
-            <p>
-                Writing articles has also been one of my hobby. Some articles that i've wrote isn't guaranteed to be perfect in terms of writing. You can
-                find <Link href={"/blog"}><a>all of my articles</a></Link> by clicking the link, or find it by checking <Link href={"/blog/tags"}><a>all the available tags</a></Link>, you can always 
-                help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
-            </p>
-            <ul>
-                {recentPosts.map((post: PostType) => {
-                    return (
-                        <li key={post.slug}>
-                            <Link as={`/blog/${post.slug}`} href={"/blog/[slug]"}>
-                                {post.title}
-                            </Link>
-                        </li>
-                    );
-                })}
-            </ul>   
-            <h2>contact me</h2>
-            <p>
-                Please contact me via email, the address is <Link href={"mailto:lolywk@tutanota.com"}><a>lolywk@tutanota.com</a></Link>,
-                grab my <Link href={"/pgp-public-key"}><a>pgp public key</a></Link> for convenience.
-            </p>
+            <MainLayout>
+                <h1>whoami</h1>
+                <p>
+                    I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
+                    I love programming at every aspect of it, it has been my hobby since i know the programming way to solve problems. I mean, it looks cool to 
+                    write such program with Vim and seeing people thinking that you're some kind of a hackerman. I'm currently working with web apps, usually 
+                    with React, and i primarily use Typescript as my go-to language alongside with Next.js, i'm also comfortable developing the backend using Node.js.
+                </p>
+                <p>
+                    As a GNU/Linux enthusiast, I use Arch Linux as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus arch is 
+                    a rolling release distribution, i'm lazy. But it would be a pain in the ass to compile things. I do love free and open source softwares (FOSS).
+                    Indeed, as most of, if not, all of my projects are free and open source. You have to note that the term "free" and "open source" is different.
+                </p>
+                <h2>take a look at my blog</h2>
+                <p>
+                    Writing articles has also been one of my hobby. Some articles that i've wrote isn't guaranteed to be perfect in terms of writing. You can
+                    find <Link href={"/posts"}><a>all of my articles</a></Link> by clicking the link, or find it by checking <Link href={"/posts/tags"}><a>all the available tags</a></Link>, you can always 
+                    help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
+                </p>
+                <RecentPosts posts={recentPosts} />
+                <h2>contact me</h2>
+                <p>
+                    Please contact me via email, the address is <Link href={"mailto:lolywk@tutanota.com"}><a>lolywk@tutanota.com</a></Link>,
+                    grab my <Link href={"/pgp-public-key"}><a>pgp public key</a></Link> for convenience.
+                </p>
+            </MainLayout>
         </>
     );
 };
 
-export default Home;
-
 export const getStaticProps = async () => {
-    const allPosts = getAllPosts([
+    const allPosts: any = getAllPosts([
         'title',
         'date', // essentially need this for the getPosts to sort for corresponding date
         'slug',
@@ -76,8 +65,8 @@ export const getStaticProps = async () => {
         'content', 
     ]);
 
-    const recentPosts = allPosts.slice(0, 3);
     await generateRSSFeed(allPosts);
+    const recentPosts = allPosts.slice(0, 3);
 
     return {
         props: {
@@ -85,3 +74,5 @@ export const getStaticProps = async () => {
         },
     };
 };
+
+export default Home;

@@ -1,6 +1,7 @@
 import { getAllPosts } from "../../../utils/getPosts";
 import { PostType } from "../../../types/post";
 import PostCards from "../../../components/PostCards";
+import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
@@ -20,8 +21,10 @@ const TagRelatePage = ({ filteredPosts, currentPostTag }: Props): JSX.Element =>
             <NextSeo
                 title={`${currentPostTag} related posts`}
             />
-            <h1>{currentPostTag} related posts:</h1>
-            <PostCards posts={filteredPosts} />
+            <MainLayout>
+                <h1>{currentPostTag} related posts:</h1>
+                <PostCards posts={filteredPosts} />
+            </MainLayout>
         </>
     );
 };

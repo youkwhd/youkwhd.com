@@ -1,6 +1,7 @@
 import { getAllPosts } from '../../utils/getPosts';
 import { PostType } from "../../types/post";
 import PostCards from "../../components/PostCards";
+import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from 'next-seo';
@@ -13,19 +14,21 @@ type Props = {
     allPosts: PostType[];
 };
 
-const BlogPage = ({ allPosts }: Props): JSX.Element => {
+const PostsPage = ({ allPosts }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title="blog posts"
             />
-            <h1>blog posts:</h1>
-            <PostCards posts={allPosts} />
+            <MainLayout>
+                <h1>blog posts:</h1>
+                <PostCards posts={allPosts} />
+            </MainLayout>
         </>
     );
 };
 
-export default BlogPage;
+export default PostsPage;
 
 export const getStaticProps = () => {
     const allPosts = getAllPosts([

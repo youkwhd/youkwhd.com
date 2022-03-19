@@ -4,7 +4,7 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Thu, 10 Mar 2022 05:49:21 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Mar 2022 08:14:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -35,14 +35,13 @@
 <h2 id="over-engineering-things">Over engineering things</h2>
 <p>I was on the state of not knowing what to do, these are the days i was living on dormitory, then some days passed when i realize Arch Wiki's site was a good reference to my blog. It has neat features, some of them are table of contents, categories, etc. I as a bored person, not knowing what to do next, was fired up to implement these features onto my site. And it was a good experience personally, but rather became a bad practice.</p>
 <h3 id="working-with-posts-tags">Working with posts tags</h3>
-<p>If you haven't noticed, every posts has it's own tags, you can <a href="/blog/tags">check it</a> by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.</p>
+<p>If you haven't noticed, every posts has it's own tags, you can <a href="/posts/tags">check it</a> by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.</p>
 <h3 id="the-newest-feature-table-of-contents">The newest feature, table of contents</h3>
 <p>There we go, now i can rest back to being a bored person, lmao. I've made this blog like it's a big ass site that's content change overtime. As i mentioned before, this was one of the good feature that i can implement on a blog. For this one, i might just keep it. Cause i'm overall somewhat happy for it, there's one bug that the library remark-toc or remark-html made, it generates <code>&#x3C;p>&#x3C;/p></code> tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. It actually has some helpful features. But it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. Or am i just overthinking?</p>
 <h2 id="no-javascript-shall-be-included">No javascript shall be included</h2>
 <p>Even tho this site is built using Typescript, it shouldn't bundle Javascript on build / production version. I don't hate Javascript, i just wanted to reduce the size of this site. Next.js or React itself has some downside on including and excluding Javascript, there should be Javascript or no Javascript at all. You can not have hybrid pages, as far as i know. This one feature has already been implemented using the SSG from Next.js, as i said before, i might build up my own simple SSG using C.</p>
 <h2 id="images-and-its-size">Images and it's size</h2>
-<p>I've tried optimizing this site's size, after doing some inspection, turns out that images are one of the factor that bloats this site. I probably will gonna remove images for upcoming updates. Might just use pure text and referring images as links.</p>
-]]></content:encoded>
+<p>I've tried optimizing this site's size, after doing some inspection, turns out that images are one of the factor that bloats this site. I probably will gonna remove images for upcoming updates. Might just use pure text and referring images as links.</p>]]></content:encoded>
             <author>lolywk@tutanota.com (youkwhd)</author>
         </item>
         <item>
@@ -89,7 +88,8 @@
 <p>for an example; if i use a plain black wallpaper, then the terminal background saturation should be a little bit higher, still black but has more saturation on it.</p>
 <h2 id="determine-your-terminal-transparency-and-prompt">Determine your terminal transparency and prompt</h2>
 <p>you can have a non-transparent terminal but under a certain conditions, e.g the terminal background color must be pure black, then add paddings inside the terminal so it'll look more minimalist, or even add a border radius, and you can also put a very standing border color like pure white. Also, consider the prompt (PS1) to be minimal as well. for example:</p>
-<p><code>export PS1="\W > \[$(tput sgr0)\]"</code></p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PS1</span></span><span class="token operator">=</span><span class="token string">"\W > \[<span class="token variable"><span class="token variable">$(</span>tput sgr0<span class="token variable">)</span></span>\]"</span>
+</code></pre>
 <p>thus will render out:</p>
 <pre class="language-bash"><code class="language-bash">~ <span class="token operator">></span> <span class="token builtin class-name">echo</span> <span class="token string">"youkwhd.github.io"</span> 
 ~ <span class="token operator">></span> yay -S icecat <span class="token function">vim</span>
@@ -97,7 +97,8 @@
 <p>here is one of an <a href="https://i.redd.it/kfbpylqmga701.png">example</a>.</p>
 <p>the way to configure transparency, shadow, etc. Is to install a compositor for X, e.g. picom, Xcompmgr, Unagi.</p>
 <p>in case if you were using cool and cozy wallpapers, then you can do something like a really long prompt, for example:</p>
-<p><code>export PS1="[\u@\h \W]\$ "</code></p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PS1</span></span><span class="token operator">=</span><span class="token string">"[\u@\h \W]\$ "</span>
+</code></pre>
 <p>the following prompt would be:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token punctuation">[</span>youkwhd@severus ~<span class="token punctuation">]</span>$ <span class="token builtin class-name">echo</span> <span class="token string">"youkwhd.github.io"</span>
 <span class="token punctuation">[</span>youkwhd@severus ~<span class="token punctuation">]</span>$ yay -S icecat <span class="token function">vim</span>
@@ -118,8 +119,7 @@
 <h2 id="conclusion">Conclusion</h2>
 <p>here comes the conclusion, don't be afraid to change things up, especially for your own good. If you are too afraid to make a mistake, configure a virtual machine, then use it as an experiment GNU/Linux rice, tho you might have more issues with virtual machines, it's still a good alternative way to ricing.</p>
 <p>keep your attention to small details like spaces in between windows. When it comes to customizing your GNU/Linux, if you ever feel like it's wonky, re-check if anything doesn't make sense, e.g; your theme doesn't match, or if it's too bright.</p>
-<p>happy hacking!</p>
-]]></content:encoded>
+<p>happy hacking!</p>]]></content:encoded>
             <author>lolywk@tutanota.com (youkwhd)</author>
         </item>
     </channel>

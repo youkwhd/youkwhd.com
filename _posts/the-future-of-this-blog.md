@@ -16,7 +16,7 @@ I was on the state of not knowing what to do, these are the days i was living on
 
 ### Working with posts tags
 
-If you haven't noticed, every posts has it's own tags, you can [check it](/blog/tags) by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.
+If you haven't noticed, every posts has it's own tags, you can [check it](/posts/tags) by clicking the link. I personally happy that i can accomplish this feature, it was a first good feature to implement on this kind of site, a blog. But then, as time flies, now i know that it's just not a good feature to implement if you don't have a specific article to write, like, only writing web development related content. It's always is a pain in the ass to just specify the "name" of a variable in programming, i also has felt it on making these tags. This feature might get deleted soon as i learn from mistakes, to not over engineer something.
 
 ### The newest feature, table of contents
 

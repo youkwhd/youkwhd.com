@@ -1,5 +1,6 @@
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+import { MainLayout } from "../components/Layout";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -71,11 +72,13 @@ const PGPPage = (): JSX.Element => {
             <NextSeo 
                 title="pgp public key"
             />
-            <p>or download the <a href="/lolywk.pubkey.asc" download>public key</a> here.</p>
-            <hr />
-            <p>fingerprint:</p>
-            <pre>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</pre>
-            <pre>{PGP_PUBLIC_KEY}</pre>
+            <MainLayout>
+                <p>or download the <a href="/lolywk.pubkey.asc" download>public key</a> here.</p>
+                <hr />
+                <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>
+                
+                <pre>{PGP_PUBLIC_KEY}</pre>
+            </MainLayout>
         </>
     );
 };

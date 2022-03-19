@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../utils/getPosts";
+import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
@@ -21,18 +22,20 @@ const TagsPage = ({ allTags }: Props): JSX.Element => {
             <NextSeo
                 title="list of topics"
             />
-            <h1>available list of topics:</h1>
-            <ul>
-                {allTags.tags.map((tag: string, index: number) => {
-                    return (
-                        <li key={index}>
-                            <Link as={`/blog/tags/${allTags.parsedTags[index]}`} href="/blog/tags/[tag]">
-                                {tag}
-                            </Link>
-                        </li>
-                    );
-                })}
-            </ul>
+            <MainLayout>
+                <h1>available list of topics:</h1>
+                <ul>
+                    {allTags.tags.map((tag: string, index: number) => {
+                        return (
+                            <li key={index}>
+                                <Link as={`/posts/tags/${allTags.parsedTags[index]}`} href="/posts/tags/[tag]">
+                                    {tag}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </MainLayout>
         </>
     );
 };

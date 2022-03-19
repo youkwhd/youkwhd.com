@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
 import { PostType } from "../../types/post";
+import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
@@ -13,19 +14,21 @@ type Props = {
     post: PostType;
 };
 
-const BlogContentPage = ({ post }: Props): JSX.Element => {
+const PostContentPage = ({ post }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title={post.title.toLowerCase()}
             />
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <MainLayout>
+                <h1>{post.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            </MainLayout>
         </>
     );
 };
 
-export default BlogContentPage;
+export default PostContentPage;
 
 type Params = {
     params: {
