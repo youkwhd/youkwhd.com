@@ -10,8 +10,8 @@ import remarkToc from "remark-toc";
 import remarkRehype from "remark-rehype";
 
 import rehypeSlug from "rehype-slug";
-import rehypePrism from "@mapbox/rehype-prism"
-import rehypeStringify from "rehype-stringify"
+import rehypePrism from "@mapbox/rehype-prism";
+import rehypeStringify from "rehype-stringify";
 
 export async function markdownToHTML(markdown: string) {
     return (await unified()
