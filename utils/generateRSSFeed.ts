@@ -4,7 +4,7 @@ import type { PostType } from "../types/post";
 import { markdownToHTML } from "./markdownConverter";
 
 // TODO: update types
-export async function generateRSSFeed(posts: any) {
+export async function generateRSSFeed(posts: PostType[]): Promise<boolean> {
     const PROTOCOL = "https://";
     const HOSTNAME = "youkwhd.vercel.app";
     const SITE_URL = PROTOCOL + HOSTNAME;
@@ -31,9 +31,9 @@ export async function generateRSSFeed(posts: any) {
     });
 
     // convert markdown to HTML
-    let tempPosts = posts;
+    let tempPosts: any = posts;
     for (let i = 0; i < posts.length; i++) {
-        const htmlContent = await markdownToHTML(posts[i].content || "");
+        const htmlContent: string = await markdownToHTML(posts[i].content);
         tempPosts[i]["htmlContent"] = htmlContent;
     }
 
