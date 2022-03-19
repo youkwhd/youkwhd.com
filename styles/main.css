@@ -96,7 +96,7 @@ img {
     padding: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
     body {
         padding: 0 1em;
     }
