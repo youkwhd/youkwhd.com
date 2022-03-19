@@ -1,7 +1,7 @@
 import { getAllPosts } from "../../../utils/getPosts";
 import { PostType } from "../../../types/post";
 import PostCards from "../../../components/PostCards";
-import { MainLayout } from "../../components/Layout";
+import { MainLayout } from "../../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";

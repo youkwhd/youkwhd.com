@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../utils/getPosts";
-import { MainLayout } from "../../components/Layout";
+import { MainLayout } from "../../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
