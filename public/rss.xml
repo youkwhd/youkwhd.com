@@ -4,11 +4,49 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Sat, 19 Mar 2022 08:14:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Mar 2022 12:17:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[Choosing the right tools]]></title>
+            <link>https://youkwhd.vercel.app/blog/choosing-the-right-tools</link>
+            <guid>https://youkwhd.vercel.app/blog/choosing-the-right-tools</guid>
+            <pubDate>Sat, 19 Mar 2022 09:22:24 GMT</pubDate>
+            <content:encoded><![CDATA[<p>Sometimes, the tool that you are going to use is not the best solution for the current project that you're building. It is okay to reproduce other people's projects with your preferenced tools, such as the programming language itself. It's a good way to learn, that makes you more comfortable with your current knowledge, but still, always learn the fundamentals, not the tool you're using.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li>
+<p><a href="#an-example-of-two-different-softwares">An example of two different softwares</a></p>
+<ul>
+<li><a href="#the-tools-each-software-uses">The tools each software uses</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#another-example-when-developing-websites">Another example when developing websites</a></p>
+</li>
+<li>
+<p><a href="#conclusion">Conclusion</a></p>
+</li>
+</ul>
+<h2 id="an-example-of-two-different-softwares">An example of two different softwares</h2>
+<p>Before i wrote this article, i was looking for a software that plays a certain sound after you click a key on your keyboard, so then i can make my keyboard sounds like a mechanical keyboard. I found two softwares that's capable of doing it, those are <a href="https://github.com/hainguyents13/mechvibes">Mechvibes</a> and <a href="https://github.com/zevv/bucklespring">Bucklespring</a>, between those two, Mechvibes is the most popular one in general, i guess it's because the software is easy to install on Windows. But Bucklespring has a higher rate of stars on Github.</p>
+<h3 id="the-tools-each-software-uses">The tools each software uses</h3>
+<p>Mechvibes however uses JavaScript as the main programming language. And it's an Electron app, wow. The performance is.. not quite good. I even have some issues when using Mechvibes, it sometimes delays after idling away from your keyboard. And just like other Electron apps, it ate a lot of my CPU.</p>
+<blockquote>
+<p>Electron bundles Chromium, for displaying UI</p>
+</blockquote>
+<p>On the other side, Bucklespring uses C as the main programming language. And it's a good choice knowing that this kind of software needs to communicate to your keyboard, or atleast listening for keyboard presses. The result is, it doesn't burn my CPU usage, and between these two, Bucklespring has the tiniest size, around 5.4 MB, while Mechvibes's size is sitting at around 60 - 80MB (executeables), this should be Electron's problem. But still, it's around 11 times bigger than the size of Bucklespring.</p>
+<h2 id="another-example-when-developing-websites">Another example when developing websites</h2>
+<p>WebAssembly is fast, now i'm free from JavaScript!! Go is faster than TypeScript, bye Node.js! well, not quite. Why not use Go as the backend language and TypeScript for the frontend? everything has their own drawbacks and advantages.. bla, bla, bla, i know you've heard that shit over and over.</p>
+<p>As i said before, in my opinion, it is okay to build your projects with the tech stacks that you prefer. Especially when you're just getting started. It's best to just keep things simple, one programming language while learning the fundamentals, build up your problem solving skills, not for remembering syntaxes, not the programming language, that's that. Go has concurrency: goroutines, channels, mutex, etc. And it is the go-to language for making the backend and can perform faster than TypeScript. I do agree if someone recommends Go over TypeScript.</p>
+<p>When making a small scale applications, you can use TypeScript on both frontend and backend (as if you're solo). It can boost your development environment. And it's community is wide. The ecosystem on TypeScript is also greater than Go's.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Therefore, those are some examples of choosing the right tool for the right job. Use the one that suits your situation.</p>
+<p>Happy hacking.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[The future of this blog]]></title>
             <link>https://youkwhd.vercel.app/blog/the-future-of-this-blog</link>
