@@ -1,7 +1,11 @@
 body {
     background-color: #171717;
     color: #bbbbbb;
-    font-family: monospace;
+    /* font-family: "LiterationMono Nerd Font Mono", monospace; */
+    font-family: "JetBrains Mono", monospace;
+    /* font-family: "Hermit", monospace; */
+
+    line-height: 1.15rem;
     font-size: 13px;
 }
 
@@ -81,7 +85,7 @@ ul > li > ul {
 /* standalone code */
 code:not([class]) {
     padding: .25em;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
     background-color: #3d3a3b;
     border-radius: 2px;
     overflow: auto;
