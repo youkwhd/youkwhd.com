@@ -4,7 +4,7 @@ import { PostType } from "../../types/post";
 import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
-import { NextSeo } from "next-seo";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -19,6 +19,7 @@ const PostContentPage = ({ post }: Props): JSX.Element => {
         <>
             <NextSeo
                 title={post.title.toLowerCase()}
+                description={post.excerpt}
             />
             <MainLayout>
                 <h1>{post.title}</h1>
@@ -38,8 +39,9 @@ type Params = {
 
 export const getStaticProps = async ({ params }: Params) => {
     const postKeys = getPostBySlug(params.slug, [
-        'title',
-        'content',
+        "title",
+        "content",
+        "excerpt"
     ]);
 
     const content = await markdownToHTML(postKeys.content || '');
@@ -56,7 +58,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
 export const getStaticPaths = () => {
     const posts = getAllPosts([
-        'slug'
+        "slug"
     ]);
 
     // all the paths that's possible to be rendered out	

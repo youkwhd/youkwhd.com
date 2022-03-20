@@ -23,6 +23,8 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
         <>
             <NextSeo
                 title="home"
+                description="youkwhd, I'm an undergraduate student majoring Computer Science that lives in Indonesia, I'm also a GNU/Linux enthusiast, I use Arch Linux as of today."
+
             />
             <MainLayout>
                 <h1>whoami</h1>
