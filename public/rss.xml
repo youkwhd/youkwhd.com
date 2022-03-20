@@ -4,7 +4,7 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Sat, 19 Mar 2022 12:17:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 20 Mar 2022 08:31:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -14,6 +14,7 @@
             <link>https://youkwhd.vercel.app/blog/choosing-the-right-tools</link>
             <guid>https://youkwhd.vercel.app/blog/choosing-the-right-tools</guid>
             <pubDate>Sat, 19 Mar 2022 09:22:24 GMT</pubDate>
+            <description><![CDATA[Sometimes, the tool that you are going to use is not the best solution for the current project that you're building. It is okay to reproduce other people's projects with your preferenced tools, such as the programming language itself. Here are some examples of choosing the right tools.]]></description>
             <content:encoded><![CDATA[<p>Sometimes, the tool that you are going to use is not the best solution for the current project that you're building. It is okay to reproduce other people's projects with your preferenced tools, such as the programming language itself. It's a good way to learn, that makes you more comfortable with your current knowledge, but still, always learn the fundamentals, not the tool you're using.</p>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
