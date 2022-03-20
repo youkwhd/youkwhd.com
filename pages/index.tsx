@@ -6,6 +6,7 @@ import type { PostType } from "../types/post";
 
 import { MainLayout } from "../components/Layout";
 import RecentPosts from "../components/RecentPosts";
+import Footer from "../components/Footer";
 
 import { getAllPosts } from "../utils/getPosts";
 import { generateRSSFeed } from "../utils/generateRSSFeed";
@@ -51,6 +52,7 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
                     grab my <Link href={"/pgp-public-key"}><a>pgp public key</a></Link> for convenience.
                 </p>
             </MainLayout>
+            <Footer />
         </>
     );
 };

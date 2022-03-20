@@ -1,7 +1,9 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { markdownToHTML } from "../../utils/markdownConverter";
+
 import { PostType } from "../../types/post";
 import { MainLayout } from "../../components/Layout";
+import Footer from "../../components/Footer";
 
 import { PageConfig } from "next";
 import { NextSeo, ArticleJsonLd } from "next-seo";
@@ -25,6 +27,7 @@ const PostContentPage = ({ post }: Props): JSX.Element => {
                 <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </MainLayout>
+            <Footer />
         </>
     );
 };

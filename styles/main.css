@@ -9,6 +9,10 @@ body {
     font-size: 13px;
 }
 
+.banner-wrapper > img {
+    margin: 4px 8px 4px 0;
+}
+
 #__next {
     max-width: 530px;
     margin: 2em auto;
