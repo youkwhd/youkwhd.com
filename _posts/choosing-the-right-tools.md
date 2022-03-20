@@ -33,6 +33,6 @@ When making a small scale applications, you can use TypeScript on both frontend 
 
 ## Conclusion
 
-Therefore, those are some examples of choosing the right tool for the right job. Use the one that suits your situation.
+Bucklespring is more efficient than Mechvibes, Go is better for the backend part. But that doesn't force you to only create applications with certain tool. Therefore, those are some examples of choosing the right tool for the right job. Use the one that suits your situation.
 
 Happy hacking.
