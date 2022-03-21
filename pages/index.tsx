@@ -22,8 +22,8 @@ const Home = ({ recentPosts }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
-                title="whoami"
-                description="youkwhd, I'm an undergraduate student majoring Computer Science that lives in Indonesia, I'm also a GNU/Linux enthusiast, I use Arch Linux as of today."
+                title="homepage"
+                description="a personal blog maintained by youkwhd, contents are mostly about GNU/Linux or programming."
             />
             <MainLayout>
                 <h1>whoami</h1>
