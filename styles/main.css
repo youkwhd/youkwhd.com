@@ -1,9 +1,7 @@
 body {
     background-color: #171717;
     color: #bbbbbb;
-    /* font-family: "LiterationMono Nerd Font Mono", monospace; */
     font-family: "JetBrains Mono", monospace;
-    /* font-family: "Hermit", monospace; */
 
     line-height: 1.15rem;
     font-size: 13px;
@@ -38,6 +36,8 @@ blockquote {
 h1, h2, h3, h4, h5, h6 {
     /* color: #658d36; */
     color: #6f9b1d;
+    /* color: #689d6a; */
+    /* color: #98971a; */
     font-size: 16px;
 }
 
