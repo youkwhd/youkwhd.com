@@ -4,11 +4,28 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Sun, 20 Mar 2022 15:31:55 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 21 Mar 2022 15:05:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[Rethink before implementing a feature]]></title>
+            <link>https://youkwhd.vercel.app/blog/rethink-before-implementing-a-feature</link>
+            <guid>https://youkwhd.vercel.app/blog/rethink-before-implementing-a-feature</guid>
+            <pubDate>Mon, 21 Mar 2022 03:21:43 GMT</pubDate>
+            <description><![CDATA[A bad habit i have is that i always rush when developing my projects. I felt like time is ticking faster when i do my works, thus that makes make me uncautious to small things to consider.]]></description>
+            <content:encoded><![CDATA[<p>A bad habit i have is that i always rush when developing my projects. I felt like time is ticking faster when i do my works, thus that makes make me uncautious to small things to consider.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#the-pull-request-i-made-on-github">The pull request i made on github</a></li>
+</ul>
+<h2 id="the-pull-request-i-made-on-github">The pull request i made on github</h2>
+<p>At first glance, i intended to fix an error on the site <a href="https://glfmn.io">glfmn.io</a>, glad it was on github, the problem was with it's HTTP 404 not found page, for more information, you can find the <a href="https://github.com/glfmn/glfmn.io/pull/4">pull request</a> archive here. Then an idea came into my mind, it was to add a new feature, a vim-like bindings, simply because the site was using Gruvbox as a color scheme, plus it's design looks like a terminal, am i right? 🧐</p>
+<p>It might be <strong>bad</strong> for the ecosystem. What i mean by that is, there's web browser extensions for such feature, like: <a href="https://vimium.github.io/">Vivium</a> &#x26; <a href="https://ueokande.github.io/vim-vixen/">Vim Vixen</a>, and i myself is using it right now. With that known, the bindings should be the same, as they the extensions are also following vim bindings, thus could make things feel a bit clunky, bindings are being overwritten either by the extension or the site.</p>
+<p>Well, it's bad right? or is it? only if the bindings aren't getting overwritten.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[Choosing the right tools]]></title>
             <link>https://youkwhd.vercel.app/blog/choosing-the-right-tools</link>
@@ -44,7 +61,7 @@
 <p>As i said before, in my opinion, it is okay to build your projects with the tech stacks that you prefer. Especially when you're just getting started. It's best to just keep things simple, one programming language while learning the fundamentals, build up your problem solving skills, not for remembering syntaxes, not the programming language, that's that. Go has concurrency: goroutines, channels, mutex, etc. And it is the go-to language for making the backend and can perform faster than TypeScript. I do agree if someone recommends Go over TypeScript.</p>
 <p>When making a small scale applications, you can use TypeScript on both frontend and backend (as if you're solo). It can boost your development environment. And it's community is wide. The ecosystem on TypeScript is also greater than Go's.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Therefore, those are some examples of choosing the right tool for the right job. Use the one that suits your situation.</p>
+<p>Bucklespring is more efficient than Mechvibes, Go is better for the backend part. But that doesn't force you to only create applications with certain tool. Therefore, those are some examples of choosing the right tool for the right job. Use the one that suits your situation.</p>
 <p>Happy hacking.</p>]]></content:encoded>
             <author>lolywk@tutanota.com (youkwhd)</author>
         </item>
