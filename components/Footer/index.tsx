@@ -1,11 +1,13 @@
 import Link from "next/link";
 
-// TODO: automate image imports
-
-
-/*
- * images and GIFs should have it's url as the name, https://landchad.net.gif
+/* 
+ * TODO: automate image imports
+ *
+ * images and GIFs should have it's url as the name, https://youkwhd.com.gif
  * make an utility helper for getting all images and GIFs.
+ *
+ * it is also a problem when sorting it, so the name of the file should contain numbers.
+ * this can be achieved by specifying a number sepereated by "-": 0-https://youkwhd.com.gif
  *
  */
 const Footer = (): JSX.Element => {
