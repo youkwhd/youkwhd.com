@@ -88,8 +88,6 @@ ul > li > ul {
 
 /* standalone code */
 code:not([class]) {
-    padding: .25em;
-    /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
     background-color: #3d3a3b;
     border-radius: 2px;
     overflow: auto;
