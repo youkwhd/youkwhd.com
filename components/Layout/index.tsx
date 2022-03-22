@@ -1,16 +1,17 @@
 import Footer from "../Footer";
 
 type Props = {
-    children: JSX.Element | JSX.Element[],
+    children: JSX.Element | JSX.Element[];
+    banners?: any;
 };
 
-export const MainLayout = ({ children }: Props): JSX.Element => {
+export const MainLayout = ({ children, banners }: Props): JSX.Element => {
     return (
         <>
             <main>
                 {children}
             </main>
-            <Footer />
+            {banners && <Footer banners={banners}/>}
         </>
     );
 };

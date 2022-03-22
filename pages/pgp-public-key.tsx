@@ -1,6 +1,7 @@
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 import { MainLayout } from "../components/Layout";
+import { getAllBanners } from "../utils/getBanners";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -66,13 +67,17 @@ n1l3Mm1PLwZf8D7FTczh8JDS58HGK/d5qfuAb903rh2mvBG3hSGD8zuVQWRldw==
 -----END PGP PUBLIC KEY BLOCK-----
 `;
 
-const PGPPage = (): JSX.Element => {
+type Props = {
+    banners: any;
+};
+
+const PGPPage = ({ banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo 
                 title="pgp public key"
             />
-            <MainLayout>
+            <MainLayout banners={banners}>
                 <p>or download the <a href="/lolywk.pubkey.asc" download>public key</a> here.</p>
                 <hr />
                 <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>
@@ -84,3 +89,13 @@ const PGPPage = (): JSX.Element => {
 };
 
 export default PGPPage;
+
+export const getStaticProps = async () => {
+    const banners = getAllBanners();
+
+    return {
+        props: {
+            banners
+        }
+    };
+};

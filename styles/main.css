@@ -7,7 +7,13 @@ body {
     font-size: 13px;
 }
 
-.banner-wrapper > img {
+.banner-wrapper > a {
+    border: none;
+}
+
+.banner-wrapper > a > * {
+    width: 88px;
+    height: 31px;
     margin: 4px 8px 4px 0;
 }
 

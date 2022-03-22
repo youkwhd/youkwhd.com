@@ -1,4 +1,5 @@
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
+import { getAllBanners } from "../../utils/getBanners";
 import { markdownToHTML } from "../../utils/markdownConverter";
 
 import { PostType } from "../../types/post";
@@ -13,16 +14,17 @@ export const config: PageConfig = {
 
 type Props = {
     post: PostType;
+    banners: any;
 };
 
-const PostContentPage = ({ post }: Props): JSX.Element => {
+const PostContentPage = ({ post, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title={post.title.toLowerCase()}
                 description={post.excerpt}
             />
-            <MainLayout>
+            <MainLayout banners={banners}>
                 <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </MainLayout>
@@ -46,6 +48,7 @@ export const getStaticProps = async ({ params }: Params) => {
     ]);
 
     const content = await markdownToHTML(postKeys.content || '');
+    const banners = getAllBanners();
 
     return {
         props: {
@@ -53,6 +56,7 @@ export const getStaticProps = async ({ params }: Params) => {
                 ...postKeys,
                 content,
             },
+            banners
         },
     };
 };

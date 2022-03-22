@@ -8,6 +8,7 @@ import { MainLayout } from "../components/Layout";
 import RecentPosts from "../components/RecentPosts";
 
 import { getAllPosts } from "../utils/getPosts";
+import { getAllBanners } from "../utils/getBanners";
 import { generateRSSFeed } from "../utils/generateRSSFeed";
 
 export const config: PageConfig = {
@@ -16,16 +17,17 @@ export const config: PageConfig = {
 
 type Props = {
     recentPosts: PostType[];
+    banners: any
 };
 
-const Home = ({ recentPosts }: Props): JSX.Element => {
+const Home = ({ recentPosts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title="homepage"
                 description="a personal blog maintained by youkwhd, contents are mostly about GNU/Linux or programming."
             />
-            <MainLayout>
+            <MainLayout banners={banners}>
                 <h1>whoami</h1>
                 <p>
                     I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
@@ -66,12 +68,15 @@ export const getStaticProps = async () => {
         'content', 
     ]);
 
+    const banners = getAllBanners();
+
     await generateRSSFeed(allPosts);
     const recentPosts = allPosts.slice(0, 3);
 
     return {
         props: {
-            recentPosts	
+            recentPosts,
+            banners
         },
     };
 };
