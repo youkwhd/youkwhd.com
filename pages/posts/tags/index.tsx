@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../utils/getPosts";
 import { MainLayout } from "../../../components/Layout";
+import type { Banner } from "../../../types";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+import { getAllBanners } from "../../../utils/getBanners";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -14,15 +16,16 @@ type Props = {
         tags: string[];
         parsedTags: string[];
     };
+    banners: Banner[];
 };
 
-const TagsPage = ({ allTags }: Props): JSX.Element => {
+const TagsPage = ({ allTags, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title="list of topics"
             />
-            <MainLayout>
+            <MainLayout banners={banners}>
                 <h1>available list of topics:</h1>
                 <ul>
                     {allTags.tags.map((tag: string, index: number) => {
@@ -51,12 +54,15 @@ export const getStaticProps = () => {
     const setOfTags= new Set(allTags.map((tag) => tag.tags).flat());
     const setOfParsedTags = new Set(allTags.map((tag) => tag.parsedTags).flat());
 
+    const banners: Banner[] = getAllBanners();
+
     return {
         props: {
             allTags: {
                 tags: Array.from(setOfTags),
                 parsedTags: Array.from(setOfParsedTags)
-            }
+            },
+            banners
         },
     };
 };

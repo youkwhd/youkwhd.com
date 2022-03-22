@@ -2,19 +2,19 @@ import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { getAllBanners } from "../../utils/getBanners";
 import { markdownToHTML } from "../../utils/markdownConverter";
 
-import { PostType } from "../../types/post";
+import type { Post, Banner } from "../../types";
 import { MainLayout } from "../../components/Layout";
 
 import { PageConfig } from "next";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
 };
 
 type Props = {
-    post: PostType;
-    banners: any;
+    post: Post;
+    banners: Banner[];
 };
 
 const PostContentPage = ({ post, banners }: Props): JSX.Element => {
@@ -47,8 +47,8 @@ export const getStaticProps = async ({ params }: Params) => {
         "excerpt"
     ]);
 
-    const content = await markdownToHTML(postKeys.content || '');
-    const banners = getAllBanners();
+    const content: string = await markdownToHTML(postKeys.content || '');
+    const banners: Banner[] = getAllBanners();
 
     return {
         props: {

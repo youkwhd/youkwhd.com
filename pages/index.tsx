@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import type { PostType } from "../types/post";
+import type { Post, Banner } from "../types";
 
 import { MainLayout } from "../components/Layout";
 import RecentPosts from "../components/RecentPosts";
@@ -16,8 +16,8 @@ export const config: PageConfig = {
 };
 
 type Props = {
-    recentPosts: PostType[];
-    banners: any
+    recentPosts: Post[];
+    banners: Banner[];
 };
 
 const Home = ({ recentPosts, banners }: Props): JSX.Element => {

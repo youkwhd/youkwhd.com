@@ -2,6 +2,7 @@ import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 import { MainLayout } from "../components/Layout";
 import { getAllBanners } from "../utils/getBanners";
+import type { Banner } from "../types";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -68,7 +69,7 @@ n1l3Mm1PLwZf8D7FTczh8JDS58HGK/d5qfuAb903rh2mvBG3hSGD8zuVQWRldw==
 `;
 
 type Props = {
-    banners: any;
+    banners: Banner[];
 };
 
 const PGPPage = ({ banners }: Props): JSX.Element => {
@@ -91,7 +92,7 @@ const PGPPage = ({ banners }: Props): JSX.Element => {
 export default PGPPage;
 
 export const getStaticProps = async () => {
-    const banners = getAllBanners();
+    const banners: Banner[] = getAllBanners();
 
     return {
         props: {

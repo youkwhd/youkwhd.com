@@ -1,19 +1,12 @@
 import fs from "fs";
 import { join } from "path";
+import type { Banner } from "../types";
 
 const bannersDirectory: string = join(process.cwd(), "public/images/banners");
 
-// TODO: export this type
-type ParsedBanner = {
-    index: number;
-    publicSrc: string,
-    url: string;
-};
-
 export const getAvailableBanners = (): string[] => fs.readdirSync(bannersDirectory);
 
-export const parseBanner = (banner: string): ParsedBanner => {
-    // const tempBanner: FixedLengthArray<[string, string]> = banner.split("[-]");
+export const parseBanner = (banner: string): Banner => {
     const tempBanner: string[] = banner.split("[-]");
     let unparsedUrl: string = tempBanner[1];
 
@@ -31,16 +24,16 @@ export const parseBanner = (banner: string): ParsedBanner => {
         publicSrc: `/images/banners/${banner}`,
         url: unparsedUrl
     };
-}
+};
 
-export const getAllBanners = (): ParsedBanner[] => {
+export const getAllBanners = (): Banner[] => {
     const banners: string[] = getAvailableBanners();
-    let parsedBanners: ParsedBanner[] = [];
+    let parsedBanners: Banner[] = [];
 
     for (let i = 0; i < banners.length; i++) {
-        const tempBanner: ParsedBanner = parseBanner(banners[i]);
+        const tempBanner: Banner = parseBanner(banners[i]);
         parsedBanners.push(tempBanner);
     }
 
     return parsedBanners.sort((banner1, banner2) => banner1.index - banner2.index);
-}
+};

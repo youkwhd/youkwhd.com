@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { PostType } from "../types/post";
+import { Post } from "../types";
 
 type Props = {
-    posts: PostType[];
+    posts: Post[];
 };
 
 const PostCards = ({ posts }: Props): JSX.Element => {
     return (
         <ul>
-            {posts.map((post: PostType) => {
+            {posts.map((post: Post) => {
                 return (
                     <li key={post.slug}>
                         <span>{post.date.split("T")[0]} - </span>

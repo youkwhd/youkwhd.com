@@ -3,12 +3,17 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { MainLayout } from "../components/Layout";
 import { getAllBanners } from "../utils/getBanners";
+import type { Banner } from "../types";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
 };
 
-const NotFound = ({ banners }: any): JSX.Element => {
+type Props = {
+    banners: Banner[];
+};
+
+const NotFound = ({ banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -25,7 +30,7 @@ const NotFound = ({ banners }: any): JSX.Element => {
 export default NotFound;
 
 export const getStaticProps = async () => {
-    const banners = getAllBanners();
+    const banners: Banner[] = getAllBanners();
 
     return {
         props: {

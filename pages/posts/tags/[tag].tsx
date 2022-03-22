@@ -1,27 +1,29 @@
 import { getAllPosts } from "../../../utils/getPosts";
-import { PostType } from "../../../types/post";
+import type { Banner, Post } from "../../../types";
 import PostCards from "../../../components/PostCards";
 import { MainLayout } from "../../../components/Layout";
 
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+import { getAllBanners } from "../../../utils/getBanners";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
 };
 
 type Props = {
-    filteredPosts: PostType[];
+    filteredPosts: Post[];
     currentPostTag: string;
+    banners: Banner[];
 };
 
-const TagRelatePage = ({ filteredPosts, currentPostTag }: Props): JSX.Element => {
+const TagRelatePage = ({ filteredPosts, currentPostTag, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
                 title={`${currentPostTag} related posts`}
             />
-            <MainLayout>
+            <MainLayout banners={banners}>
                 <h1>{currentPostTag} related posts:</h1>
                 <PostCards posts={filteredPosts} />
             </MainLayout>
@@ -61,12 +63,15 @@ export const getStaticProps = ({ params }: Params) => {
         }
     }
 
+    const banners: Banner[] = getAllBanners();
+
     return {
         props: {
             filteredPosts,
-            currentPostTag
+            currentPostTag,
+            banners
         }
-    }
+    };
 };
 
 export const getStaticPaths = () => {
