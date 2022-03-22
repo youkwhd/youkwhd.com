@@ -4,7 +4,7 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Mon, 21 Mar 2022 15:05:55 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Mar 2022 07:01:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -19,11 +19,14 @@
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#the-pull-request-i-made-on-github">The pull request i made on github</a></li>
+<li><a href="#dont-think-twice-just-go-for-it">Don't think twice, just go for it.</a></li>
 </ul>
 <h2 id="the-pull-request-i-made-on-github">The pull request i made on github</h2>
 <p>At first glance, i intended to fix an error on the site <a href="https://glfmn.io">glfmn.io</a>, glad it was on github, the problem was with it's HTTP 404 not found page, for more information, you can find the <a href="https://github.com/glfmn/glfmn.io/pull/4">pull request</a> archive here. Then an idea came into my mind, it was to add a new feature, a vim-like bindings, simply because the site was using Gruvbox as a color scheme, plus it's design looks like a terminal, am i right? 🧐</p>
 <p>It might be <strong>bad</strong> for the ecosystem. What i mean by that is, there's web browser extensions for such feature, like: <a href="https://vimium.github.io/">Vivium</a> &#x26; <a href="https://ueokande.github.io/vim-vixen/">Vim Vixen</a>, and i myself is using it right now. With that known, the bindings should be the same, as they the extensions are also following vim bindings, thus could make things feel a bit clunky, bindings are being overwritten either by the extension or the site.</p>
-<p>Well, it's bad right? or is it? only if the bindings aren't getting overwritten.</p>]]></content:encoded>
+<p>Well, it's bad right? or is it? only if the bindings aren't getting overwritten.</p>
+<h2 id="dont-think-twice-just-go-for-it">Don't think twice, just go for it.</h2>
+<p>While there is some bad affection, not all applications will get affected by independent feature. Taken an example of vim-bindings, some applications have those integrated. Because it is a standalone app, it shouldn't make any problem, e.g. <a href="https://github.com/goballooning/vim-live-latex-preview">vim-live-latex-preview</a>, <a href="https://en.wikipedia.org/wiki/Zathura_(document_viewer)">zathura</a>, <a href="https://www.notabug.org/g0tsu/litemdview">litemdview</a>, etc.</p>]]></content:encoded>
             <author>lolywk@tutanota.com (youkwhd)</author>
         </item>
         <item>
