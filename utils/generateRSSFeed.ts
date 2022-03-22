@@ -1,10 +1,10 @@
 import { Feed } from "feed";
 import fs from "fs";
-import type { PostType } from "../types/post";
+import type { Post } from "../types";
 import { markdownToHTML } from "./markdownConverter";
 
 // TODO: update types
-export async function generateRSSFeed(posts: PostType[]): Promise<boolean> {
+export async function generateRSSFeed(posts: Post[]): Promise<boolean> {
     const PROTOCOL = "https://";
     const HOSTNAME = "youkwhd.vercel.app";
     const SITE_URL = PROTOCOL + HOSTNAME;
