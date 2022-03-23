@@ -1,12 +1,12 @@
+import { PageConfig } from "next";
+import { NextSeo } from "next-seo";
+
 import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
 import { getAllBanners } from "../../utils/getBanners";
 import { markdownToHTML } from "../../utils/markdownConverter";
 
-import type { Post, Banner } from "../../types";
+import { Post, Banner } from "../../types";
 import { MainLayout } from "../../components/Layout";
-
-import { PageConfig } from "next";
-import { NextSeo } from "next-seo";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -41,13 +41,8 @@ type Params = {
 };
 
 export const getStaticProps = async ({ params }: Params) => {
-    const postKeys = getPostBySlug(params.slug, [
-        "title",
-        "content",
-        "excerpt"
-    ]);
-
-    const content: string = await markdownToHTML(postKeys.content || '');
+    const postKeys: Post = getPostBySlug(params.slug);
+    const content: string = await markdownToHTML(postKeys.content || "");
     const banners: Banner[] = getAllBanners();
 
     return {
@@ -62,9 +57,7 @@ export const getStaticProps = async ({ params }: Params) => {
 };
 
 export const getStaticPaths = () => {
-    const posts = getAllPosts([
-        "slug"
-    ]);
+    const posts: Post[] = getAllPosts();
 
     // all the paths that's possible to be rendered out	
     return {

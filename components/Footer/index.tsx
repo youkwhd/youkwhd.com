@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Banner from "../Banner";
+import { Banner as BannerType } from "../../types";
 
 /* 
  * TODO: automate image imports
@@ -13,7 +14,7 @@ import Banner from "../Banner";
  */
 
 type Props = {
-    banners?: any;
+    banners: BannerType[];
 };
 
 const Footer = ({ banners }: Props): JSX.Element => {
@@ -22,7 +23,7 @@ const Footer = ({ banners }: Props): JSX.Element => {
             <hr/>
             <p>go back to the <Link href="/"><a>homepage</a></Link> | about</p>
             <div className="banner-wrapper">
-                {banners.map((banner: any) => <Banner imageSrc={banner.publicSrc} href={banner.url} key={banner.index} />)}
+                {banners.map((banner: BannerType) => <Banner imageSrc={banner.publicSrc} href={banner.url} key={banner.index} />)}
             </div>
         </footer>
     );

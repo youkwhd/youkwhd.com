@@ -1,12 +1,11 @@
-import { getAllPosts } from "../../utils/getPosts";
-import type { Post, Banner } from "../../types";
-
-import PostCards from "../../components/PostCards";
-import { MainLayout } from "../../components/Layout";
-
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+
+import { getAllPosts } from "../../utils/getPosts";
 import { getAllBanners } from "../../utils/getBanners";
+import { Post, Banner } from "../../types";
+import { MainLayout } from "../../components/Layout";
+import PostCards from "../../components/PostCards";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -34,15 +33,7 @@ const PostsPage = ({ allPosts, banners }: Props): JSX.Element => {
 export default PostsPage;
 
 export const getStaticProps = () => {
-    const allPosts = getAllPosts([
-        "title",
-        "tags",
-        "parsedTags",
-        "date",
-        "slug",
-        "excerpt",
-    ]);
-    
+    const allPosts: Post[] = getAllPosts();
     const banners: Banner[] = getAllBanners();
 
     return {

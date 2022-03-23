@@ -2,11 +2,9 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import type { Post, Banner } from "../types";
-
+import { Post, Banner } from "../types";
 import { MainLayout } from "../components/Layout";
 import RecentPosts from "../components/RecentPosts";
-
 import { getAllPosts } from "../utils/getPosts";
 import { getAllBanners } from "../utils/getBanners";
 import { generateRSSFeed } from "../utils/generateRSSFeed";
@@ -58,20 +56,11 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
 };
 
 export const getStaticProps = async () => {
-    const allPosts: any = getAllPosts([
-        'title',
-        'date', // essentially need this for the getPosts to sort for corresponding date
-        'slug',
+    const allPosts: Post[] = getAllPosts();
+    const recentPosts: Post[] = allPosts.slice(0, 3);
 
-        // needed for RSS
-        'excerpt', 
-        'content', 
-    ]);
-
-    const banners = getAllBanners();
-
+    const banners: Banner[] = getAllBanners();
     await generateRSSFeed(allPosts);
-    const recentPosts = allPosts.slice(0, 3);
 
     return {
         props: {

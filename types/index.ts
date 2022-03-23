@@ -1,11 +1,11 @@
 export type Post = {
     slug: string;
     title: string;
+    excerpt: string;
     date: string;
     content: string;
     tags: string[];
     parsedTags: string[];
-    excerpt: string;
 };
 
 export type Banner = {

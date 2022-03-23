@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { Post } from "../../types";
+import { Post } from "../../types";
 
 type Props = {
-    posts: Post[]
+    posts: Post[];
 };
 
 const RecentPosts = ({ posts }: Props): JSX.Element => {

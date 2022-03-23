@@ -1,10 +1,10 @@
-import { getAllPosts } from "../../../utils/getPosts";
-import type { Banner, Post } from "../../../types";
-import PostCards from "../../../components/PostCards";
-import { MainLayout } from "../../../components/Layout";
-
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+
+import { getAllPosts } from "../../../utils/getPosts";
+import { Banner, Post } from "../../../types";
+import PostCards from "../../../components/PostCards";
+import { MainLayout } from "../../../components/Layout";
 import { getAllBanners } from "../../../utils/getBanners";
 
 export const config: PageConfig = {
@@ -40,17 +40,10 @@ type Params = {
 };
 
 export const getStaticProps = ({ params }: Params) => {
-    const allPosts = getAllPosts([
-        'title',
-        'tags',
-        'parsedTags',
-        'date',
-        'slug',
-        'excerpt',
-    ]);
+    const allPosts: Post[] = getAllPosts();
     
     // filter all the posts that has the current tag.
-    const filteredPosts = allPosts.filter((post) => post.parsedTags.includes(params.tag));
+    const filteredPosts: Post[] = allPosts.filter((post) => post.parsedTags.includes(params.tag));
     
     let currentPostTag: string = ""; // the current location of /tags/[tag] but un-parsed
 
@@ -75,15 +68,11 @@ export const getStaticProps = ({ params }: Params) => {
 };
 
 export const getStaticPaths = () => {
-    const posts = getAllPosts([
-        "tags",
-        "parsedTags"
-    ]); 
-
-    const parsedTags = new Set(posts.map((post) => post.parsedTags).flat());
+    const posts: Post[] = getAllPosts();
+    const parsedTags: Set<string> = new Set(posts.map((post) => post.parsedTags).flat());
 
     return {
-        paths: Array.from(parsedTags).map((tag) => {
+        paths: Array.from(parsedTags).map((tag: string) => {
             return {
                 params: {
                     tag,

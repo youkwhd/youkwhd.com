@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { getAllPosts } from "../../../utils/getPosts";
-import { MainLayout } from "../../../components/Layout";
-import type { Banner } from "../../../types";
-
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
+
 import { getAllBanners } from "../../../utils/getBanners";
+import { getAllPosts } from "../../../utils/getPosts";
+import { MainLayout } from "../../../components/Layout";
+import { Post, Banner } from "../../../types";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -46,13 +46,10 @@ const TagsPage = ({ allTags, banners }: Props): JSX.Element => {
 export default TagsPage;
 
 export const getStaticProps = () => {
-    const allTags = getAllPosts([
-        'tags',
-        'parsedTags',
-    ]);
+    const allTags: Post[] = getAllPosts();
 
-    const setOfTags= new Set(allTags.map((tag) => tag.tags).flat());
-    const setOfParsedTags = new Set(allTags.map((tag) => tag.parsedTags).flat());
+    const setOfTags: Set<string> = new Set(allTags.map((tag) => tag.tags).flat());
+    const setOfParsedTags: Set<String> = new Set(allTags.map((tag) => tag.parsedTags).flat());
 
     const banners: Banner[] = getAllBanners();
 
