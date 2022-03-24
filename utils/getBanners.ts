@@ -4,36 +4,64 @@ import { Banner } from "../types";
 
 const bannersDirectory: string = join(process.cwd(), "public/images/banners");
 
+type ReplaceString = {
+    searchValue: string;
+    replaceValue: string;
+}
+
+// TODO: learn RegExp, don't be lazy
+// for now, it doesn't support regex
+const replaces: ReplaceString[] = [
+    {
+        searchValue: "[slash]",
+        replaceValue: "/"
+    },
+    {
+        searchValue: "[http]",
+        replaceValue: "http://"
+    },
+    {
+        searchValue: "[https]",
+        replaceValue: "https://"
+    },
+    {
+        searchValue: ".gif",
+        replaceValue: ""
+    },
+    {
+        searchValue: ".png",
+        replaceValue: ""
+    },
+];
+
+
 export const getAvailableBanners = (): string[] => fs.readdirSync(bannersDirectory);
-
-export const parseBanner = (banner: string): Banner => {
-    const tempBanner: string[] = banner.split("[-]");
-    let unparsedUrl: string = tempBanner[1];
-
-    // TODO: learn RegExp ;-;
-    while (unparsedUrl.includes("[slash]")) 
-        unparsedUrl = unparsedUrl.replace("[slash]", "/");
-
-    unparsedUrl = unparsedUrl.replace("[http]", "http://");
-    unparsedUrl = unparsedUrl.replace("[https]", "https://");
-    unparsedUrl = unparsedUrl.replace(/\.gif$/, "");
-    unparsedUrl = unparsedUrl.replace(/\.png$/, "");
-
-    return {
-        index: +tempBanner[0],
-        publicSrc: `/images/banners/${banner}`,
-        url: unparsedUrl
-    };
-};
 
 export const getAllBanners = (): Banner[] => {
     const banners: string[] = getAvailableBanners();
     let parsedBanners: Banner[] = [];
 
     banners.forEach((banner) => {
-        const tempBanner: Banner = parseBanner(banner);
+        const tempBanner: Banner = parseBanner(banner, replaces);
         parsedBanners.push(tempBanner);
     });
 
     return parsedBanners.sort((banner1, banner2) => banner1.index - banner2.index);
+};
+
+const parseBanner = (banner: string, replaces: ReplaceString[]): Banner => {
+    const tempBanner: string[] = banner.split("[-]");
+    let unparsedUrl: string = tempBanner[1];
+
+    replaces.forEach((r) => {
+        while (unparsedUrl.includes(r.searchValue)) {
+            unparsedUrl = unparsedUrl.replace(r.searchValue, r.replaceValue);
+        }
+    });
+
+    return {
+        index: +tempBanner[0],
+        publicSrc: `/images/banners/${banner}`,
+        url: unparsedUrl
+    };
 };
