@@ -1,8 +1,9 @@
 import Footer from "../Footer";
+import { Banner } from "../../types";
 
 type Props = {
     children: JSX.Element | JSX.Element[];
-    banners?: any;
+    banners: Banner[];
 };
 
 export const MainLayout = ({ children, banners }: Props): JSX.Element => {
@@ -11,7 +12,7 @@ export const MainLayout = ({ children, banners }: Props): JSX.Element => {
             <main>
                 {children}
             </main>
-            {banners && <Footer banners={banners}/>}
+            <Footer banners={banners}/>
         </>
     );
 };
