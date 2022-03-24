@@ -30,10 +30,10 @@ export const getAllBanners = (): Banner[] => {
     const banners: string[] = getAvailableBanners();
     let parsedBanners: Banner[] = [];
 
-    for (let i = 0; i < banners.length; i++) {
-        const tempBanner: Banner = parseBanner(banners[i]);
+    banners.forEach((banner) => {
+        const tempBanner: Banner = parseBanner(banner);
         parsedBanners.push(tempBanner);
-    }
+    });
 
     return parsedBanners.sort((banner1, banner2) => banner1.index - banner2.index);
 };
