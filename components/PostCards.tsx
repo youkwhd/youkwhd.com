@@ -9,9 +9,11 @@ const PostCards = ({ posts }: Props): JSX.Element => {
     return (
         <ul>
             {posts.map((post: Post) => {
+                const parsedPostDate = [post.date.split("T")[0];
+
                 return (
                     <li key={post.slug}>
-                        <span>{post.date.split("T")[0]} - </span>
+                        <span>{parsedPostDate} - </span>
                         <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                             {post.title}
                         </Link>
