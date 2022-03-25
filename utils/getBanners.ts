@@ -41,7 +41,7 @@ export const getAllBanners = (): Banner[] => {
     const banners: string[] = getAvailableBanners();
     let parsedBanners: Banner[] = [];
 
-    banners.forEach((banner) => {
+    banners.forEach((banner: string): void => {
         const tempBanner: Banner = parseBanner(banner, replaces);
         parsedBanners.push(tempBanner);
     });
@@ -53,7 +53,7 @@ const parseBanner = (banner: string, replaces: ReplaceString[]): Banner => {
     const tempBanner: string[] = banner.split("[-]");
     let unparsedUrl: string = tempBanner[1];
 
-    replaces.forEach((r) => {
+    replaces.forEach((r: ReplaceString): void => {
         while (unparsedUrl.includes(r.searchValue)) {
             unparsedUrl = unparsedUrl.replace(r.searchValue, r.replaceValue);
         }
