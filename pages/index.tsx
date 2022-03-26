@@ -34,7 +34,7 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
                     usually with React, and i primarily use Typescript as my go-to language alongside with Next.js, i'm also comfortable developing the backend using Node.js.
                 </p>
                 <p>
-                    As a GNU/Linux enthusiast, I use Arch as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus arch is 
+                    As a GNU/Linux enthusiast, I use Arch as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus Arch is 
                     a rolling release distribution, i'm lazy. But it would be a pain in the ass to compile things from source. I stand with the movement of free and open source
                     softwares (FOSS). As most of, if not, all of my projects are free and open source. You have to note that the term "free" and "open source" is different.
                 </p>
