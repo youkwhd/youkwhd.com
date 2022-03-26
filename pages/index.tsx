@@ -28,15 +28,15 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
             <MainLayout banners={banners}>
                 <h1>whoami</h1>
                 <p>
-                    I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia. What a lovely smile i have.
-                    I love programming at every aspect of it, it has been my hobby since i know the programming way to solve problems. I mean, it looks cool to 
-                    write such program with Vim and seeing people thinking that you're some kind of a hackerman. I'm currently working with web apps, usually 
-                    with React, and i primarily use Typescript as my go-to language alongside with Next.js, i'm also comfortable developing the backend using Node.js.
+                    I'm an undergraduate student majoring Computer Science, but also known as Informatics in my country, Indonesia.
+                    I love programming at every aspect of it, it has been my hobby since i know the programming way to solve problems, plus the math involed in it. 
+                    I mean, it looks cool to write such program with Vim and seeing people thinking that you're some kind of a hackerman. I'm currently working with web apps,
+                    usually with React, and i primarily use Typescript as my go-to language alongside with Next.js, i'm also comfortable developing the backend using Node.js.
                 </p>
                 <p>
-                    As a GNU/Linux enthusiast, I use Arch Linux as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus arch is 
-                    a rolling release distribution, i'm lazy. But it would be a pain in the ass to compile things. I do love free and open source softwares (FOSS).
-                    Indeed, as most of, if not, all of my projects are free and open source. You have to note that the term "free" and "open source" is different.
+                    As a GNU/Linux enthusiast, I use Arch as my daily drive operating system. I wanted to use Gentoo cuz i'm a geek myself, plus arch is 
+                    a rolling release distribution, i'm lazy. But it would be a pain in the ass to compile things from source. I stand with the movement of free and open source
+                    softwares (FOSS). as most of, if not, all of my projects are free and open source. You have to note that the term "free" and "open source" is different.
                 </p>
                 <h2>take a look at my blog</h2>
                 <p>
