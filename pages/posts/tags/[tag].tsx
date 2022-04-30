@@ -40,23 +40,23 @@ type Params = {
 };
 
 export const getStaticProps = ({ params }: Params) => {
+    const banners: Banner[] = getAllBanners();
     const allPosts: Post[] = getAllPosts();
     
     // filter all the posts that has the current tag.
     const filteredPosts: Post[] = allPosts.filter((post) => post.parsedTags.includes(params.tag));
     
-    let currentPostTag: string = ""; // the current location of /tags/[tag] but un-parsed
+    let currentPostTag: string = "";
 
-    // itterate through the first post, knowing that the current [tag] will always be inside
-    // the filtered post of index 0, then get the un-parsed tag
+    // get the un-parsed tag
+    // e.g. parsed: params.tag (software-development) un-parsed: (software development)
     for (let i = 0; i < filteredPosts[0].parsedTags.length; i++) {
-        if (filteredPosts[0].parsedTags[i] === params.tag) { 
-            // every position of parsedTag is the same as tag's
+        // found index position of `params.tag` on the array
+        if (filteredPosts[0].parsedTags[i] === params.tag) {  
+            // assign the un-parsed tag
             currentPostTag = filteredPosts[0].tags[i];
         }
     }
-
-    const banners: Banner[] = getAllBanners();
 
     return {
         props: {
