@@ -1,4 +1,4 @@
-export type Post = {
+type Post = {
     slug: string;
     title: string;
     excerpt: string;
@@ -8,8 +8,13 @@ export type Post = {
     parsedTags: string[];
 };
 
-export type Banner = {
+type Banner = {
     index: number;
     publicSrc: string;
     url: string;
 };
+
+export type {
+    Post,
+    Banner
+}
