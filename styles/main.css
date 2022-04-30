@@ -28,7 +28,7 @@ a {
     border-bottom: 1px dotted #387cec;
 }
 
-a:active, a:hover, a:active {
+a:active, a:hover {
     color: #3971cc;
 }
 
