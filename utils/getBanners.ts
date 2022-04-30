@@ -5,9 +5,9 @@ import replaceString from "./parseString";
 
 const bannersDirectory: string = join(process.cwd(), "public/images/banners");
 
-export const getAvailableBanners = (): string[] => fs.readdirSync(bannersDirectory);
+const getAvailableBanners = (): string[] => fs.readdirSync(bannersDirectory);
 
-export const getAllBanners = (): Banner[] => {
+const getAllBanners = (): Banner[] => {
     const banners: string[] = getAvailableBanners();
     let parsedBanners: Banner[] = [];
 
@@ -35,4 +35,9 @@ const parseBanner = (banner: string): Banner => {
         publicSrc: `/images/banners/${banner}`,
         url: tempUrl 
     };
+};
+
+export {
+    getAvailableBanners,
+    getAllBanners
 };
