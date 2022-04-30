@@ -2,6 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import { Post } from "../types";
 import matter from "gray-matter";
+import replaceString from "./parseString";
 
 const postsDirectory: string = join(process.cwd(), "_posts");
 
@@ -38,9 +39,9 @@ const getAllPosts = (): Post[] => {
 
 const parsePostTag = (tag: string): string => {
     // TODO: make it one line, learn how to regex.
-    tag = tag.replace(" ", "-");
-    tag = tag.replace("/", "-");
-    tag = tag.replace(".", "-");
+    tag = replaceString(tag, " ", "-");
+    tag = replaceString(tag, "/", "-");
+    tag = replaceString(tag, ".", "-");
 
     return tag;
 };
