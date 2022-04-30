@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import { Banner } from "../types";
-import replaceString from "./parseString";
+import replaceString from "./replaceString";
 
 const bannersDirectory: string = join(process.cwd(), "public/images/banners");
 

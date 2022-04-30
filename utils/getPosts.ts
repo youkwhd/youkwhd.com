@@ -2,7 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import { Post } from "../types";
 import matter from "gray-matter";
-import replaceString from "./parseString";
+import replaceString from "./replaceString";
 
 const postsDirectory: string = join(process.cwd(), "_posts");
 
