@@ -3,11 +3,7 @@ import { Feed } from "feed";
 import { Post } from "../types";
 import { markdownToHTML } from "./markdownConverter";
 
-type TempPost = Post & {
-    htmlContent?: string;
-}
-
-// TODO: update types
+// refer to https://github.com/jpmonette/feed
 export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
     const PROTOCOL = "https://";
     const HOSTNAME = "youkwhd.vercel.app";
@@ -19,6 +15,7 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         email: "lolywk@tutanota.com"
     };
 
+    // config
     const feed: Feed = new Feed({
         title: `${author.name}'s blog posts`,
         description: `an archive consist of articles from ${author.name}'s site`,
@@ -33,26 +30,21 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         },
     });
 
-    // convert markdown to HTML
-    let tempPosts: TempPost[] = posts;
+    // create rss
     for (let i = 0; i < posts.length; i++) {
+        const postURL: string = `${SITE_URL}/blog/${posts[i].slug}`;
         const htmlContent: string = await markdownToHTML(posts[i].content);
-        tempPosts[i]["htmlContent"] = htmlContent;
-    }
-    
-    tempPosts.forEach((post: TempPost): void => {
-        const postURL: string = `${SITE_URL}/blog/${post.slug}`;
 
         feed.addItem({
-            title: post.title,
+            title: posts[i].title,
             id: postURL,
             link: postURL,
-            description: post.excerpt,
-            content: post.htmlContent,
+            description: posts[i].excerpt,
+            content: htmlContent,
             author: [author],
-            date: new Date(post.date)
+            date: new Date(posts[i].date)
         });
-    });
+    };
 
     fs.writeFileSync("./public/rss.xml", feed.rss2());
 };
