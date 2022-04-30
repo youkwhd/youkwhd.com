@@ -8,7 +8,7 @@ type TempPost = Post & {
 }
 
 // TODO: update types
-export async function generateRSSFeed(posts: Post[]): Promise<boolean> {
+export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
     const PROTOCOL = "https://";
     const HOSTNAME = "youkwhd.vercel.app";
     const SITE_URL = PROTOCOL + HOSTNAME;
@@ -55,5 +55,4 @@ export async function generateRSSFeed(posts: Post[]): Promise<boolean> {
     });
 
     fs.writeFileSync("./public/rss.xml", feed.rss2());
-    return true;
-}
+};
