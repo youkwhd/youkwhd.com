@@ -12,7 +12,7 @@ const Footer = ({ banners }: Props): JSX.Element => {
             <hr/>
             <p>go back to the <Link href="/"><a>homepage</a></Link> | updates via <a href="/rss.xml">rss</a></p>
             <div className="banner-wrapper">
-                {banners.map((banner: BannerType) => <Banner src={banner.publicSrc} href={banner.url} key={banner.index} />)}
+                {banners.map((banner: BannerType) => <Banner src={banner.src} href={banner.url} key={banner.index} />)}
             </div>
         </footer>
     );

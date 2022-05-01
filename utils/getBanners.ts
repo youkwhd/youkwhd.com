@@ -31,7 +31,7 @@ const parseBanner = (banner: string): Banner => {
 
     return {
         index: +tempBanner[0],
-        publicSrc: `/images/banners/${banner}`,
+        src: `/images/banners/${banner}`,
         url: tempUrl 
     };
 };

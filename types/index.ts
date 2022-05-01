@@ -9,7 +9,7 @@ type Post = {
 
 type Banner = {
     index: number;
-    publicSrc: string;
+    src: string;
     url: string;
 };
 
