@@ -1,8 +1,3 @@
-/*
- * markdownToHTML => gets a markdown content (type string) to be converted to html
- * e.g. markdown content; "hello, world" => <p>hello, world</p>
- *
- */
 import { unified } from "unified";
 
 import remarkParse from "remark-parse";
@@ -13,7 +8,7 @@ import rehypeSlug from "rehype-slug";
 import rehypePrism from "@mapbox/rehype-prism";
 import rehypeStringify from "rehype-stringify";
 
-export async function markdownToHTML(markdown: string) {
+export const markdownToHTML = async (markdown: string): Promise<string> => {
     return (await unified()
                     .use(remarkParse)
                     .use(remarkToc)
