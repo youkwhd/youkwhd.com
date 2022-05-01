@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import { Post } from "../types";
-import matter from "gray-matter";
+import matter, { GrayMatterFile } from "gray-matter";
 import replaceString from "./replaceString";
 
 const postsDirectory: string = join(process.cwd(), "_posts");
@@ -12,7 +12,7 @@ const getPostBySlug = (fileSource: string): Post => {
     const fullPath: string = join(postsDirectory, `${slug}.md`);
     const postContent: string = fs.readFileSync(fullPath, "utf8");
 
-    const { data, content } = matter(postContent);
+    const { data, content }: GrayMatterFile<string> = matter(postContent);
 
     // e.g. ["software-development"]: "software development"
     const tags: { [key: string]: string } = {}; 
