@@ -6,12 +6,11 @@ import replaceString from "./replaceString";
 
 const postsDirectory: string = join(process.cwd(), "_posts");
 const postFiles: string[] = fs.readdirSync(postsDirectory);
+const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""));
 
-const getPostBySlug = (fileSource: string): Post => {
-    const slug: string = fileSource.replace(/\.md$/, "");
-    const fullPath: string = join(postsDirectory, `${slug}.md`);
-    const postContent: string = fs.readFileSync(fullPath, "utf8");
-
+const getPostBySlug = (slug: string): Post => {
+    const postPath: string = join(postsDirectory, `${slug}.md`);
+    const postContent: string = fs.readFileSync(postPath, "utf8");
     const { data, content }: GrayMatterFile<string> = matter(postContent);
 
     // e.g. ["software-development"]: "software development"
@@ -32,8 +31,8 @@ const getPostBySlug = (fileSource: string): Post => {
 };
 
 const getAllPosts = (): Post[] => {
-    const posts = postFiles
-        .map((fileSource) => getPostBySlug(fileSource))
+    const posts = postSlugs 
+        .map((slug) => getPostBySlug(slug))
         .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
     return posts;
