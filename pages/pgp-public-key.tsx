@@ -80,10 +80,9 @@ const PGPPage = ({ banners }: Props): JSX.Element => {
                 title="pgp public key"
             />
             <MainLayout banners={banners}>
-                <p>or download the <a href="/lolywk.pubkey.asc" download>public key</a> here.</p>
-                <hr />
+                <code>curl https://youkwhd.vercel.app/lolywk.pubkey.asc | gpg --import</code>
+
                 <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>
-                
                 <pre>{PGP_PUBLIC_KEY}</pre>
             </MainLayout>
         </>
