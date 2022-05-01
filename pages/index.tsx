@@ -56,11 +56,11 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
 };
 
 export const getStaticProps = async () => {
-    const allPosts: Post[] = getAllPosts();
-    const recentPosts: Post[] = allPosts.slice(0, 3);
-
+    const posts: Post[] = getAllPosts();
+    const recentPosts: Post[] = posts.slice(0, 3);
     const banners: Banner[] = getAllBanners();
-    await generateRSSFeed(allPosts);
+
+    await generateRSSFeed(posts);
 
     return {
         props: {
