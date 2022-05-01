@@ -4,8 +4,7 @@ type Post = {
     excerpt: string;
     date: string;
     content: string;
-    tags: string[];
-    parsedTags: string[];
+    tags: { [key: string]: string; };
 };
 
 type Banner = {

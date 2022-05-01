@@ -12,14 +12,13 @@ export const config: PageConfig = {
 };
 
 type Props = {
-    allTags: {
-        tags: string[];
-        parsedTags: string[];
+    tags: {
+        [key: string]: string
     };
     banners: Banner[];
 };
 
-const TagsPage = ({ allTags, banners }: Props): JSX.Element => {
+const TagsPage = ({ tags, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -28,11 +27,11 @@ const TagsPage = ({ allTags, banners }: Props): JSX.Element => {
             <MainLayout banners={banners}>
                 <h1>available list of topics:</h1>
                 <ul>
-                    {allTags.tags.map((tag: string, index: number) => {
+                    {Object.entries(tags).map(([key, val]) => {
                         return (
-                            <li key={index}>
-                                <Link as={`/posts/tags/${allTags.parsedTags[index]}`} href="/posts/tags/[tag]">
-                                    {tag}
+                            <li key={val}>
+                                <Link as={`/posts/tags/${key}`} href="/posts/tags/[tag]">
+                                    {val}
                                 </Link>
                             </li>
                         );
@@ -46,19 +45,22 @@ const TagsPage = ({ allTags, banners }: Props): JSX.Element => {
 export default TagsPage;
 
 export const getStaticProps = () => {
-    const allTags: Post[] = getAllPosts();
-
-    const setOfTags: Set<string> = new Set(allTags.map((tag) => tag.tags).flat());
-    const setOfParsedTags: Set<String> = new Set(allTags.map((tag) => tag.parsedTags).flat());
-
+    const posts: Post[] = getAllPosts();
     const banners: Banner[] = getAllBanners();
+
+    const uniqueTags: { [key: string]: string } = {};
+    posts.forEach((post: Post) => {
+        for (const key in post.tags) {
+            // perf: checks if key is not present
+            if (!uniqueTags[key]) {
+                uniqueTags[key] = post.tags[key];
+            }
+        }
+    });
 
     return {
         props: {
-            allTags: {
-                tags: Array.from(setOfTags),
-                parsedTags: Array.from(setOfParsedTags)
-            },
+            tags: uniqueTags,
             banners
         },
     };

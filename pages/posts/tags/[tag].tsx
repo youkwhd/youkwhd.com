@@ -41,23 +41,22 @@ type Params = {
 
 export const getStaticProps = ({ params }: Params) => {
     const banners: Banner[] = getAllBanners();
-    const allPosts: Post[] = getAllPosts();
-    
+    const posts: Post[] = getAllPosts();
+
     // filter all the posts that has the current tag.
-    const filteredPosts: Post[] = allPosts.filter((post) => post.parsedTags.includes(params.tag));
-    
+    const filteredPosts: Post[] = posts.filter((post: Post) => Object.keys(post.tags).includes(params.tag));
+
+    // get the current unparsed tag
     let currentPostTag: string = "";
-
-    // get the un-parsed tag
-    // e.g. parsed: params.tag (software-development) un-parsed: (software development)
-    for (let i = 0; i < filteredPosts[0].parsedTags.length; i++) {
-        // found index position of `params.tag` on the array
-        if (filteredPosts[0].parsedTags[i] === params.tag) {  
-            // assign the un-parsed tag
-            currentPostTag = filteredPosts[0].tags[i];
+    filteredPosts.forEach((post: Post) => {
+        for (const key in post.tags) {
+            if (key === params.tag) {
+                currentPostTag = post.tags[key];
+                break;
+            }
         }
-    }
-
+    });
+    
     return {
         props: {
             filteredPosts,
@@ -69,14 +68,23 @@ export const getStaticProps = ({ params }: Params) => {
 
 export const getStaticPaths = () => {
     const posts: Post[] = getAllPosts();
-    const parsedTags: Set<string> = new Set(posts.map((post) => post.parsedTags).flat());
+
+    const uniqueTags: { [key: string]: string } = {};
+    posts.forEach((post: Post) => {
+        for (const key in post.tags) {
+            // perf: checks if key is not present
+            if (!uniqueTags[key]) {
+                uniqueTags[key] = post.tags[key];
+            }
+        }
+    });
 
     return {
-        paths: Array.from(parsedTags).map((tag: string) => {
+        paths: Object.entries(uniqueTags).map(([key, _value]) => {
             return {
                 params: {
-                    tag,
-                },
+                    tag: key,
+                }
             }
         }),
         fallback: false,

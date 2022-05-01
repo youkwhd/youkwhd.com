@@ -14,7 +14,11 @@ const getPostBySlug = (fileSource: string): Post => {
     const postContent: string = fs.readFileSync(fullPath, "utf8");
 
     const { data, content } = matter(postContent);
-    const parsedTags: string[] = data.tags.map((tag: string): string => parsePostTag(tag));
+
+    const tags: { [key: string]: string } = {}; // all tags included it's parsed tag => [parsedTag]: tag 
+    data.tags.forEach((tag: string) => {
+        tags[parsePostTag(tag)] = tag;
+    });
 
     return {
         slug,
@@ -22,8 +26,7 @@ const getPostBySlug = (fileSource: string): Post => {
         excerpt: data.excerpt,
         date: data.date,
         content,
-        tags: data.tags,
-        parsedTags
+        tags
     };
 };
 
@@ -45,7 +48,6 @@ const parsePostTag = (tag: string): string => {
 
     return tag;
 };
-
 
 export {
     getPostFiles,
