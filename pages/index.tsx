@@ -7,7 +7,7 @@ import { MainLayout } from "../components/Layout";
 import RecentPosts from "../components/RecentPosts";
 import { getAllPosts } from "../utils/getPosts";
 import { getAllBanners } from "../utils/getBanners";
-import { generateRSSFeed } from "../utils/generateRSSFeed";
+import { generateRSSFeed } from "../scripts/generateRSSFeed";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
