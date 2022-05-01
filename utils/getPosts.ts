@@ -14,9 +14,11 @@ const getPostBySlug = (fileSource: string): Post => {
 
     const { data, content } = matter(postContent);
 
-    const tags: { [key: string]: string } = {}; // all tags included it's parsed tag => [parsedTag]: tag 
+    // e.g. ["software-development"]: "software development"
+    const tags: { [key: string]: string } = {}; 
     data.tags.forEach((tag: string) => {
-        tags[parsePostTag(tag)] = tag;
+        const parsedTag: string = parsePostTag(tag);
+        tags[parsedTag] = tag;
     });
 
     return {
