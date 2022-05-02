@@ -80,10 +80,10 @@ export const getStaticPaths = () => {
     });
 
     return {
-        paths: Object.entries(uniqueTags).map(([key, _value]) => {
+        paths: Object.keys(uniqueTags).map((tag: string) => {
             return {
                 params: {
-                    tag: key,
+					tag
                 }
             }
         }),
