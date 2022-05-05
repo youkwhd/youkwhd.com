@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo";
 
 import { Post, Banner } from "../types";
 import { MainLayout } from "../components/Layout";
-import RecentPosts from "../components/RecentPosts";
 import { getAllPosts } from "../utils/getPosts";
 import { getAllBanners } from "../utils/getBanners";
 import { generateRSSFeed } from "../scripts/generateRSSFeed";
@@ -44,7 +43,17 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
                     find <Link href={"/posts"}><a>all of my articles</a></Link> by clicking the link, or find it by checking <Link href={"/posts/tags"}><a>all the available tags</a></Link>, you can always 
                     help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
                 </p>
-                <RecentPosts posts={recentPosts} />
+				<ul>
+					{recentPosts.map((post: Post) => {
+						return (
+							<li key={post.slug}>
+								<Link as={`/posts/${post.slug}`} href={"/posts/[slug]"}>
+									{post.title}
+								</Link>
+							</li>
+						);
+					})}
+				</ul>   
                 <h2>contact me</h2>
                 <p>
                     Please contact me via email, the address is <Link href={"mailto:lolywk@tutanota.com"}><a>lolywk@tutanota.com</a></Link>,
