@@ -4,12 +4,11 @@ import { Banner } from "../types";
 import replaceString from "./replaceString";
 
 const bannersDirectory: string = join(process.cwd(), "public/images/banners");
-const bannerFiles: string[] = fs.readdirSync(bannersDirectory);
 
 const getAllBanners = (): Banner[] => {
-    const banners: string[] = bannerFiles;
-    let parsedBanners: Banner[] = [];
+	const banners: string[] = fs.readdirSync(bannersDirectory);
 
+    let parsedBanners: Banner[] = [];
     banners.forEach((banner: string): void => {
         const tempBanner: Banner = parseBanner(banner);
         parsedBanners.push(tempBanner);
