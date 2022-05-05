@@ -18,7 +18,7 @@ const getAllBanners = (): Banner[] => {
 };
 
 const parseBanner = (banner: string): Banner => {
-    const tempBanner: string[] = banner.split("[-]");
+	const tempBanner: string[] = banner.split("[-]");
 
     let tempUrl: string = tempBanner[1];
     // this could be done in one line but fucking me too lazy lol
