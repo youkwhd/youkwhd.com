@@ -1,22 +1,22 @@
 import { PageConfig } from "next";
+import Link from "next/link"; 
 import { NextSeo } from "next-seo";
 
 import { getAllPosts } from "../../utils/getPosts";
 import { getAllBanners } from "../../utils/getBanners";
 import { Post, Banner } from "../../types";
 import { MainLayout } from "../../components/Layout";
-import PostCards from "../../components/PostCards";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
 };
 
 type Props = {
-    allPosts: Post[];
+    posts: Post[];
     banners: Banner[];
 };
 
-const PostsPage = ({ allPosts, banners }: Props): JSX.Element => {
+const PostsPage = ({ posts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -24,7 +24,20 @@ const PostsPage = ({ allPosts, banners }: Props): JSX.Element => {
             />
             <MainLayout banners={banners}>
                 <h1>blog posts:</h1>
-                <PostCards posts={allPosts} />
+				<ul>
+					{posts.map((post: Post) => {
+						const parsedPostDate: string = post.date.split("T")[0];
+
+						return (
+							<li key={post.slug}>
+								<span>{parsedPostDate} - </span>
+								<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+									{post.title}
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
             </MainLayout>
         </>
     );
@@ -32,13 +45,13 @@ const PostsPage = ({ allPosts, banners }: Props): JSX.Element => {
 
 export default PostsPage;
 
-export const getStaticProps = () => {
-    const allPosts: Post[] = getAllPosts();
+export const getStaticProps = ():  { props: Props } => {
+    const posts: Post[] = getAllPosts();
     const banners: Banner[] = getAllBanners();
 
     return {
         props: {
-            allPosts,
+            posts,
             banners
         },
     };

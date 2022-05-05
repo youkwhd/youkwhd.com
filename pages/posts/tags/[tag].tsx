@@ -1,9 +1,9 @@
 import { PageConfig } from "next";
+import Link from "next/link";
 import { NextSeo } from "next-seo";
 
 import { getAllPosts } from "../../../utils/getPosts";
 import { Banner, Post } from "../../../types";
-import PostCards from "../../../components/PostCards";
 import { MainLayout } from "../../../components/Layout";
 import { getAllBanners } from "../../../utils/getBanners";
 
@@ -25,7 +25,20 @@ const TagRelatePage = ({ filteredPosts, currentPostTag, banners }: Props): JSX.E
             />
             <MainLayout banners={banners}>
                 <h1>{currentPostTag} related posts:</h1>
-                <PostCards posts={filteredPosts} />
+				<ul>
+					{filteredPosts.map((post: Post) => {
+						const parsedPostDate: string = post.date.split("T")[0];
+
+						return (
+							<li key={post.slug}>
+								<span>{parsedPostDate} - </span>
+								<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+									{post.title}
+								</Link>
+							</li>
+						);
+					})}
+				</ul>
             </MainLayout>
         </>
     );

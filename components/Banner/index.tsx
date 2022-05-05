@@ -6,7 +6,7 @@ type Props = {
     href: string;
 };
 
-const Banner = ({ src, index, href }: Props): JSX.Element => {
+const Banner = ({ src, index: _index, href }: Props): JSX.Element => {
     return (
         <Link href={href}>
             <a>
