@@ -4,11 +4,28 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Wed, 06 Apr 2022 13:49:21 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 10 May 2022 19:44:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[Migrating to Flask, hello again to python]]></title>
+            <link>https://youkwhd.vercel.app/blog/migrating-to-flask-hello-again-python</link>
+            <guid>https://youkwhd.vercel.app/blog/migrating-to-flask-hello-again-python</guid>
+            <pubDate>Tue, 10 May 2022 19:39:42 GMT</pubDate>
+            <description><![CDATA[Migrating to Flask, hello again python.]]></description>
+            <content:encoded><![CDATA[<p>My first language was python, that's why i chose python. It's just a bit easier to migrate to. Also learnt more python things like decorators, virtualenv, packages layout &#x26; probably <code>__name__</code> and <code>__main__</code> variables. You probably already know why i'm using Flask rather than Django if you are a python developer yourself. Long story short, Flask is just easier to work with and lightweight, blazingly python-fast.</p>
+<h2 id="choosing-between-perl-rust--c">Choosing between Perl, Rust &#x26; C.</h2>
+<p>I actually wanted to migrate my blog to Perl using mojolicious and if not probably will do WASM with Rust using Yew. But it didn't happen, i stopped in the middle of the road with both Rust and Perl realizing that i'm still on a journey learning C, lol this is why u shouldn't hop languages. But you know, learning C opens up a bunch of keywords, I learnt heaps, pointers, buffers, addresses, <code>free()</code>, <code>malloc()</code>, segfaults, and a lot more frustrating things, i've been reading the ncurses lib manual.</p>
+<p>As i said before on the <a href="https://youkwhd.vercel.app/posts/the-future-of-this-blog">previous blog post</a>, i wanted to make my own static site generator that can be deployed to github pages or netlify, and other similiar providers. Well yeah that is still on the list. It's just that i don't wanna stick with Next.js any longer, i'm not aiming to be a soydev.</p>
+<p>Rust, i love it, i don't want to switch to a scripting language again. Perl, is it me doing something wrong or the tests are taking so long, also love it, just takes time. Also, disclaimer; what i'm doing is really bad if you are programming for a job, don't hop between languages or even frameworks itself, just stick with your leetcode problems.</p>
+<h2 id="features-like-table-of-contents">Features like table of contents</h2>
+<p>I will attempt to make table of contents by parsing either the markdown or html. I also need to implement things like auto new tab for external link, code highlightling, etc. Also, a remainder to myself, try to ditch Flask-Flatpages, instead directly use a markdown parser, this will give you a lot of freedom to your project.</p>
+<h2 id="styling-this-flask-app">Styling this Flask app</h2>
+<p>Not much is going to change from the default style, i will keep it simple. No dark backgounds for now, there will also be no banners. Tho i will work to display it, just not for now. Maybe i'm the one that somehow doesn't like fancy personal websites with a lot of animation on, or perhaps just the aesthetics. That's why a lot of my personal webpages are plain, old and lifeless. With that in mind, this app will remain raw.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[Rethink before implementing a feature]]></title>
             <link>https://youkwhd.vercel.app/blog/rethink-before-implementing-a-feature</link>
