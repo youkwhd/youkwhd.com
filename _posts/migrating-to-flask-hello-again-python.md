@@ -9,6 +9,8 @@ excerpt: "Migrating to Flask, hello again python."
 
 My first language was python, that's why i chose python. It's just a bit easier to migrate to. Also learnt more python things like decorators, virtualenv, packages layout & probably `__name__` and `__main__` variables. You probably already know why i'm using Flask rather than Django if you are a python developer yourself. Long story short, Flask is just easier to work with and lightweight, blazingly python-fast.
 
+## Table of contents
+
 ## Choosing between Perl, Rust & C.
 
 I actually wanted to migrate my blog to Perl using mojolicious and if not probably will do WASM with Rust using Yew. But it didn't happen, i stopped in the middle of the road with both Rust and Perl realizing that i'm still on a journey learning C, lol this is why u shouldn't hop languages. But you know, learning C opens up a bunch of keywords, I learnt heaps, pointers, buffers, addresses, `free()`, `malloc()`, segfaults, and a lot more frustrating things, i've been reading the ncurses lib manual.
