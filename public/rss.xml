@@ -4,11 +4,312 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Tue, 10 May 2022 19:44:08 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 May 2022 06:51:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[The making of my Flask app]]></title>
+            <link>https://youkwhd.vercel.app/blog/the-making-of-my-flask-app</link>
+            <guid>https://youkwhd.vercel.app/blog/the-making-of-my-flask-app</guid>
+            <pubDate>Tue, 17 May 2022 17:00:00 GMT</pubDate>
+            <description><![CDATA[This was actually my first time attempting to make a web app using Flask as a technology interest. It also implies with the programming language, python. I will demonstrate on how this app was made, what steps i took, also some regrets i made while making this app.]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>featuring <a href="https://youkwhd.herokuapp.com">https://youkwhd.herokuapp.com</a></p>
+</blockquote>
+<p>This was actually my <em>first time</em> attempting to make a web app using Flask as a technology interest. It also implies with the programming language, python. I will demonstrate on how this app was made, what steps i took, also some regrets i made while making this app.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li>
+<p><a href="#a-brief-of-python">A brief of python</a></p>
+<ul>
+<li><a href="#where-does-this-section-of-code-belong-to">Where does this section of code belong to?</a></li>
+<li><a href="#when-there-is-the-end-keyword">When there is the end keyword</a></li>
+<li><a href="#will-i-use-python-in-the-future">Will i use python in the future?</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#project-layout">Project layout</a></p>
+</li>
+<li>
+<p><a href="#parsing-blog-posts">Parsing blog posts</a></p>
+<ul>
+<li>
+<p><a href="#generating-table-of-contents">Generating Table of contents</a></p>
+</li>
+<li>
+<p><a href="#attempting-for-code-highlighting">Attempting for code highlighting</a></p>
+<ul>
+<li><a href="#before-knowing-extensions-is-a-thing">Before knowing extensions is a thing</a></li>
+<li><a href="#oh-there-is-extensions-for-the-markdown-library">Oh, there is extensions for the Markdown library</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#regenerating-table-of-contents">Regenerating Table of contents</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#styling-the-flask-app">Styling the Flask app</a></p>
+</li>
+<li>
+<p><a href="#rss-feeds">RSS feeds</a></p>
+</li>
+</ul>
+<h2 id="a-brief-of-python">A brief of python</h2>
+<h3 id="where-does-this-section-of-code-belong-to">Where does this section of code belong to?</h3>
+<p>After some tweakings with Flask, parsing HTMLs, some one-line shorthands, i now can state that <em>i don't like python</em>. That is because of it's <strong>syntax</strong>. Actually, some part of the syntax, for example there is no curly brackets, or <code>end</code>-like syntax to keep track of the code inside the block. An example of this can be found in various languages.</p>
+<p>In ruby, the syntax could be something like this:</p>
+<pre class="language-ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">gimme_bacon</span></span>
+	puts <span class="token string-literal"><span class="token string">"Bacon plz."</span></span>
+<span class="token keyword">end</span>
+</code></pre>
+<p>Whereas in python:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Well, this were compared with a fairly minimal code, i'm pretty sure that most of developers loves the python one? sure. But it's getting worse if you have something big inside the block, plus if it's nested. What i mean is that, you will be easily lost where you are on the block. Take a look at this piece of code:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> blueprints
+<span class="token keyword">from</span> flask <span class="token keyword">import</span> render_template
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup<span class="token punctuation">,</span> Comment
+
+<span class="token keyword">from</span> pygments <span class="token keyword">import</span> highlight<span class="token punctuation">,</span> lexers
+<span class="token keyword">from</span> pygments<span class="token punctuation">.</span>formatters<span class="token punctuation">.</span>html <span class="token keyword">import</span> HtmlFormatter
+
+<span class="token decorator annotation punctuation">@blueprints</span><span class="token punctuation">[</span><span class="token string">"posts"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/posts/&#x3C;slug>/"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>slug<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	post <span class="token operator">=</span> get_post<span class="token punctuation">(</span>slug<span class="token punctuation">)</span>
+	soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>post<span class="token punctuation">.</span>html<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+
+	codes <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"code"</span><span class="token punctuation">)</span>
+	code_formatter <span class="token operator">=</span> HtmlFormatter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">for</span> code_tag <span class="token keyword">in</span> codes<span class="token punctuation">:</span>
+		language <span class="token operator">=</span> <span class="token string">""</span>
+
+		<span class="token comment"># current code_tag is a one line &#x3C;code /></span>
+		<span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token string">"\n"</span> <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+			<span class="token keyword">continue</span>
+
+		<span class="token keyword">for</span> char <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">==</span> <span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+				<span class="token keyword">break</span>
+
+			language <span class="token operator">+=</span> char
+
+		code_lexer <span class="token operator">=</span> lexers<span class="token punctuation">.</span>get_lexer_by_name<span class="token punctuation">(</span>language<span class="token punctuation">)</span>
+		highlighted_code <span class="token operator">=</span> highlight<span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> code_lexer<span class="token punctuation">,</span> code_formatter<span class="token punctuation">)</span>
+		highlighted_code <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+		code_tag<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>replace_with<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">.</span>pre<span class="token punctuation">)</span>
+
+	post<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>soup<span class="token punctuation">)</span>
+	<span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"posts/slug.html"</span><span class="token punctuation">,</span> post<span class="token operator">=</span>post<span class="token punctuation">)</span>
+</code></pre>
+<p>Possible value of the variable i for every codes:</p>
+<pre class="language-python"><code class="language-python">code_tag <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+&#x3C;code>python
+def hello_world():
+	print("hello world")
+&#x3C;/code>
+"""</span>
+</code></pre>
+<p>There, i was trying to implement the code highlighting feature for this webpage.</p>
+<blockquote>
+<p>Ignore the fact that i'm trying to implement the feature by myself instead of using markdown extension.</p>
+</blockquote>
+<p>When compared on a text editor, it's hard to keep track of what chunk of code belongs to which block (for loop, functions), for example, the line <code>post.html = str(soup)</code> is hard to be known if it belongs to the <code>for code_tags in codes</code> or the function itself. If only i had the ability to use <code>end</code>-like keyword, it would be easier to see.</p>
+<h3 id="when-there-is-the-end-keyword">When there is the end keyword</h3>
+<p>This is an example if python has some kind of <code>end</code>-like keyword to seperate blocks.</p>
+<pre class="language-python"><code class="language-python">codes <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"code"</span><span class="token punctuation">)</span>
+code_formatter <span class="token operator">=</span> HtmlFormatter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> code_tag <span class="token keyword">in</span> codes<span class="token punctuation">:</span>
+	language <span class="token operator">=</span> <span class="token string">""</span>
+
+	<span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token string">"\n"</span> <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+		<span class="token keyword">continue</span>
+	end <span class="token comment"># WOW!</span>
+
+	<span class="token keyword">for</span> char <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">==</span> <span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+			<span class="token keyword">break</span>
+
+		language <span class="token operator">+=</span> char
+	end <span class="token comment"># WOW!</span>
+
+	code_lexer <span class="token operator">=</span> lexers<span class="token punctuation">.</span>get_lexer_by_name<span class="token punctuation">(</span>language<span class="token punctuation">)</span>
+	highlighted_code <span class="token operator">=</span> highlight<span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> code_lexer<span class="token punctuation">,</span> code_formatter<span class="token punctuation">)</span>
+	highlighted_code <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+	code_tag<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>replace_with<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">.</span>pre<span class="token punctuation">)</span>
+end <span class="token comment"># WOW!</span>
+
+post<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>soup<span class="token punctuation">)</span> <span class="token comment"># clearly belongs to the function, not the for loop</span>
+</code></pre>
+<p>Now it's a easier to find where it belongs to. That is why i don't like python for it's syntax. I had to navigate from top to bottom to process this code's behaviour.</p>
+<h3 id="will-i-use-python-in-the-future">Will i use python in the future?</h3>
+<p><strong>YES</strong>. <em>Absolutely</em>. I will continue to code in python, but not as my primary go-to language, of course as a <strong>scripting</strong> language. A language that is easy to use, a language that will always be there when i need, it comes with all over the GNU/Linux-based systems, mostly there will be python ready to use.</p>
+<p>Also <strong>NO</strong>, for anything unrelated to scripting, never gonna use it for something like this again. If i would build something like this, i might just jump to WASM, it's been attracting me lately. Maybe using a fresh language like Rust or Go.</p>
+<p>Apart from that, i'm more interested to bash as a scripting language, so..</p>
+<h2 id="project-layout">Project layout</h2>
+<p>This is how the project layout looks as for now. Or you can navigate to this app's <a href="https://github.com/youkwhd/youkwhd.herokuapp.com">repository</a> to find out.</p>
+<pre class="language-text"><code class="language-text">~/flask_app
+├── app
+│   ├── __init__.py
+│   ├── _posts
+│   │   ├── migrating-to-flask-while-saying-hello-again-to-python.md
+│   │   └── the-making-of-this-flask-app.md
+│   ├── static
+│   │   ├── css
+│   │   │   ├── code_highlighter.css
+│   │   │   └── global.css
+│   │   └── lolywk.pubkey.asc
+│   ├── templates
+│   │   ├── 404.html
+│   │   ├── base.html
+│   │   ├── home
+│   │   │   └── index.html
+│   │   └── posts
+│   │       ├── index.html
+│   │       └── slug.html
+│   └── views
+│       ├── home.py
+│       ├── __init__.py
+│       └── posts.py
+├── LICENSE
+├── Procfile
+├── README.md
+├── requirements.txt
+└── run.py
+</code></pre>
+<p>The core of this application is mostly at the <code>app/views/*</code> and <code>app/__init__.py</code>. This is more likely a "functional" layout. A more common layout is the "divisional splitting", that's what they said. An example of divisional splitting can be found on <a href="https://gitlab.com/patkennedy79/flask-recipe-app">this repository</a>.</p>
+<p>As a someone who is coming from Node.js, i like my current layout better than any. The reason is simple, every directory is self-explanatory.</p>
+<h2 id="parsing-blog-posts">Parsing blog posts</h2>
+<p>On this day, i'm using a pre-configured extension for the library Markdown. Before, i wasn't using it, instead, i use BeautifulSoup4. There is a reason behind this.</p>
+<ol>
+<li>I didn't know there was extensions, i thought there was nothing as such.</li>
+<li>Why would i solve leetcode-like problems if i don't even practice it on the real world?</li>
+</ol>
+<p>And so, i began to build up the necessary features for my needs.</p>
+<ul>
+<li>The ability to have Table of contents</li>
+<li>Code highlighting</li>
+<li>Nothing else.</li>
+</ul>
+<p>That is it. Everything i need. The essentials for a standart blog.</p>
+<h3 id="generating-table-of-contents">Generating Table of contents</h3>
+<p>Starting with the ability to have Table of contents, i first need to attach IDs for each headings / titles. Here's a code snippet showing how i accomplish it:</p>
+<pre class="language-python"><code class="language-python"><span class="token decorator annotation punctuation">@blueprints</span><span class="token punctuation">[</span><span class="token string">"posts"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/posts/&#x3C;slug>/"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>slug<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	post <span class="token operator">=</span> get_post<span class="token punctuation">(</span>slug<span class="token punctuation">)</span>
+	soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>post<span class="token punctuation">.</span>html<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">for</span> heading_tag <span class="token keyword">in</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'^h[1-6]$'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token comment"># replace all non-alphanumeric characters</span>
+		heading_tag_id <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'[\W]+'</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">,</span> heading_tag<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+		<span class="token comment"># clean ups, don't mind this while loop</span>
+		<span class="token keyword">while</span> heading_tag_id<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"-"</span><span class="token punctuation">:</span>
+				heading_tag_id <span class="token operator">=</span> heading_tag_id<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>heading_tag_id<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+
+		<span class="token comment"># append the generated id</span>
+		heading_tag<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token operator">=</span> heading_tag_id
+
+	post<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>soup<span class="token punctuation">)</span>
+	<span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"posts/slug.html"</span><span class="token punctuation">,</span> post<span class="token operator">=</span>post<span class="token punctuation">)</span>
+</code></pre>
+<p>Now i can implement Table of contents. Turns out, it's hard to accomplish. I mean, it's easy enough to generate the Table of contents. What's hard is to maintain the best structure. I had hard times deciding on what to check if the headings actually need to open a new ul tag or just appending it on, also, it's hard to have the correct "pointer" to the desired tag to append with.</p>
+<p>It's just hard. The thing is, i did it. But didn't made it as great as the pre-configured extension (we'll come back to this later). My Table of contents's structure is a mess.</p>
+<h3 id="attempting-for-code-highlighting">Attempting for code highlighting</h3>
+<p>The extension CodeHilite follows the John Gruber's <a href="https://daringfireball.net/projects/markdown/syntax">markdown syntax</a>, with a little tweakings done.</p>
+<blockquote>
+<p>"To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab."</p>
+</blockquote>
+<p>I used 4 spaces + colons for any code i wrote in markdown following John Gruber's syntax. The complete syntax can be found at the <a href="https://daringfireball.net/projects/markdown/syntax">CodeHilite extension docs</a>.</p>
+<h4 id="before-knowing-extensions-is-a-thing">Before knowing extensions is a thing</h4>
+<p>I tried to parse the code myself then highlight it using Pygments. Without realizing the syntax is wrong. The code snippet when i tried to parse it myself:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> blueprints
+<span class="token keyword">from</span> flask <span class="token keyword">import</span> render_template
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup<span class="token punctuation">,</span> Comment
+
+<span class="token keyword">from</span> pygments <span class="token keyword">import</span> highlight<span class="token punctuation">,</span> lexers
+<span class="token keyword">from</span> pygments<span class="token punctuation">.</span>formatters<span class="token punctuation">.</span>html <span class="token keyword">import</span> HtmlFormatter
+
+<span class="token decorator annotation punctuation">@blueprints</span><span class="token punctuation">[</span><span class="token string">"posts"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/posts/&#x3C;slug>/"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">post</span><span class="token punctuation">(</span>slug<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	post <span class="token operator">=</span> get_post<span class="token punctuation">(</span>slug<span class="token punctuation">)</span>
+	soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>post<span class="token punctuation">.</span>html<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+
+	codes <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"code"</span><span class="token punctuation">)</span>
+	code_formatter <span class="token operator">=</span> HtmlFormatter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">for</span> code_tag <span class="token keyword">in</span> codes<span class="token punctuation">:</span>
+		language <span class="token operator">=</span> <span class="token string">""</span>
+
+		<span class="token comment"># current code_tag is a one line &#x3C;code /></span>
+		<span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token string">"\n"</span> <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+			<span class="token keyword">continue</span>
+
+		<span class="token keyword">for</span> char <span class="token keyword">in</span> code_tag<span class="token punctuation">.</span>string<span class="token punctuation">:</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">==</span> <span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+				<span class="token keyword">break</span>
+
+			language <span class="token operator">+=</span> char
+
+		code_lexer <span class="token operator">=</span> lexers<span class="token punctuation">.</span>get_lexer_by_name<span class="token punctuation">(</span>language<span class="token punctuation">)</span>
+		highlighted_code <span class="token operator">=</span> highlight<span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>code_tag<span class="token punctuation">.</span>string<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> code_lexer<span class="token punctuation">,</span> code_formatter<span class="token punctuation">)</span>
+		highlighted_code <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">,</span> <span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+		code_tag<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>replace_with<span class="token punctuation">(</span>highlighted_code<span class="token punctuation">.</span>pre<span class="token punctuation">)</span>
+
+	post<span class="token punctuation">.</span>html <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>soup<span class="token punctuation">)</span>
+	<span class="token keyword">return</span> render_template<span class="token punctuation">(</span><span class="token string">"posts/slug.html"</span><span class="token punctuation">,</span> post<span class="token operator">=</span>post<span class="token punctuation">)</span>
+</code></pre>
+<p>I was using the three backticks instead of colons.</p>
+<p>After trying to write C code, things starting to break, from there. I checked the <a href="https://flask-flatpages.readthedocs.io/en/latest/index.html#configuration">Flask-FlatPages docs</a>, and realized that there is extensions for highlighting code. Wasted time.</p>
+<h4 id="oh-there-is-extensions-for-the-markdown-library">Oh, there is extensions for the Markdown library</h4>
+<p>Now i ditched Flask-FlatPages (Flask-FlatPages is relying on Markdown lib), and started to use the Markdown library by itself.</p>
+<p>From there, i refactored my code to use the CodeHilite extension. I don't want to waste my time implementing a feature that is already implemented.</p>
+<h3 id="regenerating-table-of-contents">Regenerating Table of contents</h3>
+<p>As i said before, my version of Table of contents's <strong>structure</strong> is not that great.</p>
+<p>When compared to the extension's, the <strong>visual effect</strong> is just the same.</p>
+<p>Here is a comparison of the structure between mine and extension's:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>The extension could generate a more cleaner structure:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>This is due to the limited data i have. The Markdown library should have something better than parsing using a list of BeautifulSoup4 objects. If i put more effort and time to this, i'm sure i would be able to have the same output.</p>
+<p>Thus i chose what just works. I had my experience making my own, so it's ok for me to just throw my code apart.</p>
+<h2 id="styling-the-flask-app">Styling the Flask app</h2>
+<p>The styling should be as minimal. It should look like a plain HTML Document. I don't know why i'm more attracted to these kind of sites that is just plain but informative. Rather than fancy looking personal websites.</p>
+<h2 id="rss-feeds">RSS feeds</h2>
+<p>While writing this article, i'm working on the RSS feed. Soon enough i will include RSS feed for this website.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[Migrating to Flask, hello again to python]]></title>
             <link>https://youkwhd.vercel.app/blog/migrating-to-flask-hello-again-python</link>
@@ -16,6 +317,12 @@
             <pubDate>Tue, 10 May 2022 19:39:42 GMT</pubDate>
             <description><![CDATA[Migrating to Flask, hello again python.]]></description>
             <content:encoded><![CDATA[<p>My first language was python, that's why i chose python. It's just a bit easier to migrate to. Also learnt more python things like decorators, virtualenv, packages layout &#x26; probably <code>__name__</code> and <code>__main__</code> variables. You probably already know why i'm using Flask rather than Django if you are a python developer yourself. Long story short, Flask is just easier to work with and lightweight, blazingly python-fast.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#choosing-between-perl-rust--c">Choosing between Perl, Rust &#x26; C.</a></li>
+<li><a href="#features-like-table-of-contents">Features like table of contents</a></li>
+<li><a href="#styling-this-flask-app">Styling this Flask app</a></li>
+</ul>
 <h2 id="choosing-between-perl-rust--c">Choosing between Perl, Rust &#x26; C.</h2>
 <p>I actually wanted to migrate my blog to Perl using mojolicious and if not probably will do WASM with Rust using Yew. But it didn't happen, i stopped in the middle of the road with both Rust and Perl realizing that i'm still on a journey learning C, lol this is why u shouldn't hop languages. But you know, learning C opens up a bunch of keywords, I learnt heaps, pointers, buffers, addresses, <code>free()</code>, <code>malloc()</code>, segfaults, and a lot more frustrating things, i've been reading the ncurses lib manual.</p>
 <p>As i said before on the <a href="https://youkwhd.vercel.app/posts/the-future-of-this-blog">previous blog post</a>, i wanted to make my own static site generator that can be deployed to github pages or netlify, and other similiar providers. Well yeah that is still on the list. It's just that i don't wanna stick with Next.js any longer, i'm not aiming to be a soydev.</p>
