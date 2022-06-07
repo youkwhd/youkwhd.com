@@ -4,12 +4,12 @@ import { Post } from "../types";
 import matter, { GrayMatterFile } from "gray-matter";
 import replaceString from "./replaceString";
 
-const postsDirectory: string = join(process.cwd(), "_posts");
-const postFiles: string[] = fs.readdirSync(postsDirectory);
+const postsDir: string = join(process.cwd(), "_posts");
+const postFiles: string[] = fs.readdirSync(postsDir);
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""));
 
 const getPostBySlug = (slug: string): Post => {
-    const postPath: string = join(postsDirectory, `${slug}.md`);
+    const postPath: string = join(postsDir, `${slug}.md`);
     const postContent: string = fs.readFileSync(postPath, "utf8");
     const { data, content }: GrayMatterFile<string> = matter(postContent);
 
