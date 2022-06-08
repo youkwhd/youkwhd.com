@@ -1,3 +1,6 @@
+/* Banner: sticked at the bottom of every page.
+ * consist of gif/images
+ */
 import Link from "next/link";
 
 type Props = {
