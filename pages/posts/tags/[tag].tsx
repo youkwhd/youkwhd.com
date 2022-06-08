@@ -25,20 +25,20 @@ const TagRelatePage = ({ filteredPosts, currentPostTag, banners }: Props): JSX.E
             />
             <MainLayout banners={banners}>
                 <h1>{currentPostTag} related posts:</h1>
-				<ul>
-					{filteredPosts.map((post: Post) => {
-						const parsedPostDate: string = post.date.split("T")[0];
+                <ul>
+                    {filteredPosts.map((post: Post) => {
+                        const parsedPostDate: string = post.date.split("T")[0];
 
-						return (
-							<li key={post.slug}>
-								<span>{parsedPostDate} - </span>
-								<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-									{post.title}
-								</Link>
-							</li>
-						);
-					})}
-				</ul>
+                        return (
+                            <li key={post.slug}>
+                                <span>{parsedPostDate} - </span>
+                                <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                                    {post.title}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
             </MainLayout>
         </>
     );
@@ -96,7 +96,7 @@ export const getStaticPaths = () => {
         paths: Object.keys(uniqueTags).map((tag: string) => {
             return {
                 params: {
-					tag
+                    tag
                 }
             }
         }),

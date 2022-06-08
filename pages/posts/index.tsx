@@ -24,20 +24,20 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
             />
             <MainLayout banners={banners}>
                 <h1>blog posts:</h1>
-				<ul>
-					{posts.map((post: Post) => {
-						const parsedPostDate: string = post.date.split("T")[0];
+                <ul>
+                    {posts.map((post: Post) => {
+                        const parsedPostDate: string = post.date.split("T")[0];
 
-						return (
-							<li key={post.slug}>
-								<span>{parsedPostDate} - </span>
-								<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-									{post.title}
-								</Link>
-							</li>
-						);
-					})}
-				</ul>
+                        return (
+                            <li key={post.slug}>
+                                <span>{parsedPostDate} - </span>
+                                <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                                    {post.title}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
             </MainLayout>
         </>
     );
