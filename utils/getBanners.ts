@@ -1,7 +1,6 @@
 import fs from "fs";
 import { join } from "path";
 import { Banner } from "../types";
-import replaceString from "./replaceString";
 
 const getAllBanners = (): Banner[] => {
     const bannersDir: string = join(process.cwd(), "public/images/banners");
@@ -15,11 +14,11 @@ const parseBanner = (banner: string): Banner => {
     const tempBanner: string[] = banner.split("[-]");
     let tempUrl: string = tempBanner[1];
 
-    tempUrl = replaceString(tempUrl, "[slash]", "/");
-    tempUrl = replaceString(tempUrl, "[http]", "http://");
-    tempUrl = replaceString(tempUrl, "[https]", "https://");
-    tempUrl = replaceString(tempUrl, ".gif", "");
-    tempUrl = replaceString(tempUrl, ".png", "");
+    tempUrl = tempUrl.replace(/\[slash\]/g, "/");
+    tempUrl = tempUrl.replace(/\[http\]/g, "http://");
+    tempUrl = tempUrl.replace(/\[https\]/g, "https://");
+    tempUrl = tempUrl.replace(/\.gif/g, "");
+    tempUrl = tempUrl.replace(/\.png/g, "");
 
     return {
         index: +tempBanner[0],
