@@ -31,11 +31,9 @@ const getPostBySlug = (slug: string): Post => {
 };
 
 const getAllPosts = (): Post[] => {
-    const posts = postSlugs 
+    return postSlugs 
         .map((slug: string): Post => getPostBySlug(slug))
         .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1));
-
-    return posts;
 };
 
 const parsePostTag = (tag: string): string => {
