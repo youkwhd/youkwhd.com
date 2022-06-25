@@ -2,11 +2,12 @@ import fs from "fs";
 import { join } from "path";
 import { Post } from "../types";
 import matter, { GrayMatterFile } from "gray-matter";
-import replaceString from "./replaceString";
 
 const postsDir: string = join(process.cwd(), "_posts");
 const postFiles: string[] = fs.readdirSync(postsDir);
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""));
+
+const parsePostTag = (tag: string): string => tag.replace(/[\s./]/, "-");
 
 const getPostBySlug = (slug: string): Post => {
     const postPath: string = join(postsDir, `${slug}.md`);
@@ -34,15 +35,6 @@ const getAllPosts = (): Post[] => {
     return postSlugs 
         .map((slug: string): Post => getPostBySlug(slug))
         .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1));
-};
-
-const parsePostTag = (tag: string): string => {
-    // TODO: make it one line, learn how to regex.
-    tag = replaceString(tag, " ", "-");
-    tag = replaceString(tag, "/", "-");
-    tag = replaceString(tag, ".", "-");
-
-    return tag;
 };
 
 export {
