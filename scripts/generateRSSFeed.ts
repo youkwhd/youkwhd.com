@@ -15,7 +15,6 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         email: "lolywk@tutanota.com"
     };
 
-    // config
     const feed: Feed = new Feed({
         title: `${author.name}'s blog posts`,
         description: `an archive consist of articles from ${author.name}'s site`,
@@ -30,21 +29,19 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         },
     });
 
-    // create rss
-    for (let i = 0; i < posts.length; i++) {
-        const postURL: string = `${SITE_URL}/blog/${posts[i].slug}`;
-        const htmlContent: string = await markdownToHTML(posts[i].content);
+    posts.forEach(async (post: Post) => {
+        const postURL: string = `${SITE_URL}/blog/${post.slug}`;
 
         feed.addItem({
-            title: posts[i].title,
+            title: post.title,
             id: postURL,
             link: postURL,
-            description: posts[i].excerpt,
-            content: htmlContent,
+            description: post.excerpt,
+            content: await markdownToHTML(post.content),
             author: [author],
-            date: new Date(posts[i].date)
+            date: new Date(post.date)
         });
-    };
+    });
 
     fs.writeFileSync("./public/rss.xml", feed.rss2());
 };
