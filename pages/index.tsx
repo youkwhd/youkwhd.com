@@ -69,7 +69,7 @@ export const getStaticProps = async () => {
     const recentPosts: Post[] = posts.slice(0, 3);
     const banners: Banner[] = getAllBanners();
 
-    await generateRSSFeed(posts);
+    // await generateRSSFeed(posts);
 
     return {
         props: {
