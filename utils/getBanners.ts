@@ -11,19 +11,18 @@ const getAllBanners = (): Banner[] => {
 };
 
 const parseBanner = (banner: string): Banner => {
-    const tempBanner: string[] = banner.split("[-]");
-    let tempUrl: string = tempBanner[1];
+    let [index, url]: string[] = banner.split("[-]");
 
-    tempUrl = tempUrl.replace(/\[slash\]/g, "/");
-    tempUrl = tempUrl.replace(/\[http\]/g, "http://");
-    tempUrl = tempUrl.replace(/\[https\]/g, "https://");
-    tempUrl = tempUrl.replace(/\.gif/g, "");
-    tempUrl = tempUrl.replace(/\.png/g, "");
+    url = url.replace(/\[slash\]/g, "/");
+    url = url.replace(/\[http\]/g, "http://");
+    url = url.replace(/\[https\]/g, "https://");
+    url = url.replace(/\.gif/g, "");
+    url = url.replace(/\.png/g, "");
 
     return {
-        index: +tempBanner[0],
+        index: +index,
         src: `/images/banners/${banner}`,
-        url: tempUrl 
+        url 
     };
 };
 
