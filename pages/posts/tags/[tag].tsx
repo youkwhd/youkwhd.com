@@ -85,10 +85,7 @@ export const getStaticPaths = () => {
     const uniqueTags: { [key: string]: string } = {};
     posts.forEach((post: Post) => {
         for (const key in post.tags) {
-            // perf: checks if key is not present
-            if (!uniqueTags[key]) {
-                uniqueTags[key] = post.tags[key];
-            }
+            uniqueTags[key] = post.tags[key];
         }
     });
 

@@ -44,15 +44,13 @@ const Home = ({ recentPosts, banners }: Props): JSX.Element => {
                     help me by contributing to this site and fix some problems i have on this site. Speaking of blog, here are some of my recent blog posts:
                 </p>
                 <ul>
-                    {recentPosts.map((post: Post) => {
-                        return (
-                            <li key={post.slug}>
-                                <Link as={`/posts/${post.slug}`} href={"/posts/[slug]"}>
-                                    {post.title}
-                                </Link>
-                            </li>
-                        );
-                    })}
+                    {recentPosts.map((post: Post) => (
+                        <li key={post.slug}>
+                            <Link as={`/posts/${post.slug}`} href={"/posts/[slug]"}>
+                                {post.title}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>   
                 <h2>contact me</h2>
                 <p>
