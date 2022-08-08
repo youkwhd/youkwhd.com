@@ -51,6 +51,7 @@ h1::before {
     content: "# ";
 }
 
+._fake_h2::before,
 h2::before {
     content: "## ";
 }
