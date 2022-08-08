@@ -4,11 +4,45 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Thu, 14 Jul 2022 11:55:05 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 08 Aug 2022 15:13:36 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[Majoring compsci, yet a self-taught]]></title>
+            <link>https://youkwhd.vercel.app/blog/majoring-compsci-yet-self-taught</link>
+            <guid>https://youkwhd.vercel.app/blog/majoring-compsci-yet-self-taught</guid>
+            <pubDate>Mon, 08 Aug 2022 15:03:40 GMT</pubDate>
+            <description><![CDATA[On the homepage, i mentioned that i am majoring a computer science, that is true. However, there is a catch on why i decided to take a degree.]]></description>
+            <content:encoded><![CDATA[<p>On the homepage, i mentioned that i am majoring a computer science, that is true. However, there is a catch on why i decided to take a degree.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#indonesia">Indonesia</a></li>
+<li><a href="#kominfo-and-the-government-instances">Kominfo and the Government instances</a></li>
+<li><a href="#professors-and-their-moods">Professors and their moods</a></li>
+</ul>
+<h2 id="indonesia">Indonesia</h2>
+<p>Indonesia is a country located in Asia, just take a look on a map. I basically live there. When it comes to "programming", most of the universities will teach their students either PHP, Java or Python. This just doesn't feel right, it's fucking dated and stupid. It is 2022 and they are still teaching PHP.</p>
+<blockquote>
+<p>No hate for PHP.</p>
+</blockquote>
+<p>What i am trying to say is, the way professors are teaching is dated. THUS! most of the government sites are <strong>VERY VERY VURNERABLE</strong>. They who rule are the one who's eating other people's money.</p>
+<h2 id="kominfo-and-the-government-instances">Kominfo and the Government instances</h2>
+<p>Let me drive you somewhere, let's do some Google dorking. Step 1:</p>
+<ul>
+<li>Search using Google <code>Index of /fckeditor/editor/filemanager/connectors/</code></li>
+<li>Results! only include sites that ends with .id, ex: <em>spai.kemdikbud.go.id</em>, <em>alumni.uinjambi.ac.id</em></li>
+</ul>
+<p>Voilà! now you've got some <strong>VURNERABLE</strong> web app. Guess what? it's built using PHP. They're learning PHP at their university yet they don't fucking know shit.</p>
+<p>Not only that, there's so many ways to attack these <code>.id</code> web apps.</p>
+<p>Someone even bypassed the admin account by changing the cookie session (an official Government web app)</p>
+<p>A web app said it costs Rp. 1.000,000.000.000 to built? 😀 source <a href="https://www.bbc.com/indonesia/articles/cg322wgp8p1o">https://www.bbc.com/indonesia/articles/cg322wgp8p1o</a></p>
+<h2 id="professors-and-their-moods">Professors and their moods</h2>
+<p>I don't know this one in other country, but here. Some professors will just give student's score whatever they want, based on their mood. Even if the student is doing good with their <em>"homework"</em>.</p>
+<p>From here, i think whoever's reading this knows what happens. No need to tell you more. Happy hacking.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[The making of my Flask app]]></title>
             <link>https://youkwhd.vercel.app/blog/the-making-of-my-flask-app</link>

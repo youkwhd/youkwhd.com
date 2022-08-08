@@ -29,19 +29,19 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         },
     });
 
-    posts.forEach(async (post: Post) => {
-        const postURL: string = `${SITE_URL}/blog/${post.slug}`;
+    for (let i = 0; i < posts.length; i++) {
+        const postURL: string = `${SITE_URL}/blog/${posts[i].slug}`;
 
         feed.addItem({
-            title: post.title,
+            title: posts[i].title,
             id: postURL,
             link: postURL,
-            description: post.excerpt,
-            content: await markdownToHTML(post.content),
+            description: posts[i].excerpt,
+            content: await markdownToHTML(posts[i].content),
             author: [author],
-            date: new Date(post.date)
+            date: new Date(posts[i].date)
         });
-    });
+    }
 
     fs.writeFileSync("./public/rss.xml", feed.rss2());
 };
