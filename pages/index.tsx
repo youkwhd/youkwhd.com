@@ -25,7 +25,7 @@ const Home = ({ banners }: Props): JSX.Element => {
             <MainLayout banners={banners}>
                 <h1 className="_fake_h2">Introducing youkwhd</h1>
                 <p>
-                    I'm an undergraduate student majoring Computer Science, a fast paced self-taught programmer who's proficient using C99 & Typescript as a language of choice, utilizing Neovim as an
+                    I'm an undergraduate student majoring Computer Science, a fast paced self-taught programmer <Link href={"/posts/majoring-compsci-yet-self-taught"}><a target="_blank" style={{ fontSize: 10 }}>[1]</a></Link> who's proficient using C99 & Typescript as a language of choice, utilizing Neovim as an
                     efficient text editor for every day use.
                 </p>
                 <p>
