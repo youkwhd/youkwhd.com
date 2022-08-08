@@ -31,7 +31,7 @@ Not only that, there's so many ways to attack these `.id` web apps.
 
 Someone even bypassed the admin account by changing the cookie session (an official Government web app)
 
-A web app said it costs Rp. 1.000,000.000.000 to built? 😀 source [https://www.bbc.com/indonesia/articles/cg322wgp8p1o](https://www.bbc.com/indonesia/articles/cg322wgp8p1o)
+A web app said it costs Rp. 1.000,000.000.000 to build? 😀 source [https://www.bbc.com/indonesia/articles/cg322wgp8p1o](https://www.bbc.com/indonesia/articles/cg322wgp8p1o)
 
 ## Professors and their moods
 
