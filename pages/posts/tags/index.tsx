@@ -19,6 +19,8 @@ type Props = {
 };
 
 const TagsPage = ({ tags, banners }: Props): JSX.Element => {
+    const arrTags: [string, string][] = Object.entries(tags).sort(([_key1, val1], [_key2, val2]) => val1 > val2 ? 1 : -1);
+
     return (
         <>
             <NextSeo
@@ -27,7 +29,7 @@ const TagsPage = ({ tags, banners }: Props): JSX.Element => {
             <MainLayout banners={banners}>
                 <h1>available list of topics:</h1>
                 <ul>
-                    {Object.entries(tags).map(([key, val]) => {
+                    {arrTags.map(([key, val]) => {
                         return (
                             <li key={val}>
                                 <Link as={`/posts/tags/${key}`} href="/posts/tags/[tag]">
@@ -51,10 +53,7 @@ export const getStaticProps = () => {
     const uniqueTags: { [key: string]: string } = {};
     posts.forEach((post: Post) => {
         for (const key in post.tags) {
-            // perf: checks if key is not present
-            if (!uniqueTags[key]) {
-                uniqueTags[key] = post.tags[key];
-            }
+            uniqueTags[key] = post.tags[key];
         }
     });
 
