@@ -7,19 +7,36 @@ body {
     font-size: 13px;
 }
 
-.banner-wrapper > a {
-    border: none;
-}
-
-.banner-wrapper > a > * {
-    width: 88px;
-    height: 31px;
-    margin: 4px 8px 4px 0;
-}
-
 #__next {
     max-width: 530px;
     margin: 2em auto;
+}
+
+$pounds: "#", "##", "###", "####", "#####", "######";
+@for $i from 1 to length($pounds) {
+    h#{$i} {
+        color: #6f9b1d;
+        font-size: 16px;
+    }
+}
+
+@for $i from 1 to length($pounds) {
+    h#{$i}::before,
+    .__fake_h#{$i}::before {
+        content: nth($pounds, $i) + " ";
+    }
+}
+
+.banner-wrapper {
+    a {
+        border: none;
+
+        * {
+            width: 88px;
+            height: 31px;
+            margin: 4px 8px 4px 0;
+        }
+    }
 }
 
 a {
@@ -39,39 +56,6 @@ blockquote {
     padding-left: 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    /* color: #658d36; */
-    color: #6f9b1d;
-    /* color: #689d6a; */
-    /* color: #98971a; */
-    font-size: 16px;
-}
-
-h1::before {
-    content: "# ";
-}
-
-._fake_h2::before,
-h2::before {
-    content: "## ";
-}
-
-h3::before {
-    content: "### ";
-}
-
-h4::before {
-    content: "#### ";
-}
-
-h5::before {
-    content: "##### ";
-}
-
-h6::before {
-    content: "###### ";
-}
-
 pre {
     overflow: auto;
 }
@@ -82,10 +66,10 @@ p {
 
 li {
     padding: .25em 0;
-}
 
-li > p {
-    margin: 0;
+    > p {
+        margin: 0;
+    }
 }
 
 /* for unconsistent p tag */ 

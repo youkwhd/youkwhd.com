@@ -2,9 +2,10 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import { Banner } from "../types";
+import { Post, Banner } from "../types";
 import { MainLayout } from "../components/Layout";
 import { getAllBanners } from "../utils/getBanners";
+import { getAllPosts } from "../utils/getPosts";
 import { generateRSSFeed } from "../scripts/generateRSSFeed";
 
 export const config: PageConfig = {
@@ -23,7 +24,7 @@ const Home = ({ banners }: Props): JSX.Element => {
                 description="a personal blog maintained by youkwhd, contents are mostly about GNU/Linux or programming."
             />
             <MainLayout banners={banners}>
-                <h1 className="_fake_h2">Introducing youkwhd</h1>
+                <h1 className="__fake_h2">Introducing youkwhd</h1>
                 <p>
                     I'm an undergraduate student majoring Computer Science, a fast paced self-taught programmer <Link href={"/posts/majoring-compsci-yet-self-taught"}><a target="_blank" style={{ fontSize: 10 }}>[1]</a></Link> who's proficient using C99 & Typescript as a language of choice, utilizing Neovim as an
                     efficient text editor for every day use.
@@ -55,7 +56,7 @@ const Home = ({ banners }: Props): JSX.Element => {
 
 export const getStaticProps = async () => {
     /* TODO: add .env variable for DEVELOPMENT */
-    // await generateRSSFeed(posts);
+    // await generateRSSFeed(getAllPosts());
 
     return {
         props: {
