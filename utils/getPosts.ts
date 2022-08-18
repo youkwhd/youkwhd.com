@@ -1,6 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import { Post } from "../types";
+import type { Post } from "@/types";
 import matter, { GrayMatterFile } from "gray-matter";
 
 const postsDir: string = join(process.cwd(), "_posts");

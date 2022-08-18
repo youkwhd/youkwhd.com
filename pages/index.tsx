@@ -2,11 +2,11 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import { Post, Banner } from "../types";
-import { MainLayout } from "../components/Layout";
-import { getAllBanners } from "../utils/getBanners";
-import { getAllPosts } from "../utils/getPosts";
-import { generateRSSFeed } from "../scripts/generateRSSFeed";
+import type { Post, Banner } from "@/types";
+import { MainLayout } from "@/components/Layout";
+import { getAllBanners } from "@/utils/getBanners";
+import { getAllPosts } from "@/utils/getPosts";
+import { generateRSSFeed } from "@/scripts/generateRSSFeed";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false

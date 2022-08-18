@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Banner from "../Banner";
-import { Banner as BannerType } from "../../types";
+import Banner from "@/components/Banner";
+import type { Banner as BannerType } from "@/types";
 
 type Props = {
     banners: BannerType[];

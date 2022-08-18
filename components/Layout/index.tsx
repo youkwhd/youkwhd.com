@@ -1,5 +1,5 @@
-import Footer from "../Footer";
-import { Banner } from "../../types";
+import Footer from "@/components/Footer";
+import type { Banner } from "@/types";
 
 type Props = {
     children: JSX.Element | JSX.Element[];

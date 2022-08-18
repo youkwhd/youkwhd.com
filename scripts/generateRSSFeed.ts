@@ -1,7 +1,7 @@
 import fs from "fs";
 import { Feed } from "feed";
-import { Post } from "../types";
-import { markdownToHTML } from "../utils/markdownConverter";
+import { Post } from "@/types";
+import { markdownToHTML } from "@/utils/markdownConverter";
 
 // refer to https://github.com/jpmonette/feed
 export const generateRSSFeed = async (posts: Post[]): Promise<void> => {

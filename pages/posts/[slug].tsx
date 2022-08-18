@@ -1,12 +1,12 @@
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import { getAllPosts, getPostBySlug } from "../../utils/getPosts";
-import { getAllBanners } from "../../utils/getBanners";
-import { markdownToHTML } from "../../utils/markdownConverter";
+import { getAllPosts, getPostBySlug } from "@/utils/getPosts";
+import { getAllBanners } from "@/utils/getBanners";
+import { markdownToHTML } from "@/utils/markdownConverter";
 
-import { Post, Banner } from "../../types";
-import { MainLayout } from "../../components/Layout";
+import type { Post, Banner } from "@/types";
+import { MainLayout } from "@/components/Layout";
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
