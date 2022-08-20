@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageConfig } from "next";
 import { NextSeo } from "next-seo";
 
-import type { Post, Banner } from "@/types";
+import type { Banner } from "@/types";
 import { MainLayout } from "@/components/Layout";
 import { getAllBanners } from "@/utils/getBanners";
 import { getAllPosts } from "@/utils/getPosts";
@@ -55,8 +55,8 @@ const Home = ({ banners }: Props): JSX.Element => {
 };
 
 export const getStaticProps = async () => {
-    /* TODO: add .env variable for DEVELOPMENT */
-    // await generateRSSFeed(getAllPosts());
+    if (process.env.DEVELOPMENT)
+        await generateRSSFeed(getAllPosts());
 
     return {
         props: {
