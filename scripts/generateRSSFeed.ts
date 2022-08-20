@@ -1,19 +1,19 @@
-import fs from "fs";
-import { Feed } from "feed";
-import { Post } from "@/types";
-import { markdownToHTML } from "@/utils/markdownConverter";
+import fs from "fs"
+import { Feed } from "feed"
+import { Post } from "@/types"
+import { markdownToHTML } from "@/utils/markdownConverter"
 
 // refer to https://github.com/jpmonette/feed
 export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
-    const PROTOCOL = "https://";
-    const HOSTNAME = "youkwhd.vercel.app";
-    const SITE_URL = PROTOCOL + HOSTNAME;
+    const PROTOCOL = "https://"
+    const HOSTNAME = "youkwhd.vercel.app"
+    const SITE_URL = PROTOCOL + HOSTNAME
 
-    const dateToday: Date = new Date();
-    const author: { name: string; email: string; } = {
+    const dateToday: Date = new Date()
+    const author: { name: string, email: string } = {
         name: "youkwhd",
         email: "lolywk@tutanota.com"
-    };
+    }
 
     const feed: Feed = new Feed({
         title: `${author.name}'s blog posts`,
@@ -27,10 +27,10 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
         feedLinks: {
             rss2: `${SITE_URL}/rss.xml`,
         },
-    });
+    })
 
     for (let i = 0; i < posts.length; i++) {
-        const postURL: string = `${SITE_URL}/blog/${posts[i].slug}`;
+        const postURL: string = `${SITE_URL}/blog/${posts[i].slug}`
 
         feed.addItem({
             title: posts[i].title,
@@ -40,8 +40,8 @@ export const generateRSSFeed = async (posts: Post[]): Promise<void> => {
             content: await markdownToHTML(posts[i].content),
             author: [author],
             date: new Date(posts[i].date)
-        });
+        })
     }
 
-    fs.writeFileSync("./public/rss.xml", feed.rss2());
-};
+    fs.writeFileSync("./public/rss.xml", feed.rss2())
+}

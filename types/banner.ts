@@ -1,7 +1,7 @@
 type Banner = {
-    index: number;
-    src: string;
-    url: string;
-};
+    index: number
+    src: string
+    url: string
+}
 
-export default Banner;
+export default Banner
