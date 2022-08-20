@@ -1,13 +1,11 @@
-import { PageConfig } from "next";
-import { NextSeo } from "next-seo";
+import { PageConfig } from "next"
+import { NextSeo } from "next-seo"
 
-import { MainLayout } from "@/components/Layout";
-import { getAllBanners } from "@/utils/getBanners";
-import type { Banner } from "@/types";
+import { MainLayout } from "@/components/Layout"
+import { getAllBanners } from "@/utils/getBanners"
+import type { Banner } from "@/types"
 
-export const config: PageConfig = {
-    unstable_runtimeJS: false
-};
+export const config: PageConfig = { unstable_runtimeJS: false }
 
 const PGP_PUBLIC_KEY = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -67,13 +65,18 @@ Ws+VRkr0TFIvcU02j3wBzoqVym14qKhoVvx0F970IS6oPB4lkbrvTckJr0IkpXXI
 n1l3Mm1PLwZf8D7FTczh8JDS58HGK/d5qfuAb903rh2mvBG3hSGD8zuVQWRldw==
 =3mHQ
 -----END PGP PUBLIC KEY BLOCK-----
-`;
+`
 
-type Props = {
-    banners: Banner[];
-};
+export const getStaticProps = async () => {
+    return {
+        props: { 
+            banners: getAllBanners() 
+        }
+    }
+}
 
-const PGPPage = ({ banners }: Props): JSX.Element => {
+type Props = { banners: Banner[] }
+export default ({ banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo 
@@ -86,17 +89,5 @@ const PGPPage = ({ banners }: Props): JSX.Element => {
                 <pre>{PGP_PUBLIC_KEY}</pre>
             </MainLayout>
         </>
-    );
-};
-
-export default PGPPage;
-
-export const getStaticProps = async () => {
-    const banners: Banner[] = getAllBanners();
-
-    return {
-        props: {
-            banners
-        }
-    };
-};
+    )
+}

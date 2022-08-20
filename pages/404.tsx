@@ -1,20 +1,23 @@
-import { PageConfig } from "next";
-import { NextSeo } from "next-seo";
-import Link from "next/link";
+import { PageConfig } from "next"
+import { NextSeo } from "next-seo"
+import Link from "next/link"
 
-import { MainLayout } from "@/components/Layout";
-import { getAllBanners } from "@/utils/getBanners";
-import type { Banner } from "@/types";
+import { MainLayout } from "@/components/Layout"
+import { getAllBanners } from "@/utils/getBanners"
+import type { Banner } from "@/types"
 
-export const config: PageConfig = {
-    unstable_runtimeJS: false
-};
+export const config: PageConfig = { unstable_runtimeJS: false }
 
-type Props = {
-    banners: Banner[];
-};
+export const getStaticProps = async () => {
+    return {
+        props: {
+            banners: getAllBanners()
+        }
+    }
+}
 
-const NotFound = ({ banners }: Props): JSX.Element => {
+type Props = { banners: Banner[] }
+export default ({ banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -25,17 +28,5 @@ const NotFound = ({ banners }: Props): JSX.Element => {
                 <p>The page you are requesting is sadly not present. Are you lost? consider going back to the <Link href="/"><a>homepage</a></Link>.</p>
             </MainLayout>
         </>
-    );
-};
-
-export default NotFound;
-
-export const getStaticProps = async () => {
-    const banners: Banner[] = getAllBanners();
-
-    return {
-        props: {
-            banners
-        }
-    };
-};
+    )
+}

@@ -1,22 +1,28 @@
-import Link from "next/link";
-import { PageConfig } from "next";
-import { NextSeo } from "next-seo";
+import Link from "next/link"
+import { PageConfig } from "next"
+import { NextSeo } from "next-seo"
 
-import type { Banner } from "@/types";
-import { MainLayout } from "@/components/Layout";
-import { getAllBanners } from "@/utils/getBanners";
-import { getAllPosts } from "@/utils/getPosts";
-import { generateRSSFeed } from "@/scripts/generateRSSFeed";
+import type { Banner } from "@/types"
+import { MainLayout } from "@/components/Layout"
+import { getAllBanners } from "@/utils/getBanners"
+import { getAllPosts } from "@/utils/getPosts"
+import { generateRSSFeed } from "@/scripts/generateRSSFeed"
 
-export const config: PageConfig = {
-    unstable_runtimeJS: false
-};
+export const config: PageConfig = { unstable_runtimeJS: false }
 
-type Props = {
-    banners: Banner[];
-};
+export const getStaticProps = async () => {
+    if (process.env.DEVELOPMENT)
+        await generateRSSFeed(getAllPosts())
 
-const Home = ({ banners }: Props): JSX.Element => {
+    return {
+        props: {
+            banners: getAllBanners()
+        },
+    }
+}
+
+type Props = { banners: Banner[] }
+export default ({ banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -51,18 +57,5 @@ const Home = ({ banners }: Props): JSX.Element => {
                 </p>
             </MainLayout>
         </>
-    );
-};
-
-export const getStaticProps = async () => {
-    if (process.env.DEVELOPMENT)
-        await generateRSSFeed(getAllPosts());
-
-    return {
-        props: {
-            banners: getAllBanners()
-        },
-    };
-};
-
-export default Home;
+    )
+}

@@ -1,12 +1,9 @@
-import Link from "next/link";
-import Banner from "@/components/Banner";
-import type { Banner as BannerType } from "@/types";
+import Link from "next/link"
+import Banner from "@/components/Banner"
+import type { Banner as BannerType } from "@/types"
 
-type Props = {
-    banners: BannerType[];
-};
-
-const Footer = ({ banners }: Props): JSX.Element => {
+type Props = { banners: BannerType[] }
+export default ({ banners }: Props): JSX.Element => {
     return (
         <footer>
             <hr/>
@@ -15,7 +12,5 @@ const Footer = ({ banners }: Props): JSX.Element => {
                 {banners.map((banner: BannerType) => <Banner src={banner.src} href={banner.url} key={banner.index} />)}
             </div>
         </footer>
-    );
-};
-
-export default Footer;
+    )
+}

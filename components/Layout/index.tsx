@@ -1,11 +1,7 @@
-import Footer from "@/components/Footer";
-import type { Banner } from "@/types";
+import Footer from "@/components/Footer"
+import type { Banner } from "@/types"
 
-type Props = {
-    children: JSX.Element | JSX.Element[];
-    banners: Banner[];
-};
-
+type Props = { children: JSX.Element | JSX.Element[], banners: Banner[] }
 export const MainLayout = ({ children, banners }: Props): JSX.Element => {
     return (
         <>
@@ -14,11 +10,9 @@ export const MainLayout = ({ children, banners }: Props): JSX.Element => {
             </main>
             <Footer banners={banners}/>
         </>
-    );
-};
+    )
+}
 
-const Layout = {
-    MainLayout,
-};
-
-export default Layout;
+export default {
+    MainLayout
+}
