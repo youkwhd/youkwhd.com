@@ -1,7 +1,25 @@
 youkwhd.vercel.app
 ==================
 
-this is a website written in Typescript & built using Next.js.
+This is a website written in Typescript & built using Next.js.
 runs on nodejs, not bloated.
 
-this website is free from Javascript/Typescript.
+This website is free from Javascript/Typescript.
+
+Development
+-----------
+
+Next.js will automatically load your .env files, while also
+setting up 2 default env variables, such as FZ and NODE_ENV.
+
+Possible values for NODE_ENV are the following:
+
+- test
+- development
+- production
+
+For whatever reasons variable TEST, DEVELOPMENT, PRODUCTION will
+be true if the above following set.
+
+This information is extracted from the following source code
+<https://raw.githubusercontent.com/vercel/next.js/canary/packages/next-env/index.ts>
