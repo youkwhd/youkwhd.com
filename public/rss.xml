@@ -4,11 +4,35 @@
         <title>youkwhd's blog posts</title>
         <link>https://youkwhd.vercel.app</link>
         <description>an archive consist of articles from youkwhd's site</description>
-        <lastBuildDate>Fri, 19 Aug 2022 18:36:13 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Aug 2022 13:23:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2022, youkwhd</copyright>
+        <item>
+            <title><![CDATA[My first C library, kind of.]]></title>
+            <link>https://youkwhd.vercel.app/blog/my-first-c-library-kind-of</link>
+            <guid>https://youkwhd.vercel.app/blog/my-first-c-library-kind-of</guid>
+            <pubDate>Sat, 20 Aug 2022 11:55:34 GMT</pubDate>
+            <description><![CDATA[The making of libtmdb.]]></description>
+            <content:encoded><![CDATA[<p>It has been ~5 months since the first mention of me wanting to make my own static site generator, yet it's never been developed, actually did, right before i made libtmdb, i was hacking libmd4c to inject header IDs, tho it will not gonna be continued.</p>
+<p>I instead made a library to call TMDb v3 API trough help of libcurl for network calls.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#designing-the-library-api">Designing the library API</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#waiting-for-answers">Waiting for answers</a></li>
+</ul>
+<h2 id="designing-the-library-api">Designing the library API</h2>
+<p>By default, the library will create a global curl handler when the user called <code>tmdb_init()</code>, and freed until the user calls <code>tmdb_cleanup()</code>, but i was thinking that user might also have seperate curl handler in case they're using it to make other network calls using curl.</p>
+<p>With that in mind, i can make a function to assign the curl handler by user, which means, the user is the one who initializes the curl handler themselves, thus libtmdb will use the user generated handler to make network calls.</p>
+<p>On each tmdb_get*, tmdb_post*, tmdb_delete* function, a memory allocation is occured. This will be a memory buffer to hold data from curl.</p>
+<h2 id="documentation">Documentation</h2>
+<p>There is no hustle writing the documentation since all you need as a user is to go to the official TMDb website to peek their required API queries / paths, because as all tmdb_get*, tmdb_post*, tmdb_delete* functions reflect those as parameters.</p>
+<h2 id="waiting-for-answers">Waiting for answers</h2>
+<p>I contacted TMDb via this <a href="https://www.themoviedb.org/about/staying-in-touch">https://www.themoviedb.org/about/staying-in-touch</a> to put my library on <a href="https://www.themoviedb.org/documentation/api/wrappers-libraries">https://www.themoviedb.org/documentation/api/wrappers-libraries</a> so it can be actually used. As they stated that <em>"All of the libraries listed below are user contributed"</em>. I hope mine can be there soon 🙂 even tho it's developed in 2022 😭.</p>]]></content:encoded>
+            <author>lolywk@tutanota.com (youkwhd)</author>
+        </item>
         <item>
             <title><![CDATA[Majoring compsci, yet a self-taught]]></title>
             <link>https://youkwhd.vercel.app/blog/majoring-compsci-yet-self-taught</link>
