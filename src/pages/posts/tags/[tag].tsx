@@ -3,8 +3,8 @@ import Link from "next/link"
 import { NextSeo } from "next-seo"
 
 import { getAllPosts } from "@/utils/getPosts"
-import type { Banner, Post } from "@/types"
-import { MainLayout } from "@/components/Layout"
+import type { Banner, Post } from "@/src/types"
+import { MainLayout } from "@/src/components/Layout"
 import { getAllBanners } from "@/utils/getBanners"
 
 export const config: PageConfig = { unstable_runtimeJS: false }

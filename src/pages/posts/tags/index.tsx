@@ -4,8 +4,8 @@ import { NextSeo } from "next-seo"
 
 import { getAllBanners } from "@/utils/getBanners"
 import { getAllPosts } from "@/utils/getPosts"
-import { MainLayout } from "@/components/Layout"
-import type { Post, Banner } from "@/types"
+import { MainLayout } from "@/src/components/Layout"
+import type { Post, Banner } from "@/src/types"
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
