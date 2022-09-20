@@ -1,9 +1,9 @@
 import { AppProps } from "next/app"
 import { DefaultSeo } from "next-seo"
 
-import "@/styles/main.scss"
-import "@/styles/font-types/jetbrains-mono.css"
-import "@/styles/prism-themes/prism-gruvbox-dark.css"
+import "@/src/styles/main.scss"
+import "@/src/styles/font-types/jetbrains-mono.css"
+import "@/src/styles/prism-themes/prism-gruvbox-dark.css"
 
 export default ({ Component, pageProps }: AppProps): JSX.Element => {
     return (

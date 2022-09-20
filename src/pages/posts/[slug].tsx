@@ -5,8 +5,8 @@ import { getAllPosts, getPostBySlug } from "@/utils/getPosts"
 import { getAllBanners } from "@/utils/getBanners"
 import { markdownToHTML } from "@/utils/markdownConverter"
 
-import type { Post, Banner } from "@/types"
-import { MainLayout } from "@/components/Layout"
+import type { Post, Banner } from "@/src/types"
+import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 

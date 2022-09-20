@@ -1,6 +1,6 @@
 import fs from "fs"
 import { join } from "path"
-import type { Post } from "@/types"
+import type { Post } from "@/src/types"
 import matter, { GrayMatterFile } from "gray-matter"
 
 const postsDir: string = join(process.cwd(), "_posts")
@@ -25,6 +25,7 @@ const getPostBySlug = (slug: string): Post => {
         slug,
         title: data.title,
         excerpt: data.excerpt,
+        sidenote: data.sidenote,
         date: data.date,
         content,
         tags

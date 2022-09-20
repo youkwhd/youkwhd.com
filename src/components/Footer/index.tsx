@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Banner from "@/components/Banner"
-import type { Banner as BannerType } from "@/types"
+import Banner from "@/src/components/Banner"
+import type { Banner as BannerType } from "@/src/types"
 
 type Props = { banners: BannerType[] }
 export default ({ banners }: Props): JSX.Element => {

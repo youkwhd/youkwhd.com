@@ -1,6 +1,6 @@
 import fs from "fs"
 import { Feed } from "feed"
-import { Post } from "@/types"
+import { Post } from "@/src/types"
 import { markdownToHTML } from "@/utils/markdownConverter"
 
 // refer to https://github.com/jpmonette/feed

@@ -4,8 +4,8 @@ import { NextSeo } from "next-seo"
 
 import { getAllPosts } from "@/utils/getPosts"
 import { getAllBanners } from "@/utils/getBanners"
-import type { Post, Banner } from "@/types"
-import { MainLayout } from "@/components/Layout"
+import type { Post, Banner } from "@/src/types"
+import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -37,6 +37,11 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
                                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                                     {post.title}
                                 </Link>
+                                {post.sidenote && (
+                                    <blockquote className="sidenote">
+                                        <p>{post.sidenote}</p>
+                                    </blockquote>
+                                )}
                             </li>
                         )
                     })}
