@@ -1,5 +1,5 @@
-import type Post from "@/types/post"
-import type Banner from "@/types/banner"
+import type Post from "@/src/types/post"
+import type Banner from "@/src/types/banner"
 
 export type {
     Post,
