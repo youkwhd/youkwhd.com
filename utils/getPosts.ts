@@ -3,7 +3,7 @@ import { join } from "path"
 import type { Post } from "@/src/types"
 import matter, { GrayMatterFile } from "gray-matter"
 
-const postsDir: string = join(process.cwd(), "_posts")
+const postsDir: string = join(process.cwd(), "src/_posts")
 const postFiles: string[] = fs.readdirSync(postsDir)
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""))
 
