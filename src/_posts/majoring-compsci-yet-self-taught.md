@@ -8,19 +8,19 @@ excerpt: "On the homepage, i mentioned that i am majoring a computer science, th
 sidenote: ""
 ---
 
-On the homepage, i mentioned that i am majoring a computer science, that is true. However, there is a catch on why i decided to take a degree.
+On the homepage, I mentioned that I am majoring a computer science, that is true. However, there is a catch on why I decided to take a degree.
 
 ## Table of contents
 
 ## Indonesia
 
-Indonesia is a country located in Asia, just take a look on a map. I basically live there. When it comes to "programming", most of the universities will teach their students either PHP, Java or Python. This just doesn't feel right, it's fucking dated and stupid. It is 2022 and they are still teaching PHP.
+Indonesia is a country located in Asia, just take a look on a map. I basically live there. When it comes to "programming", _most_ of the universities will teach their students either PHP, Java or Python. This just doesn't feel right, it's dated and stupid. It is 2022 and they are still teaching PHP.
 
 > No hate for PHP.
 
-What i am trying to say is, the way professors are teaching is dated. THUS! most of the government sites are **VERY VERY VURNERABLE**.
+What I am trying to say is, the way professors are teaching is dated. THUS! most of the government sites are **VERY VERY VURNERABLE**.
 
-## Kominfo and the Government instances
+## New Kominfo and the Government instances
 
 Let me drive you somewhere, let's do some Google dorking. Step 1:
 
@@ -35,8 +35,8 @@ Someone even bypassed the admin account by changing the cookie session (an offic
 
 A web app said it costs Rp. 1.000,000.000.000 to build? 😀 source [https://www.bbc.com/indonesia/articles/cg322wgp8p1o](https://www.bbc.com/indonesia/articles/cg322wgp8p1o)
 
-## Professors and their moods
+From here, I think whoever's reading this knows what happens. No need to tell you more. Happy hacking.
 
-I don't know this one in other country, but here. Some professors will just give student's score whatever they want, based on their mood. Even if the student is doing good with their _"homework"_.
+## On a trip long way from home
 
-From here, i think whoever's reading this knows what happens. No need to tell you more. Happy hacking.
+I am currently a student (_wow free information_), don't know how this will end up, but, it is what it is so wish me luck roasting silently.
