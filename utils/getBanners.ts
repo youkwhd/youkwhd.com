@@ -1,6 +1,6 @@
 import fs from "fs"
 import { join } from "path"
-import type { Banner } from "@/src/types"
+import { type Banner } from "@/src/types"
 
 const getAllBanners = (): Banner[] => {
     const bannersDir: string = join(process.cwd(), "public/images/banners")
