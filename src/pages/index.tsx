@@ -5,15 +5,10 @@ import { NextSeo } from "next-seo"
 import type { Banner } from "@/src/types"
 import { MainLayout } from "@/src/components/Layout"
 import { getAllBanners } from "@/utils/getBanners"
-import { getAllPosts } from "@/utils/getPosts"
-import { generateRSSFeed } from "@/scripts/generateRSSFeed"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
 export const getStaticProps = async () => {
-    if (process.env.DEVELOPMENT)
-        await generateRSSFeed(getAllPosts())
-
     return {
         props: {
             banners: getAllBanners()
