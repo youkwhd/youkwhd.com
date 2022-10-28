@@ -6,8 +6,15 @@ runs on nodejs, not bloated.
 
 This website is free from Javascript/Typescript.
 
-Development
------------
+Generating RSS feeds
+--------------------
+
+I use python3 to generate rss feeds, run the file scripts/rss.py
+to generate the file public/rss.xml, this guide section is
+likely my personal note.
+
+Next.js environment var
+-----------------------
 
 Next.js will automatically load your .env files, while also
 setting up 2 default env variables, such as FZ and NODE_ENV.
