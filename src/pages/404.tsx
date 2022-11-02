@@ -8,13 +8,7 @@ import type { Banner } from "@/src/types"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
-export const getStaticProps = async () => {
-    return {
-        props: {
-            banners: getAllBanners()
-        }
-    }
-}
+export const getStaticProps = () => ({ props: { banners: getAllBanners() }})
 
 type Props = { banners: Banner[] }
 export default ({ banners }: Props): JSX.Element => {

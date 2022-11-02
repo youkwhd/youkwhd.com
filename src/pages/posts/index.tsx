@@ -9,14 +9,7 @@ import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
-export const getStaticProps = () => {
-    return {
-        props: {
-            posts: getAllPosts(),
-            banners: getAllBanners()
-        },
-    }
-}
+export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts: getAllPosts() }})
 
 type Props = { posts: Post[], banners: Banner[] }
 const PostsPage = ({ posts, banners }: Props): JSX.Element => {

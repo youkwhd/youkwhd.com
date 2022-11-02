@@ -67,13 +67,7 @@ n1l3Mm1PLwZf8D7FTczh8JDS58HGK/d5qfuAb903rh2mvBG3hSGD8zuVQWRldw==
 -----END PGP PUBLIC KEY BLOCK-----
 `
 
-export const getStaticProps = async () => {
-    return {
-        props: { 
-            banners: getAllBanners() 
-        }
-    }
-}
+export const getStaticProps = () => ({ props: { banners: getAllBanners() }})
 
 type Props = { banners: Banner[] }
 export default ({ banners }: Props): JSX.Element => {
