@@ -4,7 +4,6 @@ date: "2022-03-09T04:11:27.630Z"
 tags:
   - web development 
 excerpt: "I wanted to change up the technologies that i've used on this blog. Something just doesn't feel as rewarding if i myself didn't build this site from scratch, i might just consider making a new one from scratch and make use of bash scripting or make my own simple static site generator using the holy C that supports markdown."
-sidenote: ""
 ---
 
 This very site was first made with [Gatsby](https://www.gatsbyjs.com), and now it's build on top of [Next.js](https://nextjs.org) — pure static HTML + CSS page, no javascript included. I wanted to change up the technologies that i've used on this blog. Something just doesn't feel as rewarding if i myself didn't build this site from scratch, i might just consider making a new one from scratch and make use of bash scripting or make my own simple static site generator using the holy C that supports markdown, including all the third party packages. Or this "plan" will be my side project. Considering i need more knowledge on Typescript for web development, more preferably Javascript itself.

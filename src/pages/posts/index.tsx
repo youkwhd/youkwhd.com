@@ -30,11 +30,6 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
                                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                                     {post.title}
                                 </Link>
-                                {post.sidenote && (
-                                    <blockquote className="sidenote">
-                                        <p>{post.sidenote}</p>
-                                    </blockquote>
-                                )}
                             </li>
                         )
                     })}

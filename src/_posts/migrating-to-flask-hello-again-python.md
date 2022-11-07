@@ -5,7 +5,6 @@ tags:
   - software development 
   - web development
 excerpt: "Migrating to Flask, hello again python."
-sidenote: ""
 ---
 
 My first language was python, that's why i chose python. It's just a bit easier to migrate to. Also learnt more python things like decorators, virtualenv, packages layout & probably `__name__` and `__main__` variables. You probably already know why i'm using Flask rather than Django if you are a python developer yourself. Long story short, Flask is just easier to work with and lightweight, blazingly python-fast.

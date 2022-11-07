@@ -5,7 +5,6 @@ tags:
   - software development 
   - gnu/linux
 excerpt: "The making of libtmdb."
-sidenote: ""
 ---
 
 It has been ~5 months since the first mention of me wanting to make my own static site generator, yet it's never been developed, actually did, right before i made libtmdb, i was hacking libmd4c to inject header IDs, tho it will not gonna be continued.

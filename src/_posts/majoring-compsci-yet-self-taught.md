@@ -5,7 +5,6 @@ tags:
   - personal experience
   - me country
 excerpt: "On the homepage, i mentioned that i am majoring a computer science, that is true. However, there is a catch on why i decided to take a degree."
-sidenote: ""
 ---
 
 On the homepage, I mentioned that I am majoring a computer science, that is true. However, there is a catch on why I decided to take a degree.

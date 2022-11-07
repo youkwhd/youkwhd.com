@@ -5,7 +5,6 @@ tags:
   - software development 
   - web development
 excerpt: "A bad habit i have is that i always rush when developing my projects. I felt like time is ticking faster when i do my works, thus that makes make me uncautious to small things to consider."
-sidenote: ""
 ---
 
 A bad habit i have is that i always rush when developing my projects. I felt like time is ticking faster when i do my works, thus that makes make me uncautious to small things to consider.

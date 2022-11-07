@@ -5,7 +5,6 @@ tags:
   - software development 
   - web development
 excerpt: "This was actually my first time attempting to make a web app using Flask as a technology interest. It also implies with the programming language, python. I will demonstrate on how this app was made, what steps i took, also some regrets i made while making this app."
-sidenote: ""
 ---
 
 > featuring [https://youkwhd.herokuapp.com](https://youkwhd.herokuapp.com)

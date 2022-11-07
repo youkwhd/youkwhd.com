@@ -5,7 +5,6 @@ tags:
   - software development 
   - web development
 excerpt: "Sometimes, the tool that you are going to use is not the best solution for the current project that you're building. It is okay to reproduce other people's projects with your preferenced tools, such as the programming language itself. Here are some examples of choosing the right tools."
-sidenote: ""
 ---
 
 Sometimes, the tool that you are going to use is not the best solution for the current project that you're building. It is okay to reproduce other people's projects with your preferenced tools, such as the programming language itself. It's a good way to learn, that makes you more comfortable with your current knowledge, but still, always learn the fundamentals, not the tool you're using.
