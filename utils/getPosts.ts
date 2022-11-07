@@ -25,7 +25,6 @@ const getPostBySlug = (slug: string): Post => {
         slug,
         title: data.title,
         excerpt: data.excerpt,
-        sidenote: data.sidenote,
         date: data.date,
         content,
         tags
