@@ -27,4 +27,6 @@ There is no hustle writing the documentation since all you need as a user is to 
 
 ## Waiting for answers
 
+> 20/11/2022; it is now live at [https://www.themoviedb.org/documentation/api/wrappers-libraries](https://www.themoviedb.org/documentation/api/wrappers-libraries) :D
+
 I contacted TMDb via this [https://www.themoviedb.org/about/staying-in-touch](https://www.themoviedb.org/about/staying-in-touch) to put my library on [https://www.themoviedb.org/documentation/api/wrappers-libraries](https://www.themoviedb.org/documentation/api/wrappers-libraries) so it can be actually used. As they stated that _"All of the libraries listed below are user contributed"_. I hope mine can be there soon 🙂 even tho it's developed in 2022 😭.
