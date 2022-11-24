@@ -32,7 +32,7 @@ export default ({ banners }: Props): JSX.Element => {
                     articles by either:
                 </p>
                 <ol>
-                    <li><Link href={"/posts"}>Inspecting every articles</Link></li>
+                    <li><Link href={"/posts"}>Inspecting every blog posts</Link></li>
                     <li><Link href={"/posts/tags"}>Checking all the available tags/topics</Link></li>
                 </ol>
                 <p>
