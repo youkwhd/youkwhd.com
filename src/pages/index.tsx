@@ -21,7 +21,7 @@ export default ({ banners }: Props): JSX.Element => {
             <MainLayout banners={banners}>
                 <h1 className="__fake_h2">Introducing youkwhd</h1>
                 <p>
-                    I'm an undergraduate student majoring Computer Science, a fast paced self-taught programmer <Link href={"/posts/majoring-compsci-yet-self-taught"} target="_blank" style={{ fontSize: 10 }}>[1]</Link> who's proficient using C99 & Typescript as a language of choice, utilizing Neovim as an efficient text editor for every day use.
+                    I'm an undergraduate student majoring Computer Science, a fast paced self-taught programmer <Link href={"/posts/majoring-compsci-yet-self-taught"} target="_blank" style={{ fontSize: 14 }}>[1]</Link> who's proficient using C99 & Typescript as a language of choice, utilizing Neovim as an efficient text editor for every day use.
                 </p>
                 <p>
                     With the mention of Neovim, thus can be summarized that i am in fact a GNU/Linux enthusiast. I prefer to use a non PID1 systemd based systems. Most of my softwares are purely Libre.
