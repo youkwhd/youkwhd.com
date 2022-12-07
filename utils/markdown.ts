@@ -8,7 +8,7 @@ import rehypeSlug from "rehype-slug"
 import rehypePrism from "@mapbox/rehype-prism"
 import rehypeStringify from "rehype-stringify"
 
-export const markdownToHTML = async (markdown: string): Promise<string> => {
+const markdownToHTML = async (markdown: string): Promise<string> => {
     return (await unified()
                     .use(remarkParse)
                     .use(remarkToc)
@@ -19,3 +19,6 @@ export const markdownToHTML = async (markdown: string): Promise<string> => {
                     .process(markdown)).toString()
 }
 
+export {
+    markdownToHTML
+}

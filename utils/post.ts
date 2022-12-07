@@ -1,9 +1,9 @@
 import fs from "fs"
 import { join } from "path"
-import { type Post } from "@/src/types"
+import { type Post } from "@/types"
 import matter, { type GrayMatterFile } from "gray-matter"
 
-const postsDir: string = join(process.cwd(), "src/_posts")
+const postsDir: string = join(process.cwd(), "assets/_posts")
 const postFiles: string[] = fs.readdirSync(postsDir)
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""))
 

@@ -2,9 +2,10 @@ import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 import Link from "next/link"
 
+import { getAllBanners } from "@/utils/banner"
+
+import type { Banner } from "@/types"
 import { MainLayout } from "@/src/components/Layout"
-import { getAllBanners } from "@/utils/getBanners"
-import type { Banner } from "@/src/types"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
