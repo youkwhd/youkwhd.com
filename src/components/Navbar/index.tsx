@@ -11,7 +11,7 @@ export default ({ links }: Props): JSX.Element => {
                     const lastLink = linkSplit[linkSplit.length - 1]
 
                     return (
-                        <li>
+                        <li key={link}>
                             <Link href={`/${link == "home" ? "" : link}`}>{lastLink}</Link>
                         </li>
                     )
