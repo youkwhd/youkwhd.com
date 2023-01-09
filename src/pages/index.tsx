@@ -27,10 +27,9 @@ export default ({ banners }: Props): JSX.Element => {
                 <p>
                     With the mention of Neovim, thus can be summarized that i am in fact a GNU/Linux enthusiast. I prefer to use a non PID1 systemd based systems. Most of my softwares are purely Libre.
                 </p>
-                <h2>Writing articles</h2>
+                <h2>Guide to this website</h2>
                 <p>
-                    The only reason why this site is here is because of me wanting to write articles. Be aware that each and every articles are written based on my experience. You can find my 
-                    articles by either:
+                    My website has no navbar, it might be weird but I love my original design. Thus most of the links are mostly on the footer below, You can find every articles I have written by either:
                 </p>
                 <ol>
                     <li><Link href={"/posts"}>Inspecting every blog posts</Link></li>
