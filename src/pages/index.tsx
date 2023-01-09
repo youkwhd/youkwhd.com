@@ -29,7 +29,7 @@ export default ({ banners }: Props): JSX.Element => {
                 </p>
                 <h2>Guide to this website</h2>
                 <p>
-                    My website has no navbar, it might be weird but I love my original design. Thus most of the links are mostly on the footer below, You can find every articles I have written by either:
+                    My website has no navbar, it might be weird but I love my original design. Thus most of the links are mostly on the footer below, you can find every articles I have written by either:
                 </p>
                 <ol>
                     <li><Link href={"/posts"}>Inspecting every blog posts</Link></li>
