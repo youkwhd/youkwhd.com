@@ -8,11 +8,22 @@ export const MainLayout = ({ children, banners }: Props): JSX.Element => {
             <main>
                 {children}
             </main>
+        </>
+    )
+}
+
+export const __MainLayout = ({ children, banners }: Props): JSX.Element => {
+    return (
+        <>
+            <main>
+                {children}
+            </main>
             <Footer banners={banners}/>
         </>
     )
 }
 
 export default {
-    MainLayout
+    MainLayout,
+    __MainLayout
 }

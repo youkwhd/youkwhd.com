@@ -1,10 +1,5 @@
-body {
-    background-color: #0f0f0f;
-    color: #bbbbbb;
-    font-family: "JetBrains Mono", monospace;
-
-    line-height: 1.15rem;
-    font-size: 13px;
+.title {
+    text-align: center;
 }
 
 .sidelink {
@@ -14,26 +9,6 @@ body {
 #__next {
     max-width: 530px;
     margin: 2em auto;
-}
-
-@for $i from 1 to 7 {
-    $pound: "#";
-    $pound_count: $i;
-
-    @while $pound_count > 1 {
-        $pound_count: $pound_count - 1;
-        $pound: $pound + "#";
-    }
-
-    h#{$i} {
-        color: #6f9b1d;
-        font-size: 16px;
-    }
-
-    h#{$i}::before,
-    .__fake_h#{$i}::before {
-        content: $pound + " ";
-    }
 }
 
 .banner-wrapper {
@@ -48,22 +23,9 @@ body {
     }
 }
 
-a {
-    color: #387cec;
-    text-decoration: none;
-    border-bottom: 1px dotted #387cec;
-
-    &:active,
-    &:hover {
-        color: #3971cc;
-    }
-}
-
-blockquote {
-    margin: 0;
-    border-left: 4px solid #474747;
-    color: #757575;
-    padding-left: 15px;
+aside {
+    float: right;
+    padding-left: 10px;
 }
 
 pre {
@@ -87,13 +49,6 @@ ul > li > ul {
     padding-top: .25em;
 }
 
-/* standalone code */
-code:not([class]) {
-    background-color: #3d3a3b;
-    border-radius: 2px;
-    overflow: auto;
-}
-
 img {
   max-width: 100%;
   object-fit: contain;
@@ -105,10 +60,4 @@ img {
 
 .no-padding {
     padding: 0;
-}
-
-@media (max-width: 560px) {
-    body {
-        padding: 0 1em;
-    }
 }

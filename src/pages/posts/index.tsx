@@ -20,20 +20,18 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
                 title="blog posts"
             />
             <MainLayout banners={banners}>
-                <h1>blog posts:</h1>
+                <h1>blog posts</h1>
+                <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
                 <ul>
                     {posts.map((post: Post) => {
-                        const parsedPostDate: string = post.date.split("T")[0]
-
                         return (
                             <li key={post.slug}>
-                                <span>{parsedPostDate} - </span>
                                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                                    {post.title}
+                                    {post.title.toLowerCase()}
                                 </Link>
                             </li>
                         )
-                    })}
+                   })}
                 </ul>
             </MainLayout>
         </>
