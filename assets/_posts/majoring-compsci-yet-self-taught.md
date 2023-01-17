@@ -1,41 +1,41 @@
 ---
-title: "Majoring compsci, yet a self-taught"
-date: "2022-08-08T15:03:40.680Z"
+title: "majoring compsci, yet a self-taught"
+date: "2022-08-08t15:03:40.680z"
 tags:
   - personal experience
   - me country
-excerpt: "On the homepage, i mentioned that i am majoring a computer science, that is true. However, there is a catch on why i decided to take a degree."
+excerpt: "on the homepage, i mentioned that i am majoring a computer science, that is true. however, there is a catch on why i decided to take a degree."
 ---
 
-On the homepage, I mentioned that I am majoring a computer science, that is true. However, there is a catch on why I decided to take a degree.
+on the homepage, i mentioned that i am majoring a computer science, that is true. however, there is a catch on why i decided to take a degree.
 
-## Table of contents
+## table of contents
 
-## Indonesia
+## indonesia
 
-Indonesia is a country located in Asia, just take a look on a map. I basically live there. When it comes to "programming", _most_ of the universities will teach their students either PHP, Java or Python. This just doesn't feel right, it's dated and stupid. It is 2022 and they are still teaching PHP.
+indonesia is a country located in asia, just take a look on a map. i basically live there. when it comes to "programming", _most_ of the universities will teach their students either php, java or python. this just doesn't feel right, it's dated and stupid. it is 2022 and they are still teaching php.
 
-> No hate for PHP.
+> no hate for php.
 
-What I am trying to say is, the way professors are teaching is dated. THUS! most of the government sites are **VERY VERY VURNERABLE**.
+what i am trying to say is, the way professors are teaching is dated. thus! most of the government sites are **very very vurnerable**.
 
-## New Kominfo and the Government instances
+## new kominfo and the government instances
 
-Let me drive you somewhere, let's do some Google dorking. Step 1:
+let me drive you somewhere, let's do some google dorking. step 1:
 
-- Search using Google `Index of /fckeditor/editor/filemanager/connectors/`
-- Results! only include sites that ends with .id, ex: _spai.kemdikbud.go.id_, _alumni.uinjambi.ac.id_
+- search using google `index of /fckeditor/editor/filemanager/connectors/`
+- results! only include sites that ends with .id, ex: _spai.kemdikbud.go.id_, _alumni.uinjambi.ac.id_
 
-Voilà! now you've got some **VURNERABLE** web app. Guess what? it's built using PHP. They're learning PHP at their university yet they don't fucking know shit.
+voilà! now you've got some **vurnerable** web app. guess what? it's built using php. they're learning php at their university yet they don't fucking know shit.
 
-Not only that, there's so many ways to attack these `.id` web apps.
+not only that, there's so many ways to attack these `.id` web apps.
 
-Someone even bypassed the admin account by changing the cookie session (an official Government web app)
+someone even bypassed the admin account by changing the cookie session (an official government web app)
 
-A web app said it costs Rp. 1.000,000.000.000 to build? 😀 source [https://www.bbc.com/indonesia/articles/cg322wgp8p1o](https://www.bbc.com/indonesia/articles/cg322wgp8p1o)
+a web app said it costs rp. 1.000,000.000.000 to build? 😀 source [https://www.bbc.com/indonesia/articles/cg322wgp8p1o](https://www.bbc.com/indonesia/articles/cg322wgp8p1o)
 
-From here, I think whoever's reading this knows what happens. No need to tell you more. Happy hacking.
+from here, i think whoever's reading this knows what happens. no need to tell you more. happy hacking.
 
-## On a trip long way from home
+## on a trip long way from home
 
-I am currently a student (_wow free information_), don't know how this will end up, but, it is what it is so wish me luck roasting silently.
+i am currently a student (_wow free information_), don't know how this will end up, but, it is what it is so wish me luck roasting silently.
