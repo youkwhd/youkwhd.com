@@ -47,7 +47,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 <ul>
                     <li>
                         <Link href={"https://github.com/youkwhd/twrap"} target="_blank">twrap</Link>
-                        , simple utility software to wrap ASCII characters
+                        , simple utility to wrap ascii characters used for readme's
                     </li>
                     <li>
                         <Link href={"https://github.com/youkwhd/libtmdb"} target="_blank">libtmdb</Link>
