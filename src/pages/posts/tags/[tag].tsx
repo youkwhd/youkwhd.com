@@ -70,11 +70,8 @@ export default ({ filteredPosts, currentPostTag, banners }: Props): JSX.Element 
                 <h1>{currentPostTag} related posts:</h1>
                 <ul>
                     {filteredPosts.map((post: Post) => {
-                        const parsedPostDate: string = post.date.split("T")[0]
-
                         return (
                             <li key={post.slug}>
-                                <span>{parsedPostDate} - </span>
                                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                                     {post.title}
                                 </Link>

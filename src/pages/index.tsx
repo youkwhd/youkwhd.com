@@ -37,7 +37,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                         return (
                             <li key={post.slug}>
                                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                                    {post.title.toLowerCase()}
+                                    {post.title}
                                 </Link>
                             </li>
                         )
