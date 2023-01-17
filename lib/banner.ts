@@ -1,6 +1,11 @@
 import fs from "fs"
 import { join } from "path"
-import { type Banner } from "@/types"
+
+type Banner = {
+    index: number
+    src: string
+    url: string
+}
 
 const getAllBanners = (): Banner[] => {
     const bannersDir: string = join(process.cwd(), "public/images/banners")
@@ -27,5 +32,6 @@ const parseBanner = (banner: string): Banner => {
 }
 
 export {
-    getAllBanners
+    getAllBanners,
+    type Banner
 }

@@ -1,5 +1,5 @@
 import Footer from "@/src/components/Footer"
-import { type Banner } from "@/types"
+import { type Banner } from "@/lib/banner"
 
 type Props = { children: JSX.Element | JSX.Element[], banners: Banner[] }
 export const MainLayout = ({ children, banners }: Props): JSX.Element => {

@@ -1,11 +1,9 @@
 import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 
-import { getAllPosts, getPostBySlug } from "@/utils/post"
-import { getAllBanners } from "@/utils/banner"
-import { markdownToHTML } from "@/utils/markdown"
-
-import type { Post, Banner } from "@/types"
+import { type Banner, getAllBanners } from "@/lib/banner"
+import { type Post, getAllPosts, getPostBySlug } from "@/lib/post"
+import { markdownToHTML } from "@/lib/markdown"
 import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }

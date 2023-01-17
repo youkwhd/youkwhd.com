@@ -1,7 +1,15 @@
 import fs from "fs"
 import { join } from "path"
-import { type Post } from "@/types"
 import matter, { type GrayMatterFile } from "gray-matter"
+
+type Post = {
+    slug: string
+    title: string
+    excerpt: string
+    date: string
+    content: string
+    tags: { [key: string]: string }
+}
 
 const postsDir: string = join(process.cwd(), "assets/_posts")
 const postFiles: string[] = fs.readdirSync(postsDir)
@@ -39,5 +47,6 @@ const getAllPosts = (): Post[] => {
 
 export {
     getPostBySlug,
-    getAllPosts
+    getAllPosts,
+    type Post
 }
