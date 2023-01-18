@@ -1,6 +1,6 @@
 ---
 title: "majoring compsci, yet a self-taught"
-date: "2022-08-08t15:03:40.680z"
+date: "2022-08-08T15:03:40.680Z"
 tags:
   - personal experience
   - me country

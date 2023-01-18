@@ -1,6 +1,6 @@
 ---
 title: "what makes a gnu/linux rice looks good"
-date: "2022-01-14t18:03:14.265z"
+date: "2022-01-14T18:03:14.265Z"
 tags:
   - gnu/linux
   - window managers

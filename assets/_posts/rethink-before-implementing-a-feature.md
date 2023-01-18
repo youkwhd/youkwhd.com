@@ -1,6 +1,6 @@
 ---
 title: "rethink before implementing a feature"
-date: "2022-03-21t03:21:43.867z"
+date: "2022-03-21T03:21:43.867Z"
 tags:
   - software development 
   - web development

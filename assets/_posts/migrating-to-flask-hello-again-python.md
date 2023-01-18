@@ -1,6 +1,6 @@
 ---
 title: "migrating to flask, hello again to python"
-date: "2022-05-10t19:39:42.733z"
+date: "2022-05-10T19:39:42.733Z"
 tags:
   - software development 
   - web development

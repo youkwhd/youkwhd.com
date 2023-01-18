@@ -1,6 +1,6 @@
 ---
 title: "the making of my flask app"
-date: "2022-05-17t17:00:00.000z" 
+date: "2022-05-17T17:00:00.000Z" 
 tags:
   - software development 
   - web development

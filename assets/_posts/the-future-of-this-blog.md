@@ -1,6 +1,6 @@
 ---
 title: "the future of this blog"
-date: "2022-03-09t04:11:27.630z"
+date: "2022-03-09T04:11:27.630Z"
 tags:
   - web development 
 excerpt: "i wanted to change up the technologies that i've used on this blog. something just doesn't feel as rewarding if i myself didn't build this site from scratch, i might just consider making a new one from scratch and make use of bash scripting or make my own simple static site generator using the holy c that supports markdown."

@@ -1,6 +1,6 @@
 ---
 title: "my first c library, kind of."
-date: "2022-08-20t11:55:34.255z"
+date: "2022-08-20T11:55:34.255Z"
 tags:
   - software development 
   - gnu/linux
