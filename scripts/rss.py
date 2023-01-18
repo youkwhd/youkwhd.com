@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import re
 import rfeed as rf
@@ -5,14 +7,14 @@ import requests as req
 import datetime as date
 import markdown as md
 
-posts_dir = f'{os.path.split(__file__)[0]}/../src/_posts'
+posts_dir = f'{os.path.split(__file__)[0]}/../assets/_posts'
 posts_files = os.listdir(posts_dir)
 posts_rss = []
 
 url = "https://youkwhd.vercel.app"
 
 # TODO: use git library or similiar
-pushed_files = req.get("https://github.com/youkwhd/youkwhd.vercel.app/tree/master/src/_posts")
+pushed_files = req.get("https://github.com/youkwhd/youkwhd.vercel.app/tree/master/assets/_posts")
 
 for post_file in posts_files:
     if post_file not in pushed_files.text:
@@ -47,7 +49,7 @@ for post_file in posts_files:
         posts_rss.append(rss_item)
 
 feed = rf.Feed(
-        title="youkwhd's blog posts RSS",
+        title="youkwhd's blog posts rss",
         description="an archive consist of articles from youkwhd's blog",
         link=url,
         language = "en-US",
