@@ -17,7 +17,7 @@ indonesia is a country located in asia, just take a look on a map. i basically l
 
 > no hate for php.
 
-what i am trying to say is, the way professors are teaching is dated. thus! most of the government sites are **very very vurnerable**.
+what i am trying to say is, the way professors are teaching is dated. thus! most of the government sites are **very very vulnerable**.
 
 ## new kominfo and the government instances
 
@@ -38,4 +38,4 @@ from here, i think whoever's reading this knows what happens. no need to tell yo
 
 ## on a trip long way from home
 
-i am currently a student (_wow free information_), don't know how this will end up, but, it is what it is so wish me luck roasting silently.
+i am currently a student, don't know how this will end up, but, it is what it is so wish me luck roasting silently.
