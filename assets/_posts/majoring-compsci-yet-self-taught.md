@@ -26,7 +26,7 @@ let me drive you somewhere, let's do some google dorking. step 1:
 - search using google `index of /fckeditor/editor/filemanager/connectors/`
 - results! only include sites that ends with .id, ex: _spai.kemdikbud.go.id_, _alumni.uinjambi.ac.id_
 
-voilà! now you've got some **vurnerable** web app. guess what? it's built using php. they're learning php at their university yet they don't fucking know shit.
+voilà! now you've got some **vulnerable** web app. guess what? it's built using php. they're learning php at their university yet they don't fucking know shit.
 
 not only that, there's so many ways to attack these `.id` web apps.
 
