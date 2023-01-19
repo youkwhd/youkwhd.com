@@ -2,12 +2,26 @@
 
 import os
 import re
+from sys import platform
 import rfeed as rf
 import requests as req
 import datetime as date
 import markdown as md
 
-posts_dir = f'{os.path.split(__file__)[0]}/../assets/_posts'
+""" WIP
+convert path
+"""
+def path_os_relative(path: str) -> str:
+    if platform == "linux" or platform == "linux2":
+        path = path.replace('\\', os.sep)
+    elif platform == "win32" or platform == "cygwin":
+        path = path.replace('/', os.sep)
+    elif platform == "darwin":
+        pass
+
+    return path
+
+posts_dir = path_os_relative(f'{os.path.split(__file__)[0]}/../assets/_posts')
 posts_files = os.listdir(posts_dir)
 posts_rss = []
 
@@ -20,13 +34,11 @@ for post_file in posts_files:
     if post_file not in pushed_files.text:
         continue
 
-    with open(f'{posts_dir}/{post_file}') as f:
+    with open(path_os_relative(f'{posts_dir}/{post_file}'), encoding='utf-8') as f:
         content = f.read()
-        r = re.sub(' -\\s', "   ", content)
-        r = re.sub(': "', ": ", r)
-        r = re.sub('"', "", r)
-        content = r
-
+        content = re.sub(' -\\s', "   ", content)
+        content = re.sub(': "', ": ", content)
+        content = re.sub('"', "", content)
 
         md_conv = md.Markdown(extensions=["meta"])
         html = md_conv.convert(content)
@@ -57,5 +69,5 @@ feed = rf.Feed(
         items=posts_rss
         )
 
-rss_file = open(f'{os.path.split(__file__)[0]}/../public/rss.xml', "w")
+rss_file = open(path_os_relative(f'{os.path.split(__file__)[0]}/../public/rss.xml'), "w")
 rss_file.write(feed.rss())
