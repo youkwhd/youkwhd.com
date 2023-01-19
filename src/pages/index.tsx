@@ -18,7 +18,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 title="homepage"
                 description="a personal blog maintained by youkwhd, contents are mostly about GNU/Linux or programming."
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1 className="title">youkwhd</h1>
                 <p>
                     welcome to my webpage, i reckon c as my language of choice, and racket as one of my beloved languages.

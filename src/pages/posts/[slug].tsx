@@ -48,7 +48,7 @@ export default ({ post, banners }: Props): JSX.Element => {
                 title={post.title.toLowerCase()}
                 description={post.excerpt}
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </MainLayout>

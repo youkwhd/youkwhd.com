@@ -17,7 +17,7 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
             <NextSeo
                 title="blog posts"
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1>blog posts</h1>
                 <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
                 <ul>

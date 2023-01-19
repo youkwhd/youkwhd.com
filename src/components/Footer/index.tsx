@@ -1,3 +1,6 @@
+/* [Legacy]
+ * As of now, v2 does not implement footer
+ */
 import Link from "next/link"
 import Banner from "@/src/components/Banner"
 import type { Banner as BannerType } from "@/lib/banner"

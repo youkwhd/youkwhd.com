@@ -1,8 +1,8 @@
 import Footer from "@/src/components/Footer"
 import { type Banner } from "@/lib/banner"
 
-type Props = { children: JSX.Element | JSX.Element[], banners: Banner[] }
-export const MainLayout = ({ children, banners }: Props): JSX.Element => {
+type MainLayoutProps = { children: JSX.Element | JSX.Element[] }
+export const MainLayout = ({ children }: MainLayoutProps): JSX.Element => {
     return (
         <>
             <main>
@@ -12,7 +12,8 @@ export const MainLayout = ({ children, banners }: Props): JSX.Element => {
     )
 }
 
-export const __MainLayout = ({ children, banners }: Props): JSX.Element => {
+type __LegacyMainLayoutProps = { children: JSX.Element | JSX.Element[], banners: Banner[] }
+export const __LegacyMainLayout = ({ children, banners }: __LegacyMainLayoutProps): JSX.Element => {
     return (
         <>
             <main>
@@ -25,5 +26,5 @@ export const __MainLayout = ({ children, banners }: Props): JSX.Element => {
 
 export default {
     MainLayout,
-    __MainLayout
+    __LegacyMainLayout
 }

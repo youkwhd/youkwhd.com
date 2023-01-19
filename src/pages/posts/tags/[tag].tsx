@@ -66,7 +66,7 @@ export default ({ filteredPosts, currentPostTag, banners }: Props): JSX.Element 
             <NextSeo
                 title={`${currentPostTag} related posts`}
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1>{currentPostTag} related posts:</h1>
                 <ul>
                     {filteredPosts.map((post: Post) => {

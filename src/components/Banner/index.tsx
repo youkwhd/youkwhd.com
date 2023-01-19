@@ -1,5 +1,8 @@
 /* Banner: sticked at the bottom of every page.
  * consist of gif/images
+ * 
+ * [Legacy]
+ * As of now, v2 does not use Banners any more.
  */
 import Link from "next/link"
 

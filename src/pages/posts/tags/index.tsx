@@ -38,7 +38,7 @@ export default ({ tags, banners }: Props): JSX.Element => {
             <NextSeo
                 title="list of topics"
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1>available list of topics:</h1>
                 <ul>
                     {arrTags.map(([key, val]) => {

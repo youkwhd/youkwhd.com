@@ -75,7 +75,7 @@ export default ({ banners }: Props): JSX.Element => {
             <NextSeo 
                 title="pgp public key"
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <code>curl https://youkwhd.vercel.app/lolywk.pubkey.asc | gpg --import</code>
 
                 <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>

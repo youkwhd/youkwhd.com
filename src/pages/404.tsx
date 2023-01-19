@@ -16,7 +16,7 @@ export default ({ banners }: Props): JSX.Element => {
             <NextSeo
                 title="404 not found"
             />
-            <MainLayout banners={banners}>
+            <MainLayout>
                 <h1>404 not found</h1>
                 <p>The page you are requesting is sadly not present. Are you lost? consider going back to the <Link href="/">homepage</Link>.</p>
             </MainLayout>
