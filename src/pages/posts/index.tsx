@@ -10,7 +10,7 @@ export const config: PageConfig = { unstable_runtimeJS: false }
 export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts: getAllPosts() }})
 
 type Props = { posts: Post[], banners: Banner[] }
-const PostsPage = ({ posts, banners }: Props): JSX.Element => {
+export default ({ posts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
@@ -32,5 +32,3 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
         </>
     )
 }
-
-export default PostsPage
