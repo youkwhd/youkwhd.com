@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
-import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -66,20 +65,18 @@ export default ({ filteredPosts, currentPostTag, banners }: Props): JSX.Element 
             <NextSeo
                 title={`${currentPostTag} related posts`}
             />
-            <MainLayout>
-                <h1>{currentPostTag} related posts:</h1>
-                <ul>
-                    {filteredPosts.map((post: Post) => {
-                        return (
-                            <li key={post.slug}>
-                                <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                                    {post.title}
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </MainLayout>
+            <h1>{currentPostTag} related posts:</h1>
+            <ul>
+                {filteredPosts.map((post: Post) => {
+                    return (
+                        <li key={post.slug}>
+                            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                                {post.title}
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
         </>
     )
 }

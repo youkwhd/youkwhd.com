@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
-import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = {
     unstable_runtimeJS: false
@@ -38,20 +37,18 @@ export default ({ tags, banners }: Props): JSX.Element => {
             <NextSeo
                 title="list of topics"
             />
-            <MainLayout>
-                <h1>available list of topics:</h1>
-                <ul>
-                    {arrTags.map(([key, val]) => {
-                        return (
-                            <li key={val}>
-                                <Link as={`/posts/tags/${key}`} href="/posts/tags/[tag]">
-                                    {val}
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </MainLayout>
+            <h1>available list of topics:</h1>
+            <ul>
+                {arrTags.map(([key, val]) => {
+                    return (
+                        <li key={val}>
+                            <Link as={`/posts/tags/${key}`} href="/posts/tags/[tag]">
+                                {val}
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
         </>
     )
 }

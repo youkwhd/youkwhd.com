@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts, getPostBySlug } from "@/lib/post"
 import { markdownToHTML } from "@/lib/markdown"
-import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -48,10 +47,8 @@ export default ({ post, banners }: Props): JSX.Element => {
                 title={post.title.toLowerCase()}
                 description={post.excerpt}
             />
-            <MainLayout>
-                <h1>{post.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </MainLayout>
+            <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </>
     )
 }

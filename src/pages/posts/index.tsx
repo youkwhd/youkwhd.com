@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
-import { MainLayout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -17,21 +16,19 @@ const PostsPage = ({ posts, banners }: Props): JSX.Element => {
             <NextSeo
                 title="blog posts"
             />
-            <MainLayout>
-                <h1>blog posts</h1>
-                <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
-                <ul>
-                    {posts.map((post: Post) => {
-                        return (
-                            <li key={post.slug}>
-                                <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                                    {post.title}
-                                </Link>
-                            </li>
-                        )
-                   })}
-                </ul>
-            </MainLayout>
+            <h1>blog posts</h1>
+            <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
+            <ul>
+                {posts.map((post: Post) => {
+                    return (
+                        <li key={post.slug}>
+                            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                                {post.title}
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
         </>
     )
 }
