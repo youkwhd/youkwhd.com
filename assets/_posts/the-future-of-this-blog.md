@@ -12,7 +12,7 @@ this very site was first made with [gatsby](https://www.gatsbyjs.com), and now i
 
 ## over engineering things 
 
-i was on the state of not knowing what to do, these are the days i was living on dormitory, then some days passed when i realize arch wiki's site was a good reference to my blog. it has neat features, some of them are table of contents, categories, etc. i as a bored person, not knowing what to do next, was fired up to implement these features onto my site. and it was a good experience personally, but rather became a bad practice.
+i was on the state of not knowing what to do, these are the days i was living on dormitory, then some days passed when i realize arch wiki's site was a good reference for my blog. it has neat features, some of them are table of contents, categories, etc. i as a bored person, not knowing what to do next, was fired up to implement these features onto my site. and it was a good experience personally, but rather became a bad practice.
 
 ### working with posts tags
 
@@ -20,7 +20,7 @@ if you haven't noticed, every posts has it's own tags, you can [check it](/posts
 
 ### the newest feature, table of contents
 
-there we go, now i can rest back to being a bored person, lmao. i've made this blog like it's a big ass site that's content change overtime. as i mentioned before, this was one of the good feature that i can implement on a blog. for this one, i might just keep it. cause i'm overall somewhat happy for it, there's one bug that the library remark-toc or remark-html made, it generates `<p></p>` tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. it actually has some helpful features. but it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. or am i just overthinking?
+there we go, now i can rest back to being a bored person, lmao. i've made this blog like it's a big ass site that's content change overtime. as i mentioned before, this was one of the good feature that i can implement on a blog. for this one, i might just keep it. cause i'm overall somewhat happy for it, there's one bug that the library remark-toc or remark-html made, it generates `<p></p>` tag in between lists on a certain condition, if the list were nested, that makes the table of contents unconsistent. the table of content actually has some helpful features. but it's optional, no one might not use it, cause again, this site is not a wiki or a big ass company site, who knows. or am i just overthinking?
 
 ## no javascript shall be included
 
