@@ -1,9 +1,10 @@
-import Link from "next/link"
+import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
+import Link from "next/link"
+
 import { type Banner, getAllBanners } from "@/lib/banner"
 
-import _config from "@/src/config"
-export const config = _config
+export const config: PageConfig = { unstable_runtimeJS: false }
 
 export const getStaticProps = () => ({ props: { banners: getAllBanners() }})
 

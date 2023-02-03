@@ -1,11 +1,11 @@
+import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts, getPostBySlug } from "@/lib/post"
 import { markdownToHTML } from "@/lib/markdown"
 
-import _config from "@/src/config"
-export const config = _config
+export const config: PageConfig = { unstable_runtimeJS: false }
 
 type Params = { params: { slug: string } }
 export const getStaticProps = async ({ params }: Params) => {
