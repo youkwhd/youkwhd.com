@@ -1,9 +1,9 @@
-import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 
-export const config: PageConfig = { unstable_runtimeJS: false }
+import _config from "@/src/config"
+export const config = _config
 
 const PGP_PUBLIC_KEY = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
