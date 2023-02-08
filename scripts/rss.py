@@ -30,11 +30,9 @@ url = f"https://{domain}"
 
 # TODO: use git library or similiar
 pushed_files = req.get(f"https://github.com/youkwhd/{domain}/tree/master/assets/_posts")
+posts_files = [post_file for post_file in posts_files if post_file not in pushed_files.text]
 
 for post_file in posts_files:
-    if post_file not in pushed_files.text:
-        continue
-
     with open(path_os_relative(f'{posts_dir}/{post_file}'), encoding='utf-8') as f:
         content = f.read()
         content = re.sub(' -\\s', "   ", content)
@@ -71,4 +69,4 @@ feed = rf.Feed(
         )
 
 rss_file = open(path_os_relative(f'{os.path.split(__file__)[0]}/../public/rss.xml'), "w")
-rss_file.write(feed.rss())
+# rss_file.write(feed.rss())
