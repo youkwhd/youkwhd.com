@@ -25,10 +25,11 @@ posts_dir = path_os_relative(f'{os.path.split(__file__)[0]}/../assets/_posts')
 posts_files = os.listdir(posts_dir)
 posts_rss = []
 
-url = "https://youkwhd.vercel.app"
+domain = "youkwhd.com"
+url = f"https://{domain}"
 
 # TODO: use git library or similiar
-pushed_files = req.get("https://github.com/youkwhd/youkwhd.vercel.app/tree/master/assets/_posts")
+pushed_files = req.get(f"https://github.com/youkwhd/{domain}/tree/master/assets/_posts")
 
 for post_file in posts_files:
     if post_file not in pushed_files.text:
