@@ -22,7 +22,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 welcome to my webpage, i reckon c as my language of choice, and racket as one of my beloved languages.
             </p>
             <aside>
-                <img src="/images/ship2.jpg" alt="blobfish" height={181} />
+                <img className="blobfish-img" src="/images/ship2.jpg" alt="blobfish" />
             </aside>
             <h2>web links</h2>
             <ul>
