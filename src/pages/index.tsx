@@ -26,8 +26,8 @@ export default ({ posts, banners }: Props): JSX.Element => {
             </aside>
             <h2>web links</h2>
             <ul>
-                <li><Link href={"/posts"}>blog posts</Link>, all the articles i've wrote</li>
-                <li><Link href={"https://github.com/youkwhd"} target="_blank">git repository</Link>, fortunately i use github</li>
+                <li><Link href="/posts">blog posts</Link>, all the articles i've wrote</li>
+                <li><Link href="https://github.com/youkwhd" target="_blank">git repository</Link>, fortunately i use github</li>
             </ul>
             <h2>latest posts</h2>
             <ul>
