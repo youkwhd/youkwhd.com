@@ -35,7 +35,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             </aside>
             <h2>Resources Around</h2>
             <ul>
-                <li><Link href="/posts">Blog Posts</Link>, All the articles i have wrote here.</li>
+                <li><Link href="/posts">Blog Posts</Link>, All the articles I have written on this webpage.</li>
             </ul>
             <h2>Softwares</h2>
             <ul>
