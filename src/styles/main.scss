@@ -1,18 +1,13 @@
-.title {
-    text-align: center;
-}
-
 .sidelink {
     font-size: 10px;
 }
 
-.blobfish-img{
+.blobfish-img {
     width: 160px;
 }
 
 #__next {
-    max-width: 530px;
-    margin: 2em auto;
+    margin: auto 2.5em;
 }
 
 .banner-wrapper {
@@ -25,32 +20,6 @@
             margin: 4px 8px 4px 0;
         }
     }
-}
-
-aside {
-    float: right;
-    padding-left: 10px;
-}
-
-pre {
-    overflow: auto;
-}
-
-p {
-    text-align: justify;
-}
-
-li {
-    padding: .25em 0;
-
-    > p {
-        margin: 0;
-    }
-}
-
-/* for unconsistent p tag */ 
-ul > li > ul {
-    padding-top: .25em;
 }
 
 .sidenote > p {

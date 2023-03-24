@@ -1,0 +1,25 @@
+h1 {
+    margin: 0 0 20px 0;
+}
+
+aside {
+    float: right;
+    padding-left: 10px;
+}
+
+pre {
+    overflow: auto;
+}
+
+li {
+    padding: .25em 0;
+
+    > p {
+        margin: 0;
+    }
+}
+
+/* for unconsistent p tag */ 
+ul > li > ul {
+    padding-top: .25em;
+}
