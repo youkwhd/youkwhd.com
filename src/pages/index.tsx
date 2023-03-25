@@ -31,7 +31,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 Most importantly, I love GNU/Linux and free open-source softwares.
             </p>
             <aside>
-                <img className="blobfish-img" src="/images/ship2.jpg" alt="blobfish" />
+                <img className="blobfish-img" src="/images/ship2.jpg" alt="blobfish" width={160} />
             </aside>
             <h2>Resources Around</h2>
             <ul>
