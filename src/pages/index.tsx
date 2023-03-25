@@ -25,7 +25,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 I adore the design of simple, easy to understand, and hackable softwares, as you can see yourself with the webpage you are currently visiting. It is simple and predictable, well might seem a bit odd because we are here at the modern era timeline, this isn't the oldschool web anymore.
             </p>
             <p>
-                One thing this webpage doesn't have is dark mode, a valuable thing to have considering your eyes are burning seeing the light coming through the screen, luckily I don't need to implement one, because of the wide variety selection of web extension that transfroms bright sites. That, was the definition of simple, having the information that we don't need to implement something that has been implemented before, there's nothing wrong to do so for learning purposes, but if you did it for real, you are just wasting time and resulted in a over engineered site.
+                One thing this webpage doesn't have is dark mode, a valuable thing to have considering your eyes are burning seeing the light coming through the screen, luckily I don't need to implement one, because of the wide variety selection of web extension that transfroms bright sites. That, was the definition of simple, having the information that we don't need to implement something that has been implemented before, there's nothing wrong to do so for learning purposes, but if you did it for real, you are just wasting time and resulted in an over engineered site.
             </p>
             <p>
                 Most importantly, I love GNU/Linux and free open-source softwares.
