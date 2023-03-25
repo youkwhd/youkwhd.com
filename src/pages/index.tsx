@@ -14,10 +14,10 @@ export default ({ posts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
-                title="homepage"
-                description="a personal blog maintained by youkwhd, contents are mostly about GNU/Linux or programming."
+                title="Homepage"
+                description="Personal blog maintained by youkwhd"
             />
-            <h1>youkwhd</h1>
+            <h1>Pearl Harbor :: youkwhd</h1>
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages.
             </p>

@@ -6,8 +6,13 @@
     width: 160px;
 }
 
+body {
+    margin: 0 40px;
+}
+
 #__next {
-    margin: auto 2.5em;
+    margin: 10px auto;
+    max-width: 1920px;
 }
 
 .banner-wrapper {
