@@ -24,10 +24,7 @@ const getPostBySlug = (slug: string): Post => {
 
     // e.g. ["software-development"]: "software development"
     const tags: { [key: string]: string } = {} 
-    data.tags.forEach((tag: string) => {
-        const parsedTag: string = parsePostTag(tag)
-        tags[parsedTag] = tag
-    })
+    data.tags.forEach((tag: string) => tags[parsePostTag(tag)] = tag)
 
     return {
         slug,
@@ -39,11 +36,9 @@ const getPostBySlug = (slug: string): Post => {
     }
 }
 
-const getAllPosts = (): Post[] => {
-    return postSlugs 
-        .map((slug: string): Post => getPostBySlug(slug))
-        .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1))
-}
+const getAllPosts = (): Post[] => postSlugs
+                                    .map((slug: string): Post => getPostBySlug(slug))
+                                    .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1))
 
 export {
     getPostBySlug,
