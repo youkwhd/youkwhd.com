@@ -5,6 +5,8 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
 
+import NavigationBar from "@/src/components/NavigationBar"
+
 export const config: PageConfig = {
     unstable_runtimeJS: false
 }
@@ -38,6 +40,7 @@ export default ({ tags, banners }: Props): JSX.Element => {
                 title="list of topics"
             />
             <h1>available list of topics:</h1>
+            <NavigationBar />
             <ul>
                 {arrTags.map(([key, val]) => {
                     return (

@@ -5,6 +5,8 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
 
+import NavigationBar from "@/src/components/NavigationBar"
+
 export const config: PageConfig = { unstable_runtimeJS: false }
 
 export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts: getAllPosts() }})
@@ -18,6 +20,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 description="Personal blog maintained by youkwhd"
             />
             <h1>Pearl Harbor :: youkwhd</h1>
+            <NavigationBar />
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages.
             </p>
@@ -33,10 +36,6 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <aside>
                 <img className="blobfish-img" src="/images/ship2.jpg" alt="blobfish" width={160} />
             </aside>
-            <h2>Resources Around</h2>
-            <ul>
-                <li><Link href="/posts">Blog Posts</Link>, All the articles I have written on this webpage.</li>
-            </ul>
             <h2>Softwares</h2>
             <ul>
                 <li>

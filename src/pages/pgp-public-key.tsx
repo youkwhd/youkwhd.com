@@ -3,6 +3,8 @@ import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 
+import NavigationBar from "@/src/components/NavigationBar"
+
 export const config: PageConfig = { unstable_runtimeJS: false }
 
 const PGP_PUBLIC_KEY = `
@@ -74,9 +76,13 @@ export default ({ banners }: Props): JSX.Element => {
             <NextSeo 
                 title="pgp public key"
             />
+
             <code>curl https://youkwhd.vercel.app/lolywk.pubkey.asc | gpg --import</code>
 
             <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>
+
+            <NavigationBar />
+
             <pre>{PGP_PUBLIC_KEY}</pre>
         </>
     )

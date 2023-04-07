@@ -5,6 +5,8 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
 
+import NavigationBar from "@/src/components/NavigationBar"
+
 export const config: PageConfig = { unstable_runtimeJS: false }
 
 export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts: getAllPosts() }})
@@ -17,6 +19,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 title="blog posts"
             />
             <h1>blog posts</h1>
+            <NavigationBar />
             <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
             <ul>
                 {posts.map((post: Post) => {
