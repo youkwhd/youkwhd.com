@@ -11,7 +11,7 @@ type Post = {
     tags: { [key: string]: string }
 }
 
-const postsDir: string = join(process.cwd(), "assets/_posts")
+const postsDir: string = join(process.cwd(), "assets/posts")
 const postFiles: string[] = fs.readdirSync(postsDir)
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""))
 
