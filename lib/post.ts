@@ -12,7 +12,7 @@ type Post = {
 }
 
 const postsDir: string = join(process.cwd(), "assets/posts")
-const postFiles: string[] = fs.readdirSync(postsDir)
+const postFiles: string[] = fs.readdirSync(postsDir).filter((file: string): boolean => file.endsWith(".md"))
 const postSlugs: string[] = postFiles.map((file: string) => file.replace(/\.md$/, ""))
 
 const parsePostTag = (tag: string): string => tag.replace(/[\s./]/, "-")
