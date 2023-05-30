@@ -1,6 +1,6 @@
 ---
 title: "This university's wifi security is so bad"
-date: "2023-05-13t06:06:03.113z"
+date: "2023-05-13T06:06:03.113Z"
 tags:
     - security
     - web exploit
