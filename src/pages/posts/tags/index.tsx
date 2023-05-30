@@ -37,9 +37,9 @@ export default ({ tags, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
-                title="list of topics"
+                title="List of topics"
             />
-            <h1>available list of topics:</h1>
+            <h1>Available list of topics:</h1>
             <NavigationBar />
             <ul>
                 {arrTags.map(([key, val]) => {

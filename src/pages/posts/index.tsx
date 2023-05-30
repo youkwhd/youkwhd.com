@@ -16,11 +16,11 @@ export default ({ posts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
-                title="blog posts"
+                title="Blog posts"
             />
-            <h1>blog posts</h1>
+            <h1>Blog posts</h1>
             <NavigationBar />
-            <p>or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
+            <p>Or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
             <ul>
                 {posts.map((post: Post) => {
                     return (
