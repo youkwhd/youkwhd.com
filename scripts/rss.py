@@ -21,8 +21,8 @@ def path_os_relative(path: str) -> str:
 
     return path
 
-posts_dir = path_os_relative(f'{os.path.split(__file__)[0]}/../assets/_posts')
-posts_files = os.listdir(posts_dir)
+posts_dir = path_os_relative(f'{os.path.split(__file__)[0]}/../assets/posts')
+posts_files = list(filter(lambda x: x.endswith(".md"), os.listdir(posts_dir)))
 posts_rss = []
 
 domain = "youkwhd.com"
