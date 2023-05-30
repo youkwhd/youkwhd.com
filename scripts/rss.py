@@ -29,7 +29,7 @@ domain = "youkwhd.com"
 url = f"https://{domain}"
 
 # TODO: use git library or similiar
-pushed_files = req.get(f"https://github.com/youkwhd/{domain}/tree/master/assets/_posts")
+pushed_files = req.get(f"https://github.com/youkwhd/{domain}/tree/master/assets/posts")
 posts_files = [post_file for post_file in posts_files if post_file not in pushed_files.text]
 
 for post_file in posts_files:
