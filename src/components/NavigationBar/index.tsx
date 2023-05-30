@@ -8,10 +8,10 @@ export default (): JSX.Element => {
                 <Link href="/">Home</Link> |
             </li>
             <li>
-                <Link href="/posts/tags">Tags</Link> |
+                <Link href="/posts">Posts</Link> |
             </li>
             <li>
-                <Link href="/posts">Posts</Link> |
+                <Link href="/posts/tags">Tags</Link> |
             </li>
             <li>
                 <Link href="/pgp-public-key">PGP Key</Link>
