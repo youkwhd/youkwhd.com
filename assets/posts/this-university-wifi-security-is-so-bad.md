@@ -16,7 +16,7 @@ I would not be writing this if they didn't make another mistake, but this is too
 
 ## Stores plain text password as a cookie
 
-I have heard that lenovo did this too with their website, but it was way long ago. Can you believe it? this is 2023 and the web is now modern, also the growth of AI is now sky rocketing and yet they still do the same mistake. A mistake this big entity has, it's a university with loads of students, staffs also they have an organization focusing on cyber security; no eye has been able to spot.
+I have heard that lenovo did this too with their website, but it was way long ago. Can you believe it? this is 2023 and the web is now modern, also the growth of AI is now sky rocketing and yet they still make the same mistake. A mistake this big entity has, it's a university with loads of students, staffs also they have an organization focusing on cyber security; no eye has been able to spot.
 
 This vuln might seem not so severe, but the problem is that, this Wi-Fi requires the user to use the official university account. Lecturers, staffs, people that has authorities are also capable of using this Wi-Fi, which means I can hack into my lecturer's university account and do whatever I want. I can change my score, anything.
 
@@ -29,13 +29,13 @@ For instance, your password is `mypassword`, and the encrypted (base64) password
 Judging by how the password is treated, this might be a fairly similiar algorithm they use:
 
 ```typescript
-const verify_password = (password: string) => {
+const verify_password = (password: string): boolean => {
     const stored_password: string = get_password_cookie()
     return password === stored_password || encrypt(password) === stored_password
 }
 ```
 
-The line where `password == stored_password` is where the problem lies, they also might not decrypt the `stored_password` and just blindly compares it like I said before.
+The line where `password === stored_password` is where the problem lies, they also might not decrypt the `stored_password` and just blindly compares it like I said before.
 
 ## Writing a script; automating the process
 
