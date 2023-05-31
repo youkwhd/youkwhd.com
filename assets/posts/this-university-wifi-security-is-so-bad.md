@@ -35,7 +35,7 @@ const verify_password = (password: string) => {
 }
 ```
 
-The line where `password == stored_password` is where the problem lies.
+The line where `password == stored_password` is where the problem lies, they also might not decrypt the `stored_password` and just blindly compares it like I said before.
 
 ## Writing a script; automating the process
 
