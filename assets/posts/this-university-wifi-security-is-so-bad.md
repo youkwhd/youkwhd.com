@@ -26,6 +26,17 @@ You know, the obvious answer to this is to hash out the password, and thus I gav
 
 For instance, your password is `mypassword`, and the encrypted (base64) password is `bXlwYXNzd29yZA==`, even if you pass down the encrypted password onto the input field, the Wi-Fi would still let you log in.
 
+Judging by how the password is treated, this might be a fairly similiar algorithm they use:
+
+```typescript
+const verify_password = (password: string) => {
+    const stored_password: string = get_password_cookie()
+    return password === stored_password || encrypt(password) === stored_password
+}
+```
+
+The line where `password == stored_password` is where the problem lies.
+
 ## Writing a script; automating the process
 
 [https://github.com/youkwhd/TUNE-CWE-315](https://github.com/youkwhd/TUNE-CWE-315), I made this as a web extension to make it hard to set up, also on top of that I used [CoffeeScript](https://coffeescript.org/) as the main language for more abstraction. I do this because I want to prevent script-kiddies from using it.
