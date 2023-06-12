@@ -19,7 +19,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 title="Homepage"
                 description="Personal blog maintained by youkwhd"
             />
-            <h1>Pearl Harbor :: youkwhd</h1>
+            <h1>youkwhd</h1>
             <NavigationBar />
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages.
@@ -39,34 +39,16 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <h2>Softwares</h2>
             <ul>
                 <li>
-                    <Link href={"https://github.com/youkwhd/TUNE-CWE-315"} target="_blank">TUNE-CWE-315</Link> (2023) - Demonstrates plain-text cookie vulnerability.
+                    <Link href={"https://github.com/youkwhd/libtmdb"} target="_blank">libtmdb</Link> (2022) - API Wrapper of the TMDb written for C.
+                </li>
+                <li>
+                    <Link href={"https://github.com/youkwhd/twrap"} target="_blank">twrap</Link> (2022) - Simple utility to wrap characters and or a clone of fold(1).
+                </li>
+                <li>
+                    <Link href={"https://github.com/youkwhd/TUNE-CWE-315"} target="_blank">TUNE-CWE-315</Link> (2023) - Documentation of a plain-text cookie vulnerability.
                 </li>
                 <li>
                     <Link href={"https://github.com/youkwhd/termstory"} target="_blank">termstory</Link> (2023) - Terminal text adventure game generator written in Racket.
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/twrap"} target="_blank">twrap</Link> (2022) - A simple utility to wrap characters and or a clone of fold(1).
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/libtmdb"} target="_blank">libtmdb</Link> (2022) - API Wrapper of the TMDb written for C.
-                </li>
-            </ul>
-            <h2>Small Components</h2>
-            <ul>
-                <li>
-                    <Link href={"https://github.com/youkwhd/fe.infinite-scroll"} target="_blank">fe.infinite-scroll</Link> (2023) - Demonstrates on how to create an infinite API calls while scrolling, using the IntersectionObserver API with Svelte.
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/fe.dropdown"} target="_blank">fe.dropdown</Link> (2023) - Implements dropdown navbar using Next.js.
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/fe.list"} target="_blank">fe.list</Link> (2023) - Dead simple list animation.
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/fs.jwt"} target="_blank">fe.jwt</Link> (2023) - Showcases on using JWT as an authorization tool, using express as the server
-                </li>
-                <li>
-                    <Link href={"https://github.com/youkwhd/be.sql"} target="_blank">be.sql</Link> (2023) - Kickstart on how to use SQL in general, uses Flask as server.
                 </li>
             </ul>
         </>

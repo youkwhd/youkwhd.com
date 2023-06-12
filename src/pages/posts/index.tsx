@@ -18,9 +18,9 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <NextSeo
                 title="Blog posts"
             />
-            <h1>Blog posts</h1>
+            <h1>Documents</h1>
             <NavigationBar />
-            <p>Or you can <Link href={"/posts/tags"}>filter posts</Link> by tags</p>
+            <p>Here are articles I write:</p>
             <ul>
                 {posts.map((post: Post) => {
                     return (
