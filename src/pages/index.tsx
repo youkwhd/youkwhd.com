@@ -28,6 +28,9 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages. I love GNU/Linux and free open-source softwares.
             </p>
+            <aside>
+                <img src="/images/profile.jpeg" alt="" width={131} height={140}/>
+            </aside>
             <p>
                 I adore the design of simple, easy to understand, and hackable softwares, as you can see yourself with the webpage you are currently visiting. It is simple and predictable, well might seem a bit odd because we are here at the modern era timeline, this isn't the oldschool web anymore.
             </p>
