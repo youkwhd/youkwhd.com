@@ -39,7 +39,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             </p>
             <h2>Cars in favor</h2>
             <p>
-                I really love cars, but i don't really have much of an experience with cars, except online. The only reason i do programming for paychecks are:
+                I really love cars, but I don't really have much of an experience with cars, except online. The only reason I do programming for paychecks are:
             </p>
             <ol>
                 <li>
@@ -54,7 +54,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             </ol>
             <p>
                 {/* TODO: */}
-                I live far away from my hometown, the only relieable way to travel back to my hometown is via cars. I have seen people and also my family cruising with cars, i really really love this because they usually overtake other drivers in a 2 way lane with traffic and somewhat high speed.
+                I live far away from my hometown, the only relieable way to travel back to my hometown is via cars. I have seen people and also my family cruising with cars, I really really love this because they usually overtake other drivers in a 2 way lane with traffic and somewhat high speed.
             </p>
             <p>
                 Yet no accidents were made by this <i>"wreckful"</i> driving, if you'd imagine so.
@@ -79,7 +79,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             </ul>
             <h2>Music within the roads</h2>
             <p>
-                It is not a travel if there's no music on, especially the old songs. Within hundreds of songs that i've heard, the most i like is <Link href="https://youtu.be/9iawLRB61Eo">Kaulah Segalanya</Link> by <Link href="https://www.discogs.com/artist/3609255-Ruth-Sahanaya">Ruth Sahanaya</Link>. This song is by far the most nostalgic song that would make me attached to the roads again. Other hits published by the same singer name like:
+                It is not a travel if there's no music on, especially the old songs. Within hundreds of songs that i've heard, the most I like is <Link href="https://youtu.be/9iawLRB61Eo">Kaulah Segalanya</Link> by <Link href="https://www.discogs.com/artist/3609255-Ruth-Sahanaya">Ruth Sahanaya</Link>. This song is by far the most nostalgic song that would make me attached to the roads again. Other hits published by the same singer name like:
             </p>
             <ul>
                 <li>
