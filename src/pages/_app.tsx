@@ -1,6 +1,6 @@
 import { AppProps } from "next/app"
 import { DefaultSeo } from "next-seo"
-import { MainLayout } from "../components/Layout"
+import * as Layout from "../components/Layout"
 
 import "@/src/styles/main.scss"
 import "@/src/styles/general.scss"
@@ -12,9 +12,9 @@ export default ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <>
             <DefaultSeo titleTemplate="youkwhd | %s" />
-            <MainLayout>
+            <Layout.MainLayout>
                 <Component {...pageProps} />
-            </MainLayout>
+            </Layout.MainLayout>
         </>
     )
 }
