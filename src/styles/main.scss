@@ -50,6 +50,6 @@
 // ugly but works for now
 @media only screen and (max-width: 580px)  {
     header img {
-        visibility: hidden;
+        display: none;
     }
 }
