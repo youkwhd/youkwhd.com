@@ -48,8 +48,8 @@
 }
 
 // ugly but works for now
-@media only screen and (max-width: 496px)  {
-    .blobfish-img {
-        width: 130px;
+@media only screen and (max-width: 580px)  {
+    header img {
+        visibility: hidden;
     }
 }
