@@ -11,6 +11,9 @@ export default (): JSX.Element => {
                 <Link href="/posts">Web Articles</Link> |
             </li>
             <li>
+                <Link href="https://youkwhd.my.id">Portfolio</Link> |
+            </li>
+            <li>
                 <Link href="/pgp-public-key">PGP Key</Link>
                 <span className="navigation-bar--closer">{']'}</span>
             </li>
