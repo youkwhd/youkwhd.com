@@ -16,7 +16,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
     return (
         <>
             <NextSeo
-                title="Blog posts"
+                title="Articles"
             />
             <h1>Documents</h1>
             <NavigationBar />
