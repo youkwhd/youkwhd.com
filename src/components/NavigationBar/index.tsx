@@ -8,7 +8,10 @@ export default (): JSX.Element => {
                 <Link href="/">Home</Link> |
             </li>
             <li>
-                <Link href="/posts">Web Articles</Link> |
+                <Link href="/posts">Articles</Link> |
+            </li>
+            <li>
+                <Link href="/collections">Collections</Link> |
             </li>
             <li>
                 <Link href="https://youkwhd.my.id">Portfolio</Link> |
