@@ -20,10 +20,12 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 title="Homepage"
                 description="Personal blog maintained by youkwhd"
             />
-            <header>
-                <h1>youkwhd.com</h1>
-                <img src="/images/dance.gif" alt="" />
-            </header>
+            <h1>
+                youkwhd.com
+                <aside>
+                    <img src="/images/dance.gif" alt="" />
+                </aside>
+            </h1>
             <NavigationBar />
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages. I love GNU/Linux and free open-source softwares.
