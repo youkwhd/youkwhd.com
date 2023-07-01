@@ -10,6 +10,7 @@ const data = {
     games: [
         "Albion Online",
         "Devil May Cry 3",
+        "Little Misfortune",
         "Harvest Moon: Hero of Leaf Valley",
         "Growtopia",
         "GTA San Andreas",
@@ -23,7 +24,6 @@ const data = {
         "Mud Runner",
         "My Summer Car",
         "Need For Speed: Carbon",
-        "Midnight Club",
         "Call of Duty",
         "Fatal Frame II",
         "Crash Bandicoot",
