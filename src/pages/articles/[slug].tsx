@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts, getPostBySlug } from "@/lib/post"
 import { markdownToHTML } from "@/lib/markdown"
+import NavigationBar from "@/src/components/NavigationBar"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -48,6 +49,7 @@ export default ({ post, banners }: Props): JSX.Element => {
                 description={post.excerpt}
             />
             <h1>{post.title}</h1>
+            <NavigationBar />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </>
     )
