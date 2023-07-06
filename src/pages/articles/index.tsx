@@ -25,7 +25,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 {posts.map((post: Post) => {
                     return (
                         <li key={post.slug}>
-                            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                            <Link as={`/articles/${post.slug}`} href="/articles/[slug]">
                                 {post.title}
                             </Link>
                         </li>
