@@ -261,7 +261,7 @@ export default (): JSX.Element => {
 
             <h2>Games</h2>
             <p>Spent the most time with</p>
-            <ul>
+            <ul style={{ columnCount: 2 }} >
                 {collections.games.map((game: Collection) => (
                     <li key={game.name}>
                         <Link href={game.url} target="_blank" rel="noreferrer noopener">
@@ -273,7 +273,7 @@ export default (): JSX.Element => {
 
             <h2>Movies</h2>
             <p>Greatest movies I have ever watched</p>
-            <ul>
+            <ul style={{ columnCount: 2 }} >
                 {collections.movies.map((movie: Collection) => (
                     <li key={movie.name}>
                         <Link href={movie.url} target="_blank" rel="noreferrer noopener">
