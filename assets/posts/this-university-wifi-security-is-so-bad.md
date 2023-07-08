@@ -20,7 +20,7 @@ I have heard that lenovo did this too with their website, but it was way long ag
 
 This vuln might seem not so severe, but the problem is that, this Wi-Fi requires the user to use the official university account. Lecturers, staffs, people that has authorities are also capable of using this Wi-Fi, which means I can hack into my lecturer's university account and do whatever I want. I can change my score, anything.
 
-## I tried to help, this is so funny
+## I tried to help
 
 You know, the obvious answer to this is to hash out the password, and thus I gave out an advice for them to do so, but oh did they do it, they did hashed the password but then there's this auto fill feature that fills in the hashed password that got stored in the cookie onto the password input element in html. Basically you can use the hashed password as a bypass. Can you believe it? this is how bad the situation was.
 
@@ -35,10 +35,16 @@ const verify_password = (password: string): boolean => {
 }
 ```
 
-The line where `password === stored_password` is where the problem lies.
+The line where `password === stored_password` is where the problem lies. What the function should be doing is:
 
-## Writing a script; automating the process
+```typescript
+const verify_password = (password: string): boolean => hash(password) === get_password_cookie()
+```
 
-[https://github.com/youkwhd/TUNE-CWE-315](https://github.com/youkwhd/TUNE-CWE-315), I made this as a web extension to make it hard to set up, also on top of that I used [CoffeeScript](https://coffeescript.org/) as the main language for more abstraction. I do this because I want to prevent script-kiddies from using it.
+Maybe, this is better, even better if the password doesn't get stored as cookie, i guess.
+
+## Writing a script
+
+[https://github.com/youkwhd/TUNE-CWE-315](https://github.com/youkwhd/TUNE-CWE-315), I made this as a web extension to make it hard to set up, also on top of that I used [CoffeeScript](https://coffeescript.org/) as the main language for more abstraction. I do this because I want to prevent script-kiddies from using it, aside from `document.cookie` to be easily found.
 
 I made this to demonstrate that someone could have been targeting a specific person to hack. While also counting as an exercise for me, since this is a real-world problem. You could also sniff out cookies, there's tools like [Wireshark](https://www.wireshark.org/) and such.
