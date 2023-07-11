@@ -260,7 +260,7 @@ export default (): JSX.Element => {
             </p>
 
             <h2>Games</h2>
-            <img src="images/carx_tandem.png" alt="" width={300} />
+            <img src="images/carx_tandem.png" alt="" width={300} height={533} />
             
             <p>
                 I used to cruise in <Link href="https://carx-online.com/" target="_blank" rel="noreferrer noopener">CarX Drift Racing Online</Link> back when I still use my old laptop, since this game is the closest substitution to sim games like <Link href="https://assettocorsa.gg/" target="_blank" rel="noreferrer noopener">Assetto Corsa</Link> that can run <i>almost</i> smoothly on my current laptop at the time, though I need to set the graphics to the lowest.
