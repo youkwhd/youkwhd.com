@@ -30,7 +30,7 @@ const collections: { games: Collection[], movies: Collection[] } = {
             url: "https://en.wikipedia.org/wiki/Harvest_Moon:_Hero_of_Leaf_Valley",
         },
         {
-            name: "Growtopia",
+            name: "Growtopia (during seth & hamumu era)",
             url: "https://growtopiagame.com/",
         },
         {
@@ -256,11 +256,24 @@ export default (): JSX.Element => {
             <NavigationBar />
 
             <p>
-                These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This, is essentially my journey, back when i was a kid.
-                </p>
+                These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This is essentially my journey, back when i was a kid, or, at most, a teenager.
+            </p>
 
             <h2>Games</h2>
-            <p>Spent the most time with</p>
+            <img src="images/carx_tandem.png" alt="" width={300} />
+            
+            <p>
+                I used to cruise in <Link href="https://carx-online.com/" target="_blank" rel="noreferrer noopener">CarX Drift Racing Online</Link> back when I still use my old laptop, since this game is the closest substitution to sim games like <Link href="https://assettocorsa.gg/" target="_blank" rel="noreferrer noopener">Assetto Corsa</Link> that can run <i>almost</i> smoothly on my current laptop at the time, though I need to set the graphics to the lowest.
+            </p>
+
+            <p>
+                This is essentially how scuffed I could be, and how I desperately love cars. Based on the image above, I don't even render smokes.
+            </p>
+
+            <p>
+                The fact that this game is one of the game that consumes my time, it does not mean that it deserves a spot on the great games list below:
+            </p>
+
             <ul style={{ columnCount: 2 }} >
                 {collections.games.map((game: Collection) => (
                     <li key={game.name}>
@@ -272,7 +285,6 @@ export default (): JSX.Element => {
             </ul>
 
             <h2>Movies</h2>
-            <p>Greatest movies I have ever watched</p>
             <ul style={{ columnCount: 2 }} >
                 {collections.movies.map((movie: Collection) => (
                     <li key={movie.name}>

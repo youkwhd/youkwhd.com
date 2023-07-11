@@ -11,6 +11,9 @@ export default (): JSX.Element => {
                 <Link href="/articles">Articles</Link> |
             </li>
             <li>
+                <Link href="/art">Art</Link> |
+            </li>
+            <li>
                 <Link href="/collections">Collections</Link> |
             </li>
             <li>
