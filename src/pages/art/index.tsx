@@ -1,4 +1,3 @@
-import Link from "next/link" 
 import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 
