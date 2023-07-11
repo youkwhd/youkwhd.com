@@ -4,7 +4,10 @@ youkwhd.com
 This is a website written in Typescript & built using Next.js.
 runs on nodejs, not bloated.
 
-This website is free from Javascript/Typescript.
+This website is free from Javascript / Typescript.
+
+TODO:
+    - Reduce image sizes
 
 Generating RSS feeds
 --------------------
