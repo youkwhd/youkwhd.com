@@ -35,24 +35,24 @@ def main():
         soup = BeautifulSoup(res.text, "html.parser")
 
         img_tags: ResultSet[Tag] = soup.find_all("img")
-        for img in img_tags:
+        for idx, img in enumerate(img_tags):
             failed = False
             warning = False
 
             if img.get("height") is None:
-                log_failure(f"No height attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_failure(f"No height attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
                 failed = True
             if img.get("width") is None:
-                log_failure(f"No width attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_failure(f"No width attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
                 failed = True
             if img.get("loading") != "lazy":
-                log_warning(f"loading attribute should be set as \"lazy\": \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_warning(f"loading attribute should be set as \"lazy\": \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
                 warning = True
             
             if failed or warning:
                 continue
                 
-            log_success(f"\"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+            log_success(f"\"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
 
 if __name__ == "__main__":
     main()
