@@ -10,15 +10,15 @@ export const config: PageConfig = { unstable_runtimeJS: false }
 
 type Params = { params: { slug: string } }
 export const getStaticProps = async ({ params }: Params) => {
-    const postKeys: Post = getPostBySlug(params.slug)
-    const content: string = await markdownToHTML(postKeys.content || "")
+    const post: Post = getPostBySlug(params.slug)
+    const html: string = await markdownToHTML(post.content)
     const banners: Banner[] = getAllBanners()
 
     return {
         props: {
             post: {
-                ...postKeys,
-                content,
+                ...post,
+                content: html,
             },
             banners
         },
