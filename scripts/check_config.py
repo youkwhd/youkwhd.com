@@ -16,9 +16,9 @@ def main():
             continue
 
         if __PAGE_CONFIG__ in open(file, mode="r", encoding="utf-8").read():
-            log_success("File OK")
+            log_success("OK")
         else:
-            log_failure("File needs PageConfig")
+            log_failure("Missing PageConfig")
 
 if __name__ == "__main__":
     main()
