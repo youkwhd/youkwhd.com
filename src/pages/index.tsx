@@ -23,7 +23,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <h1>
                 youkwhd.com
                 <aside>
-                    <img src="/images/dance.gif" alt="" />
+                    <img src="/images/dance.gif" loading="lazy" alt="" />
                 </aside>
             </h1>
             <NavigationBar />
@@ -31,7 +31,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages. I love GNU/Linux and free open-source softwares.
             </p>
             <aside>
-                <img src="/images/profile.jpeg" alt="" width={131} height={140}/>
+                <img src="/images/profile.jpeg" loading="lazy" alt="" width={131} height={140}/>
             </aside>
             <p>
                 I adore the design of simple, easy to understand, and hackable softwares, as you can see yourself with the webpage you are currently visiting. It is simple and predictable, well might seem a bit odd because we are here at the modern era timeline, this isn't the oldschool web anymore.
@@ -64,7 +64,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <p>
                 Yet no accidents were made by this <i>"wreckful"</i> driving, if you'd imagine so.
             </p>
-            <img src="/images/sumatera.png" alt="" width={436} height={242}/>
+            <img src="/images/sumatera.png" loading="lazy" alt="" width={436} height={242}/>
             <p>
                 What you're seeing here is an <Link href="https://en.wikipedia.org/wiki/Toyota_Innova">Innova</Link> trying to overtake a motorcyle, also other cars. This is considered normal within the province. You see, the feeling when you hit the gas pedal and proceeds to overtake other cars is a blast.
             </p>
