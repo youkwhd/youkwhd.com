@@ -21,13 +21,13 @@ webpage_paths = [
 ]
 
 def log_success(*arg):
-    print(f"{Fore.GREEN}[*]:", *arg)
+    print(f"{Fore.GREEN}[*]: Passed:", *arg)
 
 def log_warning(*arg):
-    print(f"{Fore.YELLOW}[*]:", *arg)
+    print(f"{Fore.YELLOW}[*]: Warning:", *arg)
 
 def log_failure(*arg):
-    print(f"{Fore.RED}[*]:", *arg)
+    print(f"{Fore.RED}[*]: Failed:", *arg)
 
 def main():
     for path in webpage_paths:
@@ -40,19 +40,19 @@ def main():
             warning = False
 
             if img.get("height") is None:
-                log_failure(f"Failed: No height attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_failure(f"No height attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
                 failed = True
             if img.get("width") is None:
-                log_failure(f"Failed: No width attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_failure(f"No width attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
                 failed = True
             if img.get("loading") != "lazy":
-                log_warning(f"Warning: loading attribute should be set as \"lazy\": \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+                log_warning(f"loading attribute should be set as \"lazy\": \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
                 warning = True
             
             if failed or warning:
                 continue
                 
-            log_success(f"Passed: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
+            log_success(f"\"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\"")
 
 if __name__ == "__main__":
     main()
