@@ -4,6 +4,9 @@
   "scripts": {
     "dev": "next dev",
     "dev:static": "serve ./out",
+    "test:img": "python ./scripts/check_img.py",
+    "test:config": "python ./scripts/check_config.py",
+    "test": "yarn test:img && yarn test:config",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"

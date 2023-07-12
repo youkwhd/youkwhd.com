@@ -8,3 +8,6 @@ def log_warning(*arg):
 
 def log_failure(*arg):
     print(f"{Fore.RED}[*]: Failed:", *arg)
+
+def log_reset():
+    print(Fore.RESET, end="")
