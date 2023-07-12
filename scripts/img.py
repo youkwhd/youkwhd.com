@@ -5,7 +5,7 @@ Checks for image attributes
 """
 
 from bs4 import BeautifulSoup, Tag, ResultSet
-from colorama import Fore
+from utils.log import *
 import requests
 
 __WEBPAGE_URL__ = "http://localhost:3000"
@@ -19,15 +19,6 @@ webpage_paths = [
     "/collections",
     "/pgp-public-key",
 ]
-
-def log_success(*arg):
-    print(f"{Fore.GREEN}[*]: Passed:", *arg)
-
-def log_warning(*arg):
-    print(f"{Fore.YELLOW}[*]: Warning:", *arg)
-
-def log_failure(*arg):
-    print(f"{Fore.RED}[*]: Failed:", *arg)
 
 def main():
     for path in webpage_paths:
