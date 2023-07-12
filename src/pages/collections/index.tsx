@@ -74,6 +74,10 @@ const collections: { games: Collection[], movies: Collection[] } = {
             url: "http://www.amistech.com/msc/",
         },
         {
+            name: "CarX Drift Racing Online",
+            url: "https://carx-online.com/",
+        },
+        {
             name: "Need For Speed: Most Wanted",
             url: "https://www.ea.com/games/need-for-speed/need-for-speed-most-wanted-2005",
         },
@@ -268,10 +272,6 @@ export default (): JSX.Element => {
 
             <p>
                 This is essentially how scuffed I could be, and how I desperately love cars. Based on the image above, I don't even render smokes.
-            </p>
-
-            <p>
-                The fact that this game is one of the game that consumes my time, it does not mean that it deserves a spot on the great games list below:
             </p>
 
             <ul style={{ columnCount: 2 }} >
