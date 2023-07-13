@@ -37,7 +37,7 @@ def main():
             if img.get("width") is None:
                 log_failure(f"No width attribute found: \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
                 failed = True
-            if img.get("loading") != "lazy":
+            if img.get("loading") is not "lazy":
                 log_warning(f"loading attribute should be set as \"lazy\": \"{__WEBPAGE_URL__ + path}\" @ \"{img.get('src')}\" :: {idx + 1}")
                 warning = True
             
