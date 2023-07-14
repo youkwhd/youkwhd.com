@@ -85,7 +85,7 @@ export default ({ posts, banners }: Props): JSX.Element => {
                 </li>
             </ul>
             <p>
-                If you're an Indonesian, and does not know about <Link href="https://www.iwanfals.co.id/article/our-story/53-biografi-iwan-fals">Iwan Fals</Link>, check em out.
+                If you're an Indonesian, and does not know <Link href="https://www.iwanfals.co.id/article/our-story/53-biografi-iwan-fals">Iwan Fals</Link>, check em out.
             </p>
         </Layout>
     )
