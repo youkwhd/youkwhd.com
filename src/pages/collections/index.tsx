@@ -2,7 +2,7 @@ import { PageConfig } from "next"
 import Link from "next/link" 
 import { NextSeo } from "next-seo"
 
-import NavigationBar from "@/src/components/NavigationBar"
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -252,12 +252,8 @@ const collections: { games: Collection[], movies: Collection[] } = {
 
 export default (): JSX.Element => {
     return (
-        <>
-            <NextSeo
-                title="collections"
-            />
-            <h1>Collections</h1>
-            <NavigationBar />
+        <Layout title={{ name: "Collections" }}>
+            <NextSeo title="collections" />
 
             <p>
                 These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This is essentially my journey, back when i was a kid, or, at most, a teenager.
@@ -294,6 +290,6 @@ export default (): JSX.Element => {
                     </li>
                 ))}
             </ul>
-        </>
+        </Layout>
     )
 }

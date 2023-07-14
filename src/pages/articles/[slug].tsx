@@ -4,7 +4,8 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts, getPostBySlug } from "@/lib/post"
 import { markdownToHTML } from "@/lib/markdown"
-import NavigationBar from "@/src/components/NavigationBar"
+
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -43,15 +44,13 @@ export const getStaticPaths = () => {
 type Props = { post: Post, banners: Banner[] }
 export default ({ post, banners }: Props): JSX.Element => {
     return (
-        <>
+        <Layout title={{ name: post.title }}>
             <NextSeo
                 title={post.title.toLowerCase()}
                 description={post.excerpt}
             />
-            <h1>{post.title}</h1>
-            <NavigationBar />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </>
+        </Layout>
     )
 }
 

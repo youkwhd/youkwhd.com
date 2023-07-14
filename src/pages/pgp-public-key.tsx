@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo"
 
 import { type Banner, getAllBanners } from "@/lib/banner"
 
-import NavigationBar from "@/src/components/NavigationBar"
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -72,18 +72,14 @@ export const getStaticProps = () => ({ props: { banners: getAllBanners() }})
 type Props = { banners: Banner[] }
 export default ({ banners }: Props): JSX.Element => {
     return (
-        <>
-            <NextSeo 
-                title="pgp public key"
-            />
-
-            <code>curl https://youkwhd.vercel.app/lolywk.pubkey.asc | gpg --import</code>
+        <Layout title={{ name: "PGP Key" }}>
+            <NextSeo title="pgp public key" />
 
             <p>fingerprint: <code>30D9 E828 9864 A272 EC97  9E6A 1D41 EE2E 7C31 63AC</code></p>
 
-            <NavigationBar />
+            <code>curl https://youkwhd.vercel.app/lolywk.pubkey.asc | gpg --import</code>
 
             <pre>{PGP_PUBLIC_KEY}</pre>
-        </>
+        </Layout>
     )
 }

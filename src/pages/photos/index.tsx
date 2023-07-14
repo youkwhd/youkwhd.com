@@ -1,18 +1,14 @@
 import { PageConfig } from "next"
 import { NextSeo } from "next-seo"
 
-import NavigationBar from "@/src/components/NavigationBar"
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
 export default (): JSX.Element => {
     return (
-        <>
-            <NextSeo
-                title="photos of me"
-            />
-            <h1>Photos of Me</h1>
-            <NavigationBar />
+        <Layout title={{ name: "Photos" }}>
+            <NextSeo title="photos of me" />
 
             <p>I don't know, this is Instagram-like page I suppose. Also it is an archive of some of my public selfies.</p>
 
@@ -43,6 +39,6 @@ export default (): JSX.Element => {
                 <small>Me, and my eyes</small>
             </div>
             <br />
-        </>
+        </Layout>
     )
 }

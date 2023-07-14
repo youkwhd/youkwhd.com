@@ -12,9 +12,7 @@ export default ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <>
             <DefaultSeo titleTemplate="youkwhd | %s" />
-            <Layout.MainLayout>
-                <Component {...pageProps} />
-            </Layout.MainLayout>
+            <Component {...pageProps} />
         </>
     )
 }

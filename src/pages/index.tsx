@@ -5,8 +5,7 @@ import { NextSeo } from "next-seo"
 import { type Banner as BannerT, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
 
-import NavigationBar from "@/src/components/NavigationBar"
-import Banner from "@/src/components/Banner"
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -15,18 +14,9 @@ export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts:
 type Props = { posts: Post[], banners: BannerT[] }
 export default ({ posts, banners }: Props): JSX.Element => {
     return (
-        <>
-            <NextSeo
-                title="Homepage"
-                description="Personal blog maintained by youkwhd"
-            />
-            <h1>
-                youkwhd.com
-                <aside>
-                    <img src="/images/dance.gif" loading="lazy" alt="" />
-                </aside>
-            </h1>
-            <NavigationBar />
+        <Layout title={{ name: "youkwhd", image: "/images/dance.gif"}}>
+            <NextSeo title="Homepage" description="Personal blog maintained by youkwhd" />
+
             <p>
                 Hello, I'm a self-proclaimed software engineer, I reckon C as my language of choice, and Racket as one of my beloved languages. I love GNU/Linux and free open-source softwares.
             </p>
@@ -97,6 +87,6 @@ export default ({ posts, banners }: Props): JSX.Element => {
             <p>
                 If you're an Indonesian, and does not know about <Link href="https://www.iwanfals.co.id/article/our-story/53-biografi-iwan-fals">Iwan Fals</Link>, check em out.
             </p>
-        </>
+        </Layout>
     )
 }

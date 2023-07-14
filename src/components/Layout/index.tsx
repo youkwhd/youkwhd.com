@@ -1,12 +1,32 @@
 import Footer from "@/src/components/Footer"
+import NavigationBar from "@/src/components/NavigationBar" 
 import { type Banner } from "@/lib/banner"
 
-type MainLayoutProps = { children: JSX.Element | JSX.Element[] }
-export const MainLayout = ({ children }: MainLayoutProps): JSX.Element => {
+type Title = {
+    name: string,
+    image?: string,
+}
+
+type MainLayoutProps = {
+    title: Title,
+    children: JSX.Element | JSX.Element[]
+}
+
+export const MainLayout = ({ children, title }: MainLayoutProps): JSX.Element => {
     return (
         <>
             <main>
+                <h1>
+                    {title.name}
+                    {title.image && (
+                        <aside>
+                            <img src={title.image} alt="" />
+                        </aside>
+                    )}
+                </h1>
+                <NavigationBar />
                 {children}
+                <Footer />
             </main>
         </>
     )
@@ -19,7 +39,7 @@ export const __LegacyMainLayout = ({ children, banners }: __LegacyMainLayoutProp
             <main>
                 {children}
             </main>
-            <Footer banners={banners}/>
+            {/* <Footer banners={banners}/> */}
         </>
     )
 }

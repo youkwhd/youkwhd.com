@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo"
 import { type Banner, getAllBanners } from "@/lib/banner"
 import { type Post, getAllPosts } from "@/lib/post"
 
-import NavigationBar from "@/src/components/NavigationBar"
+import { MainLayout as Layout } from "@/src/components/Layout"
 
 export const config: PageConfig = { unstable_runtimeJS: false }
 
@@ -14,12 +14,10 @@ export const getStaticProps = () => ({ props: { banners: getAllBanners(), posts:
 type Props = { posts: Post[], banners: Banner[] }
 export default ({ posts, banners }: Props): JSX.Element => {
     return (
-        <>
+        <Layout title={{ name: "Articles" }}>
             <NextSeo
                 title="Articles"
             />
-            <h1>Documents</h1>
-            <NavigationBar />
             <p>Here are articles I write:</p>
             <ul>
                 {posts.map((post: Post) => {
@@ -32,6 +30,6 @@ export default ({ posts, banners }: Props): JSX.Element => {
                     )
                 })}
             </ul>
-        </>
+        </Layout>
     )
 }
