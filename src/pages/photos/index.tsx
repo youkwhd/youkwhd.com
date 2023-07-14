@@ -10,7 +10,7 @@ export default (): JSX.Element => {
         <Layout title={{ name: "Photos" }}>
             <NextSeo title="photos of me" />
 
-            <p>I don't know, this is Instagram-like page I suppose. Also it is an archive of some of my public selfies.</p>
+            <br />
 
             <div>
                 <img src="/images/me/img_1941.jpg" alt="" loading="lazy" width={300} height={400} />
@@ -39,6 +39,10 @@ export default (): JSX.Element => {
                 <small>Me, and my eyes</small>
             </div>
             <br />
+
+            <h2>Why do I use an iPhone?</h2>
+            <p>This is what I currently have. My first phone was an android, once it's life has been cut off, me mom gave me her phone which is an iPhone.</p>
+
         </Layout>
     )
 }
