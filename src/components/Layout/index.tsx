@@ -15,7 +15,7 @@ type MainLayoutProps = {
 export const MainLayout = ({ children, title }: MainLayoutProps): JSX.Element => {
     return (
         <>
-            <main>
+            <header>
                 <h1>
                     {title.name}
                     {title.image && (
@@ -25,9 +25,11 @@ export const MainLayout = ({ children, title }: MainLayoutProps): JSX.Element =>
                     )}
                 </h1>
                 <NavigationBar />
+            </header>
+            <main>
                 {children}
-                <Footer />
             </main>
+            <Footer />
         </>
     )
 }
