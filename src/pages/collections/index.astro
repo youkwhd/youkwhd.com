@@ -1,4 +1,6 @@
 ---
+import Main from "../../layouts/Main.astro";
+
 type Collection = {
     name: string,
     url: string,
@@ -244,38 +246,40 @@ const collections: { games: Collection[], movies: Collection[] } = {
 }
 ---
 
-<p>
-    These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This is essentially my journey, back when i was a kid, or, at most, a teenager.
-</p>
+<Main title="collections" description="collections">
+    <p>
+        These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This is essentially my journey, back when i was a kid, or, at most, a teenager.
+    </p>
 
-<h2>Games</h2>
-<img src="images/carx_tandem.png" loading="lazy" alt="" width={300} height={533} />
+    <h2>Games</h2>
+    <img src="images/carx_tandem.png" loading="lazy" alt="" width={300} height={533} />
 
-<p>
-    I used to cruise in <a href="https://carx-online.com/" target="_blank" rel="noreferrer noopener">CarX Drift Racing Online</a> back when I still use my old laptop, since this game is the closest substitution to sim games like <a href="https://assettocorsa.gg/" target="_blank" rel="noreferrer noopener">Assetto Corsa</a> that can run <i>almost</i> smoothly on my current laptop at the time, though I need to set the graphics to the lowest.
-</p>
+    <p>
+        I used to cruise in <a href="https://carx-online.com/" target="_blank" rel="noreferrer noopener">CarX Drift Racing Online</a> back when I still use my old laptop, since this game is the closest substitution to sim games like <a href="https://assettocorsa.gg/" target="_blank" rel="noreferrer noopener">Assetto Corsa</a> that can run <i>almost</i> smoothly on my current laptop at the time, though I need to set the graphics to the lowest.
+    </p>
 
-<p>
-    This is essentially how scuffed I could be, and how I desperately love cars. Based on the image above, I don't even render smokes.
-</p>
+    <p>
+        This is essentially how scuffed I could be, and how I desperately love cars. Based on the image above, I don't even render smokes.
+    </p>
 
-<ul style={{ columnCount: 2 }} >
-    {collections.games.map((game: Collection) => (
-        <li>
-            <a href={game.url} target="_blank" rel="noreferrer noopener">
-                {game.name}
-            </a>
-        </li>
-    ))}
-</ul>
+    <ul style={{ columnCount: 2 }} >
+        {collections.games.map((game: Collection) => (
+            <li>
+                <a href={game.url} target="_blank" rel="noreferrer noopener">
+                    {game.name}
+                </a>
+            </li>
+        ))}
+    </ul>
 
-<h2>Movies</h2>
-<ul style={{ columnCount: 2 }} >
-    {collections.movies.map((movie: Collection) => (
-        <li>
-            <a href={movie.url} target="_blank" rel="noreferrer noopener">
-                {movie.name}
-            </a>
-        </li>
-    ))}
-</ul>
+    <h2>Movies</h2>
+    <ul style={{ columnCount: 2 }} >
+        {collections.movies.map((movie: Collection) => (
+            <li>
+                <a href={movie.url} target="_blank" rel="noreferrer noopener">
+                    {movie.name}
+                </a>
+            </li>
+        ))}
+    </ul>
+</Main>
