@@ -1,8 +1,0 @@
-[package]
-name = "www-gen"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-markdown = "1.0.0-alpha.11"
-tera = "1.19.0"

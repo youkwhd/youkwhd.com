@@ -1,10 +1,6 @@
 ---
 title: "This university's Wi-Fi security is so bad"
-date: "2023-05-13T06:06:03.113Z"
-tags:
-    - security
-    - web exploit
-excerpt: "To be honest, I didn't put any great expectation on how good the quality of this university's Wi-Fi would be, because of an obvious specific reason which can only be spotted within the perspective of citizens in my country."
+description: "test"
 ---
 
 To be honest, I didn't put any great expectation on how good the quality of this university's Wi-Fi would be, because of an obvious specific reason which can only be spotted within the perspective of citizens in my country.

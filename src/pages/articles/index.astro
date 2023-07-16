@@ -1,0 +1,16 @@
+---
+import Main from "../../layouts/Main.astro"
+import { getCollection } from "astro:content"
+
+const articles = await getCollection("articles")
+---
+
+<Main title="Articles" description="article page">
+    <ul>
+        {articles.map((article) => (
+            <li>
+                <a href={`/articles/${article.slug}/`}>{article.data.title}</a>
+            </li>
+        ))}
+    </ul>
+</Main>
