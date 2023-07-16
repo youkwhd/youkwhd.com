@@ -1,7 +1,8 @@
 youkwhd.com
 ===========
 
-Static website powered by Astro, free from Javascript / Typescript.
+Pure HTML webpage powered by Astro,
+with no Javascript shipped on production.
 
 TODO:
     - Reduce image sizes
