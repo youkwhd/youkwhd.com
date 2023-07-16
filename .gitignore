@@ -1,15 +1,1 @@
 /target
-
-<<<<<<< Updated upstream
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-=======
-
-# Added by cargo
-#
-# already existing elements were commented out
->>>>>>> Stashed changes
-
-#/target
