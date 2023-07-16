@@ -6,6 +6,7 @@ const articles = await getCollection("articles")
 ---
 
 <Main title="Articles" description="article page">
+    <p>Here are articles I write:</p>
     <ul>
         {articles.map((article) => (
             <li>
