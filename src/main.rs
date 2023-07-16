@@ -1,7 +1,7 @@
 use tera::{Tera, Context};
 
 fn main() {
-    let mut tera = Tera::new("www/**/*.html").unwrap();
+    let mut tera = Tera::default();
     tera.autoescape_on(vec![]);
 
     let mut context = Context::new();
