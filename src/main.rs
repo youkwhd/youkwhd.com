@@ -6,6 +6,6 @@ fn main() {
 
     let mut context = Context::new();
 
-    let html = tera.render("pages/_index.html", &context).unwrap();
+    let html = tera.render("pages/index.html", &context).unwrap();
     println!("{}", html);
 }
