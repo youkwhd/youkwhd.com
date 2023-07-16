@@ -1,3 +1,11 @@
+use tera::{Tera, Context};
+
 fn main() {
-    println!("Hello, world!");
+    let mut tera = Tera::new("www/**/*.html").unwrap();
+    tera.autoescape_on(vec![]);
+
+    let mut context = Context::new();
+
+    let html = tera.render("pages/_index.html", &context).unwrap();
+    println!("{}", html);
 }
