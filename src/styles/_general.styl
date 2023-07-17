@@ -1,28 +1,44 @@
 @require "_h"
 
-color--black = #111010
-color--white = white
-color--gray = #cccccc
+color__black = #111010
+color__black__secondary = #1c1c1c
+color__white = white
+color__gray = #cccccc
 
 
 body
-    font-family "Times New Roman", Times, serif
+    background-color color__black
+    color color__white
 
-    background-color color--black
-    color color--white
     font-family Arial, sans-serif
+    letter-spacing 0.3px
 
-    max-width 720px
+    max-width 660px
     padding 0 15px
     margin 30px auto
 
 a
-    color color--white
+    color color__white
     text-decoration-color #525252
 
-p
-    color color--gray
-    line-height 22px
+p, small
+    color color__gray
+    line-height 24px
+
+/* stand alone code with 
+ * no pre as parent
+ */
+code:not([class])
+    color #d3d3d3
+    font-weight bold
+    padding 2px 4px
+    background-color color__black__secondary
+    border 1px solid #242424
+    border-radius 5px
+
+code:not([class])::before,
+code:not([class])::after
+    content '`'
 
 img 
     height auto
