@@ -7,9 +7,6 @@ To be honest, I didn't put any great expectation on how good the quality of this
 
 I would not be writing this if they didn't make another mistake, but this is too bad to tolerate. I can't stress enough if someone who discovers this vulnerability would do something extreme.
 
-
-## Table of contents
-
 ## Stores plain text password as a cookie
 
 I have heard that lenovo did this too with their website, but it was way long ago. Can you believe it? this is 2023 and the web is now modern, also the growth of AI is now sky rocketing and yet they still make the same mistake. A mistake this big entity has, it's a university with loads of students, staffs also they have an organization focusing on cyber security; no eye has been able to spot.
