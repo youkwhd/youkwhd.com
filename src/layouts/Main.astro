@@ -8,13 +8,13 @@ type Props = CollectionEntry<"articles">["data"];
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" id="!">
 	<head>
 		<Head title={"youkwhd - " + title.toLocaleLowerCase()} description={description} />
 	</head>
 
 	<body>
-		<Header title={title} />
+		<Header />
 		<main>
             <slot />
 		</main>

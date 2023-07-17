@@ -1,17 +1,11 @@
 ---
-type Props = {
-    title: string
-}
-
-const { title } = Astro.props
+import "../styles/components/header.styl"
 ---
 
 <header>
-	<h1>
-        {title}
-	</h1>
 	<nav>
-		<a href="/">Home</a>
-		<a href="/articles">Articles</a>
+		<a href="/">home</a>
+		<a href="/articles">articles</a>
+		<a href="/projects">projects</a>
 	</nav>
 </header>
