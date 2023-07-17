@@ -1,6 +1,5 @@
 """
-python -m http.server -d dist
-serve dist/ directory, then run this test
+checks for *.js includes within the content of dist/*.html
 """
 
 from typing import LiteralString
