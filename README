@@ -1,8 +1,8 @@
 youkwhd.com
 ===========
 
-Pure HTML webpage powered by Astro,
-with no Javascript shipped on production.
+Pure HTML webpage powered by Astro, with no Javascript shipped on
+production.
 
 TODO:
     - Reduce image sizes
@@ -10,12 +10,10 @@ TODO:
 1) Testing
 ----------
 
-Each tests should be written in python, as it is
-easier to parse out html with existing libraries
-like `BeautifulSoup4`.
+Each tests should be written in python, as it is easier to parse
+out html with existing libraries like `BeautifulSoup4`.
 
-You should find all the test cases inside tests/
-folder.
+You should find all the test cases inside tests/ folder.
 
 Run the following command to run every tests:
 
