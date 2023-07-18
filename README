@@ -18,3 +18,23 @@ You should find all the test cases inside tests/ folder.
 Run the following command to run every tests:
 
     yarn test
+
+2) Deploying
+------------
+
+Make sure to run all the tests first before deploying, only then
+you are good to deploy to production.
+
+In order to deploy (configured for vercel), run the following
+command:
+
+    yarn deploy
+
+The command above will run all the tests, and will deploy if all
+the tests returns exit code 0.
+
+3) Contributing
+---------------
+
+Any contribution is welcome, it is encouraged to create a new
+branch with a prefix of patch-* before making any pull request.
