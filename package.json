@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "test": "yarn test:no-js-shipment",
     "test:no-js-shipment": "./tests/no-js-shipment.py",
+    "deploy": "yarn test && vercel --prod",
     "start": "astro dev",
     "build": "astro build"
   },
