@@ -1,0 +1,13 @@
+---
+
+/* @slot */
+type Props = {
+    class?: string
+}
+
+Astro.props.class = Astro.props.class ? ` ${Astro.props.class}` : ""
+---
+
+<li class=`list-gen list-gen--item${Astro.props.class}`>
+    <slot />
+</li>
