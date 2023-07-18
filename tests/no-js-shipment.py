@@ -41,6 +41,6 @@ if __name__ == "__main__":
     for file in files:
         contents = open(file, mode="r", encoding="utf-8").read()
         assert len(re.findall("[\w]*\.js", contents)) == 0
-        print(f"[no-js-shipment]: file passed ({file})")
+        print(f"[tests/no-js-shipment]: file passed! ({file})")
 
 
