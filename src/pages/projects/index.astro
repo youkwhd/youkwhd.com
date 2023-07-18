@@ -58,7 +58,7 @@ const repositories: Array<Repository> = [
 
 <Main title="projects" description="projects so far">
     <h1>projects</h1>
-    <p>You can find other projects listed on my GitHub</p>
+    <p>You can find other projects listed on my GitHub, these are projects that's highlighted:</p>
     <List.Root>
         {repositories.map((repo: Repository) => (
             <a href={`${repo.url}#readme`} target="_blank" class="anchor-no-decor">
