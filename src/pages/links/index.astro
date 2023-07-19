@@ -10,7 +10,7 @@ import banners, { type Banner } from "data/banners"
 <Main title="Links" description="External collections of links">
     <h1>other pages</h1>
     {banners.map((banner: Banner) => (
-        <a href={banner.url} class="anchor-no-decor">
+        <a href={banner.url} target="_blank" rel="noopener noreferrer" class="anchor-no-decor">
             <img src={banner.src} alt="" />
         </a>
     ))}
