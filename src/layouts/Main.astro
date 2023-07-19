@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content"
-import Head from "../components/Head.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import Head from "components/Head.astro"
+import Header from "components/Header.astro"
+import Footer from "components/Footer.astro"
 
 type Props = CollectionEntry<"posts">["data"]
 const { title, description } = Astro.props
