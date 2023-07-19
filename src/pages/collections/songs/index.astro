@@ -1,0 +1,32 @@
+---
+import Main from "layouts/Main.astro"
+import { type Collection, collections } from "data/collections"
+
+const { songs } = collections
+---
+
+<Main title="music collections" description="collections">
+    <h1>banger certified playlist</h1>
+
+    {Object.entries(songs).map(([_type, _song_data]: [string, unknown]) => {
+        /* Don't know why I cannot assign
+         * Collection[] inside map() callback
+         */
+        const _song = _song_data as Collection[]
+
+        return (
+            <h2>{_type.replace(/_/g, " ")}</h2>
+            <ul style={{ columnCount: 1 }}>
+                <>
+                    {_song.map((s: Collection) => (
+                        <li>
+                            <a href={s.url} target="_blank" rel="noreferrer noopener">
+                                {s.name}
+                            </a>
+                        </li>
+                    ))}
+                </>
+            </ul>
+        )
+    })}
+</Main>
