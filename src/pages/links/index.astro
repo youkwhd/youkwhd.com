@@ -1,0 +1,18 @@
+---
+/* Should be one of collections/
+ * children path, but this is kind of special.
+ */
+
+import Main from "layouts/Main.astro"
+import banners, { type Banner } from "data/banners"
+---
+
+<Main title="Links" description="External collections of links">
+    <h1>other pages</h1>
+    {banners.map((banner: Banner) => (
+        <a href={banner.url} class="anchor-no-decor">
+            <img src={banner.src} alt="" />
+        </a>
+    ))}
+    </ul>
+</Main>
