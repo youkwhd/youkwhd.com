@@ -1,6 +1,6 @@
 ---
 title: "This university's Wi-Fi security is so bad"
-description: "test"
+description: "Corresponds with one of my project"
 ---
 
 To be honest, I didn't put any great expectation on how good the quality of this university's Wi-Fi would be, because of an obvious specific reason which can only be spotted within the perspective of citizens in my country.
