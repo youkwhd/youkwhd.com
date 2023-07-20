@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config"
-import { rehypeHeadingIds } from '@astrojs/markdown-remark'
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
+import rehypeSlug from "rehype-slug"
 
 export default defineConfig({
 	site: "https://youkwhd.com",
@@ -7,7 +8,8 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "prism",
         rehypePlugins: [
-            rehypeHeadingIds,
+            rehypeSlug,
+            () => rehypeAutolinkHeadings({ behavior: "wrap", properties: { "class": "anchor-no-decor" } }),
         ],
     },
 })
