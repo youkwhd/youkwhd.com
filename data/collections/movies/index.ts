@@ -10,6 +10,10 @@ export default [
         url: "https://www.rottentomatoes.com/m/50_first_dates",
     },
     {
+        name: "Buddy Daddies",
+        url: "https://buddy-animeproject.com/",
+    },
+    {
         name: "Spirited Away",
         url: "https://www.rottentomatoes.com/m/spirited_away",
     },
