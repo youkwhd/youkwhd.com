@@ -122,6 +122,10 @@ export default [
         url: "https://www.imdb.com/title/tt6921996/",
     },
     {
+        name: "Mob Psycho 100",
+        url: "https://www.imdb.com/title/tt5897304/",
+    },
+    {
         name: "The Walking Dead S1 - S3",
         url: "https://www.imdb.com/title/tt1520211/",
     },
