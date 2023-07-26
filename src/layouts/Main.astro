@@ -12,10 +12,10 @@ const { title, description } = Astro.props
     <Head title={"youkwhd - " + title.toLocaleLowerCase()} description={description} />
 
 	<body>
-		<Header />
-		<main>
+        <Header />
+        <main>
             <slot />
-		</main>
-		<Footer />
-	</body>
+        </main>
+        <Footer />
+    </body>
 </html>
