@@ -8,6 +8,14 @@ export default {
             url: "https://soundcloud.com/raymondpps/mixbreakz-156-req-sharkx-x#t=28%3A47",
         },
         {
+            name: "Diantara Kalian D'Masiv (Nabih Ikoo Remix)",
+            url: "https://www.youtube.com/watch?v=nKqwONhIgq8",
+        },
+        {
+            name: "Bukan Cinta Satu Atau Dua",
+            url: "https://www.youtube.com/watch?v=Eta_1sHqdtI",
+        },
+        {
             name: "Bagaimana Dengan Aku Terlanjur Mencintaimu",
             url: "https://soundcloud.com/pandapotan-siahaan-818193015/dj-sial-mahalini-bagaimana",
         },
@@ -22,6 +30,10 @@ export default {
         {
             name: "DJ Domba Kuring - Saha Jaluna",
             url: "https://open.spotify.com/track/2FW8SFao5xKmd1VFZHKhhH"
+        },
+        {
+            name: "DJ El Perdon Kane X Melodi Ular INS",
+            url: "https://open.spotify.com/track/63BCzlJp5gSLV1VbNFKtqQ"
         },
     ]
 }
