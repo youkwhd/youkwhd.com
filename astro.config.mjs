@@ -9,7 +9,8 @@ export default defineConfig({
         syntaxHighlight: "prism",
         rehypePlugins: [
             rehypeSlug,
-            () => rehypeAutolinkHeadings({ behavior: "wrap", properties: { "class": "anchor-no-decor" } }),
+            // I want to deactivate this as for now
+            // () => rehypeAutolinkHeadings({ behavior: "wrap", properties: { "class": "anchor-no-decor" } }),
         ],
     },
 })
