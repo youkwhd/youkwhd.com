@@ -8,7 +8,7 @@ import banners, { type Banner } from "data/banners"
 ---
 
 <Main title="Links" description="External collections of links">
-    <h1>other pages</h1>
+    <h1>Other Pages</h1>
     {banners.map((banner: Banner) => (
         <a href={banner.url} target="_blank" rel="noopener noreferrer" class="anchor-no-decor">
             <img src={banner.src} alt="" width="81px" height="31px"/>

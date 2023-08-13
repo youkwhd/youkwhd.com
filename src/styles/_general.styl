@@ -1,27 +1,32 @@
 @require "_h"
 
+MAX_WIDTH = 660px
+
 color__black = #111010
 color__black__secondary = #1c1c1c
 color__white = white
 color__gray = #cccccc
+color__blue = #8bc2e7
+/* color__blue = #0000EE */
 
 html
     background-color color__black
     color color__white
 
-    font-family 'DM Sans', sans-serif
+    /* font-family 'DM Sans', sans-serif */
 
 body
-    max-width 660px
+    max-width MAX_WIDTH
     padding 0 15px
     margin 30px auto
 
 a
-    color color__white
-    text-decoration-color #525252
+    color color__blue
+    text-decoration none
+    /* text-decoration-color #525252 */
 
 p, small, blockquote
-    color color__gray
+    /* color color__gray */
     line-height 25px
 
 /* stand alone code with 
@@ -45,3 +50,11 @@ img
 
 .anchor-no-decor
     text-decoration none
+
+.image-float
+    float right
+    margin 0px 15px
+
+@media screen and (max-width: MAX_WIDTH)
+    .image-float
+        float none

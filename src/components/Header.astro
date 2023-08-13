@@ -1,12 +1,40 @@
 ---
 import "styles/components/header.styl"
+
+type Navigation = {
+    label: string,
+    to: string,
+}
+
+const navigations: Navigation[] = [
+    {
+        label: "Home",
+        to: "/",
+    },
+    {
+        label: "Posts",
+        to: "/posts",
+    },
+    {
+        label: "Collections",
+        to: "/collections",
+    },
+    {
+        label: "Links",
+        to: "/links",
+    },
+]
+
 ---
 
 <header>
+    <h1>youkwhd</h1>
 	<nav>
-		<a href="/">home</a>
-		<a href="/posts">posts</a>
-		<a href="/collections">collections</a>
-		<a href="/links">links</a>
+        {navigations.map((n: Navigation, i: number) => (
+            <>
+                <a href={n.to}>{n.label}</a>
+                {i != navigations.length - 1 && <span>•</span>}
+            </>
+        ))}
 	</nav>
 </header>
