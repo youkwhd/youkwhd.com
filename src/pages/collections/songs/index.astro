@@ -1,6 +1,7 @@
 ---
 import Main from "layouts/Main.astro"
-import { type Collection, type Song, collections } from "data/collections"
+import { type Collection, collections } from "data/collections"
+import { isSeperator } from "data/collections/utils"
 
 const { songs } = collections
 ---
@@ -8,25 +9,15 @@ const { songs } = collections
 <Main title="music collections" description="collections">
     <h1>banger certified playlist</h1>
 
-    {Object.entries(songs).map(([_type, _song_]: [string, unknown]) => {
-        /* Don't know why I cannot assign
-         * Collection[] inside map() callback
-         */
-        const _song = _song_ as Song
-
-        return (
-            <h2>{_song.label}</h2>
-            <ul style={{ columnCount: 1 }}>
-                <>
-                    {_song.data.map((s: Collection) => (
-                        <li>
-                            <a href={s.url} target="_blank" rel="noreferrer noopener">
-                                {s.name}
-                            </a>
-                        </li>
-                    ))}
-                </>
-            </ul>
-        )
-    })}
+    <ul>
+        {songs.map((song: Collection) => isSeperator(song) ? (
+            <br />
+        ) : (
+            <li>
+                <a href={song.url} target="_blank" rel="noreferrer noopener">
+                    {song.name}
+                </a>
+            </li>
+        ))}
+    </ul>
 </Main>
