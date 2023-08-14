@@ -1,11 +1,6 @@
-import jj from "@/data/collections/songs/jj"
+import jj from "data/collections/songs/jj"
 import latino from "data/collections/songs/latino"
 
-import type { Collection } from "data/collections"
+import { mergeCollections } from "data/collections/utils"
 
-export type Song = {
-    label: string
-    data: Collection[]
-}
-
-export default { jj, latino }
+export default mergeCollections(jj, latino)
