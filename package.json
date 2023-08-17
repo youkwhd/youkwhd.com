@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "clean": "rm -rf dist/",
-    "test": "yarn clean && yarn build && yarn test:no-js-shipment",
+    "test": "yarn test:no-js-shipment",
     "test:no-js-shipment": "python tests/no-js-shipment.py",
-    "deploy": "yarn test && vercel --prod",
+    "deploy": "yarn clean && yarn build && yarn test && vercel --prod",
     "start": "astro dev",
     "build": "astro build"
   },

@@ -5,9 +5,7 @@ checks for *.js includes within the content of dist/*.html
 """
 
 from typing import LiteralString
-import subprocess
-import re
-import os
+import re, os, subprocess
 
 def get_generated_html_files(entry_point: LiteralString, ignore: list[str]) -> list[str]:
     paths = []
@@ -40,7 +38,6 @@ if __name__ == "__main__":
 
     for file in files:
         contents = open(file, mode="r", encoding="utf-8").read()
-        assert len(re.findall("[\w]*\.js", contents)) == 0
+        js_occurences = re.findall(r"[\w]*\.js", contents)
+        assert len(js_occurences) == 0
         print(f"[tests/no-js-shipment]: file passed! ({file})")
-
-
