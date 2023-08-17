@@ -3,7 +3,7 @@
     src: url('/font/NotoSerif-Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     src: url('/font/NotoSerif-BlackItalic.woff2') format('woff2');
     font-weight: 900;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     src: url('/font/NotoSerif-BoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     src: url('/font/NotoSerif-ExtraLightItalic.woff2') format('woff2');
     font-weight: 200;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     src: url('/font/NotoSerif-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -43,7 +43,7 @@
     src: url('/font/NotoSerif-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -51,7 +51,7 @@
     src: url('/font/NotoSerif-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -59,7 +59,7 @@
     src: url('/font/NotoSerif-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -67,7 +67,7 @@
     src: url('/font/NotoSerif-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -75,7 +75,7 @@
     src: url('/font/NotoSerif-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -83,7 +83,7 @@
     src: url('/font/NotoSerif-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     src: url('/font/NotoSerif-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -99,7 +99,7 @@
     src: url('/font/NotoSerif-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -107,7 +107,7 @@
     src: url('/font/NotoSerif-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -115,7 +115,7 @@
     src: url('/font/NotoSerif-SemiBoldItalic.woff2') format('woff2');
     font-weight: 600;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -123,7 +123,7 @@
     src: url('/font/NotoSerif-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -131,7 +131,7 @@
     src: url('/font/NotoSerif-ThinItalic.woff2') format('woff2');
     font-weight: 100;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -139,7 +139,7 @@
     src: url('/font/NotoSerif-Thin.woff2') format('woff2');
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -147,7 +147,7 @@
     src: url('/font/NotoSerif-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -155,7 +155,7 @@
     src: url('/font/NotoSerif-SemiBoldItalic.woff2') format('woff2');
     font-weight: 600;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -163,7 +163,7 @@
     src: url('/font/NotoSerif-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -171,7 +171,7 @@
     src: url('/font/NotoSerif-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -179,7 +179,7 @@
     src: url('/font/NotoSerif-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -187,7 +187,7 @@
     src: url('/font/NotoSerif-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -195,7 +195,7 @@
     src: url('/font/NotoSerif-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -203,7 +203,7 @@
     src: url('/font/NotoSerif-ExtraLightItalic.woff2') format('woff2');
     font-weight: 200;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -211,7 +211,7 @@
     src: url('/font/NotoSerif-ExtraBold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -219,7 +219,7 @@
     src: url('/font/NotoSerif-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -227,7 +227,7 @@
     src: url('/font/NotoSerif-ExtraBoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -235,7 +235,7 @@
     src: url('/font/NotoSerif-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -243,7 +243,7 @@
     src: url('/font/NotoSerif-BoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -251,7 +251,7 @@
     src: url('/font/NotoSerif-Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
+    font-display: optional;
 }
 
 @font-face {
@@ -259,6 +259,5 @@
     src: url('/font/NotoSerif-BlackItalic.woff2') format('woff2');
     font-weight: 900;
     font-style: italic;
-    font-display: swap;
+    font-display: optional;
 }
-
