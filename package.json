@@ -2,6 +2,7 @@
   "name": "youkwhd.com",
   "type": "module",
   "version": "0.0.1",
+  "license": "GNU AGPL v3",
   "scripts": {
     "dev": "astro dev",
     "clean": "rm -rf dist/",
