@@ -1,5 +1,13 @@
 export default [
     {
+        name: "TETAP MENCINTAI KING PLAT KT",
+        url: "https://www.youtube.com/watch?v=NvusNIf4-qs",
+    },
+    {
+        name: "DJ apakah aku sejahat itu di matamu",
+        url: "https://www.youtube.com/watch?v=9fcMbHxRmO8",
+    },
+    {
         name: "MIXBREAKZ 156 Sharx x Vxyonn x Spynx",
         url: "https://soundcloud.com/raymondpps/mixbreakz-156-req-sharkx-x#t=28%3A47",
     },
@@ -51,14 +59,14 @@ export default [
         name: "DJ MALAM BANTU AKU TUK LULUHKAN DIA",
         url: "https://www.youtube.com/watch?v=rtSidbLL_RY",
     },
-    {
-        name: "DJ Malam Bantu Aku Tuk Luluhkan Dia CHOKO",
-        url: "https://www.youtube.com/watch?v=MdodW2Xx_8Q",
-    },
-    {
-        name: "SEMATA KARENAMU REMIX",
-        url: "https://www.youtube.com/watch?v=GLY6HWhq-xM",
-    },
+    // {
+    //     name: "DJ Malam Bantu Aku Tuk Luluhkan Dia CHOKO",
+    //     url: "https://www.youtube.com/watch?v=MdodW2Xx_8Q",
+    // },
+    // {
+    //     name: "SEMATA KARENAMU REMIX",
+    //     url: "https://www.youtube.com/watch?v=GLY6HWhq-xM",
+    // },
     {
         name: "DJ ARE YOU READY",
         url: "https://www.youtube.com/watch?v=o4aizyhcDb4",
