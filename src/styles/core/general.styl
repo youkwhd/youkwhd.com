@@ -1,0 +1,59 @@
+@require "_h"
+
+MAX_WIDTH = 660px
+
+color__black = #111010
+color__black__secondary = #1c1c1c
+color__white = white
+color__gray = #cccccc
+color__blue = #8bc2e7
+/* color__blue = #0000EE */
+
+html
+    background-color color__black
+    color color__white
+    font-family: 'Noto Serif', serif;
+
+body
+    max-width MAX_WIDTH
+    padding 0 15px
+    margin 30px auto
+
+a
+    color color__blue
+    text-decoration none
+    /* text-decoration-color #525252 */
+
+p, small, blockquote
+    /* color color__gray */
+    line-height 25px
+
+/* stand alone code with 
+ * no pre as parent
+ */
+code:not([class])
+    color #81e887
+    /* font-weight bold */
+    /* padding 2px 4px */
+    /* background-color color__black__secondary */
+    /* border 1px solid #242424 */
+    /* border-radius 5px */
+
+/* code:not([class])::before, */
+/* code:not([class])::after */
+/*     content '`' */
+
+img 
+    height auto
+    max-width 100%
+
+.anchor-no-decor
+    text-decoration none
+
+.image-float
+    float right
+    margin 0px 15px
+
+@media screen and (max-width: MAX_WIDTH)
+    .image-float
+        float none
