@@ -32,7 +32,8 @@ def get_generated_html_files(entry_point: LiteralString, ignore: list[str]) -> l
 
 if __name__ == "__main__":
     if not os.path.exists(os.path.join("dist")):
-        subprocess.call("npx astro build", shell=True)
+        print("no dist build found\nsee: ./build.sh")
+        exit(1)
 
     files = get_generated_html_files(os.path.join("dist"), ignore=["images", "_astro"])
 
