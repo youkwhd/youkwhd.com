@@ -1,2 +1,5 @@
 .lsp
 .clj-kondo
+.cpcache
+
+dist/
