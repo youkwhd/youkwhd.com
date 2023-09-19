@@ -1,7 +1,7 @@
 youkwhd.com
 ===========
 
-Pure HTML webpage written with Clojure powered by Hiccup, with no
+Pure HTML webpage written in Clojure powered by Hiccup, with no
 Javascript shipped on production.
 
 TODO:
