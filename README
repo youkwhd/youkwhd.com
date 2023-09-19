@@ -1,8 +1,8 @@
 youkwhd.com
 ===========
 
-Pure HTML webpage powered by Astro, with no Javascript shipped on
-production.
+Pure HTML webpage written with Clojure powered by Hiccup, with no
+Javascript shipped on production.
 
 TODO:
     - Reduce image sizes
@@ -15,25 +15,7 @@ out html with existing libraries like `BeautifulSoup4`.
 
 You should find all the test cases inside tests/ folder.
 
-Run the following command to run every tests:
-
-    yarn test
-
-2) Deploying
-------------
-
-Make sure to run all the tests first before deploying, only then
-you are good to deploy to production.
-
-In order to deploy (configured for vercel), run the following
-command:
-
-    yarn deploy
-
-The command above will run all the tests, and will deploy if all
-the tests returns exit code 0.
-
-3) Contributing
+2) Contributing
 ---------------
 
 Any contribution is welcome, it is encouraged to create a new
