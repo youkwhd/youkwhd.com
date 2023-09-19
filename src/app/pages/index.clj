@@ -7,24 +7,24 @@
     (fn
       []
       [[:img
-        {:src "/images/profile-compressed.webp",
-         :alt "", 
-         :width "{120}", 
-         :height "{120}", 
+        {:src "/images/profile-compressed.webp"
+         :alt "" 
+         :width "120" 
+         :height "120" 
          :class "image-float"}]
        [:p
         "I'm a Software Engineer, I reckon C as my language of choice, and "
         [:a
-         {:href "https://racket-lang.org/",
-          :target "_blank",
+         {:href "https://racket-lang.org/"
+          :target "_blank"
           :rel "noopener noreferrer"}
          "Racket"] 
         " as one of my beloved languages."]
        [:p
         "I adore the design of simple, and hackable softwares. I prefer to use and contribute to "
         [:a
-         {:href "https://www.wordnik.com/words/libre",
-          :target "_blank",
+         {:href "https://www.wordnik.com/words/libre"
+          :target "_blank"
           :rel "noopener noreferrer"} 
          "libre"] 
         " open-sourced softwares."]
@@ -34,16 +34,16 @@
        [:p
         "Most are cruising with somewhat high speed, and the tension when trying to overtake other cars just rocks, considering that we are trying to overtake with medium to high traffic from the opposite direction."]
        [:img
-        {:src "/images/sumatera-compressed.webp",
-         :alt "", 
-         :width "{436}", 
-         :height "{243}/"}]
+        {:src "/images/sumatera-compressed.webp"
+         :alt "" 
+         :width "436" 
+         :height "243"}]
        [:br]
        [:small
         "An "
         [:a
-         {:href "https://en.wikipedia.org/wiki/Toyota_Innova",
-          :target "_blank",
+         {:href "https://en.wikipedia.org/wiki/Toyota_Innova"
+          :target "_blank"
           :rel "noopener noreferrer"}
          "Innova"] 
         " trying to overtake a motorcyle, also other cars."]
@@ -54,8 +54,8 @@
        [:p
         "–"
         [:a
-         {:href "https://www.youtube.com/watch?v=NrxxZRJaxYc&t=443s",
-          :target "_blank",
+         {:href "https://www.youtube.com/watch?v=NrxxZRJaxYc&t=443s"
+          :target "_blank"
           :rel "noopener noreferrer"}
          "Here"]
         ", I'll do you a favor. Just so you know, the car that's used in the video is Daihatsu Rocky, and the the car that's leading the run is an older generation of Innova."]
