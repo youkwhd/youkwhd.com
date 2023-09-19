@@ -5,6 +5,8 @@
             [app.pages.404 :as not-found-page]
             [app.pages.art :as art-page]))
 
+; TODO: refactor on multiple element rendering
+
 (defn generate-404-page
   [dest-path]
   (spit
