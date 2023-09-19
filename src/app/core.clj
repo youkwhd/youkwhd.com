@@ -8,5 +8,4 @@
   (println 
     (str
       (h/html
-        (index-page/-main-component)))))
-
+        (index-page/-main-page)))))

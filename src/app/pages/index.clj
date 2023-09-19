@@ -1,7 +1,7 @@
 (ns app.pages.index
   (:require [app.layouts.main :as main-layout]))
 
-(defn -main-component
+(defn -main-page
   []
   (main-layout/-main-layout
     (fn
