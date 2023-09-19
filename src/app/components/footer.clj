@@ -7,7 +7,7 @@
    [:div
     {:class "footer--wrapper"}
     [:small
-     "This site is licensed under"
+     "This site is licensed under "
      [:a
       {:href
        "https://raw.githubusercontent.com/youkwhd/youkwhd.com/master/COPYING",
