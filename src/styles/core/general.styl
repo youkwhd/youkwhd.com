@@ -57,3 +57,31 @@ img
 @media screen and (max-width: MAX_WIDTH)
     .image-float
         float none
+
+.post--list, .post--list li
+    padding 0
+
+.post--list li
+    margin 20px 0px
+    list-style none
+
+.post--list li a
+    text-decoration underline
+
+.post--list li p
+    font-size 14px
+
+for depth in (1..6)
+    h{depth}[id] > a::before
+        content "#"
+        font-size: 0.9em
+        color #333333
+
+        visibility hidden
+
+        /* I assume this is OK */
+        margin-right 0.625em
+        margin-left -1.5em
+
+    h{depth}[id]:hover > a::before
+        visibility visible
