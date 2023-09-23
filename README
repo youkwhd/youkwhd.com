@@ -7,16 +7,28 @@ Javascript shipped on production.
 TODO:
     - Reduce image sizes
 
-1) Testing
-----------
+Quick Start
+-----------
+
+Run the command below and everything should be built:
+
+./build.sh
+
+Then start your favorite server, I'd recommend to use:
+    
+    - Serve by Vercel <https://www.npmjs.com/package/serve>
+    - Python HTTP Server <https://docs.python.org/3/library/http.server.html>
+
+Testing
+-------
 
 Each tests should be written in python, as it is easier to parse
 out html with existing libraries like `BeautifulSoup4`.
 
 You should find all the test cases inside tests/ folder.
 
-2) Contributing
----------------
+Contributing
+------------
 
 Any contribution is welcome, it is encouraged to create a new
 branch with a prefix of patch-* before making any pull request.
