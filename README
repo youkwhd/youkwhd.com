@@ -12,7 +12,7 @@ Quick Start
 
 Run the command below and everything should be built:
 
-./build.sh
+    ./build.sh
 
 Then start your favorite server, I'd recommend to use:
     
