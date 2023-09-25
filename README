@@ -19,6 +19,10 @@ Then start your favorite server, I'd recommend to use:
     - Serve by Vercel <https://www.npmjs.com/package/serve>
     - Python HTTP Server <https://docs.python.org/3/library/http.server.html>
 
+This case we use Serve by Vercel:
+
+    serve -d dist/
+
 Testing
 -------
 
