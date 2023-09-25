@@ -1,5 +1,6 @@
 {:deps
  {hiccup/hiccup {:mvn/version "2.0.0-RC1"}
-  markdown-clj/markdown-clj {:mvn/version "1.11.4"}}
+  markdown-clj/markdown-clj {:mvn/version "1.11.7"}
+  clygments/clygments {:mvn/version "2.0.2"}}
  
  :paths ["src"]}
