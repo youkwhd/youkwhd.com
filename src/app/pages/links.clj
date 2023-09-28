@@ -4,8 +4,8 @@
 (def banners
   [{:src "/images/banners/4gentoo.png"
     :url "https://wiki.installgentoo.com/wiki/Main_Page"}
-   {:src "/images/banners/landchat.png"
-    :url "https://landchat.net"}
+   {:src "/images/banners/landchad.png"
+    :url "https://landchad.net"}
    {:src "/images/banners/wiby.gif"
     :url "http://wiby.me"}])
 

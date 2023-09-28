@@ -3,3 +3,4 @@
 .cpcache
 
 dist/
+.vercel
