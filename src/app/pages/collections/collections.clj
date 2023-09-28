@@ -17,6 +17,4 @@
         [:li
          [:a {:href "/collections/movies"} "movies"]]
         [:li
-         [:a {:href "/collections/songs"} "songs"]]]
-       ])))
-
+         [:a {:href "/collections/songs"} "songs"]]]])))
