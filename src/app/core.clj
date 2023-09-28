@@ -7,6 +7,10 @@
             [app.pages.index :as index-page]
             [app.pages.art :as art-page]
             [app.pages.posts :as posts-page]
+            [app.pages.collections.collections :as collections-page]
+            [app.pages.collections.games :as collections-games-page]
+            [app.pages.collections.movies :as collections-movies-page]
+            [app.pages.collections.songs :as collections-songs-page]
             [app.pages.links :as links-page]))
 
 ; TODO: refactor on multiple element rendering
@@ -55,7 +59,15 @@
      {:path "/links"
       :page-component links-page/-main-page}
      {:path "/art"
-      :page-component art-page/-main-page}])
+      :page-component art-page/-main-page}
+     {:path "/collections"
+      :page-component collections-page/-main-page}
+     {:path "/collections/games"
+      :page-component collections-games-page/-main-page}
+     {:path "/collections/movies"
+      :page-component collections-movies-page/-main-page}
+     {:path "/collections/songs"
+      :page-component collections-songs-page/-main-page}])
   (generate-pages 
     "dist"
     (get-posts-pages)))
