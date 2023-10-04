@@ -63,7 +63,8 @@ The example above does not have functions to actually write to the array, that i
 
 void array_grow(array_t *arr)
 {
-    arr->data = realloc(arr->data, (sizeof *arr->data) * (arr->capacity + ARRAY_CAPACITY_INITIAL));
+    arr->capacity += ARRAY_CAPACITY_INITIAL;
+    arr->data = realloc(arr->data, (sizeof *arr->data) * arr->capacity);
 }
 
 void array_push(array_t *arr, int val)
