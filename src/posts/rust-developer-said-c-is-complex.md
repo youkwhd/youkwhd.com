@@ -1,6 +1,7 @@
 ---
 title: "Rust dev says that C is complex and hard to write"
 description: "I don't even know"
+date: "27-09-23"
 ---
 
 Once on a sunny day, I stumbled upon a video that lies over the internet ready to be watched:

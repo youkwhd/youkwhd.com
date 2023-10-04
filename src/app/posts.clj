@@ -4,6 +4,16 @@
             [clygments.core :as clygments]
             [markdown.core :as markdown]))
 
+(defn get-posts-metadata
+  [posts-dir-path]
+  (let [files (.listFiles (io/file posts-dir-path))]
+    (map (fn [file]
+           (let [filename (.getName file)
+                 filecontent (slurp file)]
+             {:metadata (markdown/md-to-meta filecontent)
+              :filename (subs filename 0 (string/index-of filename "."))}))
+         files)))
+
 (defn get-posts
   [posts-dir-path]
   (let [files (.listFiles (io/file posts-dir-path))]
