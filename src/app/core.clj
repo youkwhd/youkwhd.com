@@ -13,6 +13,8 @@
             [app.pages.collections.songs :as collections-songs-page]
             [app.pages.links :as links-page]))
 
+(def TARGET-FOLDER-PATH "dist")
+
 ; TODO: refactor on multiple element rendering
 
 (defn generate-404-page
@@ -51,7 +53,7 @@
 (defn -main
   []
   (generate-pages
-    "dist"
+    TARGET-FOLDER-PATH
     [{:path "/"
       :page-component index-page/-main-page}
      {:path "/posts"
@@ -69,5 +71,5 @@
      {:path "/collections/songs"
       :page-component collections-songs-page/-main-page}])
   (generate-pages 
-    "dist"
+    TARGET-FOLDER-PATH
     (get-posts-pages)))
