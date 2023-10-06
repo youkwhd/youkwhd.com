@@ -1,5 +1,6 @@
 (ns app.core
   (:require [hiccup2.core :as h]
+            [app.hiccup :as hc]
             [clojure.java.io :as io]
             [app.posts :as posts]
             [app.layouts.main :as main-layout]
@@ -21,7 +22,7 @@
   [dest-path]
   (spit
     (str dest-path "/404.html")
-    (str (h/html (not-found-page/-main-page)))))
+    (hc/gen-html5 (not-found-page/-main-page))))
 
 (defn get-posts-pages
   []
@@ -48,7 +49,7 @@
         (.mkdir (io/file page-path))
         (spit
           (str page-path "/index.html")
-          (str (h/html ((:page-component route)))))))))
+          (hc/gen-html5 ((:page-component route))))))))
 
 (defn -main
   []
