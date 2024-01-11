@@ -4,8 +4,16 @@
 (def banners
   [{:src "/images/banners/4gentoo.png"
     :url "https://wiki.installgentoo.com/wiki/Main_Page"}
-   {:src "/images/banners/landchad.png"
+   {:src "/images/banners/landchad.gif"
     :url "https://landchad.net"}
+   {:src "/images/banners/neocities.gif"
+    :url "https://neocities.org/"}
+   {:src "/images/banners/99gifshop.png"
+    :url "https://99gifshop.neocities.org"}
+   {:src "/images/banners/sadgrlonline.gif"
+    :url "https://sadgrl.online/"}
+   {:src "/images/banners/theericexperiment.gif"
+    :url "http://www.ericexperiment.com"}
    {:src "/images/banners/wiby.gif"
     :url "http://wiby.me"}])
 
