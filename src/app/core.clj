@@ -55,22 +55,21 @@
   []
   (generate-pages
     TARGET-FOLDER-PATH
-    [{:path "/"
-      :page-component index-page/-main-page}
-     {:path "/posts"
-      :page-component posts-page/-main-page}
-     {:path "/links"
-      :page-component links-page/-main-page}
-     {:path "/art"
-      :page-component art-page/-main-page}
-     {:path "/collections"
-      :page-component collections-page/-main-page}
-     {:path "/collections/games"
-      :page-component collections-games-page/-main-page}
-     {:path "/collections/movies"
-      :page-component collections-movies-page/-main-page}
-     {:path "/collections/songs"
-      :page-component collections-songs-page/-main-page}])
-  (generate-pages 
-    TARGET-FOLDER-PATH
-    (get-posts-pages)))
+    (concat
+      [{:path "/"
+        :page-component index-page/-main-page}
+       {:path "/posts"
+        :page-component posts-page/-main-page}
+       {:path "/links"
+        :page-component links-page/-main-page}
+       {:path "/art"
+        :page-component art-page/-main-page}
+       {:path "/collections"
+        :page-component collections-page/-main-page}
+       {:path "/collections/games"
+        :page-component collections-games-page/-main-page}
+       {:path "/collections/movies"
+        :page-component collections-movies-page/-main-page}
+       {:path "/collections/songs"
+        :page-component collections-songs-page/-main-page}]
+      (get-posts-pages))))
