@@ -8,7 +8,15 @@
     (fn
       []
       [[:h1 "Banger Certified Playlist"]
-       [:ul
-        (for [song data/SONGS]
-          [:li
-           [:a {:href (:url song) :target "_blank" :rel "noreferrer noopener"} (:name song)]])]])))
+       ; [:ul
+       ;  (for [song data/SONGS]
+       ;    [:li
+       ;     [:a {:href (:url song) :target "_blank" :rel "noreferrer noopener"} (:name song)]])]
+       [:h2 "Spotify"]
+       [:p "Plenty of different song from countries like france, spain, indonesia, america, etc."]
+       [:p "I also have playlist for specific game soundtracks"]
+       [:a {:href "https://open.spotify.com/user/btc3wj35zkps0xmca4k2164vd"} "https://open.spotify.com/user/btc3wj35zkps0xmca4k2164vd"]
+       [:h2 "Soundcloud"]
+       [:p "Not much of a collection, mostly Indonesian DJs and some lo-fi songs"]
+       [:a {:href "https://soundcloud.com/youkwhd/sets"} "https://soundcloud.com/youkwhd/sets"]
+       ])))
