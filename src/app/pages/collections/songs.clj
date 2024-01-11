@@ -8,6 +8,7 @@
     (fn
       []
       [[:h1 "Banger Certified Playlist"]
+       [:p "In order to make things as simple as possible, I decided to just create playlists from music platforms since I am lazy to update the collection manually, which are:"]
        ; [:ul
        ;  (for [song data/SONGS]
        ;    [:li
