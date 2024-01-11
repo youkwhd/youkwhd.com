@@ -6,7 +6,7 @@
   (main-layout/-main-layout
     (fn
       []
-      [[:h1 "art"]
+      [[:h1 "Art"]
        [:p
         "I like to draw, was. I remembered that i used to draw things after my brain randomly gave me flashbacks of an old image of my drawing:"]
        [:img
