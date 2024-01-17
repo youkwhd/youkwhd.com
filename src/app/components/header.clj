@@ -19,7 +19,9 @@
                       (when (not= idx (- (count navigations) 1))
                         [:span "•"])])
                    navigations)]
-    [:header [:h1 "youkwhd"]
+    [:header
+     [:a {:href "/" :class "color-white"}
+      [:h1 "youkwhd"]]
      [:nav 
       (for [navigations -navigations]
         (for [nav navigations]
