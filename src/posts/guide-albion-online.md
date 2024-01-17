@@ -123,6 +123,31 @@ Don't just ignore people in full loot pvp zone, keep your eye keen, always chang
 
 The key to avoid gankers is just simply to not get hit, by anything. So you don't lose your gallop (speed bonus).
 
+### General build
+
+Here is a recommended build, it is versatile.
+
+<div>
+    <img src="/images/albion/bag.png" class="" height="64" width="64" />
+    <img src="/images/albion/hunterhood.png" class="" height="64" width="64" />
+    <img src="/images/albion/cape.png" class="" height="64" width="64" />
+    <br>
+    <img src="/images/albion/dualsword.png" class="" height="64" width="64" />
+    <img src="/images/albion/mercenary.png" class="" height="64" width="64" />
+    <img src="/images/albion/dualsword.png" class="" height="64" width="64" style="opacity: 50%;" />
+    <br>
+    <div style="width: 64px; height: 64px; display: inline-block;"></div>
+    <img src="/images/albion/soldierboots.png" class="" height="64" width="64" />
+    <img src="/images/albion/cabbagesoup.png" class="" height="64" width="64" />
+</div>
+
+Most imporantly, it is very cheap. Or you can find other builds from:
+
+- [albionmeta.com](https://www.albionmeta.com/mistmeta)
+- [albiononline2d.com](https://albiononline2d.com/en/meta/1v1)
+- In-game corrupted dungeon infamy leaderboard
+- Youtube
+
 ## Fame farming
 
 <img src="/images/albion/mist.png" class="image-float" height="146.5" width="177" />
