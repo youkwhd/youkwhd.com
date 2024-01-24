@@ -20,8 +20,10 @@
                         [:span "•"])])
                    navigations)]
     [:header
-     [:a {:href "/" :class "color-white"}
-      [:h1 "youkwhd"]]
+     [:h1
+      [:a {:href "/" :class "color-white"}
+         "youkwhd"
+      ]]
      [:nav 
       (for [navigations -navigations]
         (for [nav navigations]
