@@ -148,6 +148,12 @@ Most imporantly, it is very cheap. Or you can find other builds from:
 - In-game corrupted dungeon infamy leaderboard
 - Youtube
 
+## The Black Zone
+
+This is the peak of albion, the black zone. You get the most reward, but also it is full loot pvp. Sounds scary but really not in practice. The black zone is where you maximize your fame farming, and money making.
+
+As a solo player, albion is all about fame farming, money making, pvp, and pve. Albion itself is a pvp game. You can't just do pve all the time, even if you try to, you would just not progress. So prepare for the full loot pvp zone.
+
 ## Fame farming
 
 <img src="/images/albion/mist.png" class="image-float" height="146.5" width="177" />
