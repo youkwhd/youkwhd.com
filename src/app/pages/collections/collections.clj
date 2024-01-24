@@ -17,4 +17,5 @@
         [:li
          [:a {:href "/collections/movies"} "movies"]]
         [:li
-         [:a {:href "/collections/songs"} "songs"]]]])))
+         [:a {:href "/collections/songs"} "songs"]]]
+       [:p "Ah yes, please take a look at my collection of " [:a {:href "/collections/characters"} "fiction characters"] ". Great masterpieces!"]])))
