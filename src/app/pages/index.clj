@@ -65,11 +65,11 @@
        [:ul
         [:li
          [:a
-          {:href "https://en.wikipedia.org/wiki/Toyota_HiAce"}
+          {:href "https://en.wikipedia.org/wiki/Toyota_HiAce#Fifth_generation_(H200;_2004)"}
           "Toyota HiAce"]]
         [:li
          [:a
-          {:href "https://en.wikipedia.org/wiki/Mitsubishi_Delica"}
+          {:href "https://en.wikipedia.org/wiki/Mitsubishi_Delica#Asia"}
           "Mitsubishi L300"]]]
        [:h2 "Music Within The Roads"]
        [:p
