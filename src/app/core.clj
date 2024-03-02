@@ -32,13 +32,11 @@
     (map (fn
            [post]
            {:path (str "/posts/" (:filename post))
-            :page-component (fn
-                              []
-                              (main-layout/-main-layout
-                                (fn
-                                  []
-                                  [[:h1 (:title (:metadata (:md post)))]
-                                   (h/raw (:html (:md post)))])))})
+            :page-component (main-layout/-main-layout
+                              (fn
+                                []
+                                [[:h1 (:title (:metadata (:md post)))]
+                                 (h/raw (:html (:md post)))]))})
          posts)))
 
 (defn generate-pages
@@ -51,7 +49,7 @@
         (.mkdir (io/file page-path))
         (spit
           (str page-path "/index.html")
-          (hc/gen-html5 ((:page-component route))))))))
+          (hc/gen-html5 (:page-component route)))))))
 
 (defn -main
   []
