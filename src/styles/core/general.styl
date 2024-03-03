@@ -12,7 +12,10 @@ color__blue = #8bc2e7
 html
     background-color color__black
     color color__white
-    font-family: 'Noto Serif', serif;
+    font-size 18px
+    line-height 24px
+    /* font-family: "Noto Serif", serif; */
+    font-family: "Georgia", "Times New Roman", serif;
 
 body
     max-width MAX_WIDTH
@@ -27,10 +30,6 @@ a
     color color__blue
     text-decoration none
     /* text-decoration-color #525252 */
-
-p, small, blockquote
-    /* color color__gray */
-    line-height 25px
 
 /* stand alone code with 
  * no pre as parent
@@ -75,8 +74,8 @@ img
 .post--list li a
     text-decoration underline
 
-.post--list li p
-    font-size 14px
+/* .post--list li p */
+/*     font-size 14px */
 
 for depth in (1..6)
     h{depth}[id] > a::before
