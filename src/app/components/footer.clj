@@ -34,5 +34,5 @@
       "Guestbook"]
      " ❗"]
     [:small " | "]
-    [:small "팬케이크 YWK"]
+    [:small "팬케이크"]
     ]])
