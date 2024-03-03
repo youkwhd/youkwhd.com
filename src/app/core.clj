@@ -57,23 +57,23 @@
     TARGET-FOLDER-PATH
     (concat
       [{:path "/"
-        :page-component index-page/-main-page}
+        :page-component (index-page/-main-page)}
        {:path "/posts"
-        :page-component posts-page/-main-page}
+        :page-component (posts-page/-main-page)}
        {:path "/links"
-        :page-component links-page/-main-page}
+        :page-component (links-page/-main-page)}
        {:path "/art"
-        :page-component art-page/-main-page}
+        :page-component (art-page/-main-page)}
        {:path "/collections"
-        :page-component collections-page/-main-page}
+        :page-component (collections-page/-main-page)}
        {:path "/collections/characters"
-        :page-component collections-characters-page/-main-page}
+        :page-component (collections-characters-page/-main-page)}
        {:path "/collections/mugshawtys"
-        :page-component collections-mugshawtys-page/-main-page}
+        :page-component (collections-mugshawtys-page/-main-page)}
        {:path "/collections/games"
-        :page-component collections-games-page/-main-page}
+        :page-component (collections-games-page/-main-page)}
        {:path "/collections/movies"
-        :page-component collections-movies-page/-main-page}
+        :page-component (collections-movies-page/-main-page)}
        {:path "/collections/songs"
-        :page-component collections-songs-page/-main-page}]
+        :page-component (collections-songs-page/-main-page)}]
       (get-posts-pages))))
