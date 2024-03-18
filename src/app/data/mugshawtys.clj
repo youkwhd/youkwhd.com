@@ -4,7 +4,7 @@
   [{:img-src "/images/mugshots/104433411_114590690104554_636743748403005970_n.jpg"
     :desc "4th degree DWI and careless driving"}
    {:img-src "/images/mugshots/171594421_204253574837790_195749487130485377_n.jpg"
-    :desc "charges unknown...what did she do?"}
+    :desc "charges unknown"}
    {:img-src "/images/mugshots/246187873_443573463856888_3209565898337500227_n.jpg"
     :desc "arson"}
    {:img-src "/images/mugshots/344829556_543995581260354_498239123797071458_n.jpg"
