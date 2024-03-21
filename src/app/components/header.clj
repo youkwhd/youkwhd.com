@@ -1,4 +1,5 @@
-(ns app.components.header)
+(ns app.components.header
+  (:require [hiccup2.core :as h]))
 
 (def navigations
   [{:label "Home"
@@ -25,7 +26,6 @@
          "youkwhd"
       ]]
      [:nav 
-      (for [navigations -navigations]
-        (for [nav navigations]
-          nav))]])
+      (for [nav -navigations]
+        (seq nav))]])
   )
