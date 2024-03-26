@@ -3,6 +3,8 @@
 (def MOVIES
   [{:name "Made in Abyss"
     :url "https://en.wikipedia.org/wiki/Made_in_Abyss"}
+   {:name "Frieren: Beyond Journey's End"
+    :url "https://myanimelist.net/anime/52991/Sousou_no_Frieren"}
    {:name "50 First Dates"
     :url "https://www.rottentomatoes.com/m/50_first_dates"}
    {:name "Buddy Daddies"
