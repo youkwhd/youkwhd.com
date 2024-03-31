@@ -52,7 +52,11 @@
           (hc/gen-html5 (:page-component route)))))))
 
 (defn -main
-  []
+  [& args]
+  ;; TODO: make use of arguments
+  (doseq [arg args]
+    (println arg))
+
   (generate-pages
     TARGET-FOLDER-PATH
     (concat
