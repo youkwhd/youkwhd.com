@@ -1,6 +1,6 @@
 ---
 title: "Rust dev says that C is complex and hard to write"
-description: "I don't even know"
+description: "Embrace the simplicity of C"
 date: "27-09-23"
 ---
 
