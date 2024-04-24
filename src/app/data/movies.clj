@@ -9,6 +9,10 @@
     :url "https://www.rottentomatoes.com/m/50_first_dates"}
    {:name "Buddy Daddies"
     :url "https://buddy-animeproject.com/"}
+   {:name "Forrest Gump"
+    :url "https://en.wikipedia.org/wiki/Forrest_Gump"}
+   {:name "Interstellar"
+    :url "https://en.wikipedia.org/wiki/Interstellar_(film)"}
    {:name "Spirited Away"
     :url "https://www.rottentomatoes.com/m/spirited_away"}
    {:name "Kiki's Delivery Service"
