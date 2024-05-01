@@ -18,4 +18,4 @@
          [:a {:href "/collections/movies"} "movies"]]
         [:li
          [:a {:href "/collections/songs"} "songs"]]]
-       [:p "Ah yes, please take a look at my collection of " [:a {:href "/collections/characters"} "fiction characters"] ". Great masterpieces, also the " [:a {:href "/collections/mugshawtys"} "mugshawty"] " shots collection."]])))
+       [:p "Ah yes, please take a look at my collection of " [:a {:href "/collections/characters"} "fiction characters"] ". Great masterpieces, also the " [:a {:href "/collections/mugshawtys"} "mugshawty"] " shots collection, and some finest " [:a {:href "/collections/yugioh"} "Yu-Gi-Oh! cards"] " ever printed."]])))
