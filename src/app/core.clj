@@ -14,6 +14,7 @@
             [app.pages.collections.games :as collections-games-page]
             [app.pages.collections.movies :as collections-movies-page]
             [app.pages.collections.songs :as collections-songs-page]
+            [app.pages.collections.yugioh :as collections-yugioh-page]
             [app.pages.links :as links-page]))
 
 (def TARGET-FOLDER-PATH "dist")
@@ -78,6 +79,8 @@
         :page-component (collections-games-page/-main-page)}
        {:path "/collections/movies"
         :page-component (collections-movies-page/-main-page)}
+       {:path "/collections/yugioh"
+        :page-component (collections-yugioh-page/-main-page)}
        {:path "/collections/songs"
         :page-component (collections-songs-page/-main-page)}]
       (get-posts-pages))))
