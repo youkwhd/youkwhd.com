@@ -8,11 +8,20 @@
       "https://s3.duellinksmeta.com/cards/6265e6c83ecc89b0e4f30426_w360.webp"
       "https://s3.duellinksmeta.com/cards/62e034bf5f0fd2a1fe376de1_w360.webp"
     ]}
+   {:archetype "Mannadium"
+    :desc "" 
+    :cards [
+      "https://s3.duellinksmeta.com/cards/6483191e16914c1ac3b282ea_w420.webp"
+      "https://s3.duellinksmeta.com/cards/63970651f8f33e42fe011ccf_w420.webp"
+      "https://s3.duellinksmeta.com/cards/63970663f8f33e42fe011dbb_w420.webp"
+      "https://s3.duellinksmeta.com/cards/642cfcc729223d673cf86596_w420.webp"
+      "https://s3.duellinksmeta.com/cards/64831976780dc357450ff416_w420.webp"
+      "https://s3.duellinksmeta.com/cards/63970688f8f33e42fe011f7f_w420.webp"
+    ]}
    {:archetype "Elder Entity"
     :desc "" 
     :cards [
       "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51f54_w360.webp"
-      ""
     ]}
    {:archetype "Sky Striker"
     :desc "" 
