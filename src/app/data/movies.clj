@@ -13,6 +13,8 @@
     :url "https://buddy-animeproject.com/"}
    {:name "Forrest Gump"
     :url "https://en.wikipedia.org/wiki/Forrest_Gump"}
+   {:name "American Made"
+    :url "https://en.wikipedia.org/wiki/American_Made_(film)"}
    {:name "Interstellar"
     :url "https://en.wikipedia.org/wiki/Interstellar_(film)"}
    {:name "Spirited Away"
