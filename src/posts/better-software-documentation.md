@@ -1,6 +1,6 @@
 ---
 title: "What Most Software Miss When Documenting"
-description: "The forgotten documentation in most project"
+description: "The forgotten documentation in most projects"
 date: "05-21-24"
 ---
 
@@ -10,9 +10,13 @@ People only care if it installs or not, `sudo apt install` and voila. So what co
 
 ## Forced to Know Certain Language's Ecosystem
 
-<img src="/images/software/memq.jpeg" class="image-floatr" height="180" width="135" />
+<div class="image-floatr">
+    <img src="/images/software/memq.jpeg" height="180" width="135" />
+    <br />
+    <small>Confused persian cat</small>
+</div>
 
-When it came to those who is interested to the source code trying to get the it built and running, just to find themselves not being able to build / run the software.
+When it came to those who is interested to the source code trying to get it built and running, just to find themselves not being able to build / run the software.
 
 This sure feel _**sucks**_ if you don't already know how to work under the ecosystem of the assosiated language. You would then try to surf the web just to get the software up and running, ended up wasting time.
 
@@ -28,7 +32,7 @@ Now, hear me out. It also applies to the **audience** of your product. Always ch
 
 <img src="/images/software/py.jpeg" class="image-floatl" height="105" width="158" />
 
-You can't expect everyone to know how to run a python script despite python's popularity. Which file is the entry point? what dependencies do I need to make this script runnable? do I need to manually setup config files? the possibility is endless.
+You can't expect everyone to know how to run a python script despite python's popularity. Which file is the entry point? what dependencies do I need to make this script runnable? do I need to manually setup config files? bla bla bla, yada yada.
 
 Something might come up to your mind: "Well, python has requirements.txt file for listing dependencies". Sure, but how should I as the audience know? I have no prior knowlegde of what the file does.
 
@@ -60,3 +64,9 @@ Let me try running `wc`:
 Would you look at that! **_25_ words** in total. Certainly not a hard thing to do, by doing this you also give eveyone the knowledge of how to write better software by showing what should be done.
 
 Thus that's why a simple 'What to do' in a README sure helps. even if you just put up the simplest, most obvious form of compiling using make: "To compile: invoke `make`".
+
+## At Last, Everyone is Happy.
+
+Thank you for writing good crisp documentation. You make your software more cool, I can save my time, and learn by just following what you have written.
+
+Continue to craft more stuff that make our life easier.
