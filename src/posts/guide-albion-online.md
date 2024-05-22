@@ -1,6 +1,6 @@
 ---
 title: "Guide: Albion Online as a free to play solo player"
-description: "A comperhensive guide on how to play Albion Online as a free to play solo player"
+description: "A comperhensive guide on how to play Albion Online"
 date: "01-17-24"
 ---
 
