@@ -8,6 +8,11 @@
       "https://s3.duellinksmeta.com/cards/6265e6c83ecc89b0e4f30426_w360.webp"
       "https://s3.duellinksmeta.com/cards/62e034bf5f0fd2a1fe376de1_w360.webp"
     ]}
+   {:archetype "Tech Genus"
+    :desc "" 
+    :cards [
+      "https://s3.duellinksmeta.com/cards/6348ee84e88d1118d0d6f656_w420.webp"
+    ]}
    {:archetype "Rituals"
     :desc "" 
     :cards [
