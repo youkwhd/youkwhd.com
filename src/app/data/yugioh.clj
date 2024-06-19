@@ -11,7 +11,7 @@
    {:archetype "Tech Genus"
     :desc "" 
     :cards [
-      "https://s3.duellinksmeta.com/cards/6348ee84e88d1118d0d6f656_w420.webp"
+      "https://s3.duellinksmeta.com/cards/64b00630451b5d913c3accfd_w420.webp"
     ]}
    {:archetype "Rituals"
     :desc "" 
