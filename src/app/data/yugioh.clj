@@ -13,6 +13,12 @@
     :cards [
       "https://s3.duellinksmeta.com/cards/64b00630451b5d913c3accfd_w420.webp"
     ]}
+   {:archetype "Yang Zing"
+    :desc "" 
+    :cards [
+      "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a51ceb_w420.webp"
+      "https://s3.duellinksmeta.com/cards/60c2b3aaa0e24f2d54a5194b_w420.webp"
+    ]}
    {:archetype "Rituals"
     :desc "" 
     :cards [
