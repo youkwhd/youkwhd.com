@@ -21,6 +21,8 @@
     :url "https://www.rottentomatoes.com/m/spirited_away"}
    {:name "Kiki's Delivery Service"
     :url "https://www.rottentomatoes.com/m/kikis_delivery_service"}
+   {:name "Shutter Island"
+    :url "https://en.wikipedia.org/wiki/Shutter_Island_(film)"}
    {:name "Fast And Furious: Tokyo Drift"
     :url "https://www.rottentomatoes.com/m/fast_and_the_furious_tokyo_drift"}
    {:name "Home Alone"
