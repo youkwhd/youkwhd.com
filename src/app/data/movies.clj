@@ -5,6 +5,8 @@
     :url "https://en.wikipedia.org/wiki/Made_in_Abyss"}
    {:name "Miracle in Cell No. 7"
     :url "https://en.wikipedia.org/wiki/Miracle_in_Cell_No._7"}
+   {:name "Young Sheldon"
+    :url "https://en.wikipedia.org/wiki/Young_Sheldon"}
    {:name "Frieren: Beyond Journey's End"
     :url "https://myanimelist.net/anime/52991/Sousou_no_Frieren"}
    {:name "50 First Dates"
