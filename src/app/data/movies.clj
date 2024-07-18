@@ -11,6 +11,8 @@
     :url "https://myanimelist.net/anime/52991/Sousou_no_Frieren"}
    {:name "50 First Dates"
     :url "https://www.rottentomatoes.com/m/50_first_dates"}
+   {:name "I, Tonya"
+    :url "https://en.wikipedia.org/wiki/I,_Tonya"}
    {:name "Buddy Daddies"
     :url "https://buddy-animeproject.com/"}
    {:name "Forrest Gump"
