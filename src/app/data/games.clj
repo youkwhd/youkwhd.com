@@ -3,6 +3,10 @@
 (def GAMES
   [{:name "Albion Online"
     :url "https://albiononline.com/lore/history"}
+   {:name "Pillars of Eternity II: Deadfire"
+    :url "https://eternity.obsidian.net/"}
+   {:name "Undertale"
+    :url "https://undertale.com/"}
    {:name "Devil May Cry 3"
     :url "https://www.devilmaycry.com/3"}
    {:name "Little Misfortune"
