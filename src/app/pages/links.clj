@@ -20,17 +20,14 @@
 (defn -main-page
   []
   (main-layout/-main-layout
-    (fn
-      []
-      [
-       [:h1 "Other Pages"]
-       (for [banner banners]
-         [:a {:href (:url banner)
-              :target "_blank"
-              :rel "noopener noreferrer"
-              :class "anchor-no-decor"}
-          [:img {:src (:src banner)
-                 :alt ""
-                 :width "81px"
-                 :height "31px"}]
-          "\n"])])))
+    [[:h1 "Other Pages"]
+     (for [banner banners]
+       [:a {:href (:url banner)
+            :target "_blank"
+            :rel "noopener noreferrer"
+            :class "anchor-no-decor"}
+        [:img {:src (:src banner)
+               :alt ""
+               :width "81px"
+               :height "31px"}]
+        "\n"])]))

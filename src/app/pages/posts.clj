@@ -5,21 +5,19 @@
 (defn -main-page
   []
   (main-layout/-main-layout
-    (fn
-      []
-      [[:h1 "Posts"]
-       [:ul {:class "post--list"}
-        (let [posts (sort-by
-                      #(:date (:metadata %))
-                      #(compare %2 %1)
-                      (map (fn
-                             [post]
-                             (update-in post [:metadata]
-                                        assoc :date (.parse (java.text.SimpleDateFormat. "dd-MM-yy") (:date (:metadata post)))))
-                           (posts/get-posts-metadata "./src/posts")))]
-          (for [post posts]
-            [:li
-             [:a {:href (str "/posts/" (:filename post))}
-              (:title (:metadata post))]
-             [:br]
-             [:small (:description (:metadata post))]]))]])))
+    [[:h1 "Posts"]
+     [:ul {:class "post--list"}
+      (let [posts (sort-by
+                    #(:date (:metadata %))
+                    #(compare %2 %1)
+                    (map (fn
+                           [post]
+                           (update-in post [:metadata]
+                                      assoc :date (.parse (java.text.SimpleDateFormat. "dd-MM-yy") (:date (:metadata post)))))
+                         (posts/get-posts-metadata "./src/posts")))]
+        (for [post posts]
+          [:li
+           [:a {:href (str "/posts/" (:filename post))}
+            (:title (:metadata post))]
+           [:br]
+           [:small (:description (:metadata post))]]))]]))

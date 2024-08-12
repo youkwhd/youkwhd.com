@@ -11,6 +11,6 @@
    (head/-main-component "youkwhd" "youkwhd's page")
    [:body
     (header/-main-component)
-    [:main (for [component (components)]
+    [:main (for [component components]
              component)]
     (footer/-main-component)]])

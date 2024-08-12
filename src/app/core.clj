@@ -34,10 +34,8 @@
            [post]
            {:path (str "/posts/" (:filename post))
             :page-component (main-layout/-main-layout
-                              (fn
-                                []
-                                [[:h1 (:title (:metadata (:md post)))]
-                                 (h/raw (:html (:md post)))]))})
+                              [[:h1 (:title (:metadata (:md post)))]
+                               (h/raw (:html (:md post)))])})
          posts)))
 
 (defn generate-pages
