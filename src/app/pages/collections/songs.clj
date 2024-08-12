@@ -1,6 +1,5 @@
 (ns app.pages.collections.songs
-  (:require [app.layouts.main :as main-layout]
-            [app.data.songs :as data]))
+  (:require [app.layouts.main :as main-layout]))
 
 (defn -main-page
   []
