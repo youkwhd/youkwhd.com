@@ -6,10 +6,6 @@
   (main-layout/-main-layout
     [[:h1 "Banger Certified Playlist"]
      [:p "In order to make things as simple as possible, I decided to just create playlists from music platforms since I am lazy to update the collection manually, which are:"]
-     ; [:ul
-     ;  (for [song data/SONGS]
-     ;    [:li
-     ;     [:a {:href (:url song) :target "_blank" :rel "noreferrer noopener"} (:name song)]])]
      [:h2 "Spotify"]
      [:p "Plenty of different song from countries like france, spain, indonesia, america, etc."]
      [:p "I also have playlist for specific game soundtracks"]
