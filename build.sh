@@ -3,9 +3,7 @@
 set -e
 
 echo "[INFO ::] Generating web pages..."
-# clj spawns a repl for some reason
-# redirect stdin to the void
-clj -M -m app.core 0>/dev/null -- $@
+clojure -M -m app.core -- $@
 
 echo "[INFO ::] Moving out resources..."
 cp -r resources/* dist/
