@@ -50,15 +50,6 @@
       [:b "Lintas Sumatera"] 
       "."]
      [:p
-      "–"
-      [:a
-       {:href "https://www.youtube.com/watch?v=NrxxZRJaxYc&t=443s"
-        :target "_blank"
-        :rel "noopener noreferrer"}
-       "Here"]
-      ", I'll do you a favor. Just so you know, the car that's used in the video is Daihatsu Rocky, and the the car that's leading the run is an older generation of Innova."]
-     [:p "If the video didn't get skipped to 7:23, Please do so."]
-     [:p
       "I also love minibuses. These are services for traveling, they mostly operates in the nights. 2 of the most common ones:"]
      [:ul
       [:li
