@@ -54,7 +54,7 @@ DO NOT use plate armors period. No benefit will grant you for using plate armor 
 
 Plate armors are used in situations where you play contents like ZvZ or any with teams. Plate armor can be used as a solo player only if you play Great Hammer or Tombhammer, it cost a lot of silver, cost alot of item power. Just don't use plate armor, waste of time.
 
-<img src="/images/albion/leatherarmor.png" class="image-float" height="64" width="64" />
+<img src="/images/albion/mercenary.png" class="image-float" height="64" width="64" />
 
 Instead, you can always go for leather armor. It is the jack of all trades. Unless you are using fire staff then pick cloth armor to maximize the damage.
 
