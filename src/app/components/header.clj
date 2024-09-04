@@ -1,5 +1,4 @@
-(ns app.components.header
-  (:require [hiccup2.core :as h]))
+(ns app.components.header)
 
 (def navigations
   [{:label "Home"
@@ -23,9 +22,7 @@
     [:header
      [:h1
       [:a {:href "/" :class "color-white"}
-         "youkwhd"
-      ]]
+         "youkwhd"]]
      [:nav 
       (for [nav -navigations]
-        (seq nav))]])
-  )
+        (seq nav))]]))
