@@ -5,7 +5,7 @@ set -e
 echo "[INFO ::] Generating web pages..."
 # clj spawns a repl for some reason
 # redirect stdin to the void
-clj -M -m app.core $@ 0>/dev/null
+clj -M -m app.core 0>/dev/null -- $@
 
 echo "[INFO ::] Moving out resources..."
 cp -r resources/* dist/
