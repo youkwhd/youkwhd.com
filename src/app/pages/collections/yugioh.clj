@@ -6,7 +6,6 @@
   []
   (main-layout/-main-layout
     [[:h1 "Collection of Great Yu-Gi-Oh! Artworks"]
-     ; [:p "Bunch of great Yu-Gi-Oh! card artworks"]
      (for [collection data/AWESOME-ARTWORK-CARDS]
        (concat
          [[:h2 (:archetype collection)] [:p (:desc collection)]]

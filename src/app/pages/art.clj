@@ -6,7 +6,7 @@
   (main-layout/-main-layout
     [[:h1 "Art"]
      [:p
-      "I like to draw, was. I remembered that i used to draw things after my brain randomly gave me flashbacks of an old image of my drawing:"]
+      "I like to draw, was."]
      [:img
       {:src "images/art_gundam.jpeg"
        :loading "lazy" 

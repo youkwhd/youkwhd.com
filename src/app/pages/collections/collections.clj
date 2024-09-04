@@ -6,14 +6,13 @@
   (main-layout/-main-layout
     [[:h1 "Collections"]
      [:p
-      "These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some memories. This is essentially my journey, back when i was a kid, or, at most, a teenager."]
-     [:p
-      "If you are bored or something like that, I hope this list can help you to find temporary happiness or even better. Anyway, here are the collections:"]
+      "These collections is meant to give out a taste of my old gems. It is not a complete list, I might forget some, but the list grows as time dies:"]
      [:ul
       [:li
-       [:a {:href "/collections/games"} "games"]]
+       [:a {:href "/collections/games"} "Games"]]
       [:li
-       [:a {:href "/collections/movies"} "movies"]]
+       [:a {:href "/collections/movies"} "Movies"]]
       [:li
-       [:a {:href "/collections/songs"} "songs"]]]
-     [:p "Ah yes, please take a look at my collection of " [:a {:href "/collections/characters"} "fiction characters"] ". Great masterpieces, also the " [:a {:href "/collections/mugshawtys"} "mugshawty"] " shots collection, and some finest " [:a {:href "/collections/yugioh"} "Yu-Gi-Oh! cards"] " ever printed."]]))
+       [:a {:href "/collections/songs"} "Songs"]]
+      [:li
+       [:a {:href "/collections/characters"} "Characters"]]] ]))
