@@ -52,33 +52,32 @@
 
 (defn -main
   [& args]
-  ;; TODO: make use of arguments
-  (doseq [arg args]
-    (println arg))
-
-  (generate-pages
-    TARGET-FOLDER-PATH
-    (concat
-      [{:path "/"
-        :page-component (index-page/-main-page)}
-       {:path "/posts"
-        :page-component (posts-page/-main-page)}
-       {:path "/links"
-        :page-component (links-page/-main-page)}
-       {:path "/art"
-        :page-component (art-page/-main-page)}
-       {:path "/collections"
-        :page-component (collections-page/-main-page)}
-       {:path "/collections/characters"
-        :page-component (collections-characters-page/-main-page)}
-       {:path "/collections/mugshawtys"
-        :page-component (collections-mugshawtys-page/-main-page)}
-       {:path "/collections/games"
-        :page-component (collections-games-page/-main-page)}
-       {:path "/collections/movies"
-        :page-component (collections-movies-page/-main-page)}
-       {:path "/collections/yugioh"
-        :page-component (collections-yugioh-page/-main-page)}
-       {:path "/collections/songs"
-        :page-component (collections-songs-page/-main-page)}]
-      (get-posts-pages))))
+  (let [start-time (. System (nanoTime))
+        calculate-elapsed (some #{"--elapsed"} args)]
+    (generate-pages
+      TARGET-FOLDER-PATH
+      (concat
+        [{:path "/"
+          :page-component (index-page/-main-page)}
+         {:path "/posts"
+          :page-component (posts-page/-main-page)}
+         {:path "/links"
+          :page-component (links-page/-main-page)}
+         {:path "/art"
+          :page-component (art-page/-main-page)}
+         {:path "/collections"
+          :page-component (collections-page/-main-page)}
+         {:path "/collections/characters"
+          :page-component (collections-characters-page/-main-page)}
+         {:path "/collections/games"
+          :page-component (collections-games-page/-main-page)}
+         {:path "/collections/movies"
+          :page-component (collections-movies-page/-main-page)}
+         {:path "/collections/yugioh"
+          :page-component (collections-yugioh-page/-main-page)}
+         {:path "/collections/songs"
+          :page-component (collections-songs-page/-main-page)}]
+        (get-posts-pages)))
+    ;; stolen from time macro
+    (when calculate-elapsed
+      (println (str "  elapsed " (/ (double (- (. System (nanoTime)) start-time)) 1000000000.0) " secs")))))
