@@ -3,6 +3,8 @@
 (def MOVIES
   [{:name "Made in Abyss"
     :url "https://en.wikipedia.org/wiki/Made_in_Abyss"}
+   {:name "Emily in Paris"
+    :url "https://en.wikipedia.org/wiki/Emily_in_Paris"}
    {:name "Miracle in Cell No. 7"
     :url "https://en.wikipedia.org/wiki/Miracle_in_Cell_No._7"}
    {:name "Young Sheldon"

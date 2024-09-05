@@ -14,4 +14,6 @@
      [:p "Just finished Made in Abyss Season 1, I really really recommend you to watch it. One of the best executed anime along with Samurai Champloo and Spirited Away."]
      [:p "The opening, style, story, ending, eveything is great about this anime, highly recommend."]
      [:small "26/3/2024:"]
-     [:p "I finished Frieren, beautiful story telling, whoever writes the story definitely knows how the world cycles."]]))
+     [:p "I finished Frieren, beautiful story telling, whoever writes the story definitely knows how the world cycles."]
+     [:small "9/5/2024:"]
+     [:p "Emily in Paris is a great Netflix series, I'm laughing out loud eveytime Luc is on screen"]]))
