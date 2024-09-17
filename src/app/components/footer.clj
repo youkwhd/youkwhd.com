@@ -28,8 +28,8 @@
      [:a
       {:href
        "#",
-       ; :target "_blank", 
-       ; :rel "noopener noreferrer"
+       ;; :target "_blank", 
+       ;; :rel "noopener noreferrer"
        } 
       "Guestbook"]
      " ❗"]

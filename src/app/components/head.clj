@@ -11,9 +11,9 @@
            :href "/favicon.ico"}]
 
    ;; CSS Links
-   ; [:link {:rel "stylesheet"
-   ;         :type "text/css"
-   ;         :href "/noto-serif.css"}]
+   ;; [:link {:rel "stylesheet"
+   ;;         :type "text/css"
+   ;;         :href "/noto-serif.css"}]
    [:link {:rel "stylesheet"
            :type "text/css"
            :href "/global.css"}]
