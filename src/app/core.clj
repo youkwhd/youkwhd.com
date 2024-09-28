@@ -1,6 +1,7 @@
 (ns app.core
   (:require [hiccup2.core :as h]
             [app.hiccup :as hc]
+            [app.rss :as rss]
             [clojure.java.io :as io]
             [app.posts :as posts]
             [app.layouts.main :as main-layout]
@@ -53,7 +54,11 @@
 (defn -main
   [& args]
   (let [start-time (. System (nanoTime))
-        calculate-elapsed (some #{"--elapsed"} args)]
+        calculate-elapsed (some #{"--elapsed"} args)
+        generate-rss (some #{"--rss"} args)]
+    (when generate-rss (spit
+                         (str TARGET-FOLDER-PATH "/rss.xml")
+                         (rss/generate (posts/get-posts-metadata "./src/posts"))))
     (generate-pages
       TARGET-FOLDER-PATH
       (concat
