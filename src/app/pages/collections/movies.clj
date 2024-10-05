@@ -5,6 +5,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Movies" "Collection of movies."
     [[:h1 "Movies"]
      [:ul {:style "column-count: 2"}
       (for [movie data/MOVIES]

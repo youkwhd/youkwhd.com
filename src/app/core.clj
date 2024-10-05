@@ -35,6 +35,7 @@
            [post]
            {:path (str "/posts/" (:filename post))
             :page-component (main-layout/-main-layout
+                              (:title (:metadata (:md post))) (:description (:metadata (:md post)))
                               [[:h1 (:title (:metadata (:md post)))]
                                (h/raw (:html (:md post)))])})
          posts)))

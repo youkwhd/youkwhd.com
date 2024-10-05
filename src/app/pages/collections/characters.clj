@@ -4,6 +4,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Fiction Characters" "Collection of favorite fiction characters."
     [[:h1 "Quick look at fiction characters"]
      [:p "Here are all my loved models of \"Characters\" collection. Most of these will be chunky looking models from various shows, anime, video games, etc."]
      [:p "I like the use of staff-like weapons, bazooka (like Lady from DMC), ebony & ivory, dante's sword, and just generally heavy things."]

@@ -20,6 +20,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Links" "Surf other places on the internet."
     [[:h1 "Other Pages"]
      (for [banner banners]
        [:a {:href (:url banner)

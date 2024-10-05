@@ -5,6 +5,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Blog Posts" "Read posts about technology, RSS included."
     [[:h1 "Posts"]
      [:ul {:class "post--list"}
       (let [posts (sort-by

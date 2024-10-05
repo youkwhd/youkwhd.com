@@ -5,6 +5,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Yu-Gi-Oh! cards" "Collection of Yu-Gi-Oh! cards."
     [[:h1 "Collection of Great Yu-Gi-Oh! Artworks"]
      (for [collection data/AWESOME-ARTWORK-CARDS]
        (concat

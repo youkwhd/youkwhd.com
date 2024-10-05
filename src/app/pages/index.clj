@@ -4,6 +4,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Homepage" "Brief introduction."
     [[:img
       {:src "/images/profile-compressed.webp"
        :alt "" 

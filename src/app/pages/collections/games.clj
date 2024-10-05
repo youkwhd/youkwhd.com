@@ -5,6 +5,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Games" "Collection of games."
     [[:h1 "Games"]
      [:img {:src "/images/carx_tandem-compressed.webp" :width "300" :height "533"}]
      [:p "I used to cruise in " [:a {:href "https://carx-online.com/" :target "_blank" :rel "noreferrer noopener"} "CarX Drift Racing Online"] " back when I still use my old laptop, since this game is the closest substitution to sim games like " [:a {:href "https://assettocorsa.gg/" :target "_blank" :rel "noreferrer noopener"} "Assetto Corsa"] " that can run " [:i "almost"] " smoothly on my current laptop at the time, though I need to set the graphics to the lowest."]

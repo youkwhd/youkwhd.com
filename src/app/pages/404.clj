@@ -4,6 +4,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Not Found" "Not found page."
     [[:h1 "404 not found"]
      [:p "Page not found, either moved or not available. Consider going back to the "
       [:a {:href "/"} "Homepage"]

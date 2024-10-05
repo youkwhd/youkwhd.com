@@ -4,11 +4,10 @@
             [app.components.footer :as footer]))
 
 (defn -main-layout
-  ;; TODO: description from layout
-  [components]
+  [title description components]
   ;; TODO: add !DOCTYPE html
   [:html
-   (head/-main-component "youkwhd" "youkwhd's page")
+   (head/-main-component title description)
    [:body
     (header/-main-component)
     [:main (for [component components]

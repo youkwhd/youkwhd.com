@@ -6,6 +6,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Mugshawtys" "Collection of mugshawtys."
     [[:h1 "Mugshawtys"]
      [:div {:style "display: grid; row-gap: 35px; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));"}
       (for [mugshawtys data/MUGSHAWTYS]

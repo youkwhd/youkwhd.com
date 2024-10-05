@@ -4,6 +4,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Art" "Collection of Arts."
     [[:h1 "Art"]
      [:p
       "I like to draw, was."]

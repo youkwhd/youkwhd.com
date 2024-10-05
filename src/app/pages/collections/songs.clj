@@ -4,6 +4,7 @@
 (defn -main-page
   []
   (main-layout/-main-layout
+    "Songs" "Collection of songs."
     [[:h1 "Banger Certified Playlist"]
      [:p "In order to make things as simple as possible, I decided to just create playlists from music platforms since I am lazy to update the collection manually:"]
      [:h2 "Spotify"]
