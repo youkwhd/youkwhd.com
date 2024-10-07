@@ -5,7 +5,6 @@
 
 (defn -main-layout
   [title description components]
-  ;; TODO: add !DOCTYPE html
   [:html
    (head/-main-component title description)
    [:body

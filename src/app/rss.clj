@@ -1,7 +1,6 @@
 (ns app.rss
   (:require [clojure.string :as string]))
 
-;; TODO: refactor concat-ing n stuff
 (defn generate
   [posts-metadata]
   (string/join "\n"
