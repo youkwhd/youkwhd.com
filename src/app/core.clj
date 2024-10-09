@@ -53,11 +53,7 @@
 (defn -main
   [& args]
   (let [start-time (. System (nanoTime))
-        calculate-elapsed (some #{"--elapsed"} args)
-        generate-rss (some #{"--rss"} args)]
-    (when generate-rss (spit
-                         (str TARGET-FOLDER-PATH "/rss.xml")
-                         (rss/generate (posts/get-posts-metadata "./src/posts"))))
+        calculate-elapsed (some #{"--elapsed"} args)]
     (generate-pages
       TARGET-FOLDER-PATH
       (concat
@@ -82,6 +78,8 @@
          {:path "/collections/songs"
           :page-component (collections-songs-page/-main-page)}]
         (get-posts-pages)))
+    (spit (str TARGET-FOLDER-PATH "/rss.xml")
+          (rss/generate (posts/get-posts-metadata "./src/posts")))
     ;; stolen from time macro
     (when calculate-elapsed
       (println (str "  elapsed " (/ (double (- (. System (nanoTime)) start-time)) 1000000000.0) " secs")))))
