@@ -13,6 +13,8 @@
     :url "https://en.wikipedia.org/wiki/The_Terminal"}
    {:name "Frieren: Beyond Journey's End"
     :url "https://myanimelist.net/anime/52991/Sousou_no_Frieren"}
+   {:name "My Stupid Boss"
+    :url "https://en.wikipedia.org/wiki/My_Stupid_Boss"}
    {:name "50 First Dates"
     :url "https://www.rottentomatoes.com/m/50_first_dates"}
    {:name "I, Tonya"
