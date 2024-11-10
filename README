@@ -7,6 +7,14 @@ Javascript shipped on production.
 TODO:
     - Reduce image sizes
 
+Prerequisite
+------------
+
+Install dependencies below:
+
+    - clojure <https://clojure.org/guides/install_clojure>
+    - stylus <https://stylus-lang.com/docs/executable.html>
+
 Quick Start
 -----------
 
