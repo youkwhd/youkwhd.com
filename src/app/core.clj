@@ -38,6 +38,19 @@
                                (h/raw (:html (:md post)))])})
          posts)))
 
+;; TODO: automatic pages generation
+(defn get-pages-files
+  []
+  (letfn [(get-files 
+            [dir]
+            (let [files (.listFiles dir)]
+              (mapcat (fn [f]
+                        (if (.isDirectory f)
+                          (get-files f)
+                          [f]))
+                files)))]
+    (get-files (io/file "./src/app/pages"))))
+
 (defn generate-pages
   [dest-path routes]
   (let [dest-path (str "./" dest-path)]
