@@ -1,12 +1,8 @@
 (ns app.data.pokemons)
 
 (def POKEMONS
-  [{:name "Reuniclus" :variants []}
-   {:name "Sableye" :variants ["Mega"]}
-   {:name "Espeon" :variants []}
-   {:name "Crobat" :variants []}
-   {:name "Porygon-Z" :variants []}
-   {:name "Porygon2" :variants []}])
+  ["Reuniclus", "Sableye", "Sableye-Mega", "Espeon", "Crobat",
+   "Porygon-Z", "Porygon2"])
 
 (def TRAINERS
   [{:name "Sabrina"
