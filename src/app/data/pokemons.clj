@@ -2,7 +2,7 @@
 
 (def POKEMONS
   ["Reuniclus", "Sableye", "Sableye-Mega", "Espeon", "Crobat",
-   "Porygon-Z", "Porygon2"])
+   "Kyurem", "Kyurem-White", "Porygon-Z", "Porygon2"])
 
 (def TRAINERS
   [{:name "Sabrina"
