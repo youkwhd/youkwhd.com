@@ -3,11 +3,13 @@
             [app.components.card :as card]
             [app.data.mugshawtys :as data]))
 
+(def MUGSHAWTY-CARD-SIZE 196) ;; px
+
 (defn -main-page
   []
   (main-layout/-main-layout
     "Mugshawtys" "Collection of mugshawtys."
     [[:h1 "Mugshawtys"]
-     [:div {:style "display: grid; row-gap: 35px; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));"}
+     [:div {:style (str "display: grid; row-gap: 35px; grid-template-columns: repeat(auto-fit, minmax(" MUGSHAWTY-CARD-SIZE "px, 1fr));")}
       (for [mugshawtys data/MUGSHAWTYS]
-        (card/-main-component (:img-src mugshawtys) (:desc mugshawtys)))]]))
+        (card/-main-component MUGSHAWTY-CARD-SIZE false false (:img-src mugshawtys) (:desc mugshawtys)))]]))

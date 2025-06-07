@@ -2,10 +2,11 @@
 (ns app.components.card)
 
 (defn -main-component
-  [image-src description]
-  [:div {:style "width: 192px;"}
+  [size force-size centered-desc image-src description]
+  [:div {:style (str "width: " size "px;" (if centered-desc " text-align: center;" ""))}
     [:img {:src image-src
-           :width 192
-           :height 192}]
+           :width size
+           :height size
+           :style (if force-size (str "object-fit: contain; " "width: " size "px;" " height: " size "px;") "")}]
     [:br]
     [:small description]])

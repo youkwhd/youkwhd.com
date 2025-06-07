@@ -12,6 +12,7 @@
             [app.pages.collections.collections :as collections-page]
             [app.pages.collections.characters :as collections-characters-page]
             [app.pages.collections.mugshawtys :as collections-mugshawtys-page]
+            [app.pages.collections.pokemons :as collections-pokemons-page]
             [app.pages.collections.games :as collections-games-page]
             [app.pages.collections.movies :as collections-movies-page]
             [app.pages.collections.songs :as collections-songs-page]
@@ -82,6 +83,8 @@
           :page-component (collections-page/-main-page)}
          {:path "/collections/characters"
           :page-component (collections-characters-page/-main-page)}
+         {:path "/collections/pokemons"
+          :page-component (collections-pokemons-page/-main-page)}
          {:path "/collections/games"
           :page-component (collections-games-page/-main-page)}
          {:path "/collections/movies"

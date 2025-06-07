@@ -16,4 +16,6 @@
       [:li
        [:a {:href "/collections/songs"} "Songs"]]
       [:li
+       [:a {:href "/collections/pokemons"} "Pokémons"]]
+      [:li
        [:a {:href "/collections/characters"} "Characters"]]] ]))
