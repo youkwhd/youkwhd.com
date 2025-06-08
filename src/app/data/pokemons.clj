@@ -1,12 +1,12 @@
 (ns app.data.pokemons)
 
 (def POKEMONS
-  ["Reuniclus", "Sableye", "Sableye-MEGA", "Espeon", "Crobat",
-   "Xerneas", "Lunala", "Necrozma-Ultra", "Kyurem", "Kyurem-White",
-   "Celesteela", "Centiskorch", "Centiskorch-GMAX", "Dragapult", "Mimikyu",
-   "Tatsugiri", "Vikavolt", "Steelix", "Steelix-MEGA" "Giratina-Origin",
-   "Indeedee", "Rotom", "Rotom-Fan", "Rotom-Mow", "Porygon-Z",
-   "Porygon2"])
+  ["Reuniclus" "Sableye" "Sableye-MEGA" "Espeon" "Crobat"
+   "Xerneas" "Lunala" "Necrozma-Ultra" "Kyurem" "Kyurem-White"
+   "Celesteela" "Centiskorch" "Centiskorch-GMAX" "Dragapult" "Giratina-Origin"
+   "Tatsugiri" "Vikavolt" "Steelix" "Steelix-MEGA" "Tyranitar"
+   "Mimikyu" "Indeedee" "Rotom" "Rotom-Fan" "Rotom-Mow"
+   "Porygon-Z" "Porygon2"])
 
 (def TRAINERS
   [{:name "Sabrina"
