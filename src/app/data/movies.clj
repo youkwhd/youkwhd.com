@@ -3,6 +3,8 @@
 (def MOVIES
   [{:name "Made in Abyss"
     :url "https://en.wikipedia.org/wiki/Made_in_Abyss"}
+   {:name "The Residence"
+    :url "https://en.wikipedia.org/wiki/The_Residence_(TV_series)"}
    {:name "Better Call Saul"
     :url "https://en.wikipedia.org/wiki/Better_Call_Saul"}
    {:name "Emily in Paris"
