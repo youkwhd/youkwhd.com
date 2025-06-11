@@ -17,4 +17,9 @@
      [:small "26/3/2024:"]
      [:p "I finished Frieren, beautiful story telling, whoever writes the story definitely knows how the world cycles."]
      [:small "9/5/2024:"]
-     [:p "Emily in Paris is a great Netflix series, I'm laughing out loud eveytime Luc is on screen"]]))
+     [:p "Emily in Paris is a great Netflix series, I'm laughing out loud eveytime Luc is on screen."]
+     [:small "11/6/2025:"]
+     [:p "When is the last time I write here? look at that time gap. I guess time just flew over, and this is the perfect timing to watch a series."]
+     [:p "I finished The Residence, it was an amazing series that has similar tone like the movie Knives Out, and particularly the game Clue/Cluedo. I'm talking about the settings of the crime scene (at a big mansion), and how clues peeled layer by layer."]
+     [:p "You might wanna hear this song—this has nothing to do with the serie, but—it's so soothing for a mystery-like settings: " [:a {:href "https://www.youtube.com/watch?v=bHsO8LZTEUM&list=PLdt9eadG8k_ese2F2WzXFSQrB12G5c9PG"} "Clue/Cluedo OST"] "."]
+     [:p "NOTE: at this time of reviewing, there's only one season, so.. the series might lean over to a more less polished mystery case. Anyway, highly recommend if you're into murder mysteries."]]))
