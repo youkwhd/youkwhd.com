@@ -1,4 +1,4 @@
-(ns app.pages.collections.collections
+(ns app.pages.collections.index
   (:require [app.layouts.main :as main-layout]))
 
 (defn -main-page

@@ -4,28 +4,9 @@
             [app.rss :as rss]
             [clojure.java.io :as io]
             [app.posts :as posts]
-            [app.layouts.main :as main-layout]
-            [app.pages.404 :as not-found-page]
-            [app.pages.index :as index-page]
-            [app.pages.art :as art-page]
-            [app.pages.posts :as posts-page]
-            [app.pages.collections.collections :as collections-page]
-            [app.pages.collections.characters :as collections-characters-page]
-            [app.pages.collections.mugshawtys :as collections-mugshawtys-page]
-            [app.pages.collections.pokemons :as collections-pokemons-page]
-            [app.pages.collections.games :as collections-games-page]
-            [app.pages.collections.movies :as collections-movies-page]
-            [app.pages.collections.songs :as collections-songs-page]
-            [app.pages.collections.yugioh :as collections-yugioh-page]
-            [app.pages.links :as links-page]))
+            [app.layouts.main :as main-layout]))
 
 (def TARGET-FOLDER-PATH "dist")
-
-(defn generate-404-page
-  [dest-path]
-  (spit
-    (str dest-path "/404.html")
-    (hc/gen-html5 (not-found-page/-main-page))))
 
 (defn get-posts-pages
   []
@@ -39,30 +20,41 @@
                                (h/raw (:html (:md post)))])})
          posts)))
 
-;; TODO: automatic pages generation
-(defn get-pages-files
+(defn get-pages-namespaces
   []
-  (letfn [(get-files 
-            [dir]
-            (let [files (.listFiles dir)]
-              (mapcat (fn [f]
-                        (if (.isDirectory f)
-                          (get-files f)
-                          [f]))
-                files)))]
-    (get-files (io/file "./src/app/pages"))))
+  (let [base-dir (io/file "./src/app/pages")
+        base-path (.getCanonicalPath base-dir)
+        ns-prefix "app.pages."]
+    (letfn [(get-files [dir]
+              (let [files (.listFiles dir)]
+                (mapcat (fn [f]
+                          (if (.isDirectory f)
+                            (get-files f)
+                            [f]))
+                        files)))]
+      (map (fn [f]
+             (let [rel-path (-> (.getCanonicalPath f)
+                                (.substring (+ (count base-path) 1)))
+                   ns-part  (-> rel-path
+                                (clojure.string/replace #"[\\/]" ".")
+                                (clojure.string/replace #"\.clj$" ""))]
+               (str ns-prefix ns-part)))
+           (get-files base-dir)))))
 
 (defn generate-pages
   [dest-path routes]
   (let [dest-path (str "./" dest-path)]
-    (.mkdir (io/file dest-path))
-    (generate-404-page dest-path)
+    (.mkdirs (io/file dest-path))
     (doseq [route routes]
       (let [page-path (str dest-path (:path route))]
-        (.mkdir (io/file page-path))
-        (spit
-          (str page-path "/index.html")
-          (hc/gen-html5 (:page-component route)))))))
+        (cond
+          ;; TODO: idk, deal with this, see the -main fn
+          (clojure.string/ends-with? page-path ".html") (spit page-path (hc/gen-html5 (:page-component route)))
+          :else (do
+            (.mkdirs (io/file page-path))
+            (spit
+              (str page-path "/index.html")
+              (hc/gen-html5 (:page-component route)))))))))
 
 (defn -main
   [& args]
@@ -71,28 +63,19 @@
     (generate-pages
       TARGET-FOLDER-PATH
       (concat
-        [{:path "/"
-          :page-component (index-page/-main-page)}
-         {:path "/posts"
-          :page-component (posts-page/-main-page)}
-         {:path "/links"
-          :page-component (links-page/-main-page)}
-         {:path "/art"
-          :page-component (art-page/-main-page)}
-         {:path "/collections"
-          :page-component (collections-page/-main-page)}
-         {:path "/collections/characters"
-          :page-component (collections-characters-page/-main-page)}
-         {:path "/collections/pokemons"
-          :page-component (collections-pokemons-page/-main-page)}
-         {:path "/collections/games"
-          :page-component (collections-games-page/-main-page)}
-         {:path "/collections/movies"
-          :page-component (collections-movies-page/-main-page)}
-         {:path "/collections/yugioh"
-          :page-component (collections-yugioh-page/-main-page)}
-         {:path "/collections/songs"
-          :page-component (collections-songs-page/-main-page)}]
+        (map (fn [namespace]
+               (require (symbol namespace))
+               (let [ns-suffix (subs namespace (count "app.pages."))
+                     page-component-func ((ns-resolve (symbol namespace) (symbol "-main-page")))
+                     page-uri-path (cond
+                                (= ns-suffix "404") "/404.html"
+                                :else (let [path (str "/" (clojure.string/replace ns-suffix #"\." "/"))]
+                                        (if (clojure.string/ends-with? path "index")
+                                          (subs path 0 (- (count path) (count "index")))
+                                          path)))]
+                 {:path page-uri-path
+                  :page-component page-component-func}))
+             (get-pages-namespaces))
         (get-posts-pages)))
     (spit (str TARGET-FOLDER-PATH "/rss.xml")
           (rss/generate (posts/get-posts-metadata "./src/posts")))
