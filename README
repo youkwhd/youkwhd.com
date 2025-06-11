@@ -31,6 +31,24 @@ This case we use Serve by Vercel:
 
     serve -d dist/
 
+Routing
+-------
+
+The pages of the webpage is located at src/app/pages, which is a
+type of file-based routing. Essentially, the folder structure
+determines the route path:
+
+- src/app/pages/index.clj -> /
+- src/app/pages/collections/index.clj -> /collections
+- src/app/pages/collections/movies.clj -> /collections/movies
+
+However, this is not entirely 100% pure file-based routing. You
+still need to specify the namespace of the file:
+
+- src/app/pages/index.clj -> (ns app.pages.index)
+- src/app/pages/collections/index.clj -> (ns app.pages.collections.index)
+- src/app/pages/collections/movies.clj -> (ns app.pages.collections.movies)
+
 Testing
 -------
 
