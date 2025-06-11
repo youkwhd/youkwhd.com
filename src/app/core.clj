@@ -51,10 +51,10 @@
           ;; TODO: idk, deal with this, see the -main fn
           (clojure.string/ends-with? page-path ".html") (spit page-path (hc/gen-html5 (:page-component route)))
           :else (do
-            (.mkdirs (io/file page-path))
-            (spit
-              (str page-path "/index.html")
-              (hc/gen-html5 (:page-component route)))))))))
+                  (.mkdirs (io/file page-path))
+                  (spit
+                    (str page-path "/index.html")
+                    (hc/gen-html5 (:page-component route)))))))))
 
 (defn -main
   [& args]
