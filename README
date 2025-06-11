@@ -35,8 +35,8 @@ Routing
 -------
 
 The pages of the webpage is located at src/app/pages, which is a
-type of file-based routing. Essentially, the folder structure
-determines the route path:
+semi automatic file-based routing. Essentially, the folder
+structure determines the route path:
 
     - src/app/pages/index.clj -> /
     - src/app/pages/collections/index.clj -> /collections
